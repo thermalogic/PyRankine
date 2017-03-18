@@ -47,7 +47,7 @@ python rankine.py
 
 ## Reference
 
-*	ASCEND4: The ASCEND Modelling and Simulation Environment  https://ascend4.org/ 
+*	ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 
 * OpenMADO: An open-source MDAO framework written in Python  http://openmdao.org/
 
