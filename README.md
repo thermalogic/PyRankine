@@ -45,6 +45,15 @@ python rankine.py
 * IF97 high-speed shared library (Windows64, Linux64); Excel Add-in Macro; Python Interface
   * https://github.com/PySEE/SEUIF97
 
+## Reference
+
+*	ASCEND4: The ASCEND Modelling and Simulation Environment  https://ascend4.org/ 
+
+* OpenMADO: An open-source MDAO framework written in Python  http://openmdao.org/
+
+* OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
+
+* Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
 
 
 
