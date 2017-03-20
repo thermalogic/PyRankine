@@ -49,7 +49,7 @@ python rankine.py
 
 *	ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 
-* OpenMADO: An open-source MDAO framework written in Python  http://openmdao.org/
+* OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
 
 * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
