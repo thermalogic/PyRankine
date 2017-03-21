@@ -1,6 +1,6 @@
 # PyRankine
 
-`PyRankine` is  a demo simulator of ideal rankine cycle based on [libseuif97](https://github.com/PySEE/SEUIF97) for Windows(64).
+`PyRankine` is  a demo simulator of ideal rankine cycle based on [libseuif97](https://github.com/PySEE/SEUIF97) for Windows/Linux(64).
 
 ## Run
 
