@@ -2,9 +2,14 @@
 
 `PyRankine` is  a demo simulator of ideal rankine cycle based on [libseuif97](https://github.com/PySEE/SEUIF97) for Windows/Linux(64).
 
+## Dependencies：libseuif97
+
+* IF97 high-speed shared library (Windows64, Linux64)
+  * https://github.com/PySEE/SEUIF97
+
 ## Run
 
-```
+```bash
 python rankine.py
 ```
 
@@ -39,11 +44,6 @@ python rankine.py
   * the rate of heat transfer, Qout, from the condensing steam as it passes through the condenser, in MW,
 
   * the mass flow rate of the condenser cooling water, in kg/h
-
-## libseuif97
-
-* IF97 high-speed shared library (Windows64, Linux64); Excel Add-in Macro; Python Interface
-  * https://github.com/PySEE/SEUIF97
 
 ## Reference
 
