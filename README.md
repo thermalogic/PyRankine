@@ -9,6 +9,13 @@
 
 ## Run
 
+* Jupyter Notebook(PyThermo_IdealRankineCycle.ipynb)
+
+```bash
+StartNB.bat
+```
+* Python(/src)
+
 ```bash
 python rankine.py
 ```
