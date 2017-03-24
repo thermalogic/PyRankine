@@ -9,7 +9,7 @@
 
 ## Run
 
-* Jupyter Notebook(PyThermo_IdealRankineCycle.ipynb)
+* Jupyter Notebook(IdealRankineCycle.ipynb)
 
 ```bash
 StartNB.bat
