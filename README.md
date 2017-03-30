@@ -54,6 +54,10 @@ python rankine.py
 
 ## Reference
 
+* Algorithms + Data Structures = Programs: https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs
+
+* Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
+
 *	ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 
 * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
