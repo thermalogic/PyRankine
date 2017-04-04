@@ -11,8 +11,6 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 
 ## Step by step Codes
 
-To demonstrate: **Data Structures+ Algorithms = Programs**
-
 * Jupyter Notebook
 
   * Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/IdealRankineCycle-Step0.ipynb
