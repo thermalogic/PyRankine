@@ -46,7 +46,7 @@ python rankine.py
 
    * The net power output of the cycle is 100 MW.
 
-   * Cooling water enters the condenser at 15C and exits at 35C.
+   * Cooling water enters the condenser at 15°C and exits at 35°C.
 
 ![rankine](./notebook/vps-fig81.png)
 

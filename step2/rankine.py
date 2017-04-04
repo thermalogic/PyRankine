@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 
 Step 2 ：
@@ -115,7 +116,7 @@ class RankineCycle(object):
               self.devs[key].mdotenergy(self.mdot)                  
   
       def cw_simulate(self):
-          # 4 condenser
+          # condenser cooling water
           self.nodew = []
           self.nodew.append(node.Node('CW-Inlet',0))
           self.nodew.append(node.Node('CW-Outlet',1))
@@ -131,20 +132,21 @@ class RankineCycle(object):
           self.devs['Condenser'].cw_simulate(self.nodew)
 
       def export(self):
+          print(" \n --------  %s   ----------------------------------"%self.name)
           print("The net power output of the cycle: ", self.Wcycledot, "MW")
           print("Efficiency: ", '%.2f' % (self.efficiency * 100), "%")
           print("The back work ratio: ", '%.2f' % (self.bwr * 100), "%")
-          print("The mass flow rate: ",  '%.2f' % self.mdot, "%")
+          print("The mass flow rate: ",  '%.2f' % self.mdot, "kg/h")
           print('The rate of heat transfer as the fluid passes the boiler: ',
           '%.2f' % self.devs['Boiler'].Qindot, 'MW')
-          print(" \n --------------------------------------------------")
-          print("Cooling water enters the condenser T", self.nodew[0].t, "C")
-          print("Cooling water exits  the condenser T", self.nodew[1].t, "C")
+          print(" \n ------- The Condenser Cooling Water  --------------")
+          print("Cooling water enters the condenser T:", self.nodew[0].t, u'°C')
+          print("Cooling water exits  the condenser T:", self.nodew[1].t, u'°C')
           print('The rate of heat transfer from the condensing steam: ',
           '%.2f' % self.devs['Condenser'].Qoutdot, 'MW')
           print('The mass flow rate of the condenser cooling water: ', '%.2f' %
           self.devs['Condenser'].mcwdot, 'kg/h')
-
+          print(" \n -------- NODES  -----------------------------------")
           print("\nNodeID\tName\tP\tT\tH\tS\tV\tX")
           for node in self.nodes:
               print(node)
