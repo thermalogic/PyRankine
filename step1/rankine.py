@@ -7,11 +7,11 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 
 The ideal rankine cycle as 
    
-    ----Node 0---Turbine---Node 1----
-    |                               |
-  Boiler                          Condenser
-    |                               |
-    ----Node 3---Pump------Node 2---- 
+    ┌─── Node 0 ── Turbine ── Node 1 ──┐
+    |                                  |
+  Boiler                            Condenser
+    |                                  |
+    └─── Node 3 ──   Pump  ── Node 2 ──┘  
 
  Michael J . Mora. 
      Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
