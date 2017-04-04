@@ -9,9 +9,13 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 * IF97 high-speed shared library (Windows/Linux)
   * https://github.com/PySEE/SEUIF97
 
-## Run
+## Step by step Codes
 
-* Jupyter Notebook(IdealRankineCycle-Step1.ipynb)
+* Jupyter Notebook
+
+* Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/IdealRankineCycle-Step0.ipynb
+
+* Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/IdealRankineCycle-Step1.ipynb
 
 ```bash
 StartNB.bat
