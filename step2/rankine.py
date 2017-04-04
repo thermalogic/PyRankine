@@ -1,7 +1,12 @@
 """
-Step 2 
 
-PyRankine is a simple simulator of the ideal rankine cycle as 
+Step 2 ：
+
+Step by step codes of the ideal rankine cycle simulator to demonstrate: 
+
+    Data Structures+ Algorithms = Programs
+
+The ideal rankine cycle as 
    
     ----Node 0---Turbine---Node 1----
     |                               |
@@ -66,14 +71,10 @@ def read_devicefile(filename):
     begId = 2
     for line in devFile:
         dev = line.split(',')
-
         if dev[1] == "TURBINE":
             Comps[dev[0]] = turbine.Turbine(dev[0], int(dev[begId]),  int(dev[begId + 1]))
         elif dev[1] == "BOILER":
             Comps[dev[0]] = boiler.Boiler(
-                dev[0], int(dev[begId]), int(dev[begId + 1]))
-        elif dev[1] == "REHEATER":
-            Comps[dev[0]] = Reheater(
                 dev[0], int(dev[begId]), int(dev[begId + 1]))
         elif dev[1] == "CONDENSER":
             Comps[dev[0]] = condenser.Condenser(

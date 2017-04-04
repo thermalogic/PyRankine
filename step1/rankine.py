@@ -1,7 +1,11 @@
 """
 Step 1  
 
-PyRankine is a simple simulator of the ideal rankine cycle as 
+Step by step codes of the ideal rankine cycle simulator to demonstrate: 
+
+   Data Structures+ Algorithms = Programs
+
+The ideal rankine cycle as 
    
     ----Node 0---Turbine---Node 1----
     |                               |

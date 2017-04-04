@@ -19,8 +19,14 @@ StartNB.bat
 * Python
 
 Step by Step Codes to demonstrate: **Data Structures+ Algorithms = Programs**
- 
+
 ```bash
+cd step1
+python rankine.py
+``` 
+
+```bash
+cd step2
 python rankine.py
 ```
 
