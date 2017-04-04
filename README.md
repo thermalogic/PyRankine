@@ -11,7 +11,7 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 
 ## Run
 
-* Jupyter Notebook(IdealRankineCycle.ipynb)
+* Jupyter Notebook(IdealRankineCycle-Step1.ipynb)
 
 ```bash
 StartNB.bat
