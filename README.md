@@ -23,6 +23,11 @@ StartNB.bat
 * Python
 
 ```bash
+cd step0
+python rankine.py
+``` 
+
+```bash
 cd step1
 python rankine.py
 ``` 
