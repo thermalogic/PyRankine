@@ -21,7 +21,6 @@ Author:Cheng Maohua
 Email: cmh@seu.edu.cn
 
 """
-
 from seuif97 import *
 
 # Given:-
@@ -32,20 +31,19 @@ Wcycledot = 100.00     # the net power output of the cycle in MW
 # Analysis
 
 # State  1
-h1 = px2h(p1, 1)          # h1 = 2758.0    From table A-3  kj/kg
-s1 = px2s(p1, 1)          # s1 = 5.7432    From table A-3  kj/kg.k
+h1 = px2h(p1, 1)         
+s1 = px2s(p1, 1)       
 
 # State  2
 s2 = s1
-
 # quality at state 2
-sf = px2s(p3, 0)         # sf = 0.5926   kj/kg.k
-sg = px2s(p3, 1)         # sg = 8.2287   kj/kg.k
+sf = px2s(p3, 0)        
+sg = px2s(p3, 1)        
 x2 = (s2 - sf) / (sg - sf)
 
-hf = px2h(p3, 0)         # hf = 173.88    kj/kg
+hf = px2h(p3, 0)     
 hg = px2h(p3, 1)
-h2 = hf + x2 * (hg - hf)  # hfg = 2403.1   kj/kg
+h2 = hf + x2 * (hg - hf) 
 
 # State 3 is saturated liquid at 0.008 MPa, so
 h3 = hf  # kj/kg
@@ -67,7 +65,6 @@ wpdot = h4 - h3
 # The rate of heat transfer to the working fluid as it passes
 # through the boiler is determined using mass and energy rate balances as
 qindot = h1 - h4
-
 # thermal efficiency
 eta = (wtdot - wpdot) / qindot
 
@@ -76,17 +73,13 @@ eta = (wtdot - wpdot) / qindot
 # developed by the turbine.
 bwr = wpdot / wtdot                                    #
 
-
 # Part(c)
-mdot = (Wcycledot * 10**3 * 3600) / ((h1 - h2) -
-                                     (h4 - h3))       # mass flow rate in kg/h
-
+# mass flow rate in kg/h
+mdot = (Wcycledot * 1000 * 3600) / ((h1 - h2) -  (h4 - h3))      
 # Part(d)
-Qindot = mdot * qindot / (3600 * 10**3)                     # in MW
-
+Qindot = mdot * qindot / (3600 * 1000)                     # in MW
 # Part(e)
-Qoutdot = mdot * (h2 - h3) / (3600 * 10**3)                   # in MW
-
+Qoutdot = mdot * (h2 - h3) / (3600 * 1000)                   # in MW
 # Part(f)
 # Given:
 tcwin = 15
@@ -95,11 +88,11 @@ tcwout = 35
 hcwout = tx2h(tcwout, 0)   # From table A-2,hcwout= 146.68  kj/kg
 
 hcwin = tx2h(tcwin, 0)    # hcwin 62.99
-mcwdot = (Qoutdot * 10**3 * 3600) / (hcwout - hcwin)          # in kg/h
+mcwdot = (Qoutdot * 1000 * 3600) / (hcwout - hcwin)          # in kg/h
 
 # Results
 print("Indeal Rankine Cycle: Net Output Power ",Wcycledot,'MW')
-print('\t(a) The thermal efficiency for the cycle is ', round(eta, 3) * 100, '%')
+print('\t(a) The thermal efficiency for the cycle is %.2f' %(eta*100), '%')
 print('\t(b) The back work ratio is ', round(bwr, 3) * 100, '%')
 print('\t(c) The mass flow rate of the steam is', round(mdot, 2), 'kg/h.')
 print('\t(d) The rate of heat transfer,Qindot into the working fluid as it passes through the boiler is',
