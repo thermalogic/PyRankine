@@ -1,0 +1,5 @@
+NAME,NID,p,t,x, mdot,  fdot  
+Main Steam,0,8,,1,,1
+Outlet Steam of HP,1,0.008,,,,1
+Condenser Water,2,0.008,,0,,1
+Main FeedWater,3,8,,,,1

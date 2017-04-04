@@ -1,0 +1,5 @@
+NAME,TYPE,NODES
+Turbine,TURBINE,0,1
+Condenser,CONDENSER,1,2
+Pump,PUMP,2,3
+Boiler,BOILER,3,0
