@@ -2,7 +2,9 @@
 
 Step by step codes of the ideal rankine cycle simulator to demonstrate: 
 
-  **Data Structures+ Algorithms = Programs**
+  * **Data Structures+ Algorithms = Programs**
+  
+  * **computational thinking** 
 
 ## Dependencies：libseuif97
 
