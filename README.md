@@ -4,7 +4,7 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 
   * **Data Structures+ Algorithms = Programs**
   
-  * **computational thinking** 
+  * **Computational Thinking** 
 
 ## Dependencies：libseuif97
 
@@ -77,13 +77,17 @@ python rankine.py
 
 * Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
 
-*	ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
+*  R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+
+* ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 
 * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
 
 * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
 * Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
+
+* Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
 
 
