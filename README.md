@@ -15,9 +15,9 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 
 * Jupyter Notebook
 
-  * Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/IdealRankineCycle-Step0.ipynb
+  * Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0.ipynb
 
-  * Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/IdealRankineCycle-Step1.ipynb
+  * Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step1.ipynb
 
 ```bash
 StartNB.bat
