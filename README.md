@@ -89,6 +89,8 @@ python rankine.py
 
 * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
+* SPICE http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/
+
 
 
 
