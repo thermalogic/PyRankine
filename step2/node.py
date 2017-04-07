@@ -3,15 +3,15 @@ import seuif97 as if97
 
 class Node(object):
 
-    def __init__(self,name,nid):
-        self.name=name
+    def __init__(self, name, nid):
+        self.name = name
         self.p = None
         self.t = None
         self.h = None
         self.s = None
         self.v = None
         self.x = None
-        self.nid=nid
+        self.nid = nid
 
     def pt(self):
         self.h = if97.pt2h(self.p, self.t)
@@ -48,8 +48,8 @@ class Node(object):
         self.h = if97.tx2h(self.t, self.x)
         self.s = if97.tx2s(self.t, self.x)
         self.v = if97.tx2v(self.t, self.x)
-   
+
     def __str__(self):
-        result='%d \t%s \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f' \
-             %(self.nid,self.name, self.p,self.t,self.h,self.s,self.v, self.x)
-        return  result 
+        result = '%d \t%s \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f' \
+            % (self.nid, self.name, self.p, self.t, self.h, self.s, self.v, self.x)
+        return result

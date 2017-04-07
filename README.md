@@ -2,9 +2,12 @@
 
 Step by step codes of the ideal rankine cycle simulator to demonstrate: 
 
-  * **Data Structures+ Algorithms = Programs**
-  
+  * **Data Structures + Algorithms = Programs** 
   * **Computational Thinking** 
+
+     * step 0 :    Zero @  Data Structures,Program architecture, Algorithms
+     * step 1 :   Basic @  Data Structures,Program architecture, Algorithms
+     * step 2 : Forward @  Data Structures,Program architecture, Algorithms
 
 ## Dependencies：libseuif97
 
@@ -77,7 +80,9 @@ python rankine.py
 
 * Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
 
-*  R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+* R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+
+* Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
 * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 

@@ -17,6 +17,8 @@ The ideal rankine cycle as
      Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
      Chapter 8 : Vapour Power Systems Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
 
+License: this code is in the public domain
+
 Author:Cheng Maohua
 Email: cmh@seu.edu.cn
 
