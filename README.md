@@ -9,6 +9,14 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
      * step 1 :   Basic @  Data Structures,Program architecture, Algorithms
      * step 2 : Forward @  Data Structures,Program architecture, Algorithms
 
+You do not need to do programming step0，1，2. 
+ 
+**You need to**
+ 
+*  reading the codes
+*  understanding computational thinking and programming skills
+*  programing one solution to the  rankine cycle 
+
 ## Dependencies：libseuif97
 
 * IF97 high-speed shared library (Windows/Linux)
@@ -98,6 +106,6 @@ python rankine.py
 
 * SPICE: https://en.wikipedia.org/wiki/SPICE
 
-
+* ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
 
 
