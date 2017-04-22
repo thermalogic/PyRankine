@@ -8,9 +8,9 @@ Step by step codes of the ideal rankine cycle simulator to demonstrate:
 The ideal rankine cycle as 
    
     ┌─── State 1 ── Turbine ── State 2 ──┐
-    |                                    |
+    │                                    │
   Boiler                            Condenser
-    |                                    |
+    │                                    │
     └─── State 4 ──  Pump  ──  State 3───┘  
 
  Michael J . Mora. 
