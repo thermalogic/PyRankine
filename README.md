@@ -67,7 +67,7 @@ python rankine.py
 
    * Cooling water enters the condenser at 15°C and exits at 35°C.
 
-![rankine81](./notebook/rankine81.png)
+![rankine81](./step3/img/rankine81.jpg)
 
 * Determine for the cycle
 
