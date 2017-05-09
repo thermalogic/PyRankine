@@ -1,4 +1,4 @@
-import Node
+import node
 
 
 class Condenser:

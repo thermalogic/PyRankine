@@ -23,7 +23,7 @@ Author:Cheng Maohua
 Email: cmh@seu.edu.cn
 
 """
-import Node
+import node
 import turbine
 import pump
 import condenser
@@ -38,7 +38,7 @@ def RankineCycle():
     # 1 init nodes
     nodes = []
     for i in range(4):
-        nodes.append(Node.Node())
+        nodes.append(node.Node())
 
     nodes[0].p = boilerPressure
     nodes[0].x = 1
@@ -72,7 +72,7 @@ def RankineCycle():
    # 4 condenser
     nodew = []
     for i in range(2):
-        nodew.append(Node.Node())
+        nodew.append(node.Node())
 
     nodew[0].t = 15
     nodew[0].x = 0
