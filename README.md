@@ -10,11 +10,11 @@ Step by step codes of the rankine cycle simulator to demonstrate:
      * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
      * step 3 : Forward @  Data Structures,Program architecture, Algorithms
 
-            The Ideal Rankine Cycle
-            A Regenerative Cycle with Open Feedwater Heater
+            Example 8.1 The Ideal Rankine Cycle
+            Example 8.5 A Regenerative Cycle with Open Feedwater Heater
                        
 
-You do not need to do programming step0，1，2. 
+You do not need to do programming step0、1、2、3 
  
 **You need to**
  
@@ -41,8 +41,8 @@ StartNB.bat
 * Python
 
 ```bash
-cd step0/1/2/3
-python rankine.py
+>cd step0/1/2/3
+>python rankine.py
 ``` 
 
 ## Example Rankine Cycle

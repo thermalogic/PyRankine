@@ -23,43 +23,42 @@ from components.turbine import Turbine
 from components.condenser import Condenser
 from components.pump import Pump
 
-
 def read_nodesfile(filename):
     """ csvfile：node's info in the file"""
-
     countNodes = len(open(filename, 'r').readlines()) - 1
     nodes = [None for i in range(countNodes)]
 
-    csvfile = open(filename, 'r')
-    reader = csv.DictReader(csvfile)
-    for line in reader:
-        i = int(line['NID'])
-        nodes[i] = Node(line['NAME'], i)
+    ndsFile = open(filename, 'r')
+    discardHeader = ndsFile.readline()
+    for line in ndsFile:
+        NAME,NID,p,t,x,fdot=line.split(',')
+        i = int(NID)
+        nodes[i] = Node(NAME, i)
         try:
-            nodes[i].p = float(line['p'])
+            nodes[i].p = float(p)
         except:
             nodes[i].p = None
         try:
-            nodes[i].t = float(line['t'])
+            nodes[i].t = float(t)
         except:
             nodes[i].t = None
         try:
-            nodes[i].x = float(line['x'])
+            nodes[i].x = float(x)
         except:
             nodes[i].x = None
         try:
-            nodes[i].fdot = float(line['fdot'])
+            nodes[i].fdot = float(fdot)
         except:
             nodes[i].fdot = None
 
-        if line['p'] != '' and line['t'] != '':
+        if  nodes[i].p !=None and nodes[i].t !=None:
             nodes[i].pt()
-        elif line['p'] != '' and line['x'] != '':
+        elif nodes[i].p !=None and nodes[i].x !=None:
             nodes[i].px()
-        elif line['t'] != '' and line['x'] != '':
+        elif nodes[i].t !=None and nodes[i].x !=None:
             nodes[i].tx()
 
-    csvfile.close()
+    ndsFile.close()
     return nodes, countNodes
 
 
