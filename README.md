@@ -24,8 +24,8 @@ You do not need to do programming step0、1、2、3
 
 ## Dependencies：libseuif97
 
-* IF97 high-speed shared library (Windows/Linux)
-  * https://github.com/PySEE/SEUIF97
+* IF97 high-speed shared library (Windows)
+  * https://github.com/PySEE/EDUIF97
 
 ## Step by step Codes
 
