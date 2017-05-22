@@ -18,7 +18,7 @@
    
    https://docs.python.org/3.6/tutorial/modules.html#packages
 
-   Packages are a way of structuring Python’s module namespace by using ** “dotted module names”.**
+   Packages are a way of structuring Python’s module namespace by using **“dotted module names”**.
    The ` __init__.py  `files are required to make Python treat the **directories** as containing **packages**; 
    this is done to **prevent directories with a common name**, such as string, from unintentionally hiding valid modules that occur later on the module search path. 
    
@@ -32,7 +32,7 @@
      ...
 ```
 
-Users of the package can import individual modules from the package, for example:
+Users of the package can import **individual modules** from the package, for example:
 
 ```python
 import components.node
@@ -42,7 +42,7 @@ An alternative way of importing the submodule is:
 ```python
 from components import node
 ```
-Yet another variation is to import **the desired function or variable directly**:
+Yet another variation is to import **the desired function or variable** directly:
 
 ```python
 from components.node import Node
