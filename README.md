@@ -81,7 +81,7 @@ StartNB.bat
 
    * Cooling water enters the condenser at 15°C and exits at 35°C.
 
-![rankine81](./step3/img/rankine81.jpg)
+![rankine81](./step4/img/rankine81.jpg)
 
 * Determine for the cycle
 
@@ -123,7 +123,7 @@ If the mass flow rate of steam entering the first-stage turbine were 150 kg/s
 
 * (b) the fraction of steam extracted, y? 
 
-![rankine85](./step3/img/rankine85.jpg)
+![rankine85](./step4/img/rankine85.jpg)
 
 Engineering Model:
 
