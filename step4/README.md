@@ -1,6 +1,6 @@
 # PyRankine 
 
- ## Step3: The General Simulator of RankineCycle
+ ## Step4: The General Simulator of RankineCycle
 
   * Examples of Rankine Cycle
  
@@ -75,7 +75,7 @@ print('Test: redirect sys.stdout to file')
 ## Run
 
 ```bash
->cd step3
+>cd step4
 >python rankine.py
 ```
 

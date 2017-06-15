@@ -6,19 +6,18 @@ class Boiler:
     The boiler class
     """
 
-    def __init__(self, name, inletNode, exitNode):
+    def __init__(self,inletNode, exitNode):
         """
-        Initializes the boiler 
+        Initializes the boiler with nodes
         """
         self.inletNode = inletNode
         self.exitNode = exitNode
-        self.name = name
 
-    def state(self, nodes):
-        pass
-
-    def simulate(self, nodes):
+    def simulate(self,nodes,mdot):
+        """
+        Simulates the Boiler and tries to get the exit temperature down
+        to the desiredOutletTemp. This is done by continuously adding h
+        while keeping the P constant.
+        """
         self.heatAdded = nodes[self.exitNode].h - nodes[self.inletNode].h
-
-    def mdotenergy(self, mdot):
-        self.Qindot = mdot * self.heatAdded / (3600 * 1000)
+        self.Qindot = mdot*self.heatAdded/(3600*1000)   

@@ -6,16 +6,28 @@ Step by step codes of the rankine cycle simulator to demonstrate:
   * **Computational Thinking** 
 
      * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+                    
+                    simple data type and expression  only
+
      * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+                    
+                    list,dict,function
+     
      * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+     
+                   object-oriented programming
+     
      * step 3 : Forward @  Data Structures,Program architecture, Algorithms
-
-            Example 8.1 The Ideal Rankine Cycle
-            Example 8.5 A Regenerative Cycle with Open Feedwater Heater
+     
+                   object-oriented programming and data files
+     
+     * step 4 : Forward @  Data Structures,Program architecture, Algorithms
+                
+                object-oriented programming,general module
+               
+                Example 8.1 The Ideal Rankine Cycle
+                Example 8.5 A Regenerative Cycle with Open Feedwater Heater
                        
-
-You do not need to do programming step0、1、2、3 
- 
 **You need to**
  
 *  reading the codes
@@ -35,13 +47,15 @@ You do not need to do programming step0、1、2、3
 
   * Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step1.ipynb
 
+  * Step2 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb
+
 ```bash
 StartNB.bat
 ```
 * Python
 
 ```bash
->cd step0/1/2/3
+>cd step0/1/2/3/4
 >python rankine.py
 ``` 
 
@@ -129,28 +143,41 @@ Engineering Model:
 
 ## Reference
 
-* Algorithms + Data Structures = Programs: https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs
+* Computational thinking
 
-* Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
+  * Algorithms + Data Structures = Programs: https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs
 
-* R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+  * Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
 
-* Process simulation：https://en.wikipedia.org/wiki/Process_simulation
+* Modeling and Simulation about ThermoCycle
 
-* ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
+  * R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
 
-* OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
+  * Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
-* OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
+  * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
-* Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
+  * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/ 
 
-* Maarten Winter: pyDNA https://github.com/mwoc/pydna
+  * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
-* Jan M. Rabaey: SPICE http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/
+  * ORC Modeling Kit: https://github.com/orcmkit/ORCmKit
 
-* SPICE: https://en.wikipedia.org/wiki/SPICE
+  * ACHP: https://github.com/TSTK/ACHP 
 
-* ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
+*  Electronic circuit simulator 
+
+   * Jan M. Rabaey: SPICE http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/
+
+   * SPICE: https://en.wikipedia.org/wiki/SPICE
+
+   * ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
+
+* Others
+
+  * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
+
+  * Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
+
 
 

@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
 """
-
-Step 2 ：
+Step 1  
 
 Step by step codes of the ideal rankine cycle simulator to demonstrate: 
 
-    Data Structures+ Algorithms = Programs
+   Data Structures+ Algorithms = Programs
 
 The ideal rankine cycle as 
    
@@ -25,8 +23,6 @@ Author:Cheng Maohua
 Email: cmh@seu.edu.cn
 
 """
-import csv
-
 import node
 import turbine
 import pump
@@ -34,140 +30,76 @@ import condenser
 import boiler
 
 
-def read_nodesfile(filename):
-    """ nodes in the  csv file"""
-    countNodes = len(open(filename, 'r').readlines()) - 1
-    nodes = [None for i in range(countNodes)]
-    csvfile = open(filename, 'r')
-    reader = csv.DictReader(csvfile)
-    for line in reader:
-        i = int(line['NID'])
-        nodes[i] = node.Node(line['NAME'], i)
-        try:
-            nodes[i].p = float(line['p'])
-        except:
-            nodes[i].p = None
-        try:
-            nodes[i].t = float(line['t'])
-        except:
-            nodes[i].t = None
-        try:
-            nodes[i].x = float(line['x'])
-        except:
-            nodes[i].x = None
+def RankineCycle():
+    boilerPressure = 8.0
+    condenserPressure = 0.008
+    Wcycledot = 100.00
 
-        if line['p'] != '' and line['t'] != '':
-            nodes[i].pt()
-        elif line['p'] != '' and line['x'] != '':
-            nodes[i].px()
-        elif line['t'] != '' and line['x'] != '':
-            nodes[i].tx()
+    # 1 init nodes
+    nodes = []
+    for i in range(4):
+        nodes.append(node.Node())
 
-    return nodes, countNodes
+    nodes[0].p = boilerPressure
+    nodes[0].x = 1
 
+    nodes[1].p = condenserPressure
 
-def read_devicefile(filename):
-    devFile = open(filename, 'r')
-    discardHeader = devFile.readline()
-    Comps = {}
-    i = 0
-    begId = 2
-    for line in devFile:
-        dev = line.split(',')
-        if dev[1] == "TURBINE":
-            Comps[dev[0]] = turbine.Turbine(
-                dev[0], int(dev[begId]),  int(dev[begId + 1]))
-        elif dev[1] == "BOILER":
-            Comps[dev[0]] = boiler.Boiler(
-                dev[0], int(dev[begId]), int(dev[begId + 1]))
-        elif dev[1] == "CONDENSER":
-            Comps[dev[0]] = condenser.Condenser(
-                dev[0], int(dev[begId]), int(dev[begId + 1]))
-        elif dev[1] == "PUMP":
-            Comps[dev[0]] = pump.Pump(dev[0], int(
-                dev[begId]),  int(dev[begId + 1]))
+    nodes[2].p = condenserPressure
+    nodes[2].x = 0
 
-        i = i + 1
+    nodes[3].p = boilerPressure
 
-    DevNum = i
-    return Comps, DevNum
+    nodes[0].px()
+    nodes[2].px()
 
+    # 2 connect device
+    t = turbine.Turbine(0, 1)
+    p = pump.Pump(2, 3)
+    b = boiler.Boiler(3, 0)
 
-class RankineCycle(object):
+    # 3 simulate
+    t.simulate(nodes)
+    p.simulate(nodes)
 
-    def __init__(self, name, nodefilename, devfilename):
-        self.name = name
-        self.nodes = []
-        self.devs = {}
-        self.nodes, self.NodeNum = read_nodesfile(nodefilename)
-        self.devs, self.DevNum = read_devicefile(devfilename)
+    bwr = p.workRequired / t.workExtracted
+    mdot = Wcycledot * 1000.0* 3600.0 / (t.workExtracted - p.workRequired)
 
-    def state(self):
-        for key in self.devs:
-            self.devs[key].state(self.nodes)
+    b.simulate(nodes, mdot)                  # in MW
+    efficiency = (t.workExtracted - p.workRequired) / \
+        (b.heatAdded)                # in MW
 
-    def simulate(self):
-        for key in self.devs:
-            self.devs[key].simulate(self.nodes)
+   # 4 condenser
+    nodew = []
+    for i in range(2):
+        nodew.append(node.Node())
 
-        self.bwr = self.devs['Pump'].workRequired / \
-            self.devs['Turbine'].workExtracted
-        self.efficiency = (self.devs['Turbine'].workExtracted - self.devs[
-                           'Pump'].workRequired) / (self.devs['Boiler'].heatAdded)
+    nodew[0].t = 15
+    nodew[0].x = 0
+    nodew[1].t = 35
+    nodew[1].x = 0
+    nodew[0].tx()
+    nodew[1].tx()
 
-    def spower_simulate(self, Wcycledot):
-        self.Wcycledot = Wcycledot
-        self.mdot = Wcycledot * 1000.0 * 3600.0 / \
-            (self.devs['Turbine'].workExtracted -
-             self.devs['Pump'].workRequired)
-        for key in self.devs:
-            self.devs[key].mdotenergy(self.mdot)
+    c = condenser.Condenser(1, 2, 0, 1)
+    c.simulate(nodes, nodew, mdot)
 
-    def cw_simulate(self):
-        """ Circulating water system：Condenser Cooling Water"""
-        self.nodew = []
-        self.nodew.append(node.Node('CW-Inlet', 0))
-        self.nodew.append(node.Node('CW-Outlet', 1))
-
-        self.nodew[0].t = 15
-        self.nodew[0].x = 0
-        self.nodew[1].t = 35
-        self.nodew[1].x = 0
-        self.nodew[0].tx()
-        self.nodew[1].tx()
-
-        self.devs['Condenser'].cw_nodes(0, 1)
-        self.devs['Condenser'].cw_simulate(self.nodew)
-
-    def export(self):
-        print(" \n --------  %s   ----------------------------------" % self.name)
-        print("The net power output: ", self.Wcycledot, "MW")
-        print("Efficiency: ", '%.2f' % (self.efficiency * 100), "%")
-        print("The back work ratio: ", '%.2f' % (self.bwr * 100), "%")
-        print("The mass flow rate: ", '%.2f' % self.mdot, "kg/h")
-        print('The rate of heat transfer as the fluid passes the boiler: ',
-              '%.2f' % self.devs['Boiler'].Qindot, 'MW')
-        print(" \n -------  Circulating Water System  --------------")
-        print("Cooling water enters the condenser T:", self.nodew[0].t, u'°C')
-        print("Cooling water exits  the condenser T:", self.nodew[1].t, u'°C')
-        print('The rate of heat transfer from the condensing steam: ',
-              '%.2f' % self.devs['Condenser'].Qoutdot, 'MW')
-        print('The mass flow rate of the condenser cooling water: ', '%.2f' %
-              self.devs['Condenser'].mcwdot, 'kg/h')
-        print(" \n -------- NODES  -----------------------------------")
-        print("\nNodeID\tName\tP\tT\tH\tS\tV\tX")
-        for inode in self.nodes:
-            print(inode)
+    print("Boiler Pressure: ", boilerPressure, "MPa")
+    print("Condenser Pressure: ", condenserPressure, "MPa")
+    print("The net power output of the cycle: ", Wcycledot, "MW")
+    print("Cooling water enters the condenser T", nodew[0].t, "°C")
+    print("Cooling water exits  the condenser T", nodew[1].t, "°C")
+    print(" \n --------------------------------------------------")
+    print("Efficiency: ", '%.2f' % (efficiency * 100), "%")
+    print("The back work ratio: ", '%.2f' % (bwr * 100), "%")
+    print("The mass flow rate: ",  '%.2f' % mdot, "%")
+    print('The rate of heat transfer as the fluid passes the boiler: ',
+          '%.2f' % b.Qindot, 'MW')
+    print('The rate of heat transfer from the condensing steam: ',
+          '%.2f' % c.Qoutdot, 'MW')
+    print('The mass flow rate of the condenser cooling water: ', '%.2f' %
+          c.mcwdot, 'kg/h')
 
 
 if __name__ == '__main__':
-    nds_filename = 'rankine81-nds.csv'
-    dev_filename = 'rankine81-dev.csv'
-    c81 = RankineCycle("Rankine81", nds_filename,  dev_filename)
-    c81.state()
-    c81.simulate()
-    # Specified Net Output Power
-    Wcycledot = 100
-    c81.spower_simulate(Wcycledot)
-    c81.cw_simulate()
-    c81.export()
+    RankineCycle()
