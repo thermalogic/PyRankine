@@ -165,6 +165,8 @@ Engineering Model:
 
   * ACHP: https://github.com/TSTK/ACHP 
 
+  * Rankine Cycle (Steam Turbine)  http://cn.mathworks.com/help/physmod/simscape/examples/rankine-cycle-steam-turbine.html
+
 *  Electronic circuit simulator 
 
    * Jan M. Rabaey: SPICE http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/
