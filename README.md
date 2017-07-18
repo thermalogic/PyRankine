@@ -149,23 +149,29 @@ Engineering Model:
 
   * Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
 
-* Modeling and Simulation about ThermoCycle
+* Modeling and Simulation of Engineering Systems
 
   * R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+
+  * Wolfgang Borutzky, Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science+Business Media, LLC 2011
 
   * Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
   * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
-  * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html
+    * https://github.com/OpenModelica
 
-     * Rankine Cycle (Steam Turbine)  http://cn.mathworks.com/help/physmod/simscape/examples/rankine-cycle-steam-turbine.html
-  
-  * Maarten Winter: pyDNA https://github.com/mwoc/pydna
+  * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html  
 
-  * ORC Modeling Kit: https://github.com/orcmkit/ORCmKit
+* ThermoCycle Simulator 
 
-  * ACHP: https://github.com/TSTK/ACHP 
+    * Maarten Winter: pyDNA https://github.com/mwoc/pydna
+
+    * ORC Modeling Kit: https://github.com/orcmkit/ORCmKit
+
+    * ACHP: https://github.com/TSTK/ACHP 
+
+    * Rankine Cycle (Steam Turbine) http://cn.mathworks.com/help/physmod/simscape/examples/rankine-cycle-steam-turbine.html
 
 *  Electronic circuit simulator 
 
