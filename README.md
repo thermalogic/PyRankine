@@ -153,7 +153,7 @@ Engineering Model:
 
   * R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
 
-  * Wolfgang Borutzky, Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science+Business Media, LLC 2011
+  * Wolfgang Borutzky, Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
 
   * Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
@@ -163,7 +163,7 @@ Engineering Model:
 
   * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html  
 
-* ThermoCycle Simulator 
+* Thermo Cycle Simulator 
 
     * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
