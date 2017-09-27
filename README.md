@@ -30,9 +30,9 @@ Step by step codes of the rankine cycle simulator to demonstrate:
                        
 **You need to**
  
-*  reading the codes
-*  understanding computational thinking and programming skills
-*  programing one solution to the  rankine cycle 
+* reading the codes
+* understanding computational thinking and programming skills
+* programing one solution to the  rankine cycle 
 
 ## Dependencies：libseuif97
 
@@ -153,7 +153,7 @@ Engineering Model:
 
   * R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
 
-  * Wolfgang Borutzky, Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
+  * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
 
   * Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
@@ -188,6 +188,3 @@ Engineering Model:
   * Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
 
   * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/
-
-
-
