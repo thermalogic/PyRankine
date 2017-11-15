@@ -1,5 +1,5 @@
 """
-components package of the General Simulator of Rankine Cycle 
+Components Package of the General Simulator of Rankine Cycle 
 
 """
 

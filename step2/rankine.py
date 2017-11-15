@@ -1,9 +1,7 @@
 """
-Step 1  
-
-Step by step codes of the ideal rankine cycle simulator to demonstrate: 
-
-   Data Structures+ Algorithms = Programs
+Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+     
+       object-oriented programming
 
 The ideal rankine cycle as 
    

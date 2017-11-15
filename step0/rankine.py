@@ -1,9 +1,7 @@
 """
-Step 0  
-
-Step by step codes of the ideal rankine cycle simulator to demonstrate: 
-
-   Data Structures+ Algorithms = Programs
+Step 0： Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+                    
+        simple data type and expression  only 
 
 The ideal rankine cycle as 
    

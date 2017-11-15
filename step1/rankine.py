@@ -1,12 +1,8 @@
 
 """
-Step 1  
-
-Step by step codes of the ideal rankine cycle simulator to demonstrate: 
-
-   Data Structures+ Algorithms = Programs
-
-    list, dict,function
+Step 1: Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+                    
+       list,dict,function
 
 The ideal rankine cycle as 
    

@@ -1,6 +1,6 @@
 # PyRankine 
 
- ## Step4: The General Simulator of RankineCycle
+ ## Step4: The General Simulator of Rankine Cycle
 
   * Examples of Rankine Cycle
  
@@ -12,9 +12,9 @@
 
     * EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
-## Python
+## Notes on Python
 
-* Packages
+* 1 Packages
    
    https://docs.python.org/3.6/tutorial/modules.html#packages
 
@@ -48,7 +48,7 @@ Yet another variation is to import **the desired function or variable** directly
 from components.node import Node
 ```
 
-* Redirect **stdout** to a file
+* 2 Redirect **stdout** to a file
 
 29.1. sys — System-specific parameters and functions
 

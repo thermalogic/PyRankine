@@ -1,32 +1,33 @@
 # PyRankine
 
-Step by step codes of the rankine cycle simulator to demonstrate: 
+Step by step codes of the rankine cycle simulator to demonstrate:
 
   * **Data Structures + Algorithms = Programs** 
   * **Computational Thinking** 
 
-     * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+    * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
                     simple data type and expression  only
 
-     * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+    * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
                     list,dict,function
      
-     * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+    * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
      
                    object-oriented programming
      
-     * step 3 : Forward @  Data Structures,Program architecture, Algorithms
+    * step 3 : Forward @  Data Structures,Program architecture, Algorithms
      
                    object-oriented programming and data files
      
-     * step 4 : Forward @  Data Structures,Program architecture, Algorithms
+    * step 4 : Advanced @  Data Structures,Program architecture, Algorithms
                 
-                object-oriented programming,general module
-               
-                Example 8.1 The Ideal Rankine Cycle
-                Example 8.5 A Regenerative Cycle with Open Feedwater Heater
+                   object-oriented programming,general module
+                      
+                       Michael J . Mora. Chapter 8 : Vapour Power Systems 
+                         1) Example 8.1: The Ideal Rankine Cycle, Page 438
+                         2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
                        
 **You need to**
  
@@ -36,8 +37,9 @@ Step by step codes of the rankine cycle simulator to demonstrate:
 
 ## Dependencies：libseuif97
 
-* IF97 high-speed shared library (Windows)
-  * https://github.com/PySEE/EDUIF97
+* IF97 high-speed shared library
+
+  * https://github.com/thermalogic/SEUIF97
 
 ## Step by step Codes
 
@@ -64,12 +66,10 @@ StartNB.bat
 * Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
       Chapter 8 : Vapour Power Systems 
-       
-        Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+        1) Example 8.1: Analyzing an Ideal Rankine Cycle, Page 438
+        2) Example 8.5：A Regenerative Cycle with Open Feedwater Heater, Page 456
 
-        EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
-
-####  Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+####  Example 8.1: Analyzing an Ideal Rankine Cycle  Page 438
 
    * Steam is the working fluid in an ideal Rankine cycle. 
 
@@ -97,7 +97,7 @@ StartNB.bat
 
   * the mass flow rate of the condenser cooling water, in kg/h
 
-####  Example 8.5: A Regenerative Cycle with Open Feedwater Heater  Page 456
+####  Example 8.5: A Regenerative Cycle with Open Feedwater Heater, Page 456
 
 Consider a regenerative vapor power cycle with one open feedwater heater.
 
@@ -163,6 +163,10 @@ Engineering Model:
 
   * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html  
 
+  * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
+
+  * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08
+
 * Thermo Cycle Simulator 
 
     * Maarten Winter: pyDNA https://github.com/mwoc/pydna
@@ -171,15 +175,17 @@ Engineering Model:
 
     * ACHP: https://github.com/TSTK/ACHP 
 
-    * Rankine Cycle (Steam Turbine) http://cn.mathworks.com/help/physmod/simscape/examples/rankine-cycle-steam-turbine.html
+    * Rankine Cycle(Steam Turbine) http://cn.mathworks.com/help/physmod/simscape/examples/rankine-cycle-steam-turbine.html
 
 *  Electronic circuit simulator 
 
    * Jan M. Rabaey: SPICE http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/
 
-   * SPICE: https://en.wikipedia.org/wiki/SPICE
+      * SPICE: https://en.wikipedia.org/wiki/SPICE
 
    * ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
+
+   * 杨华中等. 电子电路的计算机辅助分析和设计方法（第二版），清华大学出版社，北京，2008.02
 
 * Others
 
