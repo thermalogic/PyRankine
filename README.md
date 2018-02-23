@@ -33,13 +33,13 @@ Step by step codes of the rankine cycle simulator to demonstrate:
  
 * reading the codes
 * understanding computational thinking and programming skills
-* programing one solution to the  rankine cycle 
+* programming one solution to the  rankine cycle 
 
 ## Dependencies：libseuif97
 
 * IF97 high-speed shared library
 
-  * https://github.com/thermalogic/SEUIF97
+  * https://github.com/PySEE/SEUIF97
 
 ## Step by step Codes
 
