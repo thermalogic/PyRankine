@@ -1,7 +1,7 @@
 """
 Step 1  
 
-Step by step codes of the ideal rankine cycle simulator to demonstrate: 
+Step-by-step codes of the ideal rankine cycle simulator to demonstrate: 
 
    Data Structures+ Algorithms = Programs
 

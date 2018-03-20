@@ -1,3 +1,12 @@
+"""
+Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+     
+       object-oriented programming
+
+Node
+
+"""
+
 import seuif97 as if97
 
 

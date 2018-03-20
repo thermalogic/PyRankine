@@ -2,7 +2,7 @@
 """
 Step 1  
 
-Step by step codes of the ideal rankine cycle simulator to demonstrate: 
+Step-by-step codes of the ideal rankine cycle simulator to demonstrate: 
 
    Data Structures+ Algorithms = Programs
 
@@ -85,5 +85,4 @@ def CalState():
     s[3]=s[2]
     t[3]=ps2t(p[3],s[3]) 
     h[3] = h[2] + v[2]*(p[3]-p[2])*10**6*10**-3    # kj/kg
-    
     return (p,t,h,s,v,x)

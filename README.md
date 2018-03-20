@@ -1,6 +1,6 @@
 # PyRankine
 
-Step by step codes of the rankine cycle simulator to demonstrate:
+Step-by-step codes of the rankine cycle simulator to demonstrate:
 
   * **Data Structures + Algorithms = Programs** 
   * **Computational Thinking** 
@@ -17,7 +17,7 @@ Step by step codes of the rankine cycle simulator to demonstrate:
      
                    object-oriented programming
      
-    * step 3 : Forward @  Data Structures,Program architecture, Algorithms
+    * step 3 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
      
                    object-oriented programming and data files
      
@@ -41,7 +41,7 @@ Step by step codes of the rankine cycle simulator to demonstrate:
 
   * https://github.com/PySEE/SEUIF97
 
-## Step by step Codes
+## Step-by-step Codes
 
 * Jupyter Notebook
 
