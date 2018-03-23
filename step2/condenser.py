@@ -5,6 +5,14 @@ Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal R
 
 Condenser
 
+                    ↓   inletNode exhausted steam
+                ┌───┴───┐
+                │       │ 
+                │       │
+                │       │
+                └───┬───┘  
+                    ↓    exitNode condensate water 
+
 """
 
 import node

@@ -5,6 +5,13 @@ Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal R
 
 Boiler
 
+                    ↑    exitNode main steam
+                ┌───┼───┐
+                │   │   │
+                │   │   │
+                │   │   │
+                └───┼───┘  
+                    ↑    inletNode main feedwater   
 """
 
 import node

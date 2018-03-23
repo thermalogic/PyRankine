@@ -5,6 +5,13 @@ Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal R
 
 Turbine
 
+         inletNode inlet steam   
+                 ┌────────┐
+              ↓ ╱         │ 
+               ┤          │
+                ╲         │
+                 └────────┤
+                          ↓  exitNode exhausted steam   
 """
 
 import node

@@ -6,6 +6,13 @@ Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal R
 
 Pump
 
+                ┌───────┐
+                │       │
+    exitNode  ← ┼───────┼← inletNode
+                │       │
+                └───────┘  
+  
+
 """
 import node
 
