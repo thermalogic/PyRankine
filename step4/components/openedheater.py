@@ -21,6 +21,7 @@ from .node import *
 class Openedheater:
   
     energy = 'internel'
+    devTYPE="OH-FEEDWATER-DW0"
     
     def __init__(self, name, inNode, inNode_fw, outNode_fw):
         """

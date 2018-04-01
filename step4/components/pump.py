@@ -21,6 +21,7 @@ from .node import *
 class Pump():
     
     energy = "workRequired"
+    devTYPE="PUMP"
 
     def __init__(self, name, inNode, outNode, ef=100.0):
         """

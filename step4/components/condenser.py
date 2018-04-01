@@ -24,6 +24,7 @@ from .node import *
 class Condenser:
 
     energy = "heatExtracted"
+    devTYPE="CONDENSER"
 
     def __init__(self, name, inNode, outNode):
         """ Initializes the condenser """

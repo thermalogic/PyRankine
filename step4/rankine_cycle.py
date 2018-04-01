@@ -22,6 +22,9 @@ from components.turbine import Turbine
 from components.condenser import Condenser
 from components.pump import Pump
 
+# for running python through CMD in VS code under windows only
+import win_unicode_console
+win_unicode_console.enable()
 
 def read_nodesfile(filename):
     """ csvfile：node's info in the file"""
@@ -227,9 +230,11 @@ class RankineCycle(object):
             'totalWRequired(MW)', self.totalWRequired))
         print("{:>20} {:>.2f} \n".format('totalQAdded(MW)', self.totalQAdded))
 
+        # output nodes    
         print(Node.nodetitle)
         for node in self.nodes:
             print(node)
+        # output devices    
         for key in self.Comps:
             print(self.Comps[key].export(self.nodes))
 

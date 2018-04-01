@@ -24,6 +24,7 @@ from .node import *
 class Turbine(object):
 
     energy = 'workExtracted'
+    devTYPE ='TURBINE-EX1'
 
     def __init__(self, name, inNode, outNode, extNode=None, ef=100.0):
         self.name = name

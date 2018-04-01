@@ -23,6 +23,7 @@ from .node import *
 class Boiler:
   
     energy = "heatAdded"
+    devTYPE="BOILER"
 
     def __init__(self, name, inNode, outNode):
         """
