@@ -13,6 +13,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
 import sys
+import datetime
 import numpy as np
 
 from components.node import Node
@@ -23,8 +24,8 @@ from components.condenser import Condenser
 from components.pump import Pump
 
 # for running python through CMD in VS code under windows only
-import win_unicode_console
-win_unicode_console.enable()
+# import win_unicode_console
+# win_unicode_console.enable()
 
 def read_nodesfile(filename):
     """ csvfile：node's info in the file"""
@@ -217,7 +218,7 @@ class RankineCycle(object):
             datafile = open(outfilename, 'w', encoding='utf-8')
             sys.stdout = datafile
 
-        print("\n  \t%s" % self.name)
+        print("\n Rankine Cycle: %s, Time: %s" %(self.name,str(datetime.datetime.now())))
         print("{:>20} {:>.2f}".format('Net Power(MW)', self.Wcycledot))
         print("{:>20} {:>.2f}".format('Mass Flow(kg/h)', self.mdot))
         print("{:>20} {:>.2f}".format('Efficiency(%)', self.efficiency))
