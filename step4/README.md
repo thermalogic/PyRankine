@@ -16,6 +16,12 @@ Chapter 8 : Vapour Power Systems Example
 
 * EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
+## Run
+
+```bash
+>cd step4-csv/step4-json
+>python rankine.py
+```
 
 ## Notes on Python
 
@@ -77,12 +83,6 @@ sys.stdout = open('Redirect2file.txt', 'w')
 print('Test: redirect sys.stdout to file')
 ```
 
-## Run
-
-```bash
->cd step4-csv/step4-json
->python rankine.py
-```
 
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
 
