@@ -1,7 +1,0 @@
-NAME,TYPE,EFF,NODES
-Turbine,TURBINE-EX1,85,0,2,1
-Condenser,CONDENSER,,2,3,
-Condensate Pump,PUMP,100,3,4,
-Opened Feedwater Heater,OH-FEEDWATER-DW0,,1,4,5
-Feedwater Pump,PUMP,100,5,6,
-Boiler,BOILER,,6,0,

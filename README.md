@@ -21,9 +21,9 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
      
                    object-oriented programming and data files: 
                    
-                   **step3-csv**: csv files 
+                  step3-csv: csv file 
 
-                   **step3-json**: json file
+                  step3-json: json file
 
     * step 4 : Advanced @  Data Structures,Program architecture, Algorithms
                 
@@ -32,6 +32,10 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
                        Michael J . Mora. Chapter 8 : Vapour Power Systems 
                          1) Example 8.1: The Ideal Rankine Cycle, Page 438
                          2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
+
+                  step4-csv: csv file
+
+                  step4-json: json file       
                        
 **You need to**
  
