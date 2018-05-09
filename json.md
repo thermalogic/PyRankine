@@ -113,7 +113,6 @@ A string is very much like a `C` or `Java` string.
 }
 ```
 
-
 ## Python3:19.2. json — JSON encoder and decoder
 
 https://docs.python.org/3/library/json.html
