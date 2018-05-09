@@ -13,10 +13,10 @@
             "id": 1,
             "p": 0.008,
             "t": null,
-            "x": 0
+            "x": null
         },
         {
-            "name": "Condenser Water,",
+            "name": "Condenser Water",
             "id": 2,
             "p": 0.008,
             "t": null,
@@ -27,7 +27,7 @@
             "id": 3,
             "p": 8,
             "t": null,
-            "x": 0
+            "x": null
         }
     ],
     "comps": [
