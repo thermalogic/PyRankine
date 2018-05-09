@@ -23,7 +23,7 @@ json object example
             "extNode": 1
       } 
 
-  Last updated: 2017.05.05
+  Last updated: 2018.05.10
   
   Author:Cheng Maohua  Email: cmh@seu.edu.cn
 

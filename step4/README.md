@@ -1,26 +1,25 @@
 # PyRankine 
 
- ## Step4: The General Simulator of Rankine Cycle
+## Step4: The General Simulator of Rankine Cycle
 
- **step4-csv:** csv file
+    step4-csv: csv file
 
- **step4-json:** json files
+    step4-json: json file
 
-  * Examples of Rankine Cycle
+### Examples of Rankine Cycle
  
-    Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
-    Chapter 8 : Vapour Power Systems Example
+Chapter 8 : Vapour Power Systems Example
 
-    * EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
+* EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
 
-    * EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
-
+* EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
 
 ## Notes on Python
 
-* 1 Packages
+### 1 Packages
    
    https://docs.python.org/3.6/tutorial/modules.html#packages
 
@@ -54,7 +53,7 @@ Yet another variation is to import **the desired function or variable** directly
 from components.node import Node
 ```
 
-* 2 Redirect **stdout** to a file
+### 2 Redirect **stdout** to a file
 
 29.1. sys — System-specific parameters and functions
 
@@ -81,7 +80,7 @@ print('Test: redirect sys.stdout to file')
 ## Run
 
 ```bash
->cd step4
+>cd step4-csv/step4-json
 >python rankine.py
 ```
 
