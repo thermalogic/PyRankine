@@ -19,8 +19,12 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
      
     * step 3 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
      
-                   object-oriented programming and data files
-     
+                   object-oriented programming and data files: 
+                   
+                   **step3-csv**: csv files 
+
+                   **step3-json**: json file
+
     * step 4 : Advanced @  Data Structures,Program architecture, Algorithms
                 
                    object-oriented programming,general module
