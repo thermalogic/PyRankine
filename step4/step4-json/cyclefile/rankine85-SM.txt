@@ -1,0 +1,65 @@
+
+ Rankine Cycle: Rankine85, Time: 2018-05-09 23:43:31.340371
+       Net Power(MW) 130.95
+     Mass Flow(kg/h) 540000.00
+       Efficiency(%) 35.87
+   Heat Rate(kJ/kWh) 10037.43
+  Steam Rate(kg/kWh) 4.12
+ totalWExtracted(MW) 132.25
+  totalWRequired(MW) 1.30
+     totalQAdded(MW) 365.11 
+
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  0    	 Boiler to Turbine              	  8.000	 400.000	 3139.31	  6.37 	   0.034	   1.0	 1.0000	 540000.00
+  1    	 Extracted Steam To Opened FWH  	  0.700	 164.953	 2692.13	  6.55 	   0.263	 0.966	 0.2076	 112091.80
+  2    	 Exhausted Steam to CD          	  0.008	  41.510	 2143.86	  6.85 	  14.842	  0.82	 0.7924	 427908.20
+  3    	 Condensate Water to CDW Pump   	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+  4    	 CDW Pump to Opened FWH         	  0.700	  41.531	  174.55	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+  5    	 Opened FWH to FW Pump          	  0.700	 164.953	  697.14	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+  6    	 FW Pump to Boiler              	  8.000	 165.858	  705.23	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+
+Turbine
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  0    	 Boiler to Turbine              	  8.000	 400.000	 3139.31	  6.37 	   0.034	   1.0	 1.0000	 540000.00
+  2    	 Exhausted Steam to CD          	  0.008	  41.510	 2143.86	  6.85 	  14.842	  0.82	 0.7924	 427908.20
+  1    	 Extracted Steam To Opened FWH  	  0.700	 164.953	 2692.13	  6.55 	   0.263	 0.966	 0.2076	 112091.80
+workExtracted(kJ/kg): 	881.64 
+WExtracted(MW): 	132.25
+
+Condenser
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  2    	 Exhausted Steam to CD          	  0.008	  41.510	 2143.86	  6.85 	  14.842	  0.82	 0.7924	 427908.20
+  3    	 Condensate Water to CDW Pump   	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+heatExtracted(kJ/kg)  	1561.08 
+QExtracted(MW): 	234.16
+
+Condensate Pump
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  3    	 Condensate Water to CDW Pump   	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+  4    	 CDW Pump to Opened FWH         	  0.700	  41.531	  174.55	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+workRequired(kJ/kg): 	0.55
+WRequired(MW): 	0.08
+
+Opened Feedwater Heater
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  1    	 Extracted Steam To Opened FWH  	  0.700	 164.953	 2692.13	  6.55 	   0.263	 0.966	 0.2076	 112091.80
+  4    	 CDW Pump to Opened FWH         	  0.700	  41.531	  174.55	  0.59 	   0.001	   0.0	 0.7924	 427908.20
+  5    	 Opened FWH to FW Pump          	  0.700	 164.953	  697.14	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+heatAdded(kJ/kg) 	522.59
+heatExtracted(kJ/kg) 	522.59
+QAdded(MW) 	78.39
+QExtracted(MW)  	78.39
+
+Feedwater Pump
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  5    	 Opened FWH to FW Pump          	  0.700	 164.953	  697.14	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+  6    	 FW Pump to Boiler              	  8.000	 165.858	  705.23	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+workRequired(kJ/kg): 	8.09
+WRequired(MW): 	1.21
+
+Boiler
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  6    	 FW Pump to Boiler              	  8.000	 165.858	  705.23	  1.99 	   0.001	   0.0	 1.0000	 540000.00
+  0    	 Boiler to Turbine              	  8.000	 400.000	 3139.31	  6.37 	   0.034	   1.0	 1.0000	 540000.00
+heatAdded(kJ/kg) 	2434.08 
+QAdded(MW) 	365.11
