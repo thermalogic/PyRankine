@@ -21,7 +21,7 @@ Chapter 8 : Vapour Power Systems Example
 ## Run
 
 ```bash
->cd step4-csv/step4-json
+>cd step4-csv/step4-json/step4-json-dict
 >python rankine.py
 ```
 
