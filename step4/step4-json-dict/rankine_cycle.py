@@ -7,8 +7,7 @@ Main Module of the General Simulator of Rankine Cycle
 
     2 SimRankineCycle: the simulator of Rankine Cycle 
   
-Last updated: 2017.05.05
-
+Last updated: 2018.05.10
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """

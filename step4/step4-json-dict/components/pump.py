@@ -20,7 +20,6 @@ The General Simulator of Rankine Cycle
         }
 
   Last updated: 2018.05.08
-  
   Author:Cheng Maohua  Email: cmh@seu.edu.cn               
 
 """

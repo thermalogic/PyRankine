@@ -11,9 +11,6 @@ The General Simulator of Rankine Cycle
                 └───┼───┘  
                     ↑    inNode main feedwater   
 
- Last updated: 2017.05.05
-
- Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 
  json object example:
 
@@ -23,6 +20,10 @@ The General Simulator of Rankine Cycle
             "inNode": 6,
             "outNode": 0
         }
+
+ Last updated: 2018.05.10
+
+ Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 
 """
 

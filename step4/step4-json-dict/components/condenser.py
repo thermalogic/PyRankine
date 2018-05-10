@@ -20,8 +20,7 @@ json object example:
             "outNode": 3
    },                   
 
-   Last updated: 2018.05.08
-
+   Last updated: 2018.05.10
    Author:Cheng Maohua  Email: cmh@seu.edu.cn                   
 
 """

@@ -24,7 +24,6 @@ json object example
       } 
 
   Last updated: 2017.05.05
-  
   Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
