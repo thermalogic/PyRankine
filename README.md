@@ -36,7 +36,10 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
                   step4-csv: csv file
 
                   step4-json: json file       
-                       
+
+                  step4-json-dict: json file  and  __init__ device with dict      
+                  
+
 **You need to**
  
 * reading the codes
