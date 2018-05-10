@@ -6,6 +6,8 @@
 
     step4-json: json file
 
+    step4-json-dict: json file and  __init__ device with dict
+
 ### Examples of Rankine Cycle
  
 Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
