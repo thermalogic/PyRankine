@@ -93,6 +93,20 @@ r'' raw string literals produce a string just like a normal string literal does
 nds_filesname_str=r'./cyclefile/rankine85-nds.csv'
 ```
 
+### 4 glob — Unix style pathname pattern expansion
+
+https://docs.python.org/3.6/library/glob.html
+
+The `glob` module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde(~) expansion is done, but `*`, `?`, and character `ranges` expressed with `[]` will be correctly matched
+
+```python
+nds_filesname_str=r'./cyclefile/rankine8?-nds.csv
+```
+
+```python
+json_filesname_str=r'./cyclefile/rankine8[0-9].json'
+```
+
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
 
 Steam is the working fluid in an ideal Rankine cycle. 
