@@ -101,10 +101,12 @@ The `glob` module finds all the pathnames matching a specified pattern according
 
 ```python
 nds_filesname_str=r'./cyclefile/rankine8?-nds.csv
+nds_filesname=glob.glob(nds_filesname_str)
 ```
 
 ```python
 json_filesname_str=r'./cyclefile/rankine8[0-9].json'
+json_filesname=glob.glob(json_filesname_str)
 ```
 
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
