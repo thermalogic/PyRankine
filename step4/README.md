@@ -87,7 +87,7 @@ print('Test: redirect sys.stdout to file')
 
 ### 3 r'' raw string literals 
 
-r'' raw string literals produce a string just like a normal string literal does, with the exception to how it handles escape codes
+r'' raw string literals produce a string just like a normal string literal does
 
 ```python
 nds_filesname_str=r'./cyclefile/rankine85-nds.csv'
