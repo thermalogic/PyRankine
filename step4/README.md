@@ -100,11 +100,15 @@ https://docs.python.org/3.6/library/glob.html
 The `glob` module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde(~) expansion is done, but `*`, `?`, and character `ranges` expressed with `[]` will be correctly matched
 
 ```python
+import glob
+
 nds_filesname_str=r'./cyclefile/rankine8?-nds.csv
 nds_filesname=glob.glob(nds_filesname_str)
 ```
 
 ```python
+import glob
+
 json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 json_filesname=glob.glob(json_filesname_str)
 ```
