@@ -11,7 +11,7 @@
 
 * 2 An **ordered** `list` of values. In most languages, this is realized as an `array`, `vector`, `list`, or `sequence`.
 
-###  In `JSON`, they take on these `forms`:
+###  In `JSON`, they take on these `forms`
 
 #### 1 An `object` is an `unordered` set of `name/value` pairs.
 
@@ -21,17 +21,17 @@
 
 * The `name/value` pairs are `separated` by `, `(comma)
 
-### 2 An `array` is an `ordered` collection of **values**. 
+### 2 An `array` is an `ordered` collection of **values**
 
 * An array begins with `[` (left bracket) and ends with `]` (right bracket).
 
 * Values are separated by `,` (comma).
 
-#### 3 A `value` can be a `string` in double quotes("), or a `number`, or `true` or `false` or `null`, or an `object` or an `array`. 
+#### 3 A `value` can be a `string` in double quotes("), or a `number`, or `true` or `false` or `null`, or an `object` or an `array`
 
 These structures can be **nested**.
 
-#### 4 A **string** is a sequence of zero or more `Unicode` characters, wrapped in `double` quotes(`"`), using backslash escapes(`\`). 
+#### 4 A **string** is a sequence of zero or more `Unicode` characters, wrapped in `double` quotes(`"`), using backslash escapes(`\`)
 
 A `character` is represented as a single character `string`. 
 

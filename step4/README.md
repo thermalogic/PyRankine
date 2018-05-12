@@ -85,6 +85,13 @@ sys.stdout = open('Redirect2file.txt', 'w')
 print('Test: redirect sys.stdout to file')
 ```
 
+### 3 r'' raw string literals 
+
+r'' raw string literals produce a string just like a normal string literal does, with the exception to how it handles escape codes
+
+```python
+nds_filesname_str=r'./cyclefile/rankine85-nds.csv'
+```
 
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
 
