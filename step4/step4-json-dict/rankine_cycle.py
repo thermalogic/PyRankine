@@ -14,7 +14,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 import sys
 import datetime
 import numpy as np
-import  json
+import json
 
 from components.node import Node
 from components.boiler import Boiler
@@ -24,71 +24,72 @@ from components.condenser import Condenser
 from components.pump import Pump
 
 # -------------------------------------------------------------------
-# compdict 
+# compdict
 #  1: key:value-> Type String: class  name
 #  2  add the new key:value to the dict after you and the new device class/type
-#--------------------------------------------------------------------------
+# --------------------------------------------------------------------------
 
-compdict={
-    "BOILER":Boiler,
-    "CONDENSER":Condenser,
-    "TURBINE-EX1":Turbine,
-    "TURBINE-EX0":Turbine,
-    "PUMP":Pump,
-    "OH-FEEDWATER-DW0":Openedheater
+compdict = {
+    "BOILER": Boiler,
+    "CONDENSER": Condenser,
+    "TURBINE-EX1": Turbine,
+    "TURBINE-EX0": Turbine,
+    "PUMP": Pump,
+    "OH-FEEDWATER-DW0": Openedheater
 }
 
 
 def read_jsonfile(filename):
     """ rankine cycle in json file"""
 
-     # 1 read json file to dict 
+    # 1 read json file to dict
     with open(filename, 'r') as f:
         rkcyc = json.loads(f.read())
 
-    # print(rkcyc)   
-    name=rkcyc["name"]
-    dictnodes=rkcyc["nodes"]
-    dictcomps=rkcyc["comps"]
+    # print(rkcyc)
+    name = rkcyc["name"]
+    dictnodes = rkcyc["nodes"]
+    dictcomps = rkcyc["comps"]
 
     # 2 convert dict nodes to the object nodes
-    countNodes=len(dictnodes)
+    countNodes = len(dictnodes)
     nodes = [None for i in range(countNodes)]
-    for curnode in  dictnodes:
+    for curnode in dictnodes:
         i = int(curnode['id'])
         nodes[i] = Node(curnode['name'], i)
         try:
-           nodes[i].p = float(curnode['p'])
+            nodes[i].p = float(curnode['p'])
         except:
-           nodes[i].p=None
+            nodes[i].p = None
         try:
             nodes[i].t = float(curnode['t'])
-        except:  
-            nodes[i].t=None
+        except:
+            nodes[i].t = None
         try:
-          nodes[i].x = float(curnode['x'])
-        except:  
-            nodes[i].x=None  
-        try:    
+            nodes[i].x = float(curnode['x'])
+        except:
+            nodes[i].x = None
+        try:
             nodes[i].fdot = float(curnode['fdot'])
-        except: 
-            nodes[i].fdot =None
+        except:
+            nodes[i].fdot = None
 
-        if nodes[i].p!=None and nodes[i].t != None:
+        if nodes[i].p != None and nodes[i].t != None:
             nodes[i].pt()
-        elif nodes[i].p!=None and nodes[i].x!=None:
+        elif nodes[i].p != None and nodes[i].x != None:
             nodes[i].px()
-        elif nodes[i].t!=None and nodes[i].x!=None:
+        elif nodes[i].t != None and nodes[i].x != None:
             nodes[i].tx()
-    
+
     # 3 convert dict Comps to the object Comps
-    DevNum=len(dictcomps)
+    DevNum = len(dictcomps)
     Comps = {}
     for curdev in dictcomps:
         Comps[curdev['name']] = compdict[curdev['type']](curdev)
-      
-    return  name,nodes, countNodes,Comps, DevNum
-  
+
+    return name, nodes, countNodes, Comps, DevNum
+
+
 class RankineCycle(object):
 
     def __init__(self):
@@ -96,7 +97,7 @@ class RankineCycle(object):
           self.nodes : list of all nodes
           self.Comps : dict of all components
         """
-        self.name =None
+        self.name = None
         self.nodes = []
         self.Comps = {}
         self.NodehNum = 0
@@ -118,7 +119,8 @@ class RankineCycle(object):
         self.fdotok = False
 
     def addRankine(self, filename):
-        self.name,self.nodes, self.NodeNum,self.Comps, self.DevNum = read_jsonfile(filename)
+        self.name, self.nodes, self.NodeNum, self.Comps, self.DevNum = read_jsonfile(
+            filename)
 
     def componentState(self):
         for key in self.Comps:
@@ -202,7 +204,8 @@ class RankineCycle(object):
             datafile = open(outfilename, 'w', encoding='utf-8')
             sys.stdout = datafile
 
-        print("\n Rankine Cycle: %s, Time: %s" %(self.name,str(datetime.datetime.now())))
+        print("\n Rankine Cycle: %s, Time: %s" %
+              (self.name, str(datetime.datetime.now())))
         print("{:>20} {:>.2f}".format('Net Power(MW)', self.Wcycledot))
         print("{:>20} {:>.2f}".format('Mass Flow(kg/h)', self.mdot))
         print("{:>20} {:>.2f}".format('Efficiency(%)', self.efficiency))
@@ -215,11 +218,11 @@ class RankineCycle(object):
             'totalWRequired(MW)', self.totalWRequired))
         print("{:>20} {:>.2f} \n".format('totalQAdded(MW)', self.totalQAdded))
 
-        # output nodes    
+        # output nodes
         print(Node.nodetitle)
         for node in self.nodes:
             print(node)
-        # output devices    
+        # output devices
         for key in self.Comps:
             print(self.Comps[key].export(self.nodes))
 
@@ -231,10 +234,9 @@ class RankineCycle(object):
 class SimRankineCycle(object):
 
     def __init__(self, rankinefilename):
-        self.jsonfilename=rankinefilename
-        self.prefixResultFileName =  rankinefilename[0:-5] #.json
-      
-    
+        self.jsonfilename = rankinefilename
+        self.prefixResultFileName = rankinefilename[0:-5]  # .json
+
     def CycleSimulator(self):
         self.cycle = RankineCycle()
         self.cycle.addRankine(self.jsonfilename)
