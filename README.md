@@ -7,37 +7,40 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
 
     * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
-                    simple data type and expression  only
+            simple data type and expression  only
 
     * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
-                    list,dict,function
+           list,dict,function
      
     * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
      
-                   object-oriented programming
+           object-oriented programming
      
     * step 3 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+
      
-                   object-oriented programming and data files: 
+      [Rankine Cycle Representation with CSV or JSON File](./step3/README.md)
+     
+          object-oriented programming and data files: 
                    
-                  step3-csv: csv file 
+          step3-csv: csv file 
 
-                  step3-json: json file
-
+          step3-json: json file
+      
     * step 4 : Advanced @  Data Structures,Program architecture, Algorithms
                 
-                   object-oriented programming,general module
+          object-oriented programming,general module
                       
-                       Michael J . Mora. Chapter 8 : Vapour Power Systems 
-                         1) Example 8.1: The Ideal Rankine Cycle, Page 438
-                         2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
+          Michael J . Mora. Chapter 8 : Vapour Power Systems 
+              1) Example 8.1: The Ideal Rankine Cycle, Page 438
+              2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
 
-                  step4-csv: csv file
+          step4-csv: csv file
 
-                  step4-json: json file       
+          step4-json: json file       
 
-                  step4-json-dict: json file  and  __init__ device with dict      
+          step4-json-dict: json file  and  __init__ device with dict      
                   
 
 **You need to**

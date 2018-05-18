@@ -113,6 +113,10 @@ json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 json_filesname=glob.glob(json_filesname_str)
 ```
 
+### 5 Python3:19.2. json — JSON encoder and decoder
+
+https://docs.python.org/3/library/json.html
+
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
 
 Steam is the working fluid in an ideal Rankine cycle. 
