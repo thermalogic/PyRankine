@@ -44,7 +44,7 @@ class Openedheater:
         self.heatExtracted = 0
         self.QExtracted = 0
 
-        self.typeStr = dictDev['type']
+        self.type = dictDev['type']
       
 
         self.fdotok = False

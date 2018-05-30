@@ -44,7 +44,8 @@ def read_jsonfile(filename):
 
     # 1 read json file to dict
     with open(filename, 'r') as f:
-        rkcyc = json.loads(f.read())
+        rkcyc = json.load(f)
+        #rkcyc = json.loads(f.read())
 
     # print(rkcyc)
     name = rkcyc["name"]

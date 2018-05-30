@@ -113,9 +113,52 @@ json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 json_filesname=glob.glob(json_filesname_str)
 ```
 
-### 5 Python3:19.2. json — JSON encoder and decoder
+### 5 json — JSON encoder and decoder
 
-https://docs.python.org/3/library/json.html
+Python3:19.2 https://docs.python.org/3/library/json.html
+
+**json.load**
+
+json.load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, 
+parse_constant=None, object_pairs_hook=None, **kw)
+
+Deserialize fp (a .read()-supporting file-like object containing a JSON document) to a Python object using this conversion table.
+
+**json.loads**
+
+json.loads(s, *, encoding=None, cls=None, object_hook=None, parse_float=None, 
+
+parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)¶
+Deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object using this conversion table.
+
+```python
+def read_jsonfile(filename):
+    """ rankine cycle in json file"""
+
+    # 1 read json file to dict
+    with open(filename, 'r') as f:
+        rkcyc = json.load(f)
+        #rkcyc = json.loads(f.read())
+```
+
+### 6 __dict__
+
+update([other])
+
+  * Update the dictionary with the key/value pairs from other, overwriting existing keys. Return None.
+
+  * `update()` accepts either another dictionary object or an iterable of key/value pairs (as tuples or other iterables of length two). If keyword arguments are specified, the dictionary is then updated with those key/value pairs: d.update(red=1, blue=2).
+
+object.__dict__
+
+*  A dictionary or other mapping object used to store an object’s (writable) attributes.
+
+```python
+class Boiler:
+  
+      def __init__(self,dictDev):
+          self.__dict__.update(dictDev) 
+```    
 
 ## EXAMPLE 8.1 :An Ideal Rankine Cycle  
 

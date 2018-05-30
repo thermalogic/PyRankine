@@ -38,7 +38,7 @@ class Pump():
         self.name = dictDev['name']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.typeStr = dictDev['type']
+        self.type = dictDev['type']
      
         self.ef = dictDev['eff'] / 100.0
 

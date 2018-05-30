@@ -39,11 +39,13 @@ class Boiler:
         """
         Initializes the boiler
         """
-        self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
-        self.typeStr = dictDev['type']
+        self.__dict__.update(dictDev)  
     
+        #self.name = dictDev['name']
+        #self.inNode = dictDev['inNode']
+        #self.outNode = dictDev['outNode']
+        #self.type = dictDev['type']
+        
         self.fdotok = False
 
     def state(self, nodes):

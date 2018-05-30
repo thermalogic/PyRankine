@@ -45,7 +45,7 @@ class Turbine(object):
         except:
            self.extNode=None
 
-        self.typeStr = dictDev['type']
+        self.type = dictDev['type']
         
         self.ef = dictDev['eff'] / 100.0
 
