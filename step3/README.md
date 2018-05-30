@@ -1,10 +1,10 @@
-# Rankine Cycle Representation
+# The Representation of Rankine Cycle Flowsheet.
 
-The first stage in the Rankine Cycle Simulator is to be able to generate a Rankine Cycle schematic.
+The importmant stage in the Rankine Cycle Simulator is to be able to generate a Rankine Cycle Flowsheet.
 
-A Rankine Cycle schematic should be able to describe the `nodes` and `components` present in a Rankine Cycle and also be able to describe how these components are `connected` to each other through `nodes`.
+A Rankine Cycle Flowsheet should be able to describe the `nodes` and `components` present in a Rankine Cycle and also be able to describe how these components are `connected` to each other through `nodes`.
 
-* 1 Rankine Cycle Representation as `.csv` filea
+* 1 Rankine Cycle Representation as `.csv` files
 
 * 2 Rankine Cycle Representation as `JSON` file
 
@@ -33,7 +33,7 @@ A `.csv` file is essentially a `text` file which can be edited  by any Text Edit
 
 ![rankine81](./img/rankine81.jpg)
 
-CSV files of e Rankine Cycle 81 schematic 
+CSV files of the Rankine Cycle 81 Flowsheet 
 
 * `nodes`: [rankine81-nds.csv](./step3-csv/rankine81-nds.csv)
 
@@ -90,18 +90,17 @@ A string is very much like a `C` or `Java` string.
 
 * `nodes`
 
-  The nodes would have `unique ID `(**id**) for the nodes in the Rankine Cycle schematic
+  The nodes would have `unique ID `(**id**) for the nodes in the Rankine Cycle Flowsheet
 
 * `components`
 
-   The components would have `unique symbols`(**type**) for the components in the Rankine Cycle schematic
+   The components would have `unique symbols`(**type**) for the components in the Rankine Cycle Flowsheet
 
-###  Example: the json file of the Rankine Cycle 81 schematic 
+### Example: the JSON representation of the Rankine Cycle 81　Flowsheet
 
 ![rankine81](./img/rankine81.jpg)
 
-
-the json file of the Rankine Cycle 81 schematic: **rankine81.json**
+the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
 
 ```json
 {
