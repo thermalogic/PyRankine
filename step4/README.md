@@ -141,15 +141,15 @@ def read_jsonfile(filename):
         #rkcyc = json.loads(f.read())
 ```
 
-### 6 __dict__
+### 6 object__dict__ & update([other])
 
-update([other])
+**update([other])**
 
   * Update the dictionary with the key/value pairs from other, overwriting existing keys. Return None.
 
   * `update()` accepts either another dictionary object or an iterable of key/value pairs (as tuples or other iterables of length two). If keyword arguments are specified, the dictionary is then updated with those key/value pairs: d.update(red=1, blue=2).
 
-object.__dict__
+**object.\_\_dict__**
 
 *  A dictionary or other mapping object used to store an object’s (writable) attributes.
 
