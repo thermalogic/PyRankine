@@ -31,25 +31,32 @@ from .node import *
 
 
 class Boiler:
-  
-    energy = "heatAdded"
-    devTYPE="BOILER"
 
-    def __init__(self,dictDev):
+    energy = "heatAdded"
+    devTYPE = "BOILER"
+
+    def __init__(self, dictDev):
         """
         Initializes the boiler
         """
-        self.__dict__.update(dictDev)  
-    
-        #self.name = dictDev['name']
-        #self.inNode = dictDev['inNode']
-        #self.outNode = dictDev['outNode']
-        #self.type = dictDev['type']
-        
+        # self.__dict__.update(dictDev)
+
+        self.name = dictDev['name']
+        self.inNode = dictDev['inNode']
+        self.outNode = dictDev['outNode']
+        self.type = dictDev['type']
+        # add nodes
+        self.nodes = [self.inNode, self.outNode]
         self.fdotok = False
 
     def state(self, nodes):
         pass
+
+    # add _fdotok_
+    def _fdotok_(self, nodes):
+        self.fdotok = nodes[self.nodes[0]].fdot != None
+        for node in range(1, len(self.nodes)):
+            self.fdotok = self.fdotok and (nodes[node].fdot != None)
 
     def fdot(self, nodes):
         if (self.fdotok == False):
@@ -59,8 +66,8 @@ class Boiler:
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
 
-                self.fdotok = nodes[self.outNode].fdot != None
-                self.fdotok = self.fdotok and (nodes[self.inNode].fdot != None)
+                # modified self.fdotok
+                self._fdotok_(nodes)
             except:
                 self.fdotok == False
 

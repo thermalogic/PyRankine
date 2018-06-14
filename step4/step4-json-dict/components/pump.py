@@ -27,11 +27,11 @@ from .node import *
 
 
 class Pump():
-    
-    energy = "workRequired"
-    devTYPE="PUMP"
 
-    def __init__(self,dictDev):
+    energy = "workRequired"
+    devTYPE = "PUMP"
+
+    def __init__(self, dictDev):
         """
         Initializes the pump with the conditions
         """
@@ -39,8 +39,11 @@ class Pump():
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.type = dictDev['type']
-     
+
         self.ef = dictDev['eff'] / 100.0
+
+        # add nodes
+        self.nodes = [self.inNode, self.outNode]
 
         self.fdotok = False
 
@@ -55,6 +58,12 @@ class Pump():
         )
         nodes[self.outNode].ph()
 
+    # add _fdotok_
+    def _fdotok_(self, nodes):
+        self.fdotok = nodes[self.nodes[0]].fdot != None
+        for node in range(1, len(self.nodes)):
+            self.fdotok = self.fdotok and (nodes[node].fdot != None)
+
     def fdot(self, nodes):
         if (self.fdotok == False):
             try:
@@ -63,8 +72,8 @@ class Pump():
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
 
-                self.fdotok = nodes[self.outNode].fdot != None
-                self.fdotok = self.fdotok and (nodes[self.inNode].fdot != None)
+                # modified self.fdotok
+                self._fdotok_(nodes)
             except:
                 self.fdotok == False
 

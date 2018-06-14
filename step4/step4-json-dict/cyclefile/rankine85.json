@@ -60,7 +60,7 @@
     ],
     "comps": [
         {
-            "name": "Turbine",
+            "name": "Turbine Ex1",
             "type": "TURBINE-EX1",
             "eff": 85,
             "inNode": 0,

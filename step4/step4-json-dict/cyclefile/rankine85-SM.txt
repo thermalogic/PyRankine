@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine85, Time: 2018-05-30 21:23:55.912134
+ Rankine Cycle: Rankine85, Time: 2018-06-14 17:12:30.244402
        Net Power(MW) 146.41
      Mass Flow(kg/h) 540000.00
        Efficiency(%) 36.91
@@ -18,7 +18,7 @@ NodeID 	              Name              	   P  	    T   	    H   	   S   	    V 
   5    	 Opened FWH to FW Pump          	  0.700	 164.953	  697.14	  1.99 	   0.001	   0.0	 1.0000	 540000.00
   6    	 FW Pump to Boiler              	  8.000	 165.858	  705.23	  1.99 	   0.001	   0.0	 1.0000	 540000.00
 
-Turbine
+Turbine Ex1
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   0    	 Boiler to Turbine              	  8.000	 480.000	 3349.53	  6.66 	   0.040	   1.0	 1.0000	 540000.00
   2    	 Exhausted Steam to CD          	  0.008	  41.510	 2250.10	  7.19 	  15.642	 0.864	 0.8035	 433874.19

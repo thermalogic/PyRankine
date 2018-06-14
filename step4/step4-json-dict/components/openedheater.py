@@ -28,11 +28,11 @@ from .node import *
 
 
 class Openedheater:
-  
+
     energy = 'internel'
-    devTYPE="OH-FEEDWATER-DW0"
-    
-    def __init__(self,dictDev):
+    devTYPE = "OH-FEEDWATER-DW0"
+
+    def __init__(self, dictDev):
         """
         Initializes the Opened feedwater with the conditions
         """
@@ -45,12 +45,19 @@ class Openedheater:
         self.QExtracted = 0
 
         self.type = dictDev['type']
-      
 
+       # add nodes
+        self.nodes = [self.inNode, self.inNode_fw, self.outNode_fw]
         self.fdotok = False
 
     def state(self, nodes):
         pass
+
+     # add _fdotok_
+    def _fdotok_(self, nodes):
+        self.fdotok = nodes[self.nodes[0]].fdot != None
+        for node in range(1, len(self.nodes)):
+            self.fdotok = self.fdotok and (nodes[node].fdot != None)
 
     def fdot(self, nodes):
         if (self.fdotok == False):
@@ -61,11 +68,11 @@ class Openedheater:
                     self.heatExtracted = self.heatAdded
                     nodes[self.inNode].fdot = self.heatExtracted / \
                         (nodes[self.inNode].h - nodes[self.inNode_fw].h)
-                    nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - nodes[self.inNode].fdot
+                    nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - \
+                        nodes[self.inNode].fdot
 
-                self.fdotok = (nodes[self.outNode_fw].fdot != None)
-                self.fdotok = self.fdotok and (nodes[self.inNode_fw].fdot != None)
-                self.fdotok = self.fdotok and (nodes[self.inNode].fdot != None)
+                # modified self.fdotok
+                self._fdotok_(nodes)
             except:
                 self.fdotok = False
 

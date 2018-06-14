@@ -6,7 +6,7 @@
 
     step4-json: json file
 
-    step4-json-dict: json file and  __init__ device with dict
+    step4-json-dict: json file and  __init__ device with dict, modified the component class 
 
 ### Examples of Rankine Cycle
  

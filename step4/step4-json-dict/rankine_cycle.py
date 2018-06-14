@@ -19,7 +19,8 @@ import json
 from components.node import Node
 from components.boiler import Boiler
 from components.openedheater import Openedheater
-from components.turbine import Turbine
+from components.turbineex0 import TurbineEx0
+from components.turbineex1 import TurbineEx1
 from components.condenser import Condenser
 from components.pump import Pump
 
@@ -32,8 +33,8 @@ from components.pump import Pump
 compdict = {
     "BOILER": Boiler,
     "CONDENSER": Condenser,
-    "TURBINE-EX1": Turbine,
-    "TURBINE-EX0": Turbine,
+    "TURBINE-EX1": TurbineEx1,
+    "TURBINE-EX0": TurbineEx0,
     "PUMP": Pump,
     "OH-FEEDWATER-DW0": Openedheater
 }

@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine81, Time: 2018-05-30 21:23:55.904811
+ Rankine Cycle: Rankine81, Time: 2018-06-14 17:12:30.233141
        Net Power(MW) 100.00
      Mass Flow(kg/h) 376776.21
        Efficiency(%) 37.08
@@ -15,7 +15,7 @@ NodeID 	              Name              	   P  	    T   	    H   	   S   	    V 
   2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 376776.21
   3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 376776.21
 
-Turbine
+Turbine Ex0
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 376776.21
   1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 376776.21
