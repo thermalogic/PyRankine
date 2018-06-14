@@ -40,7 +40,7 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
 
           step4-json: json file       
 
-          step4-json-dict: json file  and  __init__ device with dict      
+          step4-json-dict: json file  and  __init__ device with dict,modified the component class       
                   
 
 **You need to**
