@@ -18,7 +18,7 @@ import json
 
 from components.node import Node
 from components.boiler import Boiler
-from components.openedheater import Openedheater
+from components.openedheaterdw0 import OpenedheaterDw0
 from components.turbineex0 import TurbineEx0
 from components.turbineex1 import TurbineEx1
 from components.condenser import Condenser
@@ -36,7 +36,7 @@ compdict = {
     "TURBINE-EX1": TurbineEx1,
     "TURBINE-EX0": TurbineEx0,
     "PUMP": Pump,
-    "OH-FEEDWATER-DW0": Openedheater
+    "FWH-OPENDED-DW0": OpenedheaterDw0
 }
 
 
@@ -221,7 +221,7 @@ class RankineCycle(object):
         print("{:>20} {:>.2f} \n".format('totalQAdded(MW)', self.totalQAdded))
 
         # output nodes
-        print(Node.nodetitle)
+        print(Node.title)
         for node in self.nodes:
             print(node)
         # output devices

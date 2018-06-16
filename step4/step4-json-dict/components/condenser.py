@@ -28,7 +28,7 @@ json object example:
 from .node import *
 
 
-class Condenser:
+class Condenser(object):
 
     energy = "heatExtracted"
     devTYPE="CONDENSER"
@@ -78,7 +78,7 @@ class Condenser:
 
     def export(self, nodes):
         result = '\n' + self.name
-        result += '\n' + Node.nodetitle
+        result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
         result += '\nheatExtracted(kJ/kg)  \t%.2f \nQExtracted(MW): \t%.2f' % (

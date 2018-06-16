@@ -15,7 +15,7 @@ extracted steam  0
 json object example
 
     {
-            "name": "Turbine",
+            "name": "Turbine1",
             "type": "TURBINE-EX0",
             "eff": 100,
             "inNode": 0,
@@ -89,7 +89,7 @@ class TurbineEx0(object):
 
     def export(self, nodes):
         result = '\n' + self.name
-        result += '\n' + Node.nodetitle
+        result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
 

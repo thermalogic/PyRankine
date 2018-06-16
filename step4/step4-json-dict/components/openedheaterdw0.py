@@ -27,10 +27,10 @@ class Openedheater
 from .node import *
 
 
-class Openedheater:
+class OpenedheaterDw0(object):
 
     energy = 'internel'
-    devTYPE = "OH-FEEDWATER-DW0"
+    devTYPE = "FWH-OPENDED-DW0"
 
     def __init__(self, dictDev):
         """
@@ -66,6 +66,7 @@ class Openedheater:
                     self.heatAdded = nodes[self.outNode_fw].fdot * \
                         (nodes[self.outNode_fw].h - nodes[self.inNode_fw].h)
                     self.heatExtracted = self.heatAdded
+                    
                     nodes[self.inNode].fdot = self.heatExtracted / \
                         (nodes[self.inNode].h - nodes[self.inNode_fw].h)
                     nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - \
@@ -92,7 +93,7 @@ class Openedheater:
 
     def export(self, nodes):
         result = '\n' + self.name
-        result += '\n' + Node.nodetitle
+        result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.inNode_fw].__str__()
         result += '\n' + nodes[self.outNode_fw].__str__()

@@ -82,7 +82,7 @@
         },
         {
             "name": "Opened Feedwater Heater",
-            "type": "OH-FEEDWATER-DW0",
+            "type": "FWH-OPENDED-DW0",
             "inNode": 1,
             "inNode_fw": 4,
             "outNode_fw": 5
