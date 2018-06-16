@@ -53,7 +53,7 @@ def read_jsonfile(filename):
     dictnodes = rkcyc["nodes"]
     dictcomps = rkcyc["comps"]
 
-    # 2 convert dict nodes to the object nodes
+    # 2 convert dict to the object of nodes
     countNodes = len(dictnodes)
     nodes = [None for i in range(countNodes)]
     for curnode in dictnodes:
@@ -83,7 +83,7 @@ def read_jsonfile(filename):
         elif nodes[i].t != None and nodes[i].x != None:
             nodes[i].tx()
 
-    # 3 convert dict Comps to the object Comps
+    # 3 convert dict to the object of Comps
     DevNum = len(dictcomps)
     Comps = {}
     for curdev in dictcomps:
@@ -142,12 +142,11 @@ class RankineCycle(object):
                 self.fdotok = True
 
     def cycleSimulator(self):
-        for key in self.Comps:
-            self.Comps[key].simulate(self.nodes)
 
         self.totalworkExtracted = 0
         self.totalworkRequired = 0
         self.totalheatAdded = 0
+
         for key in self.Comps:
             self.Comps[key].simulate(self.nodes)
             if self.Comps[key].energy == "workExtracted":

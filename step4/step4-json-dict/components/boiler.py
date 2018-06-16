@@ -61,6 +61,7 @@ class Boiler(object):
     def fdot(self, nodes):
         if (self.fdotok == False):
             try:
+                # mass blance equation
                 if (nodes[self.inNode].fdot != None):
                     nodes[self.outNode].fdot = nodes[self.inNode].fdot
                 elif (nodes[self.outNode].fdot != None):

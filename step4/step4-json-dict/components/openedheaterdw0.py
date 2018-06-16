@@ -40,7 +40,8 @@ class OpenedheaterDw0(object):
         self.inNode = dictDev['inNode']
         self.inNode_fw = dictDev['inNode_fw']
         self.outNode_fw = dictDev['outNode_fw']
-
+        
+        self.heatAdded=0
         self.heatExtracted = 0
         self.QExtracted = 0
 
@@ -63,12 +64,15 @@ class OpenedheaterDw0(object):
         if (self.fdotok == False):
             try:
                 if (nodes[self.outNode_fw].fdot != None):
+                    # energy blance equation
                     self.heatAdded = nodes[self.outNode_fw].fdot * \
                         (nodes[self.outNode_fw].h - nodes[self.inNode_fw].h)
-                    self.heatExtracted = self.heatAdded
                     
+                    self.heatExtracted = self.heatAdded
+
                     nodes[self.inNode].fdot = self.heatExtracted / \
                         (nodes[self.inNode].h - nodes[self.inNode_fw].h)
+                    # mass blance equation
                     nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - \
                         nodes[self.inNode].fdot
 

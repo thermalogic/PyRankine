@@ -84,6 +84,7 @@ class TurbineEx1(object):
     def fdot(self, nodes):
         if (self.fdotok == False):
             try:
+                # mass blance equation
                 nodes[self.outNode].fdot = nodes[
                     self.inNode].fdot - nodes[self.extNode].fdot
 
