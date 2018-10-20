@@ -1,13 +1,13 @@
 # PyRankine
 
-Step-by-step codes of the rankine cycle simulator to demonstrate:
+The **step-by-step codes** of the rankine cycle simulator to demonstrate:
 
   * **Data Structures + Algorithms = Programs** 
   * **Computational Thinking** 
 
     * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
-            simple data type and expression  only
+            simple data type and expression only 
 
     * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
                     
@@ -20,7 +20,7 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
     * step 3 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
 
      
-      [Rankine Cycle Representation with CSV or JSON File](./step3/README.md)
+      [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
      
           object-oriented programming and data files: 
                    
@@ -41,7 +41,13 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
           step4-json: json file       
 
           step4-json-dict: json file  and  __init__ device with dict,modified the component class       
-                  
+
+## Run
+
+```bash
+>cd step0/1/2/3/4
+>python rankine.py
+``` 
 
 **You need to**
  
@@ -49,33 +55,13 @@ Step-by-step codes of the rankine cycle simulator to demonstrate:
 * understanding computational thinking and programming skills
 * programming one solution to the  rankine cycle 
 
-## Dependencies：libseuif97
+## Dependencies：SEUIF97
 
-* IF97 high-speed shared library
+* IAPWS-IF97 high-speed shared library
 
   * https://github.com/PySEE/SEUIF97
 
-## Step-by-step Codes
-
-* Jupyter Notebook
-
-  * Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0.ipynb
-
-  * Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step1.ipynb
-
-  * Step2 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb
-
-```bash
-StartNB.bat
-```
-* Python
-
-```bash
->cd step0/1/2/3/4
->python rankine.py
-``` 
-
-## Example Rankine Cycle
+## Example Rankine Cycles
 
 * Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
@@ -165,11 +151,9 @@ Engineering Model:
 
 * Modeling and Simulation of Engineering Systems
 
-  * R Sinha, Christiaan J. J. Paredis. etc. Modeling and Simulation Methods for Design of Engineering Systems. Transactions of the ASME[J]. 2001.03(1):84-91
+  * R Sinha, Christiaan J. J. Paredis. etc. **Modeling and Simulation Methods for Design of Engineering Systems**. Transactions of the ASME[J]. 2001.03(1):84-91
 
   * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
-
-  * Process simulation：https://en.wikipedia.org/wiki/Process_simulation
 
   * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
@@ -181,7 +165,7 @@ Engineering Model:
 
   * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08
 
-* Thermo Cycle Simulator 
+* ThermoCycle Simulator 
 
     * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
@@ -205,6 +189,18 @@ Engineering Model:
 
   * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
 
-  * Jeffrey Kantor: Introduction to Chemical Engineering Analysis https://github.com/jckantor/CBE20255
-
   * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/
+
+## Appendix
+
+* The Jupyter Notebook of Ideal Rankine Cycle
+
+  * Step0 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0.ipynb
+
+  * Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step1.ipynb
+
+  * Step2 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb
+
+```bash
+>StartNB.bat
+```
