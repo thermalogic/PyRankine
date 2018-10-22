@@ -25,6 +25,39 @@ Chapter 8 : Vapour Power Systems Example
 >python rankine.py
 ```
 
+## The Modules 
+
+### The Data File of Rankine Cycle
+
+The all data files in the path `./cyclefile`
+
+* `csv's file`
+
+   * `*-dev.csv`: the data file of devices 
+
+   * `*-nds.csv`: the data file of nodes
+
+* `json's file`
+
+   * `*.json`: the data file of devices and nodes
+
+* the output files 
+
+  * `*-SM.txt`: the output of Specified Mass Flow
+
+  * `*-SP.txt`: the output of the Specified Net Output Power
+
+### The Components Class
+
+The all component classes in the package `components` have the same methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
+
+* `fdot`: chech and analysis the mass float rate
+
+### The Rankine Cycle 
+
+* 1 `rankine_cycle.py`:the General Simulator of Rankine Cycle
+* 2 `rankine.py` : the main runner of the General Simulator of Rankine Cycle
+
 ## Notes on Python
 
 ### 1 Packages

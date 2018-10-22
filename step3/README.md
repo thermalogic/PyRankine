@@ -1,4 +1,4 @@
-# The Representation of Rankine Cycle Flowsheet.
+# The Representation of Rankine Cycle Flowsheet
 
 The importmant stage in the Rankine Cycle Simulator is to be able to generate a Rankine Cycle Flowsheet.
 
