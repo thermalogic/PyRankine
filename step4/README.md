@@ -51,7 +51,7 @@ The all data files in the path `./cyclefile`
 
 The all component classes in the package `components` have the same methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
 
-* `fdot`: chech and analysis the mass float rate
+* `fdot`: check and analysis the mass float rate
 
 ### The Rankine Cycle 
 
