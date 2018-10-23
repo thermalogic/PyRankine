@@ -28,12 +28,12 @@ import rankine_cycle as rkc
 
 json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 
-#json_filesname_str=r'./cyclefile/rankine85.jsonv'
+# json_filesname_str=r'./cyclefile/rankine85.jsonv'
     
-json_filesname=glob.glob(json_filesname_str)
+json_filesname = glob.glob(json_filesname_str)
 
 
-cycle=[]
+cycle = []
 for i in range(len(json_filesname)):
     cycle.append(rkc.SimRankineCycle(json_filesname[i]))
     cycle[i].CycleSimulator()
@@ -44,6 +44,6 @@ for i in range(len(json_filesname)):
     cycle[i].SpecifiedNetOutputPowerSimulatorAndOutput(Wcycledot)      
 
 #  Specified Mass Flow (kg/h)   
-mdot= 150*3600 # kg/h   
+mdot = 150 * 3600 # kg/h   
 for i in range(len(json_filesname)):
     cycle[i].SpecifiedMassFlowSimulatorAndOutput(mdot)        
