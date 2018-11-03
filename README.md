@@ -34,7 +34,7 @@ The **step-by-step codes** of the rankine cycle simulator to demonstrate:
                 
           object-oriented programming,general module
                       
-          Michael J . Mora. Chapter 8 : Vapour Power Systems 
+          Michael J . Moran. Chapter 8 : Vapour Power Systems 
               1) Example 8.1: The Ideal Rankine Cycle, Page 438
               2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
 
@@ -65,7 +65,7 @@ The **step-by-step codes** of the rankine cycle simulator to demonstrate:
 
 ## Example Rankine Cycles
 
-* Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+* Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
       Chapter 8 : Vapour Power Systems 
         1) Example 8.1: Analyzing an Ideal Rankine Cycle, Page 438
