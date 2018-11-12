@@ -1,61 +1,54 @@
 # PyRankine
 
 The **step-by-step codes** of the rankine cycle simulator to demonstrate:
+  
+     Computational Thinking， Data Structures + Algorithms = Programs 
 
-  * **Data Structures + Algorithms = Programs** 
-  * **Computational Thinking** 
+* step 0 :  **Zero Abstraction** of The Ideal Rankine Cycle
 
-    * step 0 :    Zero @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
-                    
-            simple data type and expression only 
+      the simple data type and expression only 
 
-    * step 1 :   Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
-                    
-           list,dict,function
-     
-    * step 2 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
-     
-           object-oriented programming
-     
-    * step 3 : Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+* step 1 : **Simple Abstraction** of The Ideal Rankine Cycle
 
-     
-      [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
-     
-          object-oriented programming and data files: 
-                   
-          step3-csv: csv file 
-
-          step3-json: json file
+      structure data type: List,Dict and functions
       
-    * step 4 : Advanced @  Data Structures,Program architecture, Algorithms
+* step 2 : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle
 
-      [The UML diagram of the step4-json](./step4/UML-STEP4-JSON.md)
+      object-oriented programming 
+     
+* step 3 : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle
+     
+     [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
+     
+     object-oriented programming and data files: 
+                   
+       step3-csv: csv file 
+
+       step3-json: json file
+      
+* step 4 : **General Abstraction** and **Data Representation** of Rankine Cycle
+
+     [The UML diagram of the step4-json](./step4/UML-STEP4-JSON.md)
                 
-          object-oriented programming,general module
+     object-oriented programming,general module
                       
-          Michael J . Moran. Chapter 8 : Vapour Power Systems 
-              1) Example 8.1: The Ideal Rankine Cycle, Page 438
-              2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
+      Michael J. Moran. Chapter 8 : Vapour Power Systems 
+          1) Example 8.1: The Ideal Rankine Cycle, Page 438
+          2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
 
-          step4-csv: csv file
+      step4-csv: csv file
 
-          step4-json: json file       
+      step4-json: json file       
 
-          step4-json-dict: json file  and  __init__ device with dict,modified the component class       
+      step4-json-dict: json file  and  __init__ device with dict,modified the component class       
 
 ## Run
 
 ```bash
->cd step0/1/2/3/4
->python rankine.py
+cd step0/1/2/3/4
+python rankine.py
 ``` 
-
-**You need to**
- 
-* reading the codes
-* understanding computational thinking and programming skills
-* programming one solution to the  rankine cycle 
+We wish the PyRankine may be helpful for  you to program the general solution of the  rankine cycle,then understand computational thinking and develop the skills of programming.
 
 ## Dependencies：SEUIF97
 
@@ -131,15 +124,11 @@ Engineering Model:
 
 1. Each component in the cycle is analyzed as a steady-state control volume. The control volumes are shown in the accompanying sketch by dashed lines.
 
-
 2. All processes of the working fluid are internally reversible, except for the expansions through the two turbine stages and mixing in the open feedwater heater.
-
 
 3. The turbines, pumps, and feedwater heater operate adiabatically.
 
-
 4. Kinetic and potential energy effects are negligible.
-
 
 5. Saturated liquid exits the open feedwater heater, and saturated liquid exits the condenser.
 
@@ -147,9 +136,11 @@ Engineering Model:
 
 * Computational thinking
 
-  * Algorithms + Data Structures = Programs: https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs
+  * [wikipedia: Algorithms + Data Structures = Programs]( https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs)
 
-  * Computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
+  * [wikipedia: Computational thinking]( https://en.wikipedia.org/wiki/Computational_thinking)
+
+  * Jeannette M. Wing. [Computational Thinking Benefits Society]( http://socialissues.cs.toronto.edu/index.html%3Fp=279.html)
 
 * Modeling and Simulation of Engineering Systems
 
