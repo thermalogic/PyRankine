@@ -154,16 +154,16 @@ Engineering Model:
 * Modeling and Simulation of Engineering Systems
 
   * R Sinha, Christiaan J. J. Paredis. etc. **Modeling and Simulation Methods for Design of Engineering Systems**. Transactions of the ASME[J]. 2001.03(1):84-91
-
-  * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
-
+ 
   * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
 
     * https://github.com/OpenModelica
 
+  * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
+
   * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html  
 
-  * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
+  * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
 
   * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08
 
