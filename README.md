@@ -1,8 +1,8 @@
 # PyRankine
 
-The **step-by-step codes** of the rankine cycle simulator to demonstrate:
-  
-     Computational Thinking， Data Structures + Algorithms = Programs 
+The **step-by-step codes** of the rankine cycle simulator from zero abstraction to the general abstraction are provided in the  PyRankine
+ 
+We wish that the PyRankine may be a helpful vehicle for  you to understand **Computational Thinking** and improve the skills of programming.
 
 * step 0 :  **Zero Abstraction** of The Ideal Rankine Cycle
 
@@ -48,7 +48,6 @@ The **step-by-step codes** of the rankine cycle simulator to demonstrate:
 cd step0/1/2/3/4
 python rankine.py
 ``` 
-We wish the PyRankine may be helpful for  you to program the general solution of the  rankine cycle,then understand computational thinking and develop the skills of programming.
 
 ## Dependencies：SEUIF97
 
