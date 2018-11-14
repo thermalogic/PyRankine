@@ -1,6 +1,6 @@
 # PyRankine 
 
-## Step4: The General Simulator of Rankine Cycle
+## Step4: General Abstraction and Data Representation of Rankine Cycle
 
     step4-csv: csv file
 
@@ -10,7 +10,7 @@
 
 ### Examples of Rankine Cycle
  
-Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
 Chapter 8 : Vapour Power Systems Example
 

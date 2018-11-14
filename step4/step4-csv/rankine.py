@@ -1,23 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Step4: Advanced @  Data Structures,Program architecture, Algorithms
+Step4-csv: General Abstraction and Data Representation of Rankine Cycle
                 
-        object-oriented programming,general module
+    object-oriented programming,general module
 
-    The General Simulator of Rankine Cycle
+The General Simulator of Rankine Cycle
 
   * Examples of Rankine Cycle
  
-    Michael J . Mora. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+    Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
     Chapter 8 : Vapour Power Systems Example
 
-    * EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
+       * EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
 
-    * EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
+       * EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
 Runner of the General Simulator of Rankine Cycle 
-  
+
+python rankine.py
+
 Last updated: 2017.05.05
 
 Author:Cheng Maohua  Email: cmh@seu.edu.cn

@@ -1,3 +1,20 @@
+"""
+Step 3-csv ：Basic Object-Orientation Abstraction  and Data Representation of The Ideal Rankine Cycle
+
+ 
+        inletNode inlet steam   
+                 ┌────────┐
+              ↓ ╱         │ 
+               ┤          │
+                ╲         │
+                 └────────┤
+                          ↓  exitNode exhausted steam   
+    
+
+ Author:Cheng Maohua  Email: cmh@seu.edu.cn    
+
+"""
+
 import node
 
 class Turbine():

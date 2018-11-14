@@ -1,13 +1,14 @@
-# -*- coding: utf-8 -*-
 """
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
-Main Module of the General Simulator of Rankine Cycle 
+Main Module: 
    
     1 RankineCycle: the class of Rankine Cycle 
 
     2 SimRankineCycle: the simulator of Rankine Cycle 
   
 Last updated: 2018.05.10
+
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """

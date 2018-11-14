@@ -1,8 +1,6 @@
 
 """
-Step 2：Forward @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
-     
-       object-oriented programming
+Step 2：Basic Object-Orientation Abstraction of The Ideal Rankine Cycle
 
 Pump
 
@@ -12,6 +10,10 @@ Pump
                 │       │
                 └───────┘  
   
+License: this code is in the public domain
+
+Author:Cheng Maohua
+Email: cmh@seu.edu.cn
 
 """
 import node

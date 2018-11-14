@@ -1,6 +1,6 @@
 
 """
-Step 1: Basic @  Data Structures,Program architecture, Algorithms(The Ideal Rankine Cycle)
+Step 1: Simple Abstraction of The Ideal Rankine Cycle
                     
        list,dict,function
 
@@ -12,11 +12,13 @@ The ideal rankine cycle as
     │                                    │
     └─── Node 3  ──  Pump  ──  Node 2 ───┘  
 
- Michael J . Mora. 
-     Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+ Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
      Chapter 8 : Vapour Power Systems 
-     
-     Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+       Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+
+Running:
+
+python rankine.py
 
 License: this code is in the public domain
 

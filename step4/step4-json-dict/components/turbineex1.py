@@ -1,7 +1,7 @@
 """
-The General Simulator of Rankine Cycle
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
-    Turbine class: 
+    TurbineEx1 class: 
        
         inNode inlet steam   
                  ┌────────┐

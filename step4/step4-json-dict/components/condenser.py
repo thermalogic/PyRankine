@@ -1,6 +1,6 @@
 
 """
-The General Simulator of Rankine Cycle 
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
   class  Condenser 
 

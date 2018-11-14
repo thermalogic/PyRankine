@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
 
-Main Module of the General Simulator of Rankine Cycle 
+"""
+Step4-csv: General Abstraction and Data Representation of Rankine Cycle
+
+Main Module: 
    
     1 RankineCycle: the class of Rankine Cycle 
 

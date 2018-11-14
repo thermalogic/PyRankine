@@ -1,11 +1,7 @@
 """
-Step 1  
+Step 1  Simple Abstraction of The Ideal Rankine Cycle
 
-Step-by-step codes of the ideal rankine cycle simulator to demonstrate: 
-
-   Data Structures+ Algorithms = Programs
-
-    list, dict,function
+       list,dict,function
 
 The ideal rankine cycle as 
    
@@ -15,9 +11,10 @@ The ideal rankine cycle as
     │                                    │
     └─── Node 3  ──  Pump  ──  Node 2 ───┘  
 
- Michael J . Mora. 
+ Michael J . Moran. 
      Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
-     Chapter 8 : Vapour Power Systems Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+         Chapter 8 : Vapour Power Systems 
+         Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
 
 License: this code is in the public domain
 

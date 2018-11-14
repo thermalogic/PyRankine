@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-
-Step 3-json ：Forward @  Data Structures,Program architecture, Algorithms
+Step 3-json ：Basic Object-Orientation Abstraction  and Data Representation of The Ideal Rankine Cycle
      
         object-oriented programming and json file
 
@@ -13,11 +11,14 @@ The ideal rankine cycle as
     │                                  │
     └─── Node 3 ──   Pump  ── Node 2 ──┘  
 
- Michael J . Mora. 
-     Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
-     Chapter 8 : Vapour Power Systems 
-     
-       Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+ Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+       Chapter 8 : Vapour Power Systems 
+          Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
+
+Running:
+
+python rankine.py
+
 
 License: this code is in the public domain
 

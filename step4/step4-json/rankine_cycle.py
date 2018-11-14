@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
 """
+Step4-json: General Abstraction and Data Representation of Rankine Cycle 
 
-Main Module of the General Simulator of Rankine Cycle 
+Main Module: 
    
     1 RankineCycle: the class of Rankine Cycle 
 

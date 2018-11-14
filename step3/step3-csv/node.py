@@ -1,3 +1,19 @@
+
+"""
+Step 3-csv ：Basic Object-Orientation Abstraction  and Data Representation of The Ideal Rankine Cycle
+
+    class Node
+                      ──┐           ┌──
+                        │           │
+       component A      ├─⇒ Node ⇒─┤ component B
+                        │           │
+                      ──┘           └──
+
+  Author:Cheng Maohua  Email: cmh@seu.edu.cn  
+  
+"""
+
+
 import seuif97 as if97
 
 
