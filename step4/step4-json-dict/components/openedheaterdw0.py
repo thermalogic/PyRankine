@@ -1,7 +1,7 @@
 """
 Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
-class Openedheater
+class Openedheaterdw0
 
                     ↓   inNode extracted steam
                 ┌───┴───┐
