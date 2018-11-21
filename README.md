@@ -187,9 +187,9 @@ Engineering Model:
 
 * The Jupyter Notebook of Ideal Rankine Cycle
 
-  * Step0 & Step1 http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0&1.ipynb
+  * [Step0 & Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0&1.ipynb)
 
-  * Step2  http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb
+  * [Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb)
 
 ```bash
 >startnb.bat
