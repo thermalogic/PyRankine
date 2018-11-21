@@ -131,6 +131,16 @@ Engineering Model:
 
 5. Saturated liquid exits the open feedwater heater, and saturated liquid exits the condenser.
 
+### The Jupyter Notebooks of Ideal Rankine Cycle
+
+* [Step0 & Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0&1.ipynb)
+
+* [Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb)
+
+```bash
+>startnb.bat
+```
+
 ## Reference
 
 * Computational thinking
@@ -183,12 +193,3 @@ Engineering Model:
 
   * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/
 
-## The Jupyter Notebooks of Ideal Rankine Cycle
-
-* [Step0 & Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0&1.ipynb)
-
-* [Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb)
-
-```bash
->startnb.bat
-```
