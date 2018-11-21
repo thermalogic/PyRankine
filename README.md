@@ -155,17 +155,22 @@ Engineering Model:
 
   * R Sinha, Christiaan J. J. Paredis. etc. **Modeling and Simulation Methods for Design of Engineering Systems**. Transactions of the ASME[J]. 2001.03(1):84-91
  
-  * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
-
-    * https://github.com/OpenModelica
-
-  * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
-
   * MATLAB：Simscape https://cn.mathworks.com/products/simscape.html  
 
-  * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
+  * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
 
-  * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08
+  * Modelica
+  
+    * OpenModelica: An open-source Modelica-based modeling and simulation environment https://openmodelica.org/
+
+      * https://github.com/OpenModelica
+
+    * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
+
+  * Bond Graph
+    * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
+
+    * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08
 
 * ThermoCycle Simulator 
 
@@ -186,10 +191,4 @@ Engineering Model:
    * ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
 
    * 杨华中等. 电子电路的计算机辅助分析和设计方法（第二版），清华大学出版社，北京，2008.02
-
-* Others
-
-  * OpenMDAO: An open-source MDAO framework written in Python  http://openmdao.org/
-
-  * ASCEND4: The ASCEND Modelling and Simulation Environment  http://ascend4.org/
 
