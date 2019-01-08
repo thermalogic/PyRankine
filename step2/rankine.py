@@ -38,10 +38,8 @@ def RankineCycle():
     Wcycledot = 100.00
 
     # 1 init nodes
-    nodes = []
-    for i in range(4):
-        nodes.append(node.Node())
-
+    nodes = [node.Node() for i in range(4)]
+    
     nodes[0].p = boilerPressure
     nodes[0].x = 1
 

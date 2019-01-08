@@ -30,23 +30,14 @@ from seuif97 import *
 #               ->   Nodes    (0,1,2,3)
 
 def CalState():
-    p=[]
-    t=[]
-    h=[]
-    s=[]
-    v=[]
-    x=[]
 
     numNodes=4
-
-    for node in range(numNodes):
-        p.append(None)
-        t.append(None)
-        h.append(None)
-        s.append(None)
-        v.append(None)
-        x.append(None)
-   
+    p=[None for node in range(numNodes)]
+    t=[None for node in range(numNodes)]
+    h=[None for node in range(numNodes)]
+    s=[None for node in range(numNodes)]
+    v=[None for node in range(numNodes)]
+    x=[None for node in range(numNodes)]
 
     # Given:-
     p[0] = 8.0               #  in MPa
