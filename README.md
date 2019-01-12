@@ -133,13 +133,15 @@ Engineering Model:
 
 ### The Jupyter Notebooks of Rankine Cycle
 
-* [Example 8.1: Ideal Rankine Cycle Step0 & Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0-1.ipynb)
+* [Example 8.1: Ideal Rankine Cycle: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0-1.ipynb)
 
-* [Example 8.1: Ideal Rankine Cycle Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb)
+* [Example 8.1: Ideal Rankine Cycle: Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step2.ipynb)
 
-* [Example 8.5: A Regenerative Cycle with Open Feedwater Heater- Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+* [Example 8.3,8.4: A Reheat Cycle and Turbine Irreversibility: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
-* [Example 8.6: A Reheat–Regenerative Cycle with Two Feedwater Heater - Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
+* [Example 8.5: A Regenerative Cycle with Open Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+
+* [Example 8.6: A Reheat–Regenerative Cycle with Two Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
 
 ```bash
 >startnb.bat
