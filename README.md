@@ -63,7 +63,7 @@ python rankine.py
         1) Example 8.1: Analyzing an Ideal Rankine Cycle, Page 438
         2) Example 8.5：A Regenerative Cycle with Open Feedwater Heater, Page 456
 
-####  Example 8.1: Analyzing an Ideal Rankine Cycle  Page 438
+### Example 8.1: Analyzing an Ideal Rankine Cycle  Page 438
 
    * Steam is the working fluid in an ideal Rankine cycle. 
 
@@ -91,7 +91,7 @@ python rankine.py
 
   * the mass flow rate of the condenser cooling water, in kg/h
 
-####  Example 8.5: A Regenerative Cycle with Open Feedwater Heater, Page 456
+### Example 8.5: A Regenerative Cycle with Open Feedwater Heater, Page 456
 
 Consider a regenerative vapor power cycle with one open feedwater heater.
 
