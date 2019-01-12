@@ -131,7 +131,7 @@ Engineering Model:
 
 5. Saturated liquid exits the open feedwater heater, and saturated liquid exits the condenser.
 
-### The Jupyter Notebooks of Rankine Cycle
+## The Jupyter Notebooks of Rankine Cycle
 
 * [Example 8.1: Ideal Rankine Cycle: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/IdealRankineCycle-Step0-1.ipynb)
 
