@@ -29,7 +29,7 @@ import pprint
 
 from cycle import *
 from devices import *
-from wstates import *
+from wstates import FixeStates
 
 States = [{} for i in range(4)]
 States = FixeStates(States)
@@ -39,7 +39,6 @@ CalDevices(Boiler, Turbine, Pump)
 
 Cycle = {'Wdot': 100.0}
 CalCycle(Boiler, Turbine, Pump, Cycle)
-
 
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(Cycle)
