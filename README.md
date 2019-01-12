@@ -133,7 +133,7 @@ Engineering Model:
 
 ## The Jupyter Notebooks of Rankine Cycle
 
-* [Example 8.1: Ideal Rankine Cycle: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step0-1.ipynb)
+* [Example 8.1,8.2: Ideal Rankine Cycle: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
 * [Example 8.1: Ideal Rankine Cycle: Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
