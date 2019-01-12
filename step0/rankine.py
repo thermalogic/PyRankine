@@ -18,7 +18,7 @@ The ideal rankine cycle as
 
 Running:
 
-python rankine.py
+>python rankine.py
 
 License: this code is in the public domain
 
