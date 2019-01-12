@@ -31,6 +31,8 @@ from cycle import *
 from devices import *
 from wstates import FixeStates
 
+from plotTS import *
+
 States = [{} for i in range(4)]
 States = FixeStates(States)
 
@@ -45,3 +47,6 @@ pp.pprint(Cycle)
 pp.pprint(Boiler)
 pp.pprint(Turbine)
 pp.pprint(Pump)
+
+# plot T-S
+PlotTSDiagram(States)
