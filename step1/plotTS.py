@@ -76,8 +76,12 @@ def PlotTSDiagram(States):
                  xy=(s[4], t[4]), xycoords='data',
                  xytext=(-60, +5), textcoords='offset points', fontsize=12)
 
-    plt.title('T-s: Ideal Rankine Cycle')
 
+    tist=[t[1],t[1]]
+    sist=[s[1],px2s(States[1]['p'],1)]
+    plt.plot(sist, tist, 'y-')
+    
+    plt.title('T-s: Ideal Rankine Cycle')
     plt.xlabel('Entropy(kJ/(kg.K)')
     plt.ylabel('Temperature(°C)')
     plt.grid()
