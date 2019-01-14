@@ -4,7 +4,7 @@ The **step-by-step codes** of the rankine cycle simulator from zero abstraction 
  
 We wish that the PyRankine may be a helpful vehicle for  you to understand **Computational Thinking** and improve the programming skills.
 
-The Example Rankine Cycles used are from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)](#the-jupyter-notebooks-of-example-rankine-cycles) 
+The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)](#the-jupyter-notebooks-of-example-rankine-cycles) 
 
 * [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
