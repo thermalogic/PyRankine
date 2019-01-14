@@ -12,11 +12,11 @@ We wish that the PyRankine may be a helpful vehicle for  you to understand **Com
 
       structure data type: List,Dict and functions
       
-* step 2 : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle
+* step 2 : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
       object-oriented programming 
      
-* step 3 : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle
+* step 3 : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle(Example 8.1)
      
      [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
      
@@ -55,98 +55,36 @@ python rankine.py
 
   * https://github.com/PySEE/SEUIF97
 
-## Example Rankine Cycles
+## The Jupyter Notebooks of Example Rankine Cycles
 
-* Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
-      Chapter 8 : Vapour Power Systems 
-        1) Example 8.1: Analyzing an Ideal Rankine Cycle, Page 438
-        2) Example 8.5：A Regenerative Cycle with Open Feedwater Heater, Page 456
+Chapter 8 : Vapour Power Systems 
 
-### Example 8.1: Analyzing an Ideal Rankine Cycle  Page 438
+* EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438
+* EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444
+* EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451
+* EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451
+* EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456
+* EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463
 
-   * Steam is the working fluid in an ideal Rankine cycle. 
+![rankines](./notebook/img/rankines.jpg)
 
-   * Saturated vapor enters the turbine at 8.0 MPa 
-   
-   * Saturated liquid exits the condenser at a pressure of 0.008 MPa. 
+### The Jupyter Notebooks 
 
-   * The net power output of the cycle is 100 MW.
-
-   * Cooling water enters the condenser at 15°C and exits at 35°C.
-
-![rankine81](./step4/img/rankine81.jpg)
-
-* Determine for the cycle
-
-  * the thermal efficiency, %
-
-  * the back work ratio,  %
-
-  * the mass flow rate of the steam,in kg/h,
-
-  * the rate of heat transfer, Qin, into the working fluid as it passes through the boiler, in MW,
-
-  * the rate of heat transfer, Qout, from the condensing steam as it passes through the condenser, in MW,
-
-  * the mass flow rate of the condenser cooling water, in kg/h
-
-### Example 8.5: A Regenerative Cycle with Open Feedwater Heater, Page 456
-
-Consider a regenerative vapor power cycle with one open feedwater heater.
-
-* Steam enters the turbine at 8.0 MPa, 480°C and expands to 0.7 MPa, 
-
-* Some of the steam is extracted and diverted to the open feedwater heater operating at 0.7 MPa. 
-
-* The remaining steam expands through the second-stage turbine to the condenser pressure of 0.008 MPa
-
-* Saturated liquid exits the open feedwater heater at 0.7 MPa. 
-
-* The isentropic efficiency of each turbine  stage is 85% and each pump operates isentropically. 
-
-If the net power output of the cycle is 100 MW, determine
-
-* (a) the thermal efficiency  %
-
-* (b) the mass flow rate of steam entering the first turbine stage, in kg/h.
-
-If the mass flow rate of steam entering the first-stage turbine were 150 kg/s 
-
-* (a) what would be the net power, in MW
-
-* (b) the fraction of steam extracted, y? 
-
-![rankine85](./step4/img/rankine85.jpg)
-
-Engineering Model:
-
-1. Each component in the cycle is analyzed as a steady-state control volume. The control volumes are shown in the accompanying sketch by dashed lines.
-
-2. All processes of the working fluid are internally reversible, except for the expansions through the two turbine stages and mixing in the open feedwater heater.
-
-3. The turbines, pumps, and feedwater heater operate adiabatically.
-
-4. Kinetic and potential energy effects are negligible.
-
-5. Saturated liquid exits the open feedwater heater, and saturated liquid exits the condenser.
-
-## The Jupyter Notebooks of Rankine Cycle
-
-* [Example 8.1,8.2: Ideal Rankine Cycle: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+* [Example 8.1: Ideal Rankine Cycle, Example 8.2: Irreversibilities: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
 * [Example 8.1: Ideal Rankine Cycle: Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
-* [Example 8.3,8.4: A Reheat Cycle and Turbine Irreversibility: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
+* [Example 8.3,8.4: The Reheat Cycle and Turbine Irreversibility: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
-* [Example 8.5: A Regenerative Cycle with Open Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+* [Example 8.5: The Regenerative Cycle with Open Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
-* [Example 8.6: A Reheat–Regenerative Cycle with Two Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
+* [Example 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
 
 ```bash
 >startnb.bat
 ```
-
 ## Reference
 
 * Computational thinking
