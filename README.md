@@ -81,6 +81,8 @@ Chapter 8 : Vapour Power Systems
 >startnb.bat
 ```
 
+**Schematic of Example Rankine Cycles**
+
 ![rankines](./notebook/img/rankines.jpg)
 
 ## Reference
