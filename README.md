@@ -61,30 +61,28 @@ Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fun
 
 Chapter 8 : Vapour Power Systems 
 
-* EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438
-* EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444
-* EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451
-* EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451
-* EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456
-* EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463
+* [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
-![rankines](./notebook/img/rankines.jpg)
+    * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
-### The Jupyter Notebooks 
+* [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
-* [Example 8.1: Ideal Rankine Cycle, Example 8.2: Irreversibilities: Step0,Step1](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+* [EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
-* [Example 8.1: Ideal Rankine Cycle: Step2](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
+* [EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
-* [Example 8.3,8.4: The Reheat Cycle and Turbine Irreversibility: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
+* [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
-* [Example 8.5: The Regenerative Cycle with Open Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+* [EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
 
-* [Example 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heater: Step0](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
+**Start  the notebooks**
 
 ```bash
 >startnb.bat
 ```
+
+![rankines](./notebook/img/rankines.jpg)
+
 ## Reference
 
 * Computational thinking
