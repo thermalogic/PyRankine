@@ -1,46 +1,44 @@
-# PyRankine
+# PyRankine<!-- TOC -->
 
 The **step-by-step codes** of the rankine cycle simulator from zero abstraction to the general abstraction are provided in the  PyRankine.
  
 We wish that the PyRankine may be a helpful vehicle for  you to understand **Computational Thinking** and improve the programming skills.
 
-* step 0 :  **Zero Abstraction** of The Ideal Rankine Cycle
+In the PyRankine, the Sample Rankine Cycles are used from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition), Chapter 8 : Vapour Power Systems](#the-jupyter-notebooks-of-example-rankine-cycles) 
 
-      the simple data type and expression only 
+* [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
-* step 1 : **Simple Abstraction** of The Ideal Rankine Cycle
+     The simple data type and expression only 
 
-      structure data type: List,Dict and functions
+* [step 1](./step1)  : **Simple Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+
+     Structure data type(List,Dict) and functions
       
-* step 2 : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
-      object-oriented programming 
+     Object-oriented programming 
      
-* step 3 : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle(Example 8.1)
+* [step 3](./step3)  : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle(Example 8.1)
      
-     [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
-     
-     object-oriented programming and data files: 
-                   
-       step3-csv: csv file 
+     Object-oriented programming and data files: 
 
-       step3-json: json file
+    [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
+                        
+    * [step3-csv](./step3/step3-csv)  : csv file 
+
+    * [step3-json](./step3/step3-json): json file
       
-* step 4 : **General Abstraction** and **Data Representation** of Rankine Cycle
-
-     [The UML diagram of the step4-json](./step4/UML-STEP4-JSON.md)
-                
-     object-oriented programming,general module
+* [step 4](./step4) : **General Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
+    
+    Object-oriented programming, general module
                       
-      Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition), Chapter 8 : Vapour Power Systems 
-          1) Example 8.1: The Ideal Rankine Cycle, Page 438
-          2) Example 8.5: A Regenerative Cycle with Open Feedwater Heater,Page 456
+    [The UML diagram of the step4-json](./step4/UML-STEP4-JSON.md)
+   
+    * [step4-csv](./step4/step4-csv): csv file
 
-      step4-csv: csv file
+    * [step4-json](./step4/step4-json): json file       
 
-      step4-json: json file       
-
-      step4-json-dict: json file  and  __init__ device with dict,modified the component class       
+    * [step4-json-dict](./step4/step4-json-dict): json file  and  `__init__` device with dict, modified the component class       
 
 ## Run
 
