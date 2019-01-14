@@ -1,7 +1,7 @@
 """
-Step 1 :The In-depth Abstraction of The Ideal Rankine Cycle
+T-S Diagram of  The Ideal Rankine Cycle 
 
-       list,dict,function
+Step 1 :The Basic Abstraction of The Ideal Rankine Cycle with list,dict,function
 
 The ideal rankine cycle as 
    
@@ -18,15 +18,13 @@ The ideal rankine cycle as
 
 License: this code is in the public domain
 
-Author:Cheng Maohua
-Email: cmh@seu.edu.cn
+Cheng Maohua(Email: cmh@seu.edu.cn)
+
 """
-
-from seuif97 import *
-
 import matplotlib.pyplot as plt
 import numpy as np
 
+from seuif97 import *
 
 def PlotTSDiagram(States):
 
@@ -43,7 +41,7 @@ def PlotTSDiagram(States):
 
     t = [States[i]['t'] for i in range(4)]
     s = [States[i]['s'] for i in range(4)]
-    
+
     # States[3]['t'] is slightly larger than States[2]['t'] , points States[2] and States[3] are almost overlap if drawing with real values
     # so,adjust the value of States[3]['t'] ,using the virtual values to eliminate drawing overlap
     t[3] = States[3]['t']+8
@@ -76,11 +74,10 @@ def PlotTSDiagram(States):
                  xy=(s[4], t[4]), xycoords='data',
                  xytext=(-60, +5), textcoords='offset points', fontsize=12)
 
-
-    tist=[t[1],t[1]]
-    sist=[s[1],px2s(States[1]['p'],1)]
+    tist = [t[1], t[1]]
+    sist = [s[1], px2s(States[1]['p'], 1)]
     plt.plot(sist, tist, 'y-')
-    
+
     plt.title('T-s: Ideal Rankine Cycle')
     plt.xlabel('Entropy(kJ/(kg.K)')
     plt.ylabel('Temperature(°C)')
