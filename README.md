@@ -8,11 +8,11 @@ The Example Rankine Cycles used are from [Michael J. Moran. Fundamentals of Engi
 
 * [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
-     The simple data type and expression only 
+     The simple data types and expression only 
 
 * [step 1](./step1)  : **Simple Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
-     Structure data type(List,Dict) and functions
+     Structure data types(List,Dict) and functions
       
 * [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
