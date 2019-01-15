@@ -26,7 +26,7 @@ import numpy as np
 
 from seuif97 import *
 
-def PlotTSDiagram(States):
+def PlotTSDiagram(Nodes):
 
     plt.figure(figsize=(10.0, 5.0))  # figsize :set figure size
 
@@ -39,18 +39,18 @@ def PlotTSDiagram(States):
     plt.plot(svap, npt, 'r-')
     plt.plot(sliq, npt, 'b-')
 
-    t = [States[i]['t'] for i in range(4)]
-    s = [States[i]['s'] for i in range(4)]
+    t = [Nodes[i]['t'] for i in range(4)]
+    s = [Nodes[i]['s'] for i in range(4)]
 
-    # States[3]['t'] is slightly larger than States[2]['t'] , points States[2] and States[3] are almost overlap if drawing with real values
-    # so,adjust the value of States[3]['t'] ,using the virtual values to eliminate drawing overlap
-    t[3] = States[3]['t']+8
+    # Nodes[3]['t'] is slightly larger than Nodes[2]['t'] , points Nodes[2] and Nodes[3] are almost overlap if drawing with real values
+    # so,adjust the value of Nodes[3]['t'] ,using the virtual values to eliminate drawing overlap
+    t[3] = Nodes[3]['t']+8
 
-    t.append(px2t(States[0]['p'], 0))
-    s.append(px2s(States[0]['p'], 0))
+    t.append(px2t(Nodes[0]['p'], 0))
+    s.append(px2s(Nodes[0]['p'], 0))
 
-    t.append(States[0]['t'])
-    s.append(States[0]['s'])
+    t.append(Nodes[0]['t'])
+    s.append(Nodes[0]['s'])
 
     plt.plot(s, t, 'go-')
 
@@ -75,7 +75,7 @@ def PlotTSDiagram(States):
                  xytext=(-60, +5), textcoords='offset points', fontsize=12)
 
     tist = [t[1], t[1]]
-    sist = [s[1], px2s(States[1]['p'], 1)]
+    sist = [s[1], px2s(Nodes[1]['p'], 1)]
     plt.plot(sist, tist, 'y-')
 
     plt.title('T-s: Ideal Rankine Cycle')
