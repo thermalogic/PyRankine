@@ -167,9 +167,9 @@ class RankineCycle(object):
             self.Comps[key].simulate(self.nodes)
             if self.Comps[key].energy == "workExtracted":
                 self.totalworkExtracted += self.Comps[key].workExtracted
-            if self.Comps[key].energy == "workRequired":
+            elif self.Comps[key].energy == "workRequired":
                 self.totalworkRequired += self.Comps[key].workRequired
-            if self.Comps[key].energy == "heatAdded":
+            elif self.Comps[key].energy == "heatAdded":
                 self.totalheatAdded += self. Comps[key].heatAdded
 
         self.netpoweroutput = self.totalworkExtracted - self.totalworkRequired
