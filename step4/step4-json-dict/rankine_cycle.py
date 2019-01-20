@@ -131,18 +131,18 @@ class RankineCycle(object):
 
     def cycleFdot(self):
 
-        i = 0 # to avoid endless loop 
-        keys=list(self.Comps.keys())
+        i = 0  # to avoid endless loop
+        keys = list(self.Comps.keys())
         while (self.fdotok == False):
-            
+
             for key in keys:
                 self.Comps[key].fdot(self.nodes)
-                if (self.Comps[key].fdotok==True):
+                if (self.Comps[key].fdotok == True):
                     keys.remove(key)
-            
+
             i += 1
-            if (i >self.DevNum  or keys.count==0):
-                self.fdotok = True 
+            if (i > self.DevNum or keys.count == 0):
+                self.fdotok = True
 
     def cycleSimulator(self):
 

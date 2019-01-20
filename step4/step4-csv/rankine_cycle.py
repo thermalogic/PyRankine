@@ -28,6 +28,7 @@ from components.pump import Pump
 # import win_unicode_console
 # win_unicode_console.enable()
 
+
 def read_nodesfile(filename):
     """ csvfile：node's info in the file"""
     countNodes = len(open(filename, 'r').readlines()) - 1
@@ -143,19 +144,19 @@ class RankineCycle(object):
 
     def cycleFdot(self):
 
-        i = 0 # to avoid endless loop 
-        keys=list(self.Comps.keys())
+        i = 0  # to avoid endless loop
+        keys = list(self.Comps.keys())
         while (self.fdotok == False):
-            
+
             for key in keys:
                 self.Comps[key].fdot(self.nodes)
-                if (self.Comps[key].fdotok==True):
+                if (self.Comps[key].fdotok == True):
                     keys.remove(key)
-            
+
             i += 1
-            if (i >self.DevNum  or keys.count==0):
-                self.fdotok = True 
-            
+            if (i > self.DevNum or keys.count == 0):
+                self.fdotok = True
+
     def cycleSimulator(self):
         for key in self.Comps:
             self.Comps[key].simulate(self.nodes)
@@ -221,7 +222,8 @@ class RankineCycle(object):
             datafile = open(outfilename, 'w', encoding='utf-8')
             sys.stdout = datafile
 
-        print("\n Rankine Cycle: %s, Time: %s" %(self.name,str(datetime.datetime.now())))
+        print("\n Rankine Cycle: %s, Time: %s" %
+              (self.name, str(datetime.datetime.now())))
         print("{:>20} {:>.2f}".format('Net Power(MW)', self.Wcycledot))
         print("{:>20} {:>.2f}".format('Mass Flow(kg/h)', self.mdot))
         print("{:>20} {:>.2f}".format('Efficiency(%)', self.efficiency))
@@ -234,11 +236,11 @@ class RankineCycle(object):
             'totalWRequired(MW)', self.totalWRequired))
         print("{:>20} {:>.2f} \n".format('totalQAdded(MW)', self.totalQAdded))
 
-        # output nodes    
+        # output nodes
         print(Node.nodetitle)
         for node in self.nodes:
             print(node)
-        # output devices    
+        # output devices
         for key in self.Comps:
             print(self.Comps[key].export(self.nodes))
 
