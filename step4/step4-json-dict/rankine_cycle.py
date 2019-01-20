@@ -178,9 +178,9 @@ class RankineCycle(object):
             self.Comps[key].sm_energy(self.nodes)
             if self.Comps[key].energy == "workExtracted":
                 self.totalWExtracted += self.Comps[key].WExtracted
-            if self.Comps[key].energy == "workRequired":
+            elif self.Comps[key].energy == "workRequired":
                 self.totalWRequired += self.Comps[key].WRequired
-            if self.Comps[key].energy == "heatAdded":
+            elif self.Comps[key].energy == "heatAdded":
                 self.totalQAdded += self. Comps[key].QAdded
 
     def SpecifiedMassFlowSimulator(self, mdot):
@@ -197,9 +197,9 @@ class RankineCycle(object):
             self.Comps[key].sm_energy(self.nodes)
             if self.Comps[key].energy == "workExtracted":
                 self.totalWExtracted += self.Comps[key].WExtracted
-            if self.Comps[key].energy == "workRequired":
+            elif self.Comps[key].energy == "workRequired":
                 self.totalWRequired += self.Comps[key].WRequired
-            if self.Comps[key].energy == "heatAdded":
+            elif self.Comps[key].energy == "heatAdded":
                 self.totalQAdded += self. Comps[key].QAdded
 
     def OutFiles(self, outfilename=None):
