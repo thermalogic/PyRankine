@@ -17,12 +17,11 @@ Chapter 8 : Vapour Power Systems Example
 
 ## The UML diagram 
 
+### The UML Package diagram
+
+![Package UML](./uml/step5-package.jpg)
+
 ### The UML Class diagram 
 
 ![Class UML](./uml/step5-classes.jpg)
-
-### The UML Association diagram
-
-![step5 UML](./uml/step5-package.jpg)
-
 

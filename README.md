@@ -28,11 +28,8 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
     * [step3-json](./step3/step3-json): json file
       
-* [step 4](./step4) : **General Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
-    
+* [step 4](./step4) : **General Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)    
     Object-oriented programming, general module
-                      
-    [The UML diagram of the step4-json](./step4/UML-STEP4-JSON.md)
    
     * [step4-csv](./step4/step4-csv): csv file
 
@@ -44,7 +41,11 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
     
     Object-oriented programming, general module，the base class
                       
-    `json` file for the representation of Rankine Cycle Flowsheet and  `__init__` device with dict
+    `json` file for the representation of Rankine Cycle Flowsheet 
+
+    * [The UML Class diagram](./step5/uml/step5-classes.jpg)
+    
+    * [The UML Package diagram](./step5/uml/step5-package.jpg)
 
 ## Run
 
