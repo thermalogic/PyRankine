@@ -8,15 +8,17 @@
 
     step4-json-dict: json file and  __init__ device with dict, modified the component class 
 
-### Examples of Rankine Cycle
- 
-Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+## EXAMPLE Example Rankine Cycles
 
-Chapter 8 : Vapour Power Systems Example
+Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
-* EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
+Chapter 8 : Vapour Power Systems 
 
-* EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
+* [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+
+    * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
+
+* [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
 ## Run
 
@@ -193,74 +195,3 @@ class Boiler:
           self.__dict__.update(dictDev) 
 ```    
 
-## EXAMPLE 8.1 :An Ideal Rankine Cycle  
-
-Steam is the working fluid in an ideal Rankine cycle. 
-
-   * Saturated vapor enters the turbine at 8.0 MPa 
-   
-   * Saturated liquid exits the condenser at a pressure of 0.008 MPa. 
-
-   * The net power output of the cycle is 100 MW.
-
-   * Cooling water enters the condenser at 15°C and exits at 35°C.
-
-![rankine](./img/rankine81.jpg)
-
-Determine for the cycle
-
-  * the thermal efficiency, %
-
-  * the back work ratio,  %
-
-  * the mass flow rate of the steam,in kg/h,
-
-  * the rate of heat transfer, Qin, into the working fluid as it passes through the boiler, in MW,
-
-  * the rate of heat transfer, Qout, from the condensing steam as it passes through the condenser, in MW,
-
-  * the mass flow rate of the condenser cooling water, in kg/h
-
-## EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater
-
-Consider a regenerative vapor power cycle with one open feedwater heater.
-
-* Steam enters the turbine at 8.0 MPa, 480°C and expands to 0.7 MPa, 
-
-* Some of the steam is extracted and diverted to the open feedwater heater operating at 0.7 MPa. 
-
-* The remaining steam expands through the second-stage turbine to the condenser pressure of 0.008 MPa
-
-* Saturated liquid exits the open feedwater heater at 0.7 MPa. 
-
-* The isentropic efficiency of each turbine  stage is 85% and each pump operates isentropically. 
-
-If the net power output of the cycle is 100 MW, determine
-
-* (a) the thermal efficiency  %
-
-* (b) the mass flow rate of steam entering the first turbine stage, in kg/h.
-
-If the mass flow rate of steam entering the first-stage turbine were 150 kg/s 
-
-* (a) what would be the net power, in MW
-
-* (b) the fraction of steam extracted, y? 
-
-![rankine85](./img/rankine85.jpg)
-
-Engineering Model:
-
-1. Each component in the cycle is analyzed as a steady-state control volume. The control volumes are shown in the accompanying sketch by dashed lines.
-
-
-2. All processes of the working fluid are internally reversible, except for the expansions through the two turbine stages and mixing in the open feedwater heater.
-
-
-3. The turbines, pumps, and feedwater heater operate adiabatically.
-
-
-4. Kinetic and potential energy effects are negligible.
-
-
-5. Saturated liquid exits the open feedwater heater, and saturated liquid exits the condenser.

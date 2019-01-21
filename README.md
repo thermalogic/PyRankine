@@ -1,4 +1,4 @@
-# PyRankine<!-- TOC -->
+# PyRankine
 
 The **step-by-step codes** of the rankine cycle simulator from zero abstraction to the general abstraction are provided in the  PyRankine.
  
@@ -40,10 +40,16 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
     * [step4-json-dict](./step4/step4-json-dict): json file  and  `__init__` device with dict, modified the component class       
 
+* [step 5](./step5) : **The Base Class Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
+    
+    Object-oriented programming, general module，the base vlass
+                      
+    `json` file for the representation of Rankine Cycle Flowsheet and  `__init__` device with dict
+
 ## Run
 
 ```bash
-cd step0/1/2/3/4
+cd step0/1/2/3/4/5
 python rankine.py
 ``` 
 
