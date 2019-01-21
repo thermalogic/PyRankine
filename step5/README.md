@@ -1,7 +1,7 @@
        
-# The UML diagram of the STEP5
+# Step5: The Base Class of Components
 
-Step5: The General Simulator of Rankine Cycle with the base class of components
+The General Simulator of Rankine Cycle with the base class of components
 
 * `json` file for the representation of Rankine Cycle Flowsheet and `__init__` device with dict
 
@@ -15,11 +15,13 @@ Chapter 8 : Vapour Power Systems Example
 
 * [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
-## The UML Class diagram 
+## The UML diagram 
+
+### The UML Class diagram 
 
 ![Class UML](./uml/step5-classes.jpg)
 
-## The UML diagram of step5
+### The UML Association diagram
 
 ![step5 UML](./uml/step5-package.jpg)
 

@@ -40,9 +40,9 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
     * [step4-json-dict](./step4/step4-json-dict): json file  and  `__init__` device with dict, modified the component class       
 
-* [step 5](./step5) : **The Base Class Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
+* [step 5](./step5) : **The Base Class Abstraction** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
     
-    Object-oriented programming, general module，the base vlass
+    Object-oriented programming, general module，the base class
                       
     `json` file for the representation of Rankine Cycle Flowsheet and  `__init__` device with dict
 

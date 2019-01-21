@@ -149,9 +149,9 @@ class Boiler(object):
 
 ![UML of Rankine_cycle](./img/uml-json-rankine_cycle.jpg)
 
-## The UML Class diagram of step4-ison
+## The UML Association diagram of step4-ison
 
-![UML of Components](./img/uml-json-packages.jpg)
+![UML of Association](./img/uml-json-packages.jpg)
 
 ## Reference
 
