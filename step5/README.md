@@ -17,11 +17,11 @@ Chapter 8 : Vapour Power Systems Example
 
 ## The UML Class diagram 
 
-### The Class Diagram：Directed Association
+### The Class Diagram： Association
 
 ![Package UML](./uml/step5-package.jpg)
 
-### The Class Diagram : Inheritanced Dependency, Composition
+### The Class Diagram : Inheritance, Composition
 
 ![Class UML](./uml/step5-classes.jpg)
 
