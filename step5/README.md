@@ -15,13 +15,13 @@ Chapter 8 : Vapour Power Systems Example
 
 * [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
-## The UML diagram 
+## The UML Class diagram 
 
-### The UML Package diagram
+### The Class Diagram：Directed Association
 
 ![Package UML](./uml/step5-package.jpg)
 
-### The UML Class diagram 
+### The Class Diagram : Inheritanced Dependency, Composition
 
 ![Class UML](./uml/step5-classes.jpg)
 
