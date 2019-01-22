@@ -17,7 +17,7 @@ class BComponent():
     def __init__(self, dictDev):
         """ Initializes the Component"""
         self.nodes = []
-        raise NotImplementedErrorpython
+        raise NotImplementedError
 
     def state(self, Nodes):
         """  State """
