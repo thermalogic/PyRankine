@@ -35,7 +35,7 @@ All component classes have the same methods:
 
  * `_fdotok_`: the helper of fdot
  
-Two kinds of methods in [the  base class: /components/BComponent.py](./components/BComponent.py])
+Two kinds of methods in [the  base class: /components/BComponent.py](./components/BComponent.py)
 
 1. The methods must be implemented by its subclass
 
