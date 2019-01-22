@@ -51,7 +51,8 @@ class Condenser(BComponent):
         pass
 
     def fdot(self, nodes):
-        super().fdot(nodes)
+        # demo BComponent
+        BComponent.fdot(self,nodes)
 
     def simulate(self, nodes):
         """  Simulates the Condenser  """
@@ -64,6 +65,7 @@ class Condenser(BComponent):
         self.QExtracted /= (3600.0 * 1000.0)
 
     def export(self, nodes):
+        # demo BComponent
         result=BComponent.export(self,nodes)
         result += '\nheatExtracted(kJ/kg)  \t%.2f \nQExtracted(MW): \t%.2f' % (
             self.heatExtracted, self.QExtracted)
