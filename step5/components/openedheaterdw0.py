@@ -35,20 +35,21 @@ class OpenedheaterDw0(BComponent):
         """
         Initializes the Opened feedwater with the conditions
         """
+        super().__init__(dictDev)
+        
         self.name = dictDev['name']
         self.inNode = dictDev['inNode']
         self.inNode_fw = dictDev['inNode_fw']
         self.outNode_fw = dictDev['outNode_fw']
         
+        self.type = dictDev['type']
+
+        # add nodes
+        self.nodes = [self.inNode, self.inNode_fw, self.outNode_fw]
+        
         self.heatAdded=0
         self.heatExtracted = 0
         self.QExtracted = 0
-
-        self.type = dictDev['type']
-
-       # add nodes
-        self.nodes = [self.inNode, self.inNode_fw, self.outNode_fw]
-        self.fdotok = False
 
     def state(self, nodes):
         pass
@@ -89,12 +90,7 @@ class OpenedheaterDw0(BComponent):
         self.QAdded = self.QExtracted
 
     def export(self, nodes):
-        result = '\n' + self.name
-        result += '\n' + Node.title
-        result += '\n' + nodes[self.inNode].__str__()
-        result += '\n' + nodes[self.inNode_fw].__str__()
-        result += '\n' + nodes[self.outNode_fw].__str__()
-
+        result=super().export(nodes)
         result += '\nheatAdded(kJ/kg) \t%.2f' % self.heatAdded
         result += '\nheatExtracted(kJ/kg) \t%.2f' % self.heatExtracted
         result += '\nQAdded(MW) \t%.2f' % self.QAdded
