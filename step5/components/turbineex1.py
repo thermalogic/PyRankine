@@ -31,6 +31,7 @@ import seuif97
 from .node import *
 from .BComponent import BComponent
 
+
 class TurbineEx1(BComponent):
 
     energy = 'workExtracted'
@@ -79,8 +80,8 @@ class TurbineEx1(BComponent):
         if (self.fdotok == False):
             try:
                 # mass blance equation
-                nodes[self.outNode].fdot = nodes[
-                    self.inNode].fdot - nodes[self.extNode].fdot
+                nodes[self.outNode].fdot = nodes[self.inNode].fdot - \
+                    nodes[self.extNode].fdot
 
                 # modified self.fdotok
                 self._fdotok_(nodes)
