@@ -3,7 +3,7 @@
 
 The General Simulator of Rankine Cycle with the base class of components
 
-* `json` file for the representation of Rankine Cycle Flowsheet and `__init__` device with dict
+* `json` file for the representation of Rankine Cycle Flowsheet 
 
 ## Examples of Rankine Cycle
  
