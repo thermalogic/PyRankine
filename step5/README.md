@@ -27,7 +27,7 @@ Chapter 8 : Vapour Power Systems Example
 
 ## The base class of components
 
-All components class have the same methods:
+All component classes have the same methods:
 
 `__init__`, `state`, `fdot`, `simulate`, `sm_energy`, `export`
 
