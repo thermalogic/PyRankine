@@ -36,10 +36,11 @@ class Condenser(object):
     def __init__(self,dictDev):
         """ Initializes the condenser """
         self.name =  dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.type = dictDev['type']
-         # add nodes 
+       
+        # add nodes 
         self.nodes=[self.inNode, self.outNode]
      
         self.fdotok = False

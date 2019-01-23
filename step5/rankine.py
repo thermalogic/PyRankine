@@ -22,9 +22,9 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 import glob
 import rankine_cycle as rkc
 
-json_filesname_str=r'./cyclefile/rankine8[0-9].json'
+json_filesname_str='./cyclefile/rankine8[0-9].json'
 
-#json_filesname_str=r'./cyclefile/rankine85.json'
+#json_filesname_str='./cyclefile/rankine85.json'
     
 json_filesname=glob.glob(json_filesname_str)
 

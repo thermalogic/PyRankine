@@ -2,9 +2,9 @@
 
 ## Step4: General Abstraction and Data Representation of Rankine Cycle
 
-    step4-csv: csv file
+   * [step4-csv](./step4-csv/): csv file
 
-    step4-json: json file
+   * [step4-json](./step4-json/): json file   
 
 ## EXAMPLE Example Rankine Cycles
 
@@ -21,7 +21,7 @@ Chapter 8 : Vapour Power Systems
 ## Run
 
 ```bash
->cd step4-csv/step4-json/step4-json-dict
+>cd step4-csv/step4-json
 >python rankine.py
 ```
 
@@ -118,15 +118,7 @@ sys.stdout = open('Redirect2file.txt', 'w')
 print('Test: redirect sys.stdout to file')
 ```
 
-### 3 r'' raw string literals 
-
-r'' raw string literals produce a string just like a normal string literal does
-
-```python
-nds_filesname_str=r'./cyclefile/rankine85-nds.csv'
-```
-
-### 4 glob — Unix style pathname pattern expansion
+### 3 glob — Unix style pathname pattern expansion
 
 https://docs.python.org/3.6/library/glob.html
 
@@ -146,7 +138,7 @@ json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 json_filesname=glob.glob(json_filesname_str)
 ```
 
-### 5 json — JSON encoder and decoder
+### 4 json — JSON encoder and decoder
 
 Python3:19.2 https://docs.python.org/3/library/json.html
 
@@ -159,9 +151,9 @@ Deserialize fp (a .read()-supporting file-like object containing a JSON document
 
 **json.loads**
 
-json.loads(s, *, encoding=None, cls=None, object_hook=None, parse_float=None, 
-
-parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)¶
+```python
+json.loads(s, *, encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)
+```
 Deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object using this conversion table.
 
 ```python
@@ -174,7 +166,7 @@ def read_jsonfile(filename):
         #rkcyc = json.loads(f.read())
 ```
 
-### 6 object__dict__ & update([other])
+### 5 object__dict__ & update([other])
 
 **update([other])**
 
@@ -190,6 +182,12 @@ def read_jsonfile(filename):
 class Boiler:
   
       def __init__(self,dictDev):
-          self.__dict__.update(dictDev) 
-```    
+         
+         self.__dict__.update(dictDev) 
+          
+        # self.name = dictDev['name']
+        # self.type = dictDev['type']
+        # self.inNode = dictDev['inNode']
+        # self.outNode = dictDev['outNode']
+```   
 

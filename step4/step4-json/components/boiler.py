@@ -42,9 +42,10 @@ class Boiler(object):
         # self.__dict__.update(dictDev)
 
         self.name = dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.type = dictDev['type']
+       
         # add nodes
         self.nodes = [self.inNode, self.outNode]
         self.fdotok = False

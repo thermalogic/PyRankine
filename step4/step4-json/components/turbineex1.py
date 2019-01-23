@@ -38,10 +38,10 @@ class TurbineEx1(object):
 
     def __init__(self, dictDev):
         self.name = dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.extNode = dictDev['extNode']
-        self.type = dictDev['type']
         self.ef = dictDev['ef'] 
 
         # add nodes
