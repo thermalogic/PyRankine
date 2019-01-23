@@ -41,10 +41,10 @@ class TurbineEx1(BComponent):
         super().__init__(dictDev)
 
         self.name = dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.extNode = dictDev['extNode']
-        self.type = dictDev['type']
         self.ef = dictDev['ef']
 
         # add nodes

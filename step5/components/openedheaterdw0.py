@@ -38,11 +38,11 @@ class OpenedheaterDw0(BComponent):
         super().__init__(dictDev)
 
         self.name = dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.inNode_fw = dictDev['inNode_fw']
         self.outNode_fw = dictDev['outNode_fw']
-        self.type = dictDev['type']
-
+     
         # add nodes
         self.nodes = [self.inNode, self.inNode_fw, self.outNode_fw]
         

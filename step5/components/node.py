@@ -27,9 +27,9 @@ import seuif97 as if97
 
 
 class Node(object):
-  
+
     title = ('{:^6} \t {:^30} \t {:^5}\t {:^7}\t {:^7}\t {:^5} \t {:^7}\t {:^7}\t {:^5}\t {:^10}'.format
-                 ("NodeID", "Name", "P", "T", "H", "S", "V", "X", "FDOT", "MDOT"))
+             ("NodeID", "Name", "P", "T", "H", "S", "V", "X", "FDOT", "MDOT"))
 
     def __init__(self, name, nodeid):
         self.name = name

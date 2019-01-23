@@ -37,9 +37,9 @@ class Pump(BComponent):
         super().__init__(dictDev)
        
         self.name = dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.type = dictDev['type']
         self.ef = dictDev['ef'] 
 
         # add nodes

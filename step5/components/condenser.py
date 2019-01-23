@@ -40,9 +40,10 @@ class Condenser(BComponent):
         BComponent.__init__(self,dictDev)
 
         self.name =  dictDev['name']
+        self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.type = dictDev['type']
+     
         
         # add nodes
         self.nodes = [self.inNode, self.outNode]
