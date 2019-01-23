@@ -49,9 +49,9 @@ The all data files in the path `./cyclefile`
 
 ### The Components Class
 
-The all component classes in the package `components` have the same methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
+All component classes in the package `components` have these  methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
 
-* `fdot`: check and analysis the mass float rate
+* `fdot`: check and analysis the mass float rate with mass and energy balance
 
 ### The Rankine Cycle 
 
@@ -98,7 +98,7 @@ from components.node import Node
 
 29.1. sys — System-specific parameters and functions
 
-https://docs.python.org/3.6/library/sys.html
+https://docs.python.org/3/library/sys.html
 
 This module provides access to some variables used or maintained by the **interpreter** and to functions that interact strongly with the interpreter. It is always available.
 
@@ -120,7 +120,7 @@ print('Test: redirect sys.stdout to file')
 
 ### 3 glob — Unix style pathname pattern expansion
 
-https://docs.python.org/3.6/library/glob.html
+https://docs.python.org/3/library/glob.html
 
 The `glob` module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde(~) expansion is done, but `*`, `?`, and character `ranges` expressed with `[]` will be correctly matched
 
@@ -140,13 +140,14 @@ json_filesname=glob.glob(json_filesname_str)
 
 ### 4 json — JSON encoder and decoder
 
-Python3:19.2 https://docs.python.org/3/library/json.html
+Python3: https://docs.python.org/3/library/json.html
 
 **json.load**
 
+```python
 json.load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, 
 parse_constant=None, object_pairs_hook=None, **kw)
-
+```
 Deserialize fp (a .read()-supporting file-like object containing a JSON document) to a Python object using this conversion table.
 
 **json.loads**
