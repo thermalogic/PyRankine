@@ -127,14 +127,14 @@ The `glob` module finds all the pathnames matching a specified pattern according
 ```python
 import glob
 
-nds_filesname_str=r'./cyclefile/rankine8?-nds.csv
+nds_filesname_str='./cyclefile/rankine8?-nds.csv
 nds_filesname=glob.glob(nds_filesname_str)
 ```
 
 ```python
 import glob
 
-json_filesname_str=r'./cyclefile/rankine8[0-9].json'
+json_filesname_str='./cyclefile/rankine8[0-9].json'
 json_filesname=glob.glob(json_filesname_str)
 ```
 
