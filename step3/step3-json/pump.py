@@ -20,13 +20,13 @@ class Pump():
     Pump class： Represents a pump in the Rankine cycle
     """
 
-    def __init__(self, name, inletNode, exitNode):
+    def __init__(self, dictDev):
         """
         Initializes the pump with nodes
         """
-        self.inletNode = inletNode
-        self.exitNode = exitNode
-        self.name = name
+        self.name = dictDev['name']
+        self.inletNode = dictDev['inNode']
+        self.exitNode = dictDev['exNode']
 
     def state(self, nodes):
         nodes[self.exitNode].s = nodes[self.inletNode].s

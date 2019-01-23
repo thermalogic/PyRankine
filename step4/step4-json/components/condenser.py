@@ -1,6 +1,6 @@
 
 """
-Step4-json: General Abstraction and Data Representation of Rankine Cycle 
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
   class  Condenser 
 
@@ -20,8 +20,7 @@ json object example:
             "outNode": 3
    },                   
 
-   Last updated: 2018.05.08
-
+   Last updated: 2018.05.10
    Author:Cheng Maohua  Email: cmh@seu.edu.cn                   
 
 """
@@ -29,22 +28,30 @@ json object example:
 from .node import *
 
 
-class Condenser:
+class Condenser(object):
 
     energy = "heatExtracted"
     devTYPE="CONDENSER"
 
-    def __init__(self, name, inNode, outNode):
+    def __init__(self,dictDev):
         """ Initializes the condenser """
-        self.name = name
-        self.inNode = inNode
-        self.outNode = outNode
-        self.typeStr = 'CONDENSER'
+        self.name =  dictDev['name']
+        self.inNode = dictDev['inNode']
+        self.outNode = dictDev['outNode']
+        self.type = dictDev['type']
+         # add nodes 
+        self.nodes=[self.inNode, self.outNode]
      
         self.fdotok = False
 
     def state(self, Nodes):
         pass
+
+     # add _fdotok_
+    def _fdotok_(self, nodes):
+        self.fdotok = nodes[self.nodes[0]].fdot != None
+        for node in range(1, len(self.nodes)):
+            self.fdotok = self.fdotok and (nodes[node].fdot != None)
 
     def fdot(self, nodes):
         if (self.fdotok == False):
@@ -53,9 +60,9 @@ class Condenser:
                     nodes[self.outNode].fdot = nodes[self.inNode].fdot
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
-
-                self.fdotok = nodes[self.outNode].fdot != None
-                self.fdotok = self.fdotok and (nodes[self.inNode].fdot != None)
+               
+                # modified self.fdotok
+                self._fdotok_(nodes)
             except:
                 self.fdotok == False
 
@@ -71,7 +78,7 @@ class Condenser:
 
     def export(self, nodes):
         result = '\n' + self.name
-        result += '\n' + Node.nodetitle
+        result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
         result += '\nheatExtracted(kJ/kg)  \t%.2f \nQExtracted(MW): \t%.2f' % (

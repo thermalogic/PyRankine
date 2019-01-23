@@ -1,6 +1,6 @@
 
 """
-Step4-json: General Abstraction and Data Representation of Rankine Cycle 
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
     class Pump
 
@@ -14,13 +14,12 @@ Step4-json: General Abstraction and Data Representation of Rankine Cycle
      {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "ef": 1.0,
+            "ef": 1.00,
             "inNode":5,
             "outNode":6
         }
 
   Last updated: 2018.05.08
-  
   Author:Cheng Maohua  Email: cmh@seu.edu.cn               
 
 """
@@ -28,20 +27,22 @@ from .node import *
 
 
 class Pump():
-    
-    energy = "workRequired"
-    devTYPE="PUMP"
 
-    def __init__(self, name, inNode, outNode, ef=1.0):
+    energy = "workRequired"
+    devTYPE = "PUMP"
+
+    def __init__(self, dictDev):
         """
         Initializes the pump with the conditions
         """
-        self.name = name
-        self.inNode = inNode
-        self.outNode = outNode
-        self.typeStr = "PUMP"
-     
-        self.ef = ef
+        self.name = dictDev['name']
+        self.inNode = dictDev['inNode']
+        self.outNode = dictDev['outNode']
+        self.type = dictDev['type']
+        self.ef = dictDev['ef'] 
+
+        # add nodes
+        self.nodes = [self.inNode, self.outNode]
 
         self.fdotok = False
 
@@ -56,16 +57,23 @@ class Pump():
         )
         nodes[self.outNode].ph()
 
+    # add _fdotok_
+    def _fdotok_(self, nodes):
+        self.fdotok = nodes[self.nodes[0]].fdot != None
+        for node in range(1, len(self.nodes)):
+            self.fdotok = self.fdotok and (nodes[node].fdot != None)
+
     def fdot(self, nodes):
         if (self.fdotok == False):
             try:
+                # mass blance equation
                 if (nodes[self.inNode].fdot != None):
                     nodes[self.outNode].fdot = nodes[self.inNode].fdot
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
 
-                self.fdotok = nodes[self.outNode].fdot != None
-                self.fdotok = self.fdotok and (nodes[self.inNode].fdot != None)
+                # modified self.fdotok
+                self._fdotok_(nodes)
             except:
                 self.fdotok == False
 
@@ -83,7 +91,7 @@ class Pump():
 
     def export(self, nodes):
         result = '\n' + self.name
-        result += '\n' + Node.nodetitle
+        result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
 

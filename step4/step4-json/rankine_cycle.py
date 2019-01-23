@@ -1,5 +1,5 @@
 """
-Step4-json: General Abstraction and Data Representation of Rankine Cycle 
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
 Main Module: 
    
@@ -7,7 +7,7 @@ Main Module:
 
     2 SimRankineCycle: the simulator of Rankine Cycle 
   
-Last updated: 2017.05.05
+Last updated: 2018.05.10
 
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
@@ -19,10 +19,26 @@ import json
 
 from components.node import Node
 from components.boiler import Boiler
-from components.openedheater import Openedheater
-from components.turbine import Turbine
+from components.openedheaterdw0 import OpenedheaterDw0
+from components.turbineex0 import TurbineEx0
+from components.turbineex1 import TurbineEx1
 from components.condenser import Condenser
 from components.pump import Pump
+
+# -------------------------------------------------------------------
+# compdict
+#  1: key:value-> Type String: class  name
+#  2  add the new key:value to the dict after you and the new device class/type
+# --------------------------------------------------------------------------
+
+compdict = {
+    "BOILER": Boiler,
+    "CONDENSER": Condenser,
+    "TURBINE-EX1": TurbineEx1,
+    "TURBINE-EX0": TurbineEx0,
+    "PUMP": Pump,
+    "FWH-OPENDED-DW0": OpenedheaterDw0
+}
 
 
 def read_jsonfile(filename):
@@ -30,14 +46,15 @@ def read_jsonfile(filename):
 
     # 1 read json file to dict
     with open(filename, 'r') as f:
-        rkcyc = json.loads(f.read())
+        rkcyc = json.load(f)
+        #rkcyc = json.loads(f.read())
 
     # print(rkcyc)
     name = rkcyc["name"]
     dictnodes = rkcyc["nodes"]
     dictcomps = rkcyc["comps"]
 
-    # 2 convert dict nodes to the object nodes
+    # 2 convert dict to the object of nodes
     countNodes = len(dictnodes)
     nodes = [None for i in range(countNodes)]
     for curnode in dictnodes:
@@ -67,28 +84,11 @@ def read_jsonfile(filename):
         elif nodes[i].t != None and nodes[i].x != None:
             nodes[i].tx()
 
-    # 3 convert dict Comps to the object Comps
+    # 3 convert dict to the object of Comps
     DevNum = len(dictcomps)
     Comps = {}
     for curdev in dictcomps:
-        if curdev['type'] == "TURBINE-EX1":
-            Comps[curdev['name']] = Turbine(curdev['name'], curdev['inNode'],
-                                            curdev['outNode'], curdev['extNode'], ef=curdev['ef'])
-        elif curdev['type'] == "TURBINE-EX0":
-            Comps[curdev['name']] = Turbine(curdev['name'], curdev['inNode'],
-                                            curdev['outNode'], ef=curdev['ef'])
-        elif curdev['type'] == "BOILER":
-            Comps[curdev['name']] = Boiler(
-                curdev['name'], curdev['inNode'], curdev['outNode'])
-        elif curdev['type'] == "CONDENSER":
-            Comps[curdev['name']] = Condenser(
-                curdev['name'], curdev['inNode'], curdev['outNode'])
-        elif curdev['type'] == "PUMP":
-            Comps[curdev['name']] = Pump(
-                curdev['name'], curdev['inNode'], curdev['outNode'], curdev['ef'])
-        elif curdev['type'] == "OH-FEEDWATER-DW0":
-            Comps[curdev['name']] = Openedheater(curdev['name'],  curdev['inNode'],
-                                                 curdev['inNode_fw'], curdev['outNode_fw'])
+        Comps[curdev['name']] = compdict[curdev['type']](curdev)
 
     return name, nodes, countNodes, Comps, DevNum
 
@@ -145,12 +145,11 @@ class RankineCycle(object):
                 self.fdotok = True
 
     def cycleSimulator(self):
-        for key in self.Comps:
-            self.Comps[key].simulate(self.nodes)
 
         self.totalworkExtracted = 0
         self.totalworkRequired = 0
         self.totalheatAdded = 0
+
         for key in self.Comps:
             self.Comps[key].simulate(self.nodes)
             if self.Comps[key].energy == "workExtracted":
@@ -224,7 +223,7 @@ class RankineCycle(object):
         print("{:>20} {:>.2f} \n".format('totalQAdded(MW)', self.totalQAdded))
 
         # output nodes
-        print(Node.nodetitle)
+        print(Node.title)
         for node in self.nodes:
             print(node)
         # output devices

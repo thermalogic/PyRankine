@@ -8,7 +8,6 @@
             "t": 480.0,
             "x": null,
             "fdot": 1
-            
         },
         {
             "name": "Extracted Steam To Opened FWH",
@@ -16,7 +15,7 @@
             "p": 0.7,
             "t": null,
             "x": null,
-            "fdot":null
+            "fdot": null
         },
         {
             "name": "Exhausted Steam to CD",
@@ -58,13 +57,10 @@
             "x": null,
             "fdot": null
         }
-
-
     ],
     "comps": [
-      
         {
-            "name": "Turbine",
+            "name": "Turbine Ex1",
             "type": "TURBINE-EX1",
             "ef": 0.85,
             "inNode": 0,
@@ -81,22 +77,22 @@
             "name": "Condensate Pump",
             "type": "PUMP",
             "ef": 1.00,
-            "inNode":3,
+            "inNode": 3,
             "outNode": 4
         },
         {
             "name": "Opened Feedwater Heater",
-            "type": "OH-FEEDWATER-DW0",
-            "inNode":1,
-            "inNode_fw":4,
-            "outNode_fw":5
+            "type": "FWH-OPENDED-DW0",
+            "inNode": 1,
+            "inNode_fw": 4,
+            "outNode_fw": 5
         },
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
             "ef": 1.00,
-            "inNode":5,
-            "outNode":6
+            "inNode": 5,
+            "outNode": 6
         },
         {
             "name": "Boiler",
@@ -104,7 +100,5 @@
             "inNode": 6,
             "outNode": 0
         }
-        
-        
     ]
 }

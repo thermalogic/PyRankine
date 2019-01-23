@@ -23,14 +23,14 @@ class Condenser:
     The condenser class
     """
 
-    def __init__(self, name, inletNode, exitNode):
+    def __init__(self,dictDev):
         """
         Initializes the condenser with nodes
         """
-        self.inletNode = inletNode
-        self.exitNode = exitNode
-        self.name = name
-
+        self.name = dictDev['name']
+        self.inletNode = dictDev['inNode']
+        self.exitNode = dictDev['exNode']
+       
     def state(self, nodes):
         pass
 

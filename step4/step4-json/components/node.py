@@ -1,6 +1,6 @@
 
 """
-Step4-json: General Abstraction and Data Representation of Rankine Cycle 
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
 
     class Node
                       ──┐           ┌──
@@ -21,7 +21,6 @@ json object example:
     }
   
 Last updated: 2018.05.08
-
 Author:Cheng Maohua  Email: cmh@seu.edu.cn  
   
 """
@@ -30,7 +29,7 @@ import seuif97 as if97
 
 class Node(object):
   
-    nodetitle = ('{:^6} \t {:^30} \t {:^5}\t {:^7}\t {:^7}\t {:^5} \t {:^7}\t {:^7}\t {:^5}\t {:^10}'.format
+    title = ('{:^6} \t {:^30} \t {:^5}\t {:^7}\t {:^7}\t {:^5} \t {:^7}\t {:^7}\t {:^5}\t {:^10}'.format
                  ("NodeID", "Name", "P", "T", "H", "S", "V", "X", "FDOT", "MDOT"))
 
     def __init__(self, name, nodeid):

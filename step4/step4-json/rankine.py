@@ -1,27 +1,26 @@
 
 """
-Step4-json: General Abstraction and Data Representation of Rankine Cycle 
-                
-       object-oriented programming,general module
+Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle 
+               
+      object-oriented programming,general module
 
   The General Simulator of Rankine Cycle
 
   Examples of Rankine Cycle
  
     Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+     
+     Chapter 8 : Vapour Power Systems Example
 
-    Chapter 8 : Vapour Power Systems Example
+         EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
 
-       EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
-
-       EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
+         EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
 Runner of the General Simulator of Rankine Cycle 
 
 python rankine.py
   
-Last updated: 2018.05.09
-
+Last updated: 2018.05.10
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
@@ -30,12 +29,12 @@ import rankine_cycle as rkc
 
 json_filesname_str=r'./cyclefile/rankine8[0-9].json'
 
-# json_filesname_str=r'./cyclefile/rankine85.json'
+#json_filesname_str=r'./cyclefile/rankine85.json'
     
-json_filesname = glob.glob(json_filesname_str)
+json_filesname=glob.glob(json_filesname_str)
 
 
-cycle = []
+cycle=[]
 for i in range(len(json_filesname)):
     cycle.append(rkc.SimRankineCycle(json_filesname[i]))
     cycle[i].CycleSimulator()
@@ -46,6 +45,6 @@ for i in range(len(json_filesname)):
     cycle[i].SpecifiedNetOutputPowerSimulatorAndOutput(Wcycledot)      
 
 #  Specified Mass Flow (kg/h)   
-mdot = 150 * 3600 # kg/h   
+mdot= 150*3600 # kg/h   
 for i in range(len(json_filesname)):
     cycle[i].SpecifiedMassFlowSimulatorAndOutput(mdot)        

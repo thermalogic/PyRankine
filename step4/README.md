@@ -6,8 +6,6 @@
 
     step4-json: json file
 
-    step4-json-dict: json file and  __init__ device with dict, modified the component class 
-
 ## EXAMPLE Example Rankine Cycles
 
 Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011

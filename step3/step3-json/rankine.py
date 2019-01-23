@@ -29,10 +29,24 @@ Email: cmh@seu.edu.cn
 import json
 
 import node
+import boiler
 import turbine
 import pump
 import condenser
-import boiler
+
+
+# -------------------------------------------------------------------
+# compdict
+#  1: key:value-> Type String: class  name
+#  2  add the new key:value to the dict after you and the new device class/type
+# --------------------------------------------------------------------------
+
+compdict = {
+    "BOILER": boiler.Boiler,
+    "CONDENSER": condenser.Condenser,
+    "TURBINE": turbine.Turbine,
+    "PUMP":  pump.Pump
+}
 
 
 def read_jsonfile(filename):
@@ -64,24 +78,12 @@ def read_jsonfile(filename):
         elif nodes[i].t!=None and nodes[i].x!=None:
             nodes[i].tx()
         
-    #print(nodes[1]) 
-      
     # 3 convert dict Comps to the object Comps
     DevNum=len(dictcomps)
     Comps = {}
     for curdev in dictcomps:
-        if curdev['type'] == "TURBINE":
-            Comps[curdev['name']] = turbine.Turbine(
-                curdev['name'], curdev['inNode'],curdev['exNode'])
-        elif curdev['type'] == "BOILER":
-            Comps[curdev['name']] = boiler.Boiler(
-                curdev['name'], curdev['inNode'],curdev['exNode'])
-        elif curdev['type'] == "CONDENSER":
-            Comps[curdev['name']] = condenser.Condenser(
-                curdev['name'], curdev['inNode'],curdev['exNode'])
-        elif curdev['type'] == "PUMP":
-             Comps[curdev['name']] = pump.Pump(curdev['name'], curdev['inNode'],curdev['exNode'])
- 
+        Comps[curdev['name']] = compdict[curdev['type']](curdev)
+      
     return  name,nodes, countNodes,Comps, DevNum
 
 class RankineCycle(object):
