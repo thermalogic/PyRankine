@@ -16,8 +16,7 @@ class BComponent():
 
     def __init__(self, dictDev):
         """ Initializes the Component"""
-        self.name = None
-        self.nodes = []
+        
         #self.__dict__.update(dictDev)
         
         self.fdotok = False

@@ -73,10 +73,10 @@ def read_jsonfile(filename):
     for curdev in dictcomps:
         if curdev['type'] == "TURBINE-EX1":
             Comps[curdev['name']] = Turbine(curdev['name'], curdev['inNode'],
-                                            curdev['outNode'], curdev['extNode'], ef=curdev['eff'])
+                                            curdev['outNode'], curdev['extNode'], ef=curdev['ef'])
         elif curdev['type'] == "TURBINE-EX0":
             Comps[curdev['name']] = Turbine(curdev['name'], curdev['inNode'],
-                                            curdev['outNode'], ef=curdev['eff'])
+                                            curdev['outNode'], ef=curdev['ef'])
         elif curdev['type'] == "BOILER":
             Comps[curdev['name']] = Boiler(
                 curdev['name'], curdev['inNode'], curdev['outNode'])
@@ -85,7 +85,7 @@ def read_jsonfile(filename):
                 curdev['name'], curdev['inNode'], curdev['outNode'])
         elif curdev['type'] == "PUMP":
             Comps[curdev['name']] = Pump(
-                curdev['name'], curdev['inNode'], curdev['outNode'], curdev['eff'])
+                curdev['name'], curdev['inNode'], curdev['outNode'], curdev['ef'])
         elif curdev['type'] == "OH-FEEDWATER-DW0":
             Comps[curdev['name']] = Openedheater(curdev['name'],  curdev['inNode'],
                                                  curdev['inNode_fw'], curdev['outNode_fw'])

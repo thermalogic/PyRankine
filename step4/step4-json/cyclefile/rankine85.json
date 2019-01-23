@@ -66,7 +66,7 @@
         {
             "name": "Turbine",
             "type": "TURBINE-EX1",
-            "eff": 85,
+            "ef": 0.85,
             "inNode": 0,
             "outNode": 2,
             "extNode": 1
@@ -80,7 +80,7 @@
         {
             "name": "Condensate Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.00,
             "inNode":3,
             "outNode": 4
         },
@@ -94,7 +94,7 @@
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.00,
             "inNode":5,
             "outNode":6
         },

@@ -38,15 +38,15 @@ class Boiler(BComponent):
         Initializes the boiler
         """
         super().__init__(dictDev)
-        
+
         self.name = dictDev['name']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.type = dictDev['type']
-        
+
         # add nodes
         self.nodes = [self.inNode, self.outNode]
-  
+     
     def state(self, nodes):
         pass
 

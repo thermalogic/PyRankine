@@ -38,7 +38,7 @@
         {
             "name": "Turbine",
             "type": "TURBINE-EX0",
-            "eff": 100,
+            "ef": 1.0,
             "inNode": 0,
             "outNode": 1
         },
@@ -51,14 +51,13 @@
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.0,
             "inNode": 2,
             "outNode": 3
         },
         {
             "name": "Boiler",
             "type": "BOILER",
-            "eff": null,
             "inNode": 3,
             "outNode": 0
         }

@@ -9,12 +9,11 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
      Chapter 8 : Vapour Power Systems Example
 
          EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
-
          EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
-Runner of the General Simulator of Rankine Cycle 
+Run:
 
-  python rankine.py
+>python rankine.py
   
 Last updated: 2019.01.10
 Author:Cheng Maohua  Email: cmh@seu.edu.cn

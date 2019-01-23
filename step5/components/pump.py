@@ -14,7 +14,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
      {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.0,
             "inNode":5,
             "outNode":6
         }
@@ -35,12 +35,12 @@ class Pump(BComponent):
         Initializes the pump with the conditions
         """
         super().__init__(dictDev)
-        
+       
         self.name = dictDev['name']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.type = dictDev['type']
-        self.ef = dictDev['eff'] / 100.0
+        self.ef = dictDev['ef'] 
 
         # add nodes
         self.nodes = [self.inNode, self.outNode]

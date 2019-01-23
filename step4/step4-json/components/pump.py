@@ -14,7 +14,7 @@ Step4-json: General Abstraction and Data Representation of Rankine Cycle
      {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.0,
             "inNode":5,
             "outNode":6
         }
@@ -32,7 +32,7 @@ class Pump():
     energy = "workRequired"
     devTYPE="PUMP"
 
-    def __init__(self, name, inNode, outNode, ef=100.0):
+    def __init__(self, name, inNode, outNode, ef=1.0):
         """
         Initializes the pump with the conditions
         """
@@ -41,7 +41,7 @@ class Pump():
         self.outNode = outNode
         self.typeStr = "PUMP"
      
-        self.ef = ef / 100.0
+        self.ef = ef
 
         self.fdotok = False
 

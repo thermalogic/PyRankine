@@ -17,7 +17,7 @@ json object example
     {
             "name": "Turbine1",
             "type": "TURBINE-EX0",
-            "eff": 100,
+            "ef": 1.0,
             "inNode": 0,
             "outNode": 1
     },
@@ -36,18 +36,17 @@ class TurbineEx0(BComponent):
     devTYPE = 'TURBINE-EX0'
 
     def __init__(self, dictDev):
-        
         super().__init__(dictDev)
 
         self.name = dictDev['name']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-
         self.type = dictDev['type']
-        self.ef = dictDev['eff'] / 100.0
+        self.ef = dictDev['ef'] 
 
         # add nodes
         self.nodes = [self.inNode, self.outNode]
+    
 
     def state(self, nodes):
         if self.ef == 1.0:

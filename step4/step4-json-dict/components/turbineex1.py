@@ -17,7 +17,7 @@ json object example
      {
             "name": "Turbine1",
             "type": "TURBINE-EX1",
-            "eff": 85,
+            "ef": 0.85,
             "inNode": 0,
             "outNode": 2,
             "extNode": 1
@@ -41,10 +41,9 @@ class TurbineEx1(object):
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.extNode = dictDev['extNode']
-
         self.type = dictDev['type']
+        self.ef = dictDev['ef'] 
 
-        self.ef = dictDev['eff'] / 100.0
         # add nodes
         self.nodes = [self.inNode, self.outNode, self.extNode]
         self.fdotok = False

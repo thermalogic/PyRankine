@@ -38,8 +38,8 @@ class Condenser(BComponent):
         """ Initializes the condenser """
         # demo BComponent.__init_
         BComponent.__init__(self,dictDev)
-        
-        self.name = dictDev['name']
+
+        self.name =  dictDev['name']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.type = dictDev['type']

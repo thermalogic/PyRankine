@@ -17,7 +17,7 @@ json object example
      {
             "name": "Turbine",
             "type": "TURBINE-EX1",
-            "eff": 85,
+            "ef": 0.85,
             "inNode": 0,
             "outNode": 2,
             "extNode": 1
@@ -37,7 +37,7 @@ class Turbine(object):
     energy = 'workExtracted'
     devTYPE ='TURBINE-EX01'
 
-    def __init__(self, name, inNode, outNode, extNode=None, ef=100.0):
+    def __init__(self, name, inNode, outNode, extNode=None, ef=1.0):
         self.name = name
         self.inNode = inNode
         self.outNode = outNode
@@ -47,7 +47,7 @@ class Turbine(object):
         else:
             self.typeStr = 'TURBINE-EX1'
 
-        self.ef = ef / 100.0
+        self.ef = ef
 
         self.fdotok = False
 

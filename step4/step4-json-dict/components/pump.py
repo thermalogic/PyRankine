@@ -14,7 +14,7 @@ Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle
      {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
+            "ef": 1.00,
             "inNode":5,
             "outNode":6
         }
@@ -39,8 +39,7 @@ class Pump():
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
         self.type = dictDev['type']
-
-        self.ef = dictDev['eff'] / 100.0
+        self.ef = dictDev['ef'] 
 
         # add nodes
         self.nodes = [self.inNode, self.outNode]
