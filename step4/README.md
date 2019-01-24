@@ -37,12 +37,31 @@ Chapter 8 : Vapour Power Systems
 
 All component classes in the package `components` have these  methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
 
-* `fdot`: check and analysis the mass float rate with mass and energy balance
-
 ### The Rankine Cycle 
 
 * 1 `rankine_cycle.py`:the General Simulator of Rankine Cycle
 * 2 `rankine.py` : the main runner of the General Simulator of Rankine Cycle
+
+### The Methods to check and analysis the mass float rate
+
+There are dependencies in the mass float rate calculation.
+
+e.g: [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+
+If the Open Feedwater Heater is not calculated, the fraction of extraction steam flow from turbine is not obtained, then the
+fraction of the total flow passing through the second-stage turbine is also no value, The turbine work calculation cannot be carried out.
+
+That is to say that the Open Feedwater Heater must be calculated **before** the Turbine.
+
+There is a problem of **equipment calculation order** in the mass float rate of Rankine Cycle
+
+What is the solution? Hard-coded Calculation Order? No, It is not the general solution.
+
+In the example codes, We provide one simple general solution:
+
+* the method `fdot` in every components with the method `cycledot` in the `rankine_cycle.py`
+
+If you are interested in solutions based on mathematical models,it is advisable to refer to general circuit analysis methods used in [SPICE](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/)
 
 ## Notes on Python
 
