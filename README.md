@@ -43,9 +43,14 @@ python rankine.py
 
 ## Dependencies：SEUIF97
 
-* IAPWS-IF97 high-speed shared library
+IAPWS-IF97 high-speed shared library
 
   * https://github.com/PySEE/SEUIF97
+
+Install with pip
+```bash
+python -m pip install seuif97
+```
 
 ## The Jupyter Notebooks of Example Rankine Cycles
 
