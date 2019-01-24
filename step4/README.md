@@ -59,7 +59,7 @@ What is the solution? Hard-coded Calculation Order? No, It is not the general so
 
 In the example codes, we provide one simple general solution:
 
-* the method `fdot` in every component with the method `cycledot` in the `rankine_cycle.py`
+* the method `fdot` in every component with the method `cycleFdot` in the `rankine_cycle.py`
 
 If you are interested in solutions based on mathematical models,it is advisable to refer to general circuit analysis methods used in [SPICE](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/)
 
