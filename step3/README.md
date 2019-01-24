@@ -34,11 +34,11 @@ The [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyte
 
 * 1 A collection of **name/value** pairs. 
 
-   In various languages, this is realized as an `object`, `record`, `struct`, `dictionary`, `hash table`, `keyed list`, or `associative array`.
+   In various languages, this is realized as an `object`, `record`, `struct`, `dictionary`, `hash table`, `keyed list`, or `associative array`. **Python: dictionary**
 
 * 2 An **ordered list** of values.
 
-    In most languages, this is realized as an `array`, `vector`, `list`, or `sequence`.
+    In most languages, this is realized as an `array`, `vector`, `list`, or `sequence`. **Python: list**
 
 #### 1 An `object` is an `unordered` set of **name/value** pairs.
 
