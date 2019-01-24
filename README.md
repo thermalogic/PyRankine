@@ -20,17 +20,15 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
      
 * [step 3](./step3)  : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle(Example 8.1)
      
-     Object-oriented Programming and JSON File of Rankine Cycle Flowsheet
+     Object-oriented Programming; JSON file of Rankine Cycle Flowsheet
                         
 * [step 4](./step4) : **General Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)    
   
-    Object-oriented programming, general module and JSON File of Rankine Cycle Flowsheet
+    Object-oriented programming, general module; JSON file of Rankine Cycle Flowsheet
  
 * [step 5](./step5) : **The Base Class Abstraction** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
  
-    Object-oriented programming, general module, the base class
-                      
-    * `json` file for the representation of Rankine Cycle Flowsheet 
+    Object-oriented programming, general module, the base class; JSON file of Rankine Cycle Flowsheet 
 
     **The UML Class Diagram: Association**
 
