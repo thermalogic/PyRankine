@@ -26,54 +26,88 @@ Chapter 8 : Vapour Power Systems
 
 [JSON (JavaScript Object Notation)](http://json.org/), specified by [RFC 7159]() (which obsoletes RFC 4627) and by ECMA-404, is a `lightweight data interchange` format inspired by [JavaScript](https://en.wikipedia.org/wiki/JavaScript) object literal syntax (although it is not a strict subset of JavaScript).
 
+The [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb) is used as the example to show the forms of `JSON` items 
+
+![rankine81](./img/rankine81.jpg)
+
 ### `JSON` is built on `two` structures:
 
-* 1 A collection of `name/value` pairs. In various languages, this is realized as an `object`, `record`, `struct`, `dictionary`, `hash table`, `keyed list`, or `associative array`.
+* 1 A collection of **name/value** pairs. 
 
+   In various languages, this is realized as an `object`, `record`, `struct`, `dictionary`, `hash table`, `keyed list`, or `associative array`.
 
-* 2 An **ordered** `list` of values. In most languages, this is realized as an `array`, `vector`, `list`, or `sequence`.
+* 2 An **ordered list** of values.
 
-###  In `JSON`, they take on these `forms`
+    In most languages, this is realized as an `array`, `vector`, `list`, or `sequence`.
 
-#### 1 An `object` is an `unordered` set of `name/value` pairs.
+#### 1 An `object` is an `unordered` set of **name/value** pairs.
 
 * An `object` begins with `{` (left brace) and ends with `}` (right brace).
 
-* Each `name` is followed by `:` (colon) 
+* **name/value** pairs.
 
-* The `name/value` pairs are `separated` by `, `(comma)
+   * The **name/value** pairs are `separated` by `, `(comma)
 
+   * Each `name` is followed by `:` (colon) 
+
+   *  The `value` can be a `string` in double quotes("), or a `number`, or `true` or `false` or `null`, or an `object` or an `array`，These structures can be **nested**.
+      
+      * The **string** is a sequence of zero or more `Unicode` characters, wrapped in `double` quotes(`"`), using backslash escapes(`\`)
+
+        * The `character` is represented as a single character `string`. 
+
+      * A `number` is very much like a `C`number, `except` that the `octal and hexadecimal` formats are not used.
+
+The json object of node 0
+```json
+       {
+            "name": "Main Steam",
+            "id": 0,
+            "p": 8.0,
+            "t": null,
+            "x": 1,
+            "fdot": 1
+        }
+```
 #### 2 An `array` is an `ordered` collection of **values**
 
 * An array begins with `[` (left bracket) and ends with `]` (right bracket).
 
 * Values are separated by `,` (comma).
 
-#### 3 A `value` can be a `string` in double quotes("), or a `number`, or `true` or `false` or `null`, or an `object` or an `array`
-
-These structures can be **nested**.
-
-#### 4 A **string** is a sequence of zero or more `Unicode` characters, wrapped in `double` quotes(`"`), using backslash escapes(`\`)
-
-A `character` is represented as a single character `string`. 
-
-A string is very much like a `C` or `Java` string.
-
-#### 5 A `number` is very much like a `C` or `Java` number, `except` that the `octal and hexadecimal` formats are not used.
+The json array of node 0,1
+```json
+"nodes": [
+       {
+            "name": "Main Steam",
+            "id": 0,
+            "p": 8.0,
+            "t": null,
+            "x": 1,
+            "fdot": 1
+        },
+        {
+            "name": "Outlet Steam of HP",
+            "id": 1,
+            "p": 0.008,
+            "t": null,
+            "x": null,
+            "fdot": null
+        }
+   ]   
+```
 
 ## The  Rankine Cycle is `drawn` in the json  files 
 
-* `nodes`
+* `nodes` array
 
-  The nodes would have `unique ID `(**id**) for the nodes in the Rankine Cycle Flowsheet
+  The nodes array would have `unique ID `(**id**) for the nodes in the Rankine Cycle Flowsheet
 
-* `components`
+* `components` array
 
    The components would have `unique symbols`(**type**) for the components in the Rankine Cycle Flowsheet
 
 ### the `JSON` representation of the Rankine Cycle 81 Flowsheet
-
-![rankine81](./img/rankine81.jpg)
 
 the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
 
