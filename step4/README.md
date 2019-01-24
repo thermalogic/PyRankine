@@ -1,7 +1,7 @@
 # Step4: General Abstraction and Data Representation of Rankine Cycle
 
 
-## EXAMPLE Example Rankine Cycles
+## Example Rankine Cycles
 
 Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
