@@ -99,6 +99,15 @@ The json array of node 0,1
 
 ## The  Rankine Cycle is `drawn` in the json  files 
 
+The Python Object of Rankine Cycle
+
+```python   
+{ 'name': 'NameString',
+  'nodes':[{'name':None,'id':None,'p':None,'t':None,'x':None,'fot':None}],
+  'comps':[{'name':None,'type':None,'inNode':None,'outNodet':None,...}]
+}   
+```
+
 * `nodes` array
 
   The nodes array would have `unique ID `(**id**) for the nodes in the Rankine Cycle Flowsheet
@@ -170,7 +179,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
         {
             "name": "Boiler",
             "type": "BOILER",
-            "eff": null,
             "inNode": 3,
             "outNode": 0
         }
