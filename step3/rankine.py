@@ -30,10 +30,9 @@ import json
 
 import node
 import boiler
-import turbine
-import pump
 import condenser
-
+import pump
+import turbine
 
 # -------------------------------------------------------------------
 # compdict
