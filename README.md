@@ -32,7 +32,7 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
     **The UML Class Diagram: Association**
 
-    ![The UML Class Diagram: Association](./step5/uml/step5-package.jpg)
+    ![The UML Class Diagram: Association](./step5/uml/packages.svg)
 
 ## Run
 

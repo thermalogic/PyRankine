@@ -25,11 +25,11 @@ Chapter 8 : Vapour Power Systems Example
 
 ### The Class Diagram： Association
 
-![Package UML](./uml/step5-package.jpg)
+![Package UML](./uml/packages.svg)
 
 ### The Class Diagram : Inheritance, Composition
 
-![Class UML](./uml/step5-classes.jpg)
+![Class UML](./uml/classes.svg)
 
 ## The base class of components
 
