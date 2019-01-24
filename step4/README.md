@@ -1,10 +1,5 @@
-# PyRankine 
+# Step4: General Abstraction and Data Representation of Rankine Cycle
 
-## Step4: General Abstraction and Data Representation of Rankine Cycle
-
-   * [step4-csv](./step4-csv/): csv file
-
-   * [step4-json](./step4-json/): json file   
 
 ## EXAMPLE Example Rankine Cycles
 
@@ -21,21 +16,12 @@ Chapter 8 : Vapour Power Systems
 ## Run
 
 ```bash
->cd step4-csv/step4-json
 >python rankine.py
 ```
 
-## The Modules 
+## The Projects 
 
-### The Data File of Rankine Cycle
-
-The all data files in the path `./cyclefile`
-
-* `csv's file`
-
-   * `*-dev.csv`: the data file of devices 
-
-   * `*-nds.csv`: the data file of nodes
+### [The Data Files of Rankine Cycle](./cyclefile)
 
 * `json's file`
 
@@ -47,7 +33,7 @@ The all data files in the path `./cyclefile`
 
   * `*-SP.txt`: the output of the Specified Net Output Power
 
-### The Components Class
+### [The Components Class](./components)
 
 All component classes in the package `components` have these  methods:`__init__`,`state`,`fdot`,`simulate`, `sm_energy`,`export`
 

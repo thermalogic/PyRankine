@@ -1,53 +1,28 @@
-# The Representation of Rankine Cycle Flowsheet
+# Step3: Basic Object-Orientation Abstraction and Data Representation of  Rankine Cycle
+
+**The `JSON` File of Rankine Cycle Flowsheet**
 
 The importmant stage in the Rankine Cycle Simulator is to be able to generate a Rankine Cycle Flowsheet.
 
-A Rankine Cycle Flowsheet should be able to describe the `nodes` and `components` present in a Rankine Cycle and also be able to describe how these components are `connected` to each other through `nodes`.
-
-* 1 Rankine Cycle Representation as `.csv` files
-
-* 2 Rankine Cycle Representation as `JSON` file
-
-* 3 Python: `json` — JSON encoder and decoder
-
-## 1  Rankine Cycle Representation as a Comma Separated Value (.csv) file
-
-A `Comma Separated Value (.csv)` file can be opened and edited in any `spreadsheet` software like any other spreadsheet.
-
-In the .csv file, each `row` of the spreadsheet appears in a separate `line` and the `contents of the cells` in a row are separated by `commas`.
-
-A `.csv` file is essentially a `text` file which can be edited  by any Text Editor
+The `JSON` files of Rankine Cycle Flowsheet describe the `nodes` and `components` present in a Rankine Cycle ando describe how these components are `connected` to each other through `nodes`.
 
 
-### The  Rankine Cycle is `drawn` in two `.csv` files 
+**Running:**
+```bash
+python rankine.py
+```
 
-* `nodes`:  
+## EXAMPLE Example Rankine Cycles
 
-    The nodes would have `unique ID `(**NID**) for the nodes in the Rankine Cycle schematic
+Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
-* `components`: `components` and how these components are `connected`  to each other through `nodes`.
+Chapter 8 : Vapour Power Systems 
 
-   The components would have `unique symbols`(**TYPE**) for the components in the Rankine Cycle schematic
+* [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
-### Example: the CSV files of the Rankine Cycle 81 schematic
+    * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
-![rankine81](./img/rankine81.jpg)
-
-CSV files of the Rankine Cycle 81 Flowsheet 
-
-* `nodes`: [rankine81-nds.csv](./step3-csv/rankine81-nds.csv)
-
-* `components`: [rankine81-dev.csv](./step3-csv/rankine81-dev.csv)
-
-![rankine81-nds](./img/rankine81-nds.png)
-
-![rankine81-nds-sp](./img/rankine81-nds-sp.png)
-
-![rankine81-dev](./img/rankine81-dev.png)
-
-![rankine81-dev-sp](./img/rankine81-dev-sp.png)
-
-## 2 Rankine Cycle Representation as a JSON file
+## JSON
 
 [JSON (JavaScript Object Notation)](http://json.org/), specified by [RFC 7159]() (which obsoletes RFC 4627) and by ECMA-404, is a `lightweight data interchange` format inspired by [JavaScript](https://en.wikipedia.org/wiki/JavaScript) object literal syntax (although it is not a strict subset of JavaScript).
 
@@ -68,7 +43,7 @@ CSV files of the Rankine Cycle 81 Flowsheet
 
 * The `name/value` pairs are `separated` by `, `(comma)
 
-### 2 An `array` is an `ordered` collection of **values**
+#### 2 An `array` is an `ordered` collection of **values**
 
 * An array begins with `[` (left bracket) and ends with `]` (right bracket).
 
@@ -86,7 +61,7 @@ A string is very much like a `C` or `Java` string.
 
 #### 5 A `number` is very much like a `C` or `Java` number, `except` that the `octal and hexadecimal` formats are not used.
 
-### The  Rankine Cycle is `drawn` in the json  files 
+## The  Rankine Cycle is `drawn` in the json  files 
 
 * `nodes`
 
@@ -96,7 +71,7 @@ A string is very much like a `C` or `Java` string.
 
    The components would have `unique symbols`(**type**) for the components in the Rankine Cycle Flowsheet
 
-### Example: the JSON representation of the Rankine Cycle 81　Flowsheet
+### the `JSON` representation of the Rankine Cycle 81 Flowsheet
 
 ![rankine81](./img/rankine81.jpg)
 
@@ -143,7 +118,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
         {
             "name": "Turbine",
             "type": "TURBINE-EX0",
-            "eff": 100,
             "inNode": 0,
             "outNode": 1
         },
@@ -156,7 +130,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
-            "eff": 100,
             "inNode": 2,
             "outNode": 3
         },
@@ -171,6 +144,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
 }
 ```
 
-## 3 Python3:19.2. json — JSON encoder and decoder
+## Reference
 
-https://docs.python.org/3/library/json.html
+* [Python3: json — JSON encoder and decoder](https://docs.python.org/3/library/json.html)

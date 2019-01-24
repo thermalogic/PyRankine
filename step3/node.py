@@ -1,6 +1,6 @@
 
 """
-Step4-csv: General Abstraction and Data Representation of Rankine Cycle
+Step 3-json ：Basic Object-Orientation Abstraction  and Data Representation of The Ideal Rankine Cycle
 
     class Node
                       ──┐           ┌──
@@ -9,35 +9,25 @@ Step4-csv: General Abstraction and Data Representation of Rankine Cycle
                         │           │
                       ──┘           └──
 
-  Last updated: 2017.05.05
-
   Author:Cheng Maohua  Email: cmh@seu.edu.cn  
   
 """
+
 import seuif97 as if97
 
 
 class Node(object):
-  
-    nodetitle = ('{:^6} \t {:^30} \t {:^5}\t {:^7}\t {:^7}\t {:^5} \t {:^7}\t {:^7}\t {:^5}\t {:^10}'.format
-                 ("NodeID", "Name", "P", "T", "H", "S", "V", "X", "FDOT", "MDOT"))
 
-    def __init__(self, name, nodeid):
+    def __init__(self, name, nid):
         self.name = name
-        self.nodeid = nodeid
-
+        self.nid = nid
         self.p = None
         self.t = None
         self.h = None
         self.s = None
         self.v = None
         self.x = None
-
-        self.fdot = None
-        self.mdot = None
-
-    def calmdot(self, totalmass):
-        self.mdot = totalmass * self.fdot
+     
 
     def pt(self):
         self.h = if97.pt2h(self.p, self.t)
@@ -76,6 +66,6 @@ class Node(object):
         self.v = if97.tx2v(self.t, self.x)
 
     def __str__(self):
-        result = ('{:^6d} \t {:<30} \t {:>6.3f}\t {:>7.3f}\t {:>7.2f}\t {:>5.2f} \t {:>7.3f}\t {:>5.3}\t {:>6.4f}\t {:>.2f}'.format
-                  (self.nodeid, self.name, self.p, self.t, self.h, self.s, self.v, self.x, self.fdot, self.mdot))
+        result = '%d \t%s \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f \t%.2f' \
+            % (self.nid, self.name, self.p, self.t, self.h, self.s, self.v, self.x)
         return result

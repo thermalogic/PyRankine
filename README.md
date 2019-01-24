@@ -20,20 +20,11 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
      
 * [step 3](./step3)  : **Basic Object-Orientation Abstraction**  and **Data Representation** of The Ideal Rankine Cycle(Example 8.1)
      
-     Object-oriented programming and data files: 
-
-    [Rankine Cycle Representation of CSV or JSON File](./step3/README.md)
+     Object-oriented Programming and JSON File of Rankine Cycle Flowsheet
                         
-    * [step3-csv](./step3/step3-csv)  : csv file 
-
-    * [step3-json](./step3/step3-json): json file
-      
 * [step 4](./step4) : **General Abstraction** and **Data Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)    
-    Object-oriented programming, general module
-   
-    * [step4-csv](./step4/step4-csv): csv file
-
-    * [step4-json](./step4/step4-json): json file       
+  
+    Object-oriented programming, general module and JSON File of Rankine Cycle Flowsheet
  
 * [step 5](./step5) : **The Base Class Abstraction** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
  
