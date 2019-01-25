@@ -14,7 +14,7 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
       Structure data types(List,Dict) and functions
       
-* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1) and 
+* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1) 
 
       Object-oriented programming 
      
