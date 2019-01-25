@@ -154,13 +154,13 @@ The JSON of Rankine Cycle
 JSON `nodes` array -> Pythin list
 
 JSON `node` a collection of name/value pairs -> Python dictionary
-*  The node would have `unique ID `(**id**) for order in the nodes of the Rankine Cycle Flowsheet
+*  The node has `unique ID `(**id**) for order in the nodes of the Rankine Cycle Flowsheet
 
 JSON `components` array -> Python list
 
 JSON component :a collection of name/value pairs  -> Python dictionary  
 
-* The component would has `unique symbols`(**type**) for the component in the Rankine Cycle Flowsheet
+* The component has `unique symbols`(**type**) for the component in the Rankine Cycle Flowsheet
 
 ### The `JSON` representation of the Rankine Cycle 81 Flowsheet
 
