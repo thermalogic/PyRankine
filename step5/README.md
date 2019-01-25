@@ -1,11 +1,17 @@
        
-# Step5: The Base Class of Components
+# Step5: The Base Class of Components and Textual Representation
 
-The General Simulator of Rankine Cycle with the base class of components
+Object-oriented programming, general module, the base class
 
-* `json` file for the representation of Rankine Cycle Flowsheet 
+JSON file of Rankine Cycle Flowsheet 
 
-## Examples of Rankine Cycle
+**Run**
+
+```bash
+>python rankine.py
+```
+
+## Example Rankine Cycles
  
 Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
@@ -15,11 +21,6 @@ Chapter 8 : Vapour Power Systems Example
 
 * [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
 
-## Run
-
-```bash
->python rankine.py
-```
 
 ## The UML Class diagram 
 

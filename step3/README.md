@@ -1,18 +1,15 @@
-# Step3: Basic Object-Orientation Abstraction and Data Representation of  Rankine Cycle
+# Step3: Basic Object-Orientation Abstraction and Textual Representation of  Rankine Cycle
 
-**The `JSON` File of Rankine Cycle Flowsheet**
+Object-oriented Programming
 
-The importmant stage in the Rankine Cycle Simulator is to be able to generate a Rankine Cycle Flowsheet.
-
-The `JSON` files of Rankine Cycle Flowsheet describe the `nodes` and `components` present in a Rankine Cycle ando describe how these components are `connected` to each other through `nodes`.
-
+JSON file of Rankine Cycle Flowsheet
 
 **Running:**
 ```bash
 python rankine.py
 ```
 
-## EXAMPLE Example Rankine Cycles
+## Example Rankine Cycles
 
 Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
 
@@ -21,6 +18,14 @@ Chapter 8 : Vapour Power Systems
 * [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
 
     * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
+
+## The `JSON` File of Rankine Cycle Flowsheet
+
+The importmant stage in the Rankine Cycle Simulator is to build the Textual Representation of Rankine Cycle Flowsheet.
+
+We use `JSON` format for the Textual Representation Rankine of Cycle Flowsheet
+
+The `JSON` files of Rankine Cycle Flowsheet describe the `nodes` and `components` present in a Rankine Cycle and describe how these components are `connected` to each other through `nodes`.
 
 ## JSON
 
