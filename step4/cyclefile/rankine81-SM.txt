@@ -1,0 +1,44 @@
+
+ Rankine Cycle: Rankine81, Time: 2019-01-25 19:42:57.020829
+       Net Power(MW) 143.32
+     Mass Flow(kg/h) 540000.00
+       Efficiency(%) 37.08
+   Heat Rate(kJ/kWh) 9708.39
+  Steam Rate(kg/kWh) 3.77
+ totalWExtracted(MW) 144.53
+  totalWRequired(MW) 1.21
+     totalQAdded(MW) 386.50 
+
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 540000.00
+  1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 540000.00
+  2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+
+Turbine Ex0
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 540000.00
+  1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 540000.00
+workExtracted(kJ/kg): 	963.53 
+WExtracted(MW): 	144.53
+
+Condenser
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 540000.00
+  2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+heatExtracted(kJ/kg)  	1621.23 
+QExtracted(MW): 	243.18
+
+Feedwater Pump
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+workRequired(kJ/kg): 	8.06
+WRequired(MW): 	1.21
+
+Boiler
+NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
+  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+  0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 540000.00
+heatAdded(kJ/kg) 	2576.70 
+QAdded(MW) 	386.50

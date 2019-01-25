@@ -14,26 +14,49 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
       Structure data types(List,Dict) and functions
       
-* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1) and 
 
       Object-oriented programming 
      
 * [step 3](./step3)  : **Basic Object-Orientation Abstraction**  and **Textual Representation** of The Ideal Rankine Cycle(Example 8.1)
      
-      Object-oriented Programming; JSON file of Rankine Cycle Flowsheet
+      Object-oriented Programming 
+      
+      JSON file of Rankine Cycle Flowsheet
                         
-* [step 4](./step4) : **General Abstraction** and **Textual Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)    
-  
-      Object-oriented programming, general module; JSON file of Rankine Cycle Flowsheet
+* [step 4](./step4) : **General Abstraction** and **Textual Representation** of Rankine Cycles
+      
+      Object-oriented programming, general module; 
+      
+      JSON file of Rankine Cycle Flowsheet
+      
+    Example Rankine Cycles    
+   
+    * Example 8.1: The Ideal Rankine Cycle
+      
+    * Example 8.2: Analyzing a Rankine Cycle with Irreversibilities
+      
+    * Example 8.5: Regenerative Cycle with Open Feedwater Heater    
  
-* [step 5](./step5) : **The Base Class Abstraction**  and **Textual Representation** of Ideal Rankine Cycle(Example 8.1), Regenerative Cycle with Open Feedwater Heater(Example 8.5)                
- 
-      Object-oriented programming, general module, the base class; JSON file of Rankine Cycle Flowsheet 
+* [step 5](./step5) : **The Base Class Abstraction**  and **Textual Representation** of Rankine Cycles
 
+      Object-oriented programming, general module, the base class; 
+      
+      JSON file of Rankine Cycle Flowsheet 
+    
+    Example Rankine Cycles    
+   
+    * Example 8.1: The Ideal Rankine Cycle
+      
+    * Example 8.2: Analyzing a Rankine Cycle with Irreversibilities
+      
+    * Example 8.5: Regenerative Cycle with Open Feedwater Heater 
+    
     **The UML Class Diagram: Association**
 
     ![The UML Class Diagram: Association](./step5/uml/packages.svg)
 
+ 
 ## Run
 
 ```bash
