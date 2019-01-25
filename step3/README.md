@@ -74,13 +74,23 @@ The json object of node 0
             "fdot": 1
         }
 ```
+
+The json object of Boiler
+```json
+  {
+     "name": "Boiler",
+     "type": "BOILER",
+     "inNode": 3,
+     "outNode": 0
+  }
+```
 #### 2 An `array` is an `ordered` collection of **values**
 
 * An array begins with `[` (left bracket) and ends with `]` (right bracket).
 
 * Values are separated by `,` (comma).
 
-The json array of node 0,1
+#### The json array of node 0,1
 ```json
 "nodes": [
        {
@@ -102,26 +112,57 @@ The json array of node 0,1
    ]   
 ```
 
-## The  Rankine Cycle is `drawn` in the json  files 
+#### The json array of Boiler,Turbine
+```json
+{ "comps": [
+        {
+            "name": "Turbine",
+            "type": "TURBINE-EX0",
+            "inNode": 0,
+            "outNode": 1
+        },
+       {
+            "name": "Boiler",
+            "type": "BOILER",
+            "inNode": 3,
+            "outNode": 0
+        }
+    ]
+} 
+```
+
+## The JSON  of Rankine Cycle 
 
 The Python Object of Rankine Cycle
 
 ```python   
 { 'name': 'NameString',
-  'nodes':[{'name':None,'id':None,'p':None,'t':None,'x':None,'fot':None}],
-  'comps':[{'name':None,'type':None,'inNode':None,'outNodet':None,...}]
+  'nodes':[{'name':None,'id':None,'p':None,'t':None,'x':None,'fot':None},...],
+  'comps':[{'name':None,'type':None,'inNode':None,'outNodet':None,...},...]
 }   
 ```
 
-* `nodes` array
+The JSON of Rankine Cycle
+```json
+{
+    "name": "RankineCycleName",
+    "nodes": [...],
+    "comps": [...]
+}  
+```
 
-  The nodes array would have `unique ID `(**id**) for the nodes in the Rankine Cycle Flowsheet
+JSON `nodes` array -> Pythin list
 
-* `components` array
+JSON `node` a collection of name/value pairs -> Python dictionary
+*  The node would have `unique ID `(**id**) for order in the nodes of the Rankine Cycle Flowsheet
 
-   The components would have `unique symbols`(**type**) for the components in the Rankine Cycle Flowsheet
+JSON `components` array -> Python list
 
-### the `JSON` representation of the Rankine Cycle 81 Flowsheet
+JSON component :a collection of name/value pairs  -> Python dictionary  
+
+* The component would has `unique symbols`(**type**) for the component in the Rankine Cycle Flowsheet
+
+### The `JSON` representation of the Rankine Cycle 81 Flowsheet
 
 the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
 
