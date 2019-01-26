@@ -23,6 +23,10 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
       Object-oriented Programming 
       
       JSON file of Rankine Cycle Flowsheet
+
+     **The UML Class Diagram: Association**
+
+     ![The UML Class Diagram: Association](./step3/uml/packages.svg)  
                         
 * [step 4](./step4) : **General Abstraction** and **Textual Representation** of Rankine Cycles
       
@@ -36,7 +40,11 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
       
     * Example 8.2: Analyzing a Rankine Cycle with Irreversibilities
       
-    * Example 8.5: Regenerative Cycle with Open Feedwater Heater    
+    * Example 8.5: Regenerative Cycle with Open Feedwater Heater  
+
+     **The UML Class Diagram: Association**
+
+    ![The UML Class Diagram: Association](./step4/uml/packages.svg)  
  
 * [step 5](./step5) : **The Base Class Abstraction**  and **Textual Representation** of Rankine Cycles
 

@@ -1,0 +1,28 @@
+digraph "packages" {
+charset="utf-8"
+rankdir=BT
+"1" [label="components", shape="box"];
+"2" [label="components.boiler", shape="box"];
+"3" [label="components.condenser", shape="box"];
+"4" [label="components.node", shape="box"];
+"5" [label="components.openedheaterdw0", shape="box"];
+"6" [label="components.pump", shape="box"];
+"7" [label="components.turbineex0", shape="box"];
+"8" [label="components.turbineex1", shape="box"];
+"9" [label="rankine", shape="box"];
+"10" [label="rankine_cycle", shape="box"];
+"2" -> "4" [arrowhead="open", arrowtail="none"];
+"3" -> "4" [arrowhead="open", arrowtail="none"];
+"5" -> "4" [arrowhead="open", arrowtail="none"];
+"6" -> "4" [arrowhead="open", arrowtail="none"];
+"7" -> "4" [arrowhead="open", arrowtail="none"];
+"8" -> "4" [arrowhead="open", arrowtail="none"];
+"9" -> "10" [arrowhead="open", arrowtail="none"];
+"10" -> "2" [arrowhead="open", arrowtail="none"];
+"10" -> "3" [arrowhead="open", arrowtail="none"];
+"10" -> "4" [arrowhead="open", arrowtail="none"];
+"10" -> "5" [arrowhead="open", arrowtail="none"];
+"10" -> "6" [arrowhead="open", arrowtail="none"];
+"10" -> "7" [arrowhead="open", arrowtail="none"];
+"10" -> "8" [arrowhead="open", arrowtail="none"];
+}

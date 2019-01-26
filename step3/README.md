@@ -19,6 +19,17 @@ Chapter 8 : Vapour Power Systems
 
     * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
+
+## The UML Class diagram 
+
+### The Class Diagram： Association
+
+![Package UML](./uml/packages.svg)
+
+### The Class Diagram
+
+![Class UML](./uml/classes.svg)
+
 ## The `JSON` File of Rankine Cycle Flowsheet
 
 The importmant stage in the Rankine Cycle Simulator is to build the Textual Representation of Rankine Cycle Flowsheet.
