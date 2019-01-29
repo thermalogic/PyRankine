@@ -20,7 +20,7 @@ class Openedheaterdw0
             "outNode_fw":5
      }
 
-  Author:Cheng Maohua  Email: cmh@seu.edu.cn  
+Author:Cheng Maohua(cmh@seu.edu.cn)  
 
 """
 from .node import *

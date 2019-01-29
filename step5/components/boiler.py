@@ -1,6 +1,7 @@
 """
 Step5: The General Simulator of Rankine Cycle with the  base class of components
-  class Boiler
+  c
+  lass Boiler
 
                     ↑    outNode main steam
                 ┌───┼───┐
@@ -20,7 +21,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
             "outNode": 0
         }
 
- Author:Cheng Maohua  Email: cmh@seu.edu.cn 
+ Author:Cheng Maohua(cmh@seu.edu.cn)
 
 """
 

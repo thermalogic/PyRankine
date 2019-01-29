@@ -241,7 +241,7 @@ class SimRankineCycle(object):
 
     def __init__(self, rankinefilename):
         self.jsonfilename = rankinefilename
-        self.prefixResultFileName = rankinefilename[0:-5]  # .json
+        self.prefixResultFileName = (rankinefilename[0:-5]).replace("txtcycle","output")  # -5 remove .json
 
     def CycleSimulator(self):
         self.cycle = RankineCycle()

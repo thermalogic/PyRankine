@@ -36,17 +36,15 @@ Chapter 8 : Vapour Power Systems
 
 ## The Projects 
 
-### [The Data Files of Rankine Cycle](./cyclefile)
+### [The Textual Representation Files of Rankine Cycle](./txtcycle)
 
-* `json's file`
+* `rankine??.json`
 
-   * `*.json`: the data file of devices and nodes
+### [The Output Files of Rankine Cycle](./output) 
 
-* the output files 
+* `rankine??-SM.txt`: the output of Specified Mass Flow
 
-  * `*-SM.txt`: the output of Specified Mass Flow
-
-  * `*-SP.txt`: the output of the Specified Net Output Power
+* `rankine??-SP.txt`: the output of the Specified Net Output Power
 
 ### [The Components Class](./components)
 

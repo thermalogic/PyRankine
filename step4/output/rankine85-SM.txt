@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine85, Time: 2019-01-25 19:42:57.090790
+ Rankine Cycle: Rankine85, Time: 2019-01-29 17:20:05.437761
        Net Power(MW) 146.41
      Mass Flow(kg/h) 540000.00
        Efficiency(%) 36.91

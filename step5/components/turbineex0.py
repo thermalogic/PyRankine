@@ -1,7 +1,7 @@
 """
 Step5: The General Simulator of Rankine Cycle with the  base class of components
 
-    TurbineEx0 class: 
+ TurbineEx0 class: 
        
         inNode inlet steam   
                  ┌────────┐
@@ -10,7 +10,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
                 ╲         │
                  └────────┤
                           ↓  outNode exhausted steam   
-extracted steam  0    
+   
 
 json object example
 
@@ -20,9 +20,9 @@ json object example
             "ef": 1.0,
             "inNode": 0,
             "outNode": 1
-    },
+    }
 
-   Author:Cheng Maohua  Email: cmh@seu.edu.cn
+Author:Cheng Maohua(cmh@seu.edu.cn)  
 
 """
 import seuif97

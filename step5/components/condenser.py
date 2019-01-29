@@ -18,10 +18,9 @@ json object example:
             "type": "CONDENSER",
             "inNode": 2,
             "outNode": 3
-   },                   
+   }                   
 
-   Last updated: 2018.05.10
-   Author:Cheng Maohua  Email: cmh@seu.edu.cn                   
+ Author:Cheng Maohua(cmh@seu.edu.cn)                   
 
 """
 

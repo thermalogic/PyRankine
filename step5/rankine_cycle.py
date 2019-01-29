@@ -1,10 +1,8 @@
 """
-Step5: The General Simulator of Rankine Cycle with the  base class of components
+Step5: The Base Class of Components and Textual Representation
 
 Main Module: 
-   
     1 RankineCycle: the class of Rankine Cycle 
-
     2 SimRankineCycle: the simulator of Rankine Cycle 
   
 Last updated: 2019·.01.10
@@ -241,7 +239,7 @@ class SimRankineCycle(object):
 
     def __init__(self, rankinefilename):
         self.jsonfilename = rankinefilename
-        self.prefixResultFileName = rankinefilename[0:-5]  # .json
+        self.prefixResultFileName = (rankinefilename[0:-5]).replace("txtcycle","output")  # -5 remove .json
 
     def CycleSimulator(self):
         self.cycle = RankineCycle()

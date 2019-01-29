@@ -19,7 +19,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
             "outNode":6
         }
 
-   Author:Cheng Maohua  Email: cmh@seu.edu.cn               
+Author:Cheng Maohua(cmh@seu.edu.cn)              
 
 """
 from .node import *

@@ -1,14 +1,14 @@
 
 """
-Step5: The General Simulator of Rankine Cycle with the  base class of components
+Step5: The Base Class of Components and Textual Representation
                
-  Examples of Rankine Cycle
+ Example Rankine Cycles
  
     Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
-     
-     Chapter 8 : Vapour Power Systems Example
+    Chapter 8 : Vapour Power Systems Example
 
          EXAMPLE 8.1 ：An Ideal Regenerative Cycle, Page 438
+         EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities
          EXAMPLE 8.5 ：A Regenerative Cycle with Open Feedwater Heater,Page 456
 
 Run:
@@ -23,24 +23,22 @@ import glob
 
 import rankine_cycle as rkc
 
-json_filesname_str='./cyclefile/rankine8[0-9].json'
+json_filesname_str='./txtcycle/rankine8[0-9].json'
 
-#json_filesname_str='./cyclefile/rankine85.json'
+#json_filesname_str='./txtfile/rankine85.json'
     
 json_filesname=glob.glob(json_filesname_str)
 
 
 cycle=[]
+Wcycledot = 100
+mdot= 150*3600 # kg/h 
 for i in range(len(json_filesname)):
     cycle.append(rkc.SimRankineCycle(json_filesname[i]))
     cycle[i].CycleSimulator()
 
-# Specified Net Output Power(MW)
-Wcycledot = 100
-for i in range(len(json_filesname)):
+    # Specified Net Output Power(MW)
     cycle[i].SpecifiedNetOutputPowerSimulatorAndOutput(Wcycledot)      
 
-#  Specified Mass Flow (kg/h)   
-mdot= 150*3600 # kg/h   
-for i in range(len(json_filesname)):
+    #  Specified Mass Flow (kg/h)   
     cycle[i].SpecifiedMassFlowSimulatorAndOutput(mdot)        

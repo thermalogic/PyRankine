@@ -3,7 +3,7 @@
 
  The  base class of components
  
- Author:Cheng Maohua  Email: cmh@seu.edu.cn
+ Author:Cheng Maohua(cmh@seu.edu.cn)
 
 """
 from .node import Node

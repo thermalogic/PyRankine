@@ -20,7 +20,7 @@ json object example:
             "fdot":null
     }
   
-Author:Cheng Maohua  Email: cmh@seu.edu.cn  
+Author:Cheng Maohua(cmh@seu.edu.cn)
   
 """
 import seuif97 as if97
