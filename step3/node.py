@@ -18,17 +18,33 @@ import seuif97 as if97
 
 class Node(object):
 
-    def __init__(self, name, nid):
-        self.name = name
-        self.nid = nid
-        self.p = None
-        self.t = None
+    def __init__(self,dictnode):
+        self.name = dictnode['name']
+        self.nid = dictnode['id']
+        try: 
+           self.p = dictnode['p']
+        except:  
+           self.p=None  
+        try:   
+          self.t = dictnode['t']
+        except:  
+          self.t=None 
+        try: 
+           self.x = dictnode['x']
+        except:  
+          self.x=None  
+
         self.h = None
         self.s = None
         self.v = None
-        self.x = None
-     
-
+    
+        if self.p!=None and self.t != None:
+            self.pt()
+        elif self.p!=None and self.x!=None:
+            self.px()
+        elif self.t!=None and self.x!=None:
+            self.tx()
+        
     def pt(self):
         self.h = if97.pt2h(self.p, self.t)
         self.s = if97.pt2s(self.p, self.t)

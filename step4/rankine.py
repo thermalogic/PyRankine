@@ -24,9 +24,9 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 import glob
 import rankine_cycle as rkc
 
-json_filesname_str='./txtcycle/rankine8[0-9].json'
+#json_filesname_str='./txtcycle/rankine8[0-9].json'
 
-#json_filesname_str='./txtcycle/rankine85.json'
+json_filesname_str='./txtcycle/rankine81.json'
     
 json_filesname=glob.glob(json_filesname_str)
 

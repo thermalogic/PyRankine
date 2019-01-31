@@ -63,20 +63,10 @@ def read_jsonfile(filename):
     # 2 convert dict nodes to the object nodes
     countNodes=len(dictnodes)
     nodes = [None for i in range(countNodes)]
-    for curjnode in  dictnodes:
-        i = int(curjnode['id'])
-        nodes[i] = node.Node(curjnode['name'], i)
-        nodes[i].p = curjnode['p']
-        nodes[i].t = curjnode['t']
-        nodes[i].x = curjnode['x']
-            
-        if nodes[i].p!=None and nodes[i].t != None:
-            nodes[i].pt()
-        elif nodes[i].p!=None and nodes[i].x!=None:
-            nodes[i].px()
-        elif nodes[i].t!=None and nodes[i].x!=None:
-            nodes[i].tx()
-        
+    for curnode in  dictnodes:
+        i = int(curnode['id'])
+        nodes[i] = node.Node(curnode)
+     
     # 3 convert dict Comps to the object Comps
     DevNum=len(dictcomps)
     Comps = {}
@@ -115,16 +105,17 @@ class RankineCycle(object):
 
     def cw_simulate(self):
         """ Circulating water system：Condenser Cooling Water"""
+        cwin={'name':'CW-In',
+              'id':0,
+              't':15.0,
+              "x":0}
+        cwout={'name':'CW-Out',
+              'id':1,
+              't':35.0,
+              "x":0}
         self.nodew = []
-        self.nodew.append(node.Node('CW-Inlet', 0))
-        self.nodew.append(node.Node('CW-Outlet', 1))
-
-        self.nodew[0].t = 15
-        self.nodew[0].x = 0
-        self.nodew[1].t = 35
-        self.nodew[1].x = 0
-        self.nodew[0].tx()
-        self.nodew[1].tx()
+        self.nodew.append(node.Node(cwin))
+        self.nodew.append(node.Node(cwout))
 
         self.devs['Condenser'].cw_nodes(0, 1)
         self.devs['Condenser'].cw_simulate(self.nodew)

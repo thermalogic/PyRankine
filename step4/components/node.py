@@ -32,19 +32,38 @@ class Node(object):
     title = ('{:^6} \t {:^30} \t {:^5}\t {:^7}\t {:^7}\t {:^5} \t {:^7}\t {:^7}\t {:^5}\t {:^10}'.format
                  ("NodeID", "Name", "P", "T", "H", "S", "V", "X", "FDOT", "MDOT"))
 
-    def __init__(self, name, nodeid):
-        self.name = name
-        self.nodeid = nodeid
-
-        self.p = None
-        self.t = None
+    def __init__(self,dictnode):
+        self.name = dictnode['name']
+        self.nodeid = dictnode['id']
+        try: 
+           self.p =  float(dictnode['p'])
+        except:  
+           self.p=None  
+        try:   
+           self.t =  float(dictnode['t'])
+        except:  
+           self.t=None 
+        try: 
+           self.x = float(dictnode['x'])
+        except:  
+           self.x=None  
+      
         self.h = None
         self.s = None
         self.v = None
-        self.x = None
 
-        self.fdot = None
+        try:
+           self.fdot =  float(dictnode['fdot'])
+        except:
+           self.fdot = None
         self.mdot = None
+
+        if self.p!=None and self.t != None:
+            self.pt()
+        elif self.p!=None and self.x!=None:
+            self.px()
+        elif self.t!=None and self.x!=None:
+            self.tx()
 
     def calmdot(self, totalmass):
         self.mdot = totalmass * self.fdot

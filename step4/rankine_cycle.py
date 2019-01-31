@@ -60,31 +60,7 @@ def read_jsonfile(filename):
     countNodes = len(dictnodes)
     nodes = [None for i in range(countNodes)]
     for curnode in dictnodes:
-        i = int(curnode['id'])
-        nodes[i] = Node(curnode['name'], i)
-        try:
-            nodes[i].p = float(curnode['p'])
-        except:
-            nodes[i].p = None
-        try:
-            nodes[i].t = float(curnode['t'])
-        except:
-            nodes[i].t = None
-        try:
-            nodes[i].x = float(curnode['x'])
-        except:
-            nodes[i].x = None
-        try:
-            nodes[i].fdot = float(curnode['fdot'])
-        except:
-            nodes[i].fdot = None
-
-        if nodes[i].p != None and nodes[i].t != None:
-            nodes[i].pt()
-        elif nodes[i].p != None and nodes[i].x != None:
-            nodes[i].px()
-        elif nodes[i].t != None and nodes[i].x != None:
-            nodes[i].tx()
+        nodes[int(curnode['id'])] = Node(curnode)
 
     # 3 convert dict to the object of Comps
     DevNum = len(dictcomps)

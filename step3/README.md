@@ -19,7 +19,6 @@ Chapter 8 : Vapour Power Systems
 
     * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
 
-
 ## The UML Class diagram 
 
 ### The Class Diagram： Association
@@ -82,7 +81,6 @@ The json object of node 0
             "p": 8.0,
             "t": null,
             "x": 1,
-            "fdot": 1
         }
 ```
 
@@ -109,17 +107,15 @@ The json object of Boiler
             "id": 0,
             "p": 8.0,
             "t": null,
-            "x": 1,
-            "fdot": 1
+            "x": 1
         },
         {
             "name": "Outlet Steam of HP",
             "id": 1,
             "p": 0.008,
             "t": null,
-            "x": null,
-            "fdot": null
-        }
+            "x": null
+         }
    ]   
 ```
 
@@ -142,14 +138,14 @@ The json object of Boiler
 } 
 ```
 
-## The JSON  of Rankine Cycle 
+## The JSON  of Rankine Cycle 81
 
-The Python Object of Rankine Cycle
+The Python Object of Rankine Cycle 81
 
 ```python   
 { 'name': 'NameString',
-  'nodes':[{'name':None,'id':None,'p':None,'t':None,'x':None,'fot':None},...],
-  'comps':[{'name':None,'type':None,'inNode':None,'outNodet':None,...},...]
+  'nodes':[{'name':None,'id':None,'p':None,'t':None,'x':None},...],
+  'comps':[{'name':None,'type':None,'inNode':None,'outNode':None},...]
 }   
 ```
 
@@ -187,7 +183,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
             "p": 8.0,
             "t": null,
             "x": 1,
-            "fdot": 1
         },
         {
             "name": "Outlet Steam of HP",
@@ -195,7 +190,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
             "p": 0.008,
             "t": null,
             "x": null,
-            "fdot": null
         },
         {
             "name": "Condenser Water",
@@ -203,7 +197,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
             "p": 0.008,
             "t": null,
             "x": 0,
-            "fdot": null
         },
         {
             "name": "Main FeedWater",
@@ -211,7 +204,6 @@ the json file of the Rankine Cycle 81 Flowsheet: **rankine81.json**
             "p": 8.0,
             "t": null,
             "x": null,
-            "fdot": null
         }
     ],
     "comps": [

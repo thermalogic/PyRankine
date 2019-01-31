@@ -77,6 +77,7 @@ class TurbineEx0(object):
     def simulate(self, nodes):
         self.workExtracted = nodes[self.outNode].fdot * \
             (nodes[self.inNode].h - nodes[self.outNode].h)
+        
 
     def sm_energy(self, nodes):
         # mdot，get WExtracted
