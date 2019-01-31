@@ -53,13 +53,13 @@ class OpenedheaterDw0(object):
     def state(self, nodes):
         pass
 
-     # add _fdotok_
     def _fdotok_(self, nodes):
         self.fdotok = nodes[self.nodes[0]].fdot != None
         for node in range(1, len(self.nodes)):
             self.fdotok = self.fdotok and (nodes[node].fdot != None)
 
     def fdot(self, nodes):
+        """ the initial condition: the fraction of outNode_fw flow is known """
         if (self.fdotok == False):
             try:
                 if (nodes[self.outNode_fw].fdot != None):
@@ -75,7 +75,7 @@ class OpenedheaterDw0(object):
                     nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - \
                         nodes[self.inNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
             except:
                 self.fdotok = False

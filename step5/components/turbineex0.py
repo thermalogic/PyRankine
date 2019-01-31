@@ -64,7 +64,7 @@ class TurbineEx0(BComponent):
                 # mass blance equation
                 nodes[self.outNode].fdot = nodes[self.inNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
 
             except:

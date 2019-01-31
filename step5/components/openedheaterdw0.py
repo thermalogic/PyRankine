@@ -54,6 +54,7 @@ class OpenedheaterDw0(BComponent):
         pass
 
     def fdot(self, nodes):
+        """ the initial condition: the fraction of outNode_fw flow is known """
         if (self.fdotok == False):
             try:
                 if (nodes[self.outNode_fw].fdot != None):
@@ -69,7 +70,7 @@ class OpenedheaterDw0(BComponent):
                     nodes[self.inNode_fw].fdot = nodes[self.outNode_fw].fdot - \
                         nodes[self.inNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
             except:
                 self.fdotok = False

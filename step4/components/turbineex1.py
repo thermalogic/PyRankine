@@ -50,15 +50,6 @@ class TurbineEx1(object):
 
     def state(self, nodes):
         if self.ef == 1.0:
-            nodes[self.outNode].s = nodes[self.inNode].s
-            nodes[self.outNode].ps()
-        else:
-            isoh = seuif97.ps2h(nodes[self.outNode].p, nodes[self.inNode].s)
-            nodes[self.outNode].h = nodes[self.inNode].h - \
-                self.ef * (nodes[self.inNode].h - isoh)
-            nodes[self.outNode].ph()
-
-        if self.ef == 1.0:
             nodes[self.extNode].s = nodes[self.inNode].s
             nodes[self.extNode].ps()
         else:
@@ -74,7 +65,6 @@ class TurbineEx1(object):
                 self.ef * (nodes[self.extNode].h - isoh)
             nodes[self.outNode].ph()
 
-    # add _fdotok_
     def _fdotok_(self, nodes):
         self.fdotok = nodes[self.nodes[0]].fdot != None
         for node in range(1, len(self.nodes)):
@@ -87,7 +77,7 @@ class TurbineEx1(object):
                 nodes[self.outNode].fdot = nodes[
                     self.inNode].fdot - nodes[self.extNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
             except:
                 self.fdotok = False

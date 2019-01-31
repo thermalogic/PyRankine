@@ -57,7 +57,6 @@ class Pump():
         )
         nodes[self.outNode].ph()
 
-    # add _fdotok_
     def _fdotok_(self, nodes):
         self.fdotok = nodes[self.nodes[0]].fdot != None
         for node in range(1, len(self.nodes)):
@@ -72,7 +71,7 @@ class Pump():
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
             except:
                 self.fdotok == False

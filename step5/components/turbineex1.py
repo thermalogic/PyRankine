@@ -51,15 +51,6 @@ class TurbineEx1(BComponent):
 
     def state(self, nodes):
         if self.ef == 1.0:
-            nodes[self.outNode].s = nodes[self.inNode].s
-            nodes[self.outNode].ps()
-        else:
-            isoh = seuif97.ps2h(nodes[self.outNode].p, nodes[self.inNode].s)
-            nodes[self.outNode].h = nodes[self.inNode].h - \
-                self.ef * (nodes[self.inNode].h - isoh)
-            nodes[self.outNode].ph()
-
-        if self.ef == 1.0:
             nodes[self.extNode].s = nodes[self.inNode].s
             nodes[self.extNode].ps()
         else:
@@ -82,7 +73,7 @@ class TurbineEx1(BComponent):
                 nodes[self.outNode].fdot = nodes[self.inNode].fdot - \
                     nodes[self.extNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
             except:
                 self.fdotok = False

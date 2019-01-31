@@ -57,7 +57,6 @@ class TurbineEx0(object):
                 self.ef * (nodes[self.inNode].h - isoh)
             nodes[self.outNode].ph()
 
-     # add _fdotok_
     def _fdotok_(self, nodes):
         self.fdotok = nodes[self.nodes[0]].fdot != None
         for node in range(1, len(self.nodes)):
@@ -69,7 +68,7 @@ class TurbineEx0(object):
                 # mass blance equation
                 nodes[self.outNode].fdot = nodes[self.inNode].fdot
 
-                # modified self.fdotok
+                # check self.fdotok
                 self._fdotok_(nodes)
 
             except:

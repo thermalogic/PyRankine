@@ -37,13 +37,13 @@ class Condenser(BComponent):
         """ Initializes the condenser """
         # demo BComponent.__init_
         BComponent.__init__(self,dictDev)
+        #super().__init__(dictDev)
 
         self.name =  dictDev['name']
         self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-     
-        
+         
         # add nodes
         self.nodes = [self.inNode, self.outNode]
 
@@ -53,6 +53,7 @@ class Condenser(BComponent):
     def fdot(self, nodes):
         # demo BComponent
         BComponent.fdot(self,nodes)
+        #super().fdot(nodes)
 
     def simulate(self, nodes):
         """  Simulates the Condenser  """
