@@ -1,19 +1,19 @@
 
- Rankine Cycle: Rankine81, Time: 2019-01-31 19:27:59.768485
+ Rankine Cycle: Rankine81, Time: 2019-04-07 19:51:54.976183
        Net Power(MW) 143.32
      Mass Flow(kg/h) 540000.00
        Efficiency(%) 37.08
-   Heat Rate(kJ/kWh) 9708.39
+   Heat Rate(kJ/kWh) 9708.30
   Steam Rate(kg/kWh) 3.77
  totalWExtracted(MW) 144.53
   totalWRequired(MW) 1.21
-     totalQAdded(MW) 386.50 
+     totalQAdded(MW) 386.51 
 
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 540000.00
   1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 540000.00
   2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
-  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+  3    	 Main FeedWater                 	  8.000	  41.752	  181.90	  0.59 	   0.001	   0.0	 1.0000	 540000.00
 
 Turbine Ex0
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
@@ -32,13 +32,13 @@ QExtracted(MW): 	243.18
 Feedwater Pump
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
-  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
-workRequired(kJ/kg): 	8.06
+  3    	 Main FeedWater                 	  8.000	  41.752	  181.90	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+workRequired(kJ/kg): 	8.05
 WRequired(MW): 	1.21
 
 Boiler
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
-  3    	 Main FeedWater                 	  8.000	  41.755	  181.91	  0.59 	   0.001	   0.0	 1.0000	 540000.00
+  3    	 Main FeedWater                 	  8.000	  41.752	  181.90	  0.59 	   0.001	   0.0	 1.0000	 540000.00
   0    	 Main Steam                     	  8.000	 295.009	 2758.61	  5.74 	   0.024	   1.0	 1.0000	 540000.00
-heatAdded(kJ/kg) 	2576.70 
-QAdded(MW) 	386.50
+heatAdded(kJ/kg) 	2576.71 
+QAdded(MW) 	386.51

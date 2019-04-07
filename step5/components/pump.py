@@ -22,6 +22,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
 Author:Cheng Maohua(cmh@seu.edu.cn)              
 
 """
+import seuif97
 from .node import *
 from .BComponent import BComponent
 
@@ -49,13 +50,17 @@ class Pump(BComponent):
         """
         calc outNode of the pump 
         """
-        nodes[self.outNode].h = (
-            nodes[self.inNode].h +
-            (nodes[self.inNode].v * (nodes[self.outNode].p -
-                                     nodes[self.inNode].p) * 1000.0) / self.ef
-        )
-        nodes[self.outNode].ph()
+        #nodes[self.outNode].h = (
+        #    nodes[self.inNode].h +
+        #     (nodes[self.inNode].v * (nodes[self.outNode].p -
+        #                             nodes[self.inNode].p) * 1000.0) / self.ef
+        #)
 
+        sout_s = nodes[self.inNode].s
+        hout_s = seuif97.ps2h(nodes[self.outNode].p, sout_s)
+        nodes[self.outNode].h =  nodes[self.inNode].h +(hout_s -  nodes[self.inNode].h)/self.ef
+        nodes[self.outNode].ph()
+    
     def fdot(self, nodes):
         super().fdot(nodes)
 

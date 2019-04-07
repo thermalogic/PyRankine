@@ -23,6 +23,7 @@ Step4-json-dict: General Abstraction and Data Representation of Rankine Cycle
   Author:Cheng Maohua  Email: cmh@seu.edu.cn               
 
 """
+import seuif97
 from .node import *
 
 
@@ -50,13 +51,16 @@ class Pump():
         """
         calc outNode of the pump 
         """
-        nodes[self.outNode].h = (
-            nodes[self.inNode].h +
-            (nodes[self.inNode].v * (nodes[self.outNode].p -
-                                     nodes[self.inNode].p) * 1000.0) / self.ef
-        )
+        #nodes[self.outNode].h = (
+        #    nodes[self.inNode].h +
+        #    (nodes[self.inNode].v * (nodes[self.outNode].p -
+        #                             nodes[self.inNode].p) * 1000.0) / self.ef
+        #)
+        sout_s = nodes[self.inNode].s
+        hout_s = seuif97.ps2h(nodes[self.outNode].p, sout_s)
+        nodes[self.outNode].h =  nodes[self.inNode].h +(hout_s -  nodes[self.inNode].h)/self.ef
         nodes[self.outNode].ph()
-
+    
     def _fdotok_(self, nodes):
         self.fdotok = nodes[self.nodes[0]].fdot != None
         for node in range(1, len(self.nodes)):
