@@ -6,6 +6,7 @@ Step5: The General Simulator of Rankine Cycle with the  base class of components
 """
 
 __all__ = ["node",
+           "BComponent",
            "boiler",
            "condenser",
            "openedheaterdw0",
