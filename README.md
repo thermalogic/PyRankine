@@ -89,11 +89,13 @@ Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fun
 
 Chapter 8 : Vapour Power Systems 
 
-* [EXAMPLE 8.1: Analyzing an Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+* **Example 8.1: The Ideal Rankine Cycle, P438**
 
-    * [Ideal Rankine Cycle of OOP](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-Step2.ipynb)
+* **EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444**
 
-* [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+    * [Step0,1 of Example 8.1 & 8.2 ](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
+
+    * [Step2 of Example 8.1 & 8.2 ](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step2-OOP.ipynb)
 
 * [EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
@@ -103,7 +105,7 @@ Chapter 8 : Vapour Power Systems
 
 * [EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
 
-**Start  the notebooks**
+**Start the notebooks**
 
 ```bash
 >startnb.bat
