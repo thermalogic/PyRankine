@@ -15,7 +15,9 @@ from seuif97 import *
 from nodes import * 
 
 def CalTurbine(Turbine, Nodes):
-    """Turbine"""
+    """Turbine dict
+         { "TURBINE-EX0": {'minID': None, 'moutID': None, 'eta': None, 'wdot': None, "energy": "Wout", "fun": CalTurbine} }
+    """        
     iID = Turbine['minID']
     oID = Turbine['moutID']
     # 1 Nodes[oID]
@@ -30,10 +32,12 @@ def CalTurbine(Turbine, Nodes):
 
 
 def CalPump(Pump, Nodes):
-    """Pump"""
+    """Pump Dict
+        { "PUMP": {'minID': None, 'moutID': None, 'eta': None, 'wdot': None, "energy": "Win", "fun": CalPump} }
+    """
     iID = Pump['minID']
     oID = Pump['moutID']
-    # 1 Nodes[oID]
+    # 1 Nodes[oID] 
     sout_s = Nodes[iID]['s']
     hout_s = ps2h(Nodes[oID]['p'], sout_s)
     Nodes[oID]['h'] = Nodes[iID]['h']+(hout_s - Nodes[iID]['h'])/Pump['eta']
@@ -43,37 +47,38 @@ def CalPump(Pump, Nodes):
     # 2 Energy
     Pump['wdot'] = Nodes[oID]['h'] - Nodes[iID]['h']
 
-
 def CalBoiler(Boiler, Nodes):
-    """Boiler"""
+    """Boiler Dict
+       { "BOILER": {'minID': None, 'moutID': None, 'qindot': None, "energy": "Qin", "fun": CalBoiler} }
+    """
     iID = Boiler['minID']
     oID = Boiler['moutID']
     # 2 Energy
     Boiler['qindot'] = Nodes[oID]['h']-Nodes[iID]['h']
 
-
 def CalCondenser(Condenser, Nodes):
-    """Condenser"""
+    """Condenser
+      { "CONDENSER": {'minID': None, 'moutID': None, 'qoutdot': None, "energy": "Qout", "fun": CalCondenser} }
+    """
     iID = Condenser['minID']
     oID = Condenser['moutID']
     # 2 Energy
-    Condenser['qoutdot'] = Nodes[iID]['h']-Nodes[oID]['h']
-
-
+    Condenser['qoutdot'] = Nodes[iID]['h']-Nodes[oID]['h']    
+    
 def CalDevices(Devices, Nodes):
     keys = list(Devices.keys())
-    devCounts = len(keys)
-    i = 0
-    while len(keys) != 0 and i < (devCounts+1):
-        i += 1
+    devCounts=len(keys)
+    i=0
+    while len(keys) != 0 and i<(devCounts+1):
+        i+=1
         for dev in keys:
             try:
                 Devices[dev]["fun"](Devices[dev], Nodes)
                 keys.remove(dev)
             except:
-                pass
+                pass   
 
-
+# the devices dict prototype in the cycle 
 compdict = {
     "BOILER": {'minID': None, 'moutID': None, 'qindot': None, "energy": "Qin", "fun": CalBoiler},
     "TURBINE-EX0": {'minID': None, 'moutID': None, 'eta': None, 'wdot': None, "energy": "Wout", "fun": CalTurbine},
