@@ -24,6 +24,7 @@ def CalTurbine(Turbine, Nodes):
     Nodes[oID]['h'] = Nodes[iID]['h'] - Turbine['eta']*(Nodes[iID]['h']-hout_s)
     Nodes[oID]['t'] = ph2t(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['s'] = ph2s(Nodes[oID]['p'], Nodes[oID]['h'])
+    Nodes[oID]['x'] = ph2x(Nodes[oID]['p'], Nodes[oID]['h'])
     # 2 Energy
     Turbine['wdot'] = Nodes[iID]['h'] - Nodes[oID]['h']
 
@@ -38,6 +39,7 @@ def CalPump(Pump, Nodes):
     Nodes[oID]['h'] = Nodes[iID]['h']+(hout_s - Nodes[iID]['h'])/Pump['eta']
     Nodes[oID]['t'] = ph2t(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['s'] = ph2s(Nodes[oID]['p'], Nodes[oID]['h'])
+    Nodes[oID]['x'] = ph2x(Nodes[oID]['p'], Nodes[oID]['h'])
     # 2 Energy
     Pump['wdot'] = Nodes[oID]['h'] - Nodes[iID]['h']
 
