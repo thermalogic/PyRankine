@@ -88,17 +88,27 @@ def read_DevicesFile(filename):
     reader = csv.DictReader(csvfile)
 
     devices = {}
-    temp = copy.deepcopy(compdict)
+    temp=copy.deepcopy(compdict)
     for row in reader:
         curdev = temp[row['TYPE']]
-        curdev['minID'] = int(row['minID'])
-        curdev['moutID'] = int(row['moutID'])
+        
+        # -- Please code the connection between nodes and device carefully! --
+        
+        if (row['TYPE'] in ["BOILER","TURBINE-EX0","PUMP","CONDENSER"]):
+            curdev['minID'] = int(row['NODE0'])
+            curdev['moutID'] = int(row['NODE1'])
+        
+        # the new device with the different nodes types
+        # if (row['TYPE'] in []):    
+        #
+        #
+        
         try:
-            curdev['eta'] = float(row['eta'])
+            curdev['eta'] = float(row['ETA'])
         except:
             pass
-
+        
         devices[row['NAME']] = curdev
-
-    csvfile.close()
+        
+    csvfile.close()     
     return devices
