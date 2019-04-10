@@ -6,13 +6,15 @@ We wish that the PyRankine may be a helpful vehicle for  you to understand **Com
 
 The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)](#the-jupyter-notebooks-of-example-rankine-cycles) 
 
-* [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+* [step 0](./step0) :  **Zero Abstraction** of The Rankine Cycle(Example 8.1,8.2)
 
       The simple data types and expression only 
 
-* [step 1](./step1)  : **Simple Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+* [step 1](./step1)  : **Abstraction** and **Textual Representation** of The Rankine Cycle(Example 8.1,8.2)
 
       Structure data types(List,Dict) and functions
+
+      CSV file of Rankine Cycle Flowsheet
       
 * [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1) 
 

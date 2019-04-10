@@ -1,9 +1,10 @@
 """
-T-S Diagram of  The Ideal Rankine Cycle 
 
-Step 1 :The Basic Abstraction of The Ideal Rankine Cycle with list,dict,function
+Step 1 : Abstraction and Textual Representation of The Rankine Cycle(Example 8.1,8.2)
 
-The ideal rankine cycle as 
+T-S Diagram of the Rankine Cycle 
+
+The rankine cycle as 
    
     ┌─── Node 0 ── Turbine ── Node 1   ──┐
     │                                    │
@@ -11,10 +12,6 @@ The ideal rankine cycle as
     │                                    │
     └─── Node 3  ──  Pump  ──  Node 2 ───┘  
 
- Michael J . Moran. 
-     Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
-         Chapter 8 : Vapour Power Systems 
-         Example 8.1:Analyzing an Ideal Rankine Cycle  Page 438
 
 License: this code is in the public domain
 
@@ -78,7 +75,7 @@ def PlotTSDiagram(Nodes):
     sist = [s[1], px2s(Nodes[1]['p'], 1)]
     plt.plot(sist, tist, 'y-')
 
-    plt.title('T-s: Ideal Rankine Cycle')
+    plt.title('T-s: The Rankine Cycle')
     plt.xlabel('Entropy(kJ/(kg.K)')
     plt.ylabel('Temperature(°C)')
     plt.grid()
