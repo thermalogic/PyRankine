@@ -63,38 +63,40 @@ def OutFiles(Nodes, Cycle, outfilename=None):
         sys.stdout = savedStdout
 
 
+def RankineCycle(nds_filenames,des_filenames):
+    # 1 nodes
+    for i in range(len(nds_filenames)):
+        CurNodes=[]
+        CurNodes=read_nodesfile(nds_filenames[i])
+        Nodes.append(CurNodes)
+
+    # 2 devices
+    for i in range(len(des_filenames)):
+        CurDevices={}
+        CurDevices=read_DevicesFile(des_filenames[i])
+        CalDevices(CurDevices,Nodes[i])
+        Devices.append(CurDevices)
+
+    # 3 cycle
+    for i in range(len(des_filenames)):    
+        CurCycle = {'Wdot': 100.0}
+        CalCycle(Devices[i],   CurCycle)
+        Cycle.append(CurCycle)
+
+    # 4 output
+    for i in range(len(des_filenames)):    
+        cyclename = nds_filenames[i][0:nds_filenames[i].find('-')]
+        OutFiles(Nodes[i],Cycle[i])
+        OutFiles(Nodes[i], Cycle[i],cyclename +'-sp.txt')
+
+
 nds_filenames = ['./data/rankine81-nds.csv', './data/rankine82-nds.csv']
 des_filenames = ['./data/rankine81-des.csv', './data/rankine82-des.csv']
 
 Nodes = []
 Devices = []
 Cycle = []
-
-# 1 nodes
-for i in range(len(nds_filenames)):
-    CurNodes = []
-    CurNodes = read_nodesfile(nds_filenames[i])
-    Nodes.append(CurNodes)
-
-# 2 devices
-for i in range(len(des_filenames)):
-    CurDevices = {}
-    CurDevices = read_DevicesFile(des_filenames[i])
-    CalDevices(CurDevices, Nodes[i])
-    Devices.append(CurDevices)
-
-# 3 cycle
-for i in range(len(des_filenames)):
-    CurCycle = {'Wdot': 100.0}
-    CalCycle(Devices[i],   CurCycle)
-    Cycle.append(CurCycle)
-
-# 4 output
-for i in range(len(des_filenames)):
-    cyclename = nds_filenames[i][0:nds_filenames[i].find('-')]
-    OutFiles(Nodes[i], Cycle[i])
-    OutFiles(Nodes[i], Cycle[i], cyclename + '-sp.txt')
-
+RankineCycle(nds_filenames,des_filenames )
 for node in Nodes:
     PlotTSDiagram(node)
 

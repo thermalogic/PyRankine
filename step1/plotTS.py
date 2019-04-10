@@ -42,9 +42,15 @@ def PlotTSDiagram(Nodes):
     # Nodes[3]['t'] is slightly larger than Nodes[2]['t'] , points Nodes[2] and Nodes[3] are almost overlap if drawing with real values
     # so,adjust the value of Nodes[3]['t'] ,using the virtual values to eliminate drawing overlap
     t[3] = Nodes[3]['t']+8
-
+    
+    # point 5  sat water
     t.append(px2t(Nodes[0]['p'], 0))
     s.append(px2s(Nodes[0]['p'], 0))
+
+    # point 6  sat steam
+    if (Nodes[0]['t']>px2t(Nodes[0]['p'],1)):
+        t.append(px2t(Nodes[0]['p'], 1))
+        s.append(px2s(Nodes[0]['p'], 1))
 
     t.append(Nodes[0]['t'])
     s.append(Nodes[0]['s'])
