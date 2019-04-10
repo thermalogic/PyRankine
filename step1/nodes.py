@@ -17,7 +17,7 @@ def read_nodesfile(filename):
     
     # readlines() to the end of file
     countNodes = len(open(filename, 'r').readlines()) - 1
-    nodes = [{'NAME':None,'p':None,'t':None,'h':None,'s':None,'x':None} for i in range(countNodes)]
+    nodes = [{'NAME':None,'p':None,'t':None,'h':None,'s':None,'x':None,'fdot':None} for i in range(countNodes)]
 
     #  re-open the file to its head 
     csvfile = open(filename, 'r')
@@ -37,6 +37,10 @@ def read_nodesfile(filename):
             nodes[i]['x'] = float(line['x'])
         except:
             pass
+        try:
+            nodes[i]['fdot'] = float(line['fdot'])
+        except:
+            pass    
         
         if line['p'] != '' and line['t'] != '':
             nodes[i]['h'] = pt2h(nodes[i]['p'], nodes[i]['t'])
@@ -49,5 +53,6 @@ def read_nodesfile(filename):
             nodes[i]['p'] = tx2p(nodes[i]['t'], nodes[i]['x'])
             nodes[i]['h'] = tx2h(nodes[i]['t'], nodes[i]['x'])
             nodes[i]['s'] = tx2s(nodes[i]['t'], nodes[i]['x'])
+    
     csvfile.close()
     return nodes

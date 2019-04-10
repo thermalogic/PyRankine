@@ -50,12 +50,12 @@ def OutFiles(Nodes, Cycle, outfilename=None):
     print('totalQadded is  %.3f' % Cycle['Qin'], 'MW.')
 
     # output nodes
-    print('\n{:10}\t {:^6}\t {:^7}  {:^7}  {:^7}  {:^7} {:^7}'.format(
-        "NAME", "Node", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)", "X"))
+    print('\n{:10}\t {:^6}\t {:^7}  {:^7}  {:^7}  {:^7} {:^7} {:^7}'.format(
+        "NAME", "Node", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)", "X", "FDOT"))
     i = 0
     for node in Nodes:
-        print('{:10}\t {:^6d}\t {:>5.3f} {:>9.2f} {:>10.2f} {:>9.3f} {:>9.3f}'.format(
-            node['NAME'], i, node['p'],  node['t'],  node['h'],  node['s'],  node['x']))
+        print('{:10}\t {:^6d}\t {:>5.3f} {:>9.2f} {:>10.2f} {:>9.3f} {:>9.3f}  {:>9.3f}'.format(
+            node['NAME'], i, node['p'],  node['t'],  node['h'],  node['s'],  node['x'], node['fdot']))
         i += 1
     
     if (outfilename != None):

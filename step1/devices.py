@@ -27,8 +27,13 @@ def CalTurbine(Turbine, Nodes):
     Nodes[oID]['t'] = ph2t(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['s'] = ph2s(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['x'] = ph2x(Nodes[oID]['p'], Nodes[oID]['h'])
-    # 2 Energy
-    Turbine['wdot'] = Nodes[iID]['h'] - Nodes[oID]['h']
+    # 2 Mass
+    if Nodes[iID]['fdot'] != None:
+        Nodes[oID]['fdot'] = Nodes[iID]['fdot']
+    if Nodes[oID]['fdot'] != None:
+         Nodes[iID]['fdot'] = Nodes[oID]['fdot']
+    # 3 Energy
+    Turbine['wdot'] = Nodes[iID]['fdot']*Nodes[iID]['h'] - Nodes[oID]['fdot']*Nodes[oID]['h']
 
 
 def CalPump(Pump, Nodes):
@@ -44,8 +49,13 @@ def CalPump(Pump, Nodes):
     Nodes[oID]['t'] = ph2t(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['s'] = ph2s(Nodes[oID]['p'], Nodes[oID]['h'])
     Nodes[oID]['x'] = ph2x(Nodes[oID]['p'], Nodes[oID]['h'])
+    # 2 Mass
+    if Nodes[iID]['fdot'] != None:
+        Nodes[oID]['fdot'] = Nodes[iID]['fdot']
+    if Nodes[oID]['fdot'] != None:
+         Nodes[iID]['fdot'] = Nodes[oID]['fdot']
     # 2 Energy
-    Pump['wdot'] = Nodes[oID]['h'] - Nodes[iID]['h']
+    Pump['wdot'] = Nodes[oID]['fdot']*Nodes[oID]['h'] - Nodes[iID]['fdot']*Nodes[iID]['h']
 
 def CalBoiler(Boiler, Nodes):
     """Boiler Dict
@@ -53,8 +63,13 @@ def CalBoiler(Boiler, Nodes):
     """
     iID = Boiler['minID']
     oID = Boiler['moutID']
-    # 2 Energy
-    Boiler['qindot'] = Nodes[oID]['h']-Nodes[iID]['h']
+    # 2 Mass
+    if Nodes[iID]['fdot'] != None:
+        Nodes[oID]['fdot'] = Nodes[iID]['fdot']
+    if Nodes[oID]['fdot'] != None:
+         Nodes[iID]['fdot'] = Nodes[oID]['fdot']
+    # 3 Energy
+    Boiler['qindot'] = Nodes[oID]['fdot']*Nodes[oID]['h']-Nodes[iID]['fdot']*Nodes[iID]['h']
 
 def CalCondenser(Condenser, Nodes):
     """Condenser
@@ -62,8 +77,13 @@ def CalCondenser(Condenser, Nodes):
     """
     iID = Condenser['minID']
     oID = Condenser['moutID']
+    # 2 Mass
+    if Nodes[iID]['fdot'] != None:
+        Nodes[oID]['fdot'] = Nodes[iID]['fdot']
+    if Nodes[oID]['fdot'] != None:
+         Nodes[iID]['fdot'] = Nodes[oID]['fdot']
     # 2 Energy
-    Condenser['qoutdot'] = Nodes[iID]['h']-Nodes[oID]['h']    
+    Condenser['qoutdot'] = Nodes[iID]['fdot']*Nodes[iID]['h']- Nodes[oID]['fdot']*Nodes[oID]['h']    
     
 def CalDevices(Devices, Nodes):
     keys = list(Devices.keys())
