@@ -1,5 +1,11 @@
-import seuif97 as if97
+"""
+step 2 : Object-Orientation Abstraction and CSV Textual Representation The Rankine Cycle(Example 8.1,8.2)
 
+License: this code is in the public domain
+Cheng Maohua(cmh@seu.edu.cn)
+
+"""
+import seuif97 as if97
 
 class Node:
 

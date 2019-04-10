@@ -1,8 +1,15 @@
+"""
+step 2 : Object-Orientation Abstraction and CSV Textual Representation The Rankine Cycle(Example 8.1,8.2)
+
+License: this code is in the public domain
+Cheng Maohua(cmh@seu.edu.cn)
+
+"""
 from seuif97 import ps2h
-from node import  *
+from node import *
+
 
 class Turbine:
-
     """
     Turbine class
 
@@ -10,11 +17,11 @@ class Turbine:
 
       inletNode inlet steam   
                  ┌────────┐
-              ↓ ╱                │ 
- workExtracted ┤                  │
-                ╲                 │
+              ↓ ╱         │ 
+ workExtracted ┤          │
+                ╲         │
                  └────────┤
-                                   ↓  exitNode exhausted steam   
+                          ↓  exitNode exhausted steam   
 
     """
     energy = 'workExtracted'

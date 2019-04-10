@@ -1,15 +1,22 @@
+"""
+step 2 : Object-Orientation Abstraction and CSV Textual Representation The Rankine Cycle(Example 8.1,8.2)
+
+License: this code is in the public domain
+Cheng Maohua(cmh@seu.edu.cn)
+
+"""
 from node import  *
 
 class Boiler:
     """
     The boiler class
-                        ↑    exitNode main steam
+                    ↑    exitNode main steam
                 ┌───┼───┐
-                │      │      │Qindot
-                │      │      │
-                │      │      │
+                │       │      Qindot
+                │       │      
+                │       │      
      heatAdded  └───┼───┘  
-                        ↑    inletNode main feedwater   
+                    ↑    inletNode main feedwater   
 
     """
     energy = "heatAdded"

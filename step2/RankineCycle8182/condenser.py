@@ -1,15 +1,23 @@
+"""
+step 2 : Object-Orientation Abstraction and CSV Textual Representation The Rankine Cycle(Example 8.1,8.2)
+
+License: this code is in the public domain
+Cheng Maohua(cmh@seu.edu.cn)
+
+"""
+
 from node import  *
 
 class Condenser:
     """
     The Condenser class
-                        ↓   inletNode exhausted steam
+                    ↓   inletNode exhausted steam
                 ┌───┴───┐
-                │              │ 
-   exitNodeW  ←┼───────┼← inletNodeW  
-                │              │
+                │       │ 
+    exitNodeW  ←┼───────┼← inletNodeW  
+                │       │
                 └───┬───┘  
-                        ↓    exitNode condensate water 
+                    ↓    exitNode condensate water 
 
     """
     energy = "heatOuted"
