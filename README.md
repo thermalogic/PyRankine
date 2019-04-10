@@ -10,17 +10,19 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
       The simple data types and expression only 
 
-* [step 1](./step1)  : **Abstraction** and **Textual Representation** of The Rankine Cycle(Example 8.1,8.2)
+* [step 1](./step1)  : **Abstraction** and **CSV Textual Representation** of The Rankine Cycle(Example 8.1,8.2)
 
       Structure data types(List,Dict) and functions
 
       CSV file of Rankine Cycle Flowsheet
       
-* [step 2](./step2) : **Basic Object-Orientation Abstraction** of The Ideal Rankine Cycle(Example 8.1) 
+* [step 2](./step2) : **Object-Orientation Abstraction** and **CSV Textual Representation** The Rankine Cycle(Example 8.1,8.2) 
 
-      Object-oriented programming 
+      Object-oriented programming
+
+      CSV file of Rankine Cycle Flowsheet 
      
-* [step 3](./step3)  : **Basic Object-Orientation Abstraction**  and **Textual Representation** of The Ideal Rankine Cycle(Example 8.1)
+* [step 3](./step3)  : **Object-Orientation Abstraction**  and **JSON Textual Representation** of The Ideal Rankine Cycle(Example 8.1)
      
       Object-oriented Programming 
       
@@ -30,7 +32,7 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
      ![The UML Class Diagram: Association](./step3/uml/packages.svg)  
                         
-* [step 4](./step4) : **General Abstraction** and **Textual Representation** of Rankine Cycles
+* [step 4](./step4) : **General Abstraction** and **JSON Textual Representation** of Rankine Cycles
       
       Object-oriented programming, general module; 
       
@@ -48,7 +50,7 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
     ![The UML Class Diagram: Association](./step4/uml/packages.svg)  
  
-* [step 5](./step5) : **The Base Class Abstraction**  and **Textual Representation** of Rankine Cycles
+* [step 5](./step5) : **The Base Class Abstraction**  and **JSON Textual Representation** of Rankine Cycles
 
       Object-oriented programming, general module, the base class; 
       
