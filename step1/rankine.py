@@ -114,7 +114,7 @@ def main():
     pp.pprint(Pump)
 
   # plot T-S
-    PlotTSDiagram(Nodes)
+    PlotPrettyTSDiagram(Nodes)
 
 
 if __name__ == '__main__':

@@ -98,6 +98,6 @@ class Pump():
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
 
-        result += '\nworkRequired(kJ/kg): \t%.2f' % self.workRequired
-        result += '\nWRequired(MW): \t%.2f' % self.WRequired
+        result += '\nworkRequired(kJ/kg): \t{:>.2f}'.format(self.workRequired)
+        result += '\nWRequired(MW): \t{:>.2f}'.format(self.WRequired)
         return result

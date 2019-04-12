@@ -31,18 +31,18 @@ from .node import *
 class Condenser(object):
 
     energy = "heatExtracted"
-    devTYPE="CONDENSER"
+    devTYPE = "CONDENSER"
 
-    def __init__(self,dictDev):
+    def __init__(self, dictDev):
         """ Initializes the condenser """
-        self.name =  dictDev['name']
+        self.name = dictDev['name']
         self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-       
-        # add nodes 
-        self.nodes=[self.inNode, self.outNode]
-     
+
+        # add nodes
+        self.nodes = [self.inNode, self.outNode]
+
         self.fdotok = False
 
     def state(self, Nodes):
@@ -60,7 +60,7 @@ class Condenser(object):
                     nodes[self.outNode].fdot = nodes[self.inNode].fdot
                 elif (nodes[self.outNode].fdot != None):
                     nodes[self.inNode].fdot = nodes[self.outNode].fdot
-               
+
                 # check self.fdotok
                 self._fdotok_(nodes)
             except:
@@ -81,6 +81,6 @@ class Condenser(object):
         result += '\n' + Node.title
         result += '\n' + nodes[self.inNode].__str__()
         result += '\n' + nodes[self.outNode].__str__()
-        result += '\nheatExtracted(kJ/kg)  \t%.2f \nQExtracted(MW): \t%.2f' % (
+        result += '\nheatExtracted(kJ/kg)  \t{:>.2f} \nQExtracted(MW): \t{:>.2f}'.format(
             self.heatExtracted, self.QExtracted)
         return result

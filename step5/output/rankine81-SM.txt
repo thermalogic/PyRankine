@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine81, Time: 2019-04-07 19:51:54.976183
+ Rankine Cycle: Rankine81, Time: 2019-04-12 22:02:15.848968
        Net Power(MW) 143.32
      Mass Flow(kg/h) 540000.00
        Efficiency(%) 37.08
@@ -26,7 +26,7 @@ Condenser
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   1    	 Outlet Steam of HP             	  0.008	  41.510	 1795.08	  5.74 	  12.215	 0.675	 1.0000	 540000.00
   2    	 Condenser Water                	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 1.0000	 540000.00
-heatExtracted(kJ/kg)  	1621.23 
+heatExtracted(kJ/kg)  	1621.23
 QExtracted(MW): 	243.18
 
 Feedwater Pump

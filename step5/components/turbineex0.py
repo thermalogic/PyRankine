@@ -42,11 +42,10 @@ class TurbineEx0(BComponent):
         self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-        self.ef = dictDev['ef'] 
+        self.ef = dictDev['ef']
 
         # add nodes
         self.nodes = [self.inNode, self.outNode]
-    
 
     def state(self, nodes):
         if self.ef == 1.0:
@@ -82,8 +81,7 @@ class TurbineEx0(BComponent):
         self.WExtracted /= (3600.0 * 1000.0)
 
     def export(self, nodes):
-        result=super().export(nodes)
-     
-        result += '\nworkExtracted(kJ/kg): \t%.2f \nWExtracted(MW): \t%.2f' % (
+        result = super().export(nodes)
+        result += '\nworkExtracted(kJ/kg): \t{:<.2f} \nWExtracted(MW): \t{:<.2f}'.format(
             self.workExtracted, self.WExtracted)
         return result

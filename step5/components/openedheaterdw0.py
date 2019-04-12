@@ -91,8 +91,8 @@ class OpenedheaterDw0(BComponent):
 
     def export(self, nodes):
         result=super().export(nodes)
-        result += '\nheatAdded(kJ/kg) \t%.2f' % self.heatAdded
-        result += '\nheatExtracted(kJ/kg) \t%.2f' % self.heatExtracted
-        result += '\nQAdded(MW) \t%.2f' % self.QAdded
-        result += '\nQExtracted(MW)  \t%.2f' % self.QExtracted
+        result += '\nheatAdded(kJ/kg) \t{:<.2f}'.format(self.heatAdded)
+        result += '\nheatExtracted(kJ/kg) \t{:<.2f}'.format(self.heatExtracted)
+        result += '\nQAdded(MW) \t{:<.2f}'.format(self.QAdded)
+        result += '\nQExtracted(MW)  \t{:<.2f}'.format(self.QExtracted)
         return result

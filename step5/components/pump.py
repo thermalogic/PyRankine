@@ -78,6 +78,6 @@ class Pump(BComponent):
 
     def export(self, nodes):
         result=super().export(nodes)
-        result += '\nworkRequired(kJ/kg): \t%.2f' % self.workRequired
-        result += '\nWRequired(MW): \t%.2f' % self.WRequired
+        result += '\nworkRequired(kJ/kg): \t{:<.2f}'.format(self.workRequired)
+        result += '\nWRequired(MW): \t{:<.2f}'.format(self.WRequired)
         return result

@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine85, Time: 2019-04-07 19:51:55.023156
+ Rankine Cycle: Rankine85, Time: 2019-04-12 22:02:15.891942
        Net Power(MW) 100.00
      Mass Flow(kg/h) 368813.09
        Efficiency(%) 36.91
@@ -30,7 +30,7 @@ Condenser
 NodeID 	              Name              	   P  	    T   	    H   	   S   	    V   	    X   	 FDOT 	    MDOT   
   2    	 Exhausted Steam to CD          	  0.008	  41.510	 2250.10	  7.19 	  15.642	 0.864	 0.8035	 296330.50
   3    	 Condensate Water to CDW Pump   	  0.008	  41.510	  173.85	  0.59 	   0.001	   0.0	 0.8035	 296330.50
-heatExtracted(kJ/kg)  	1668.21 
+heatExtracted(kJ/kg)  	1668.21
 QExtracted(MW): 	170.90
 
 Condensate Pump

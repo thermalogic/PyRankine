@@ -96,11 +96,10 @@ hcwin = tx2h(tcwin, 0)    # hcwin 62.99
 mcwdot = (Qoutdot * 1000 * 3600) / (hcwout - hcwin)          # in kg/h
 
 # Results
-print("The Ideal Rankine Cycle: Net Output Power ", Wcycledot, 'MW')
-print('\t(a) The thermal efficiency for the cycle is %.2f' % (eta*100), '%')
-print('\t(b) The back work ratio is  %.3f' % (bwr * 100), '%')
-print('\t(c) The mass flow rate of the steam is %.2f' % mdot, 'kg/h.')
-print('\t(d) The rate of heat transfer,Qindot into the working fluid as it passes through the boiler is %.2f' % Qindot, 'MW.')
-print('\t(e) The rate of heat transfer,Qoutdot from the condensing steam as it passes through the condenser is %.2f' % Qoutdot, 'MW.')
-print('\t(f) The mass flow rate of the condenser cooling water is %.2f' %
-      mcwdot, 'kg/h.')
+print('The Ideal Rankine Cycle: Net Output Power ', Wcycledot, 'MW')
+print('\t(a) The thermal efficiency for the cycle is {:>.2f}%'.format(eta*100))
+print('\t(b) The back work ratio is {:>.2f}%'.format(bwr * 100))
+print('\t(c) The mass flow rate of the steam is {:>.2f}kg/h'.format(mdot))
+print('\t(d) The rate of heat transfer,Qindot into the working fluid as it passes through the boiler is {:>.2f}MW'.format(Qindot))
+print('\t(e) The rate of heat transfer,Qoutdot from the condensing steam as it passes through the condenser is {:>.2f}MW'.format(Qoutdot))
+print('\t(f) The mass flow rate of the condenser cooling water is  {:>.2f}kg/h'.format(mcwdot))

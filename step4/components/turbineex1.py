@@ -107,6 +107,6 @@ class TurbineEx1(object):
 
         result += '\n' + nodes[self.extNode].__str__()
 
-        result += '\nworkExtracted(kJ/kg): \t%.2f \nWExtracted(MW): \t%.2f' % (
+        result += '\nworkExtracted(kJ/kg): \t{:>.2f} \nWExtracted(MW): \t{:>.2f}'.format(
             self.workExtracted, self.WExtracted)
         return result

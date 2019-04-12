@@ -90,15 +90,12 @@ def RankineCycle():
     print("Cooling water enters the condenser T", nodew[0].t, "°C")
     print("Cooling water exits  the condenser T", nodew[1].t, "°C")
     print(" \n --------------------------------------------------")
-    print("Efficiency: ", '%.2f' % (efficiency * 100), "%")
-    print("The back work ratio: ", '%.2f' % (bwr * 100), "%")
-    print("The mass flow rate: ",  '%.2f' % mdot, "%")
-    print('The rate of heat transfer as the fluid passes the boiler: ',
-          '%.2f' % b.Qindot, 'MW')
-    print('The rate of heat transfer from the condensing steam: ',
-          '%.2f' % c.Qoutdot, 'MW')
-    print('The mass flow rate of the condenser cooling water: ', '%.2f' %
-          c.mcwdot, 'kg/h')
+    print("Efficiency: {:>.2f}%",format(efficiency * 100))
+    print("The back work ratio: {:>.2f}%".format(bwr * 100))
+    print("The mass flow rate:  {:>.2f}%".format(mdot))
+    print("The rate of heat transfer as the fluid passes the boiler: {:>.2f}MW".format(b.Qindot))
+    print("The rate of heat transfer from the condensing steam: {:>.2f}MW".format(c.Qoutdot))
+    print("The mass flow rate of the condenser cooling water: {:>.2f}kg/h".format(c.mcwdot))
 
 
 if __name__ == '__main__':

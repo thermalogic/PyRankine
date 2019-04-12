@@ -68,6 +68,6 @@ class Condenser(BComponent):
     def export(self, nodes):
         # demo BComponent
         result=BComponent.export(self,nodes)
-        result += '\nheatExtracted(kJ/kg)  \t%.2f \nQExtracted(MW): \t%.2f' % (
+        result += '\nheatExtracted(kJ/kg)  \t{:<.2f}\nQExtracted(MW): \t{:<.2f}'.format(
             self.heatExtracted, self.QExtracted)
         return result

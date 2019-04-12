@@ -186,8 +186,7 @@ class RankineCycle(object):
             datafile = open(outfilename, 'w', encoding='utf-8')
             sys.stdout = datafile
 
-        print("\n Rankine Cycle: %s, Time: %s" %
-              (self.name, str(datetime.datetime.now())))
+        print("\n Rankine Cycle: {}, Time: {}".format(self.name, str(datetime.datetime.now())))
         print("{:>20} {:>.2f}".format('Net Power(MW)', self.Wcycledot))
         print("{:>20} {:>.2f}".format('Mass Flow(kg/h)', self.mdot))
         print("{:>20} {:>.2f}".format('Efficiency(%)', self.efficiency))

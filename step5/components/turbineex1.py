@@ -97,6 +97,6 @@ class TurbineEx1(BComponent):
 
     def export(self, nodes):
         result = super().export(nodes)
-        result += '\nworkExtracted(kJ/kg): \t%.2f \nWExtracted(MW): \t%.2f' % (
+        result += '\nworkExtracted(kJ/kg): \t{:<.2f} \nWExtracted(MW): \t{:<.2f}'.format(
             self.workExtracted, self.WExtracted)
         return result

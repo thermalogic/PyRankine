@@ -51,36 +51,38 @@ compdict = {
 def read_jsonfile(filename):
     """ rankine cycle in json file"""
 
-     # 1 read json file to dict 
+    # 1 read json file to dict
     with open(filename, 'r') as f:
         rkcyc = json.loads(f.read())
 
-    # print(rkcyc)   
-    name=rkcyc["name"]
-    dictnodes=rkcyc["nodes"]
-    dictcomps=rkcyc["comps"]
+    # print(rkcyc)
+    name = rkcyc["name"]
+    dictnodes = rkcyc["nodes"]
+    dictcomps = rkcyc["comps"]
 
     # 2 convert dict nodes to the object nodes
-    countNodes=len(dictnodes)
+    countNodes = len(dictnodes)
     nodes = [None for i in range(countNodes)]
-    for curnode in  dictnodes:
+    for curnode in dictnodes:
         i = int(curnode['id'])
         nodes[i] = node.Node(curnode)
-     
+
     # 3 convert dict Comps to the object Comps
-    DevNum=len(dictcomps)
+    DevNum = len(dictcomps)
     Comps = {}
     for curdev in dictcomps:
         Comps[curdev['name']] = compdict[curdev['type']](curdev)
-      
-    return  name,nodes, countNodes,Comps, DevNum
+
+    return name, nodes, countNodes, Comps, DevNum
+
 
 class RankineCycle(object):
 
     def __init__(self, rankinefile):
         self.nodes = []
         self.devs = {}
-        self.name,self.nodes, self.NodeNum,self.devs, self.DevNum= read_jsonfile(rankinefile)
+        self.name, self.nodes, self.NodeNum, self.devs, self.DevNum = read_jsonfile(
+            rankinefile)
 
     def state(self):
         for key in self.devs:
@@ -105,14 +107,14 @@ class RankineCycle(object):
 
     def cw_simulate(self):
         """ Circulating water system：Condenser Cooling Water"""
-        cwin={'name':'CW-In',
-              'id':0,
-              't':15.0,
-              "x":0}
-        cwout={'name':'CW-Out',
-              'id':1,
-              't':35.0,
-              "x":0}
+        cwin = {'name': 'CW-In',
+                'id': 0,
+                't': 15.0,
+                "x": 0}
+        cwout = {'name': 'CW-Out',
+                 'id': 1,
+                 't': 35.0,
+                 "x": 0}
         self.nodew = []
         self.nodew.append(node.Node(cwin))
         self.nodew.append(node.Node(cwout))
@@ -121,20 +123,18 @@ class RankineCycle(object):
         self.devs['Condenser'].cw_simulate(self.nodew)
 
     def export(self):
-        print(" \n --------  %s   ----------------------------------" % self.name)
+        print(" \n --------  {} ----------------------------------".format(self.name))
         print("The net power output: ", self.Wcycledot, "MW")
-        print("Efficiency: ", '%.2f' % (self.efficiency * 100), "%")
-        print("The back work ratio: ", '%.2f' % (self.bwr * 100), "%")
-        print("The mass flow rate: ", '%.2f' % self.mdot, "kg/h")
-        print('The rate of heat transfer as the fluid passes the boiler: ',
-              '%.2f' % self.devs['Boiler'].Qindot, 'MW')
+        print("Efficiency: {:>.2f}%".format(self.efficiency * 100))
+        print("The back work ratio: {:>.2f}%".format(self.bwr * 100))
+        print("The mass flow rate: {:>.2f}kg/h".format(self.mdot))
+        print("The rate of heat transfer as the fluid passes the boiler:{:>.2f}MW".format(
+            self.devs['Boiler'].Qindot))
         print(" \n -------  Circulating Water System  --------------")
         print("Cooling water enters the condenser T:", self.nodew[0].t, u'°C')
         print("Cooling water exits  the condenser T:", self.nodew[1].t, u'°C')
-        print('The rate of heat transfer from the condensing steam: ',
-              '%.2f' % self.devs['Condenser'].Qoutdot, 'MW')
-        print('The mass flow rate of the condenser cooling water: ', '%.2f' %
-              self.devs['Condenser'].mcwdot, 'kg/h')
+        print("The rate of heat transfer from the condensing steam: {:>.2f}MW".format(self.devs['Condenser'].Qoutdot))
+        print("The mass flow rate of the condenser cooling water: {:>.2f}kg/h".format(self.devs['Condenser'].mcwdot))
         print(" \n -------- NODES  -----------------------------------")
         print("\nNodeID\tName\tP\tT\tH\tS\tV\tX")
         for inode in self.nodes:

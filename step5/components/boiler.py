@@ -44,11 +44,10 @@ class Boiler(BComponent):
         self.type = dictDev['type']
         self.inNode = dictDev['inNode']
         self.outNode = dictDev['outNode']
-     
 
         # add nodes
         self.nodes = [self.inNode, self.outNode]
-     
+
     def state(self, nodes):
         pass
 
@@ -65,7 +64,7 @@ class Boiler(BComponent):
         self.QAdded /= (3600.0 * 1000.0)
 
     def export(self, nodes):
-        result=super().export(nodes)
-        result += '\nheatAdded(kJ/kg) \t%.2f \nQAdded(MW) \t%.2f' % (
+        result = super().export(nodes)
+        result += '\nheatAdded(kJ/kg) \t{:<.2f} \nQAdded(MW) \t{:<.2f}'.format(
             self.heatAdded, self.QAdded)
-        return  result
+        return result
