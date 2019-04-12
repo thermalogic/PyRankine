@@ -6,21 +6,17 @@ We wish that the PyRankine may be a helpful vehicle for  you to understand **Com
 
 The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)](#the-jupyter-notebooks-of-example-rankine-cycles) 
 
-* [step 0](./step0) :  **Zero Abstraction** of The Rankine Cycle(Example 8.1,8.2)
+* [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
 
       The simple data types and expression only 
 
-* [step 1](./step1)  : **Abstraction** and **CSV Textual Representation** of The Rankine Cycle(Example 8.1,8.2)
+* [step 1](./step1)  : **The Simple Abstraction** of The  Ideal Rankine Cycle(Example 8.1)
 
       Structure data types(List,Dict) and functions
-
-      CSV file of Rankine Cycle Flowsheet
-      
-* [step 2](./step2) : **Object-Orientation Abstraction** and **CSV Textual Representation** The Rankine Cycle(Example 8.1,8.2) 
+     
+* [step 2](./step2) : **The Simple Object-Orientation Abstraction** of The  Ideal Rankine Cycle(Example 8.1) 
 
       Object-oriented programming
-
-      CSV file of Rankine Cycle Flowsheet 
      
 * [step 3](./step3)  : **Object-Orientation Abstraction**  and **JSON Textual Representation** of The Ideal Rankine Cycle(Example 8.1)
      
@@ -93,14 +89,10 @@ Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fun
 
 Chapter 8 : Vapour Power Systems 
 
-* **Example 8.1: The Ideal Rankine Cycle, P438**
+* [EXAMPLE 8.1: The Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0.ipynb)
 
-* **EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444**
-
-    * [Step0,1 of Example 8.1 & 8.2 ](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0-1.ipynb)
-
-    * [Step2 of Example 8.1 & 8.2 ](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step2-OOP.ipynb)
-
+* [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0.ipynb)
+  
 * [EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
 
 * [EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)

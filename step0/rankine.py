@@ -1,5 +1,5 @@
 """
-Step 0：Zero Abstraction of The Ideal Rankine CycleZ
+Step 0：Zero Abstraction of The Ideal Rankine Cycle
                     
         simple data type and expression  only 
 
