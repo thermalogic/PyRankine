@@ -1,3 +1,15 @@
+"""
+
+T-S Diagram Module
+
+Step 1 :The Simple Abstraction of The Rankine Cycle 8.1,8.2  with list,dict,function
+
+License: this code is in the public domain
+
+Cheng Maohua(cmh@seu.edu.cn)
+
+"""
+
 import matplotlib.pyplot as plt
 from seuif97 import *
 import numpy as np

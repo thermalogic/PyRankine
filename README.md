@@ -10,7 +10,7 @@ The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. 
 
       The simple data types and expression only 
 
-* [step 1](./step1)  : **The Simple Abstraction** of The  Ideal Rankine Cycle(Example 8.1)
+* [step 1](./step1)  : **The Simple Abstraction** of The Rankine Cycle(Example 8.1，8.2)
 
       Structure data types(List,Dict) and functions
      
