@@ -26,9 +26,9 @@ from components.turbineex0 import TurbineEx0
 from components.turbineex1 import TurbineEx1
 
 # -------------------------------------------------------------------
-# compdict
-#  1: key:value-> Type String: class  name
-#  2  add the new key:value to the dict after you and the new device class/type
+# compdict (jump table)
+#     key:value-> Type String: class  name
+#  Add the new key:value to the dict after you add the new device class/type
 # --------------------------------------------------------------------------
 
 compdict = {
