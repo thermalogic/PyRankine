@@ -52,6 +52,8 @@ class TurbineEx1(object):
         if self.ef == 1.0:
             nodes[self.extNode].s = nodes[self.inNode].s
             nodes[self.extNode].ps()
+            nodes[self.outNode].s = nodes[self.inNode].s
+            nodes[self.outNode].ps()
         else:
             isoh = seuif97.ps2h(
                 nodes[self.extNode].p, nodes[self.inNode].s)
