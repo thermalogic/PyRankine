@@ -1,110 +1,62 @@
 # PyRankine
 
-The **step-by-step codes** of the rankine cycle simulator from zero abstraction to the general abstraction are provided in the  PyRankine.
+The two types of general rankine cycle simulator are provided in the PyRankine
  
-We wish that the PyRankine may be a helpful vehicle for  you to understand **Computational Thinking** and improve the programming skills.
+We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
 
-The Example Rankine Cycles used in the follow codes are from [Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)](#the-jupyter-notebooks-of-example-rankine-cycles) 
+## The Simulators
 
-* [step 0](./step0) :  **Zero Abstraction** of The Ideal Rankine Cycle(Example 8.1)
+### [The Simulator 1](./sim1)
 
-      The simple data types and expression only 
+* Using List,Dict and Function 
 
-* [step 1](./step1)  : **The Simple Abstraction** of The Rankine Cycle(Example 8.1，8.2)
-
-      Structure data types(List,Dict) and functions
+* CSV Textual Model of the Rankine Cycle Flowsheet 
      
-* [step 2](./step2) : **The Simple Object-Orientation Abstraction** of The  Ideal Rankine Cycle(Example 8.1) 
+### [The Simulator 2](./sim2)
 
-      Object-oriented programming
+* Object-oriented programming
+
+* JSON Textual Model of Rankine Cycles Flowsheet 
      
-* [step 3](./step3)  : **Object-Orientation Abstraction**  and **JSON Textual Representation** of The Ideal Rankine Cycle(Example 8.1)
-     
-      Object-oriented Programming 
-      
-      JSON file of Rankine Cycle Flowsheet
+   **The UML Class Diagram: Association**
 
-     **The UML Class Diagram: Association**
-
-     ![The UML Class Diagram: Association](./step3/uml/packages.svg)  
-                        
-* [step 4](./step4) : **General Abstraction** and **JSON Textual Representation** of Rankine Cycles
-      
-      Object-oriented programming, general module; 
-      
-      JSON file of Rankine Cycle Flowsheet
-      
-    Example Rankine Cycles    
-   
-    * Example 8.1: The Ideal Rankine Cycle
-      
-    * Example 8.2: Analyzing a Rankine Cycle with Irreversibilities
-      
-    * Example 8.5: Regenerative Cycle with Open Feedwater Heater  
-
-     **The UML Class Diagram: Association**
-
-    ![The UML Class Diagram: Association](./step4/uml/packages.svg)  
+   ![The UML Class Diagram: Association](./sim2/uml/packages.svg)  
  
-* [step 5](./step5) : **The Base Class Abstraction**  and **JSON Textual Representation** of Rankine Cycles
-
-      Object-oriented programming, general module, the base class; 
-      
-      JSON file of Rankine Cycle Flowsheet 
-    
-    Example Rankine Cycles    
-   
-    * Example 8.1: The Ideal Rankine Cycle
-      
-    * Example 8.2: Analyzing a Rankine Cycle with Irreversibilities
-      
-    * Example 8.5: Regenerative Cycle with Open Feedwater Heater 
-    
-    **The UML Class Diagram: Association**
-
-    ![The UML Class Diagram: Association](./step5/uml/packages.svg)
-
- 
-## Run
-
-```bash
-cd step0/1/2/3/4/5
-python rankine.py
-``` 
-
 ## Dependencies：SEUIF97
 
 IAPWS-IF97 high-speed shared library
 
-  * https://github.com/PySEE/SEUIF97
+* https://github.com/PySEE/SEUIF97
 
 Install with pip
 ```bash
 python -m pip install seuif97
 ```
 
-## The Jupyter Notebooks of Example Rankine Cycles
+## The Example Rankine Cycles
 
-Michael J. Moran, Howard N. Shapiro, Daisie D. Boettner, Margaret B. Bailey. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
+The Rankine Cycles used in these general simulators are Example 8.1, 8.2 and 8,5 of **Michael J. Moran. Fundamentals of Engineering Thermodynamics(7th Edition)**. John Wiley & Sons, Inc. 2011
 
 Chapter 8 : Vapour Power Systems 
 
-* [EXAMPLE 8.1: The Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0.ipynb)
+### The Jupyter Notebooks of Example Rankine Cycles
 
-* [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82-Step0.ipynb)
+* [EXAMPLE 8.1: The Ideal Rankine Cycle, P438](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82.ipynb)
+
+* [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities,  P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82.ipynb)
   
-* [EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
+* [EXAMPLE 8.3: Evaluating Performance of an Ideal Reheat Cycle, P449-451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84.ipynb)
 
-* [EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84-Step0.ipynb)
+* [EXAMPLE 8.4: Evaluating Performance of a Reheat Cycle with Turbine Irreversibility, P451](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle83-84.ipynb)
 
-* [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85-Step0.ipynb)
+* [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85.ipynb)
 
-* [EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86-Step0.ipynb)
+* [EXAMPLE 8.6: The Reheat–Regenerative Cycle with Two Feedwater Heaters, P460-463](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle86.ipynb)
 
 **Start the notebooks**
 
 ```bash
->startnb.bat
+>start.bat
 ```
 
 **Schematic of Example Rankine Cycles**
@@ -114,8 +66,6 @@ Chapter 8 : Vapour Power Systems
 ## Reference
 
 * Computational thinking
-
-  * [wikipedia: Algorithms + Data Structures = Programs]( https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs)
 
   * [wikipedia: Computational thinking]( https://en.wikipedia.org/wiki/Computational_thinking)
 
@@ -138,6 +88,7 @@ Chapter 8 : Vapour Power Systems
     * Michael M.Tiller (作者),  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
 
   * Bond Graph
+  
     * Wolfgang Borutzky. Bond Graph Modelling of Engineering Systems：Theory, Applications and Software Support. Springer Science Business Media, LLC 2011
 
     * 王中双. 键合图理论及其在系统动力学中的应用, 哈尔滨工程大学出版社,2007.08

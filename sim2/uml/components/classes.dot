@@ -1,0 +1,11 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Boiler|QAdded\lenergy : str\lheatAdded\linNode\lname\loutNode\ltype : str\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+"1" [label="{Condenser|QExtracted\lenergy : str\lheatExtracted\linNode\lname\loutNode\ltype : str\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+"2" [label="{Node|fdot : float, NoneType\lh : NoneType\lid\lmdot : NoneType\lname\lp : NoneType, float\ls : NoneType\lt : float, NoneType\ltitle : str\lv : NoneType\lx : float, NoneType\l|calmdot()\lhs()\lph()\lps()\lpt()\lpx()\ltx()\l}", shape="record"];
+"3" [label="{OpenedheaterDw0|QAdded : int\lQExtracted : float, int\lenergy : str\lheatAdded : int\lheatExtracted : int\linNode\linNode_fw\lname\loutNode_fw\ltype : str\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+"4" [label="{Pump|WRequired\lef\lenergy : str\linNode\lname\loutNode\ltype : str\lworkRequired\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+"5" [label="{TurbineEx0|WExtracted\lef\lenergy : str\linNode\lname\loutNode\ltype : str\lworkExtracted\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+"6" [label="{TurbineEx1|WExtracted\lef\lenergy : str\lextNode\linNode\lname\loutNode\ltype : str\lworkExtracted\l|export()\lsimulate()\lsm_energy()\lstate()\l}", shape="record"];
+}

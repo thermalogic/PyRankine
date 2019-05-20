@@ -1,0 +1,16 @@
+
+ ----- Rankine Cycle at Time: 2019/04/30 12:24:07 ----- 
+	Net Power: 100.00MW.
+	Mass flow rate: 444698.07kg/h
+	The thermal efficiency: 31.43%
+	Heat Rate: 11452.28kg/kWh
+	Steam Rate: 4.45kg/kWh
+	totalWExtracted: 101.17MW.
+	totalWRequired: 1.17MW.
+	totalQadded: 318.12MW.
+
+NAME                        	  Node 	 P(MPa)    T(°C)   H(kJ/kg)  S(kJ/kg.K)    X       FDOT   
+MainSteam                   	   0   	 8.000    295.01    2758.61     5.745     1.000     1.000
+OutletSteamHP               	   1   	 0.008     41.51    1939.61     6.204     0.735     1.000
+CondenserWater              	   2   	 0.008     41.51     173.85     0.593     0.000     1.000
+MainFeedWater               	   3   	 8.000     42.09     183.32     0.597     0.000     1.000

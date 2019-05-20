@@ -1,0 +1,25 @@
+digraph "packages" {
+charset="utf-8"
+rankdir=BT
+"0" [label="components", shape="box"];
+"1" [label="components.boiler", shape="box"];
+"2" [label="components.condenser", shape="box"];
+"3" [label="components.node", shape="box"];
+"4" [label="components.openedheaterdw0", shape="box"];
+"5" [label="components.pump", shape="box"];
+"6" [label="components.turbineex0", shape="box"];
+"7" [label="components.turbineex1", shape="box"];
+"0" -> "1" [arrowhead="open", arrowtail="none"];
+"0" -> "2" [arrowhead="open", arrowtail="none"];
+"0" -> "3" [arrowhead="open", arrowtail="none"];
+"0" -> "4" [arrowhead="open", arrowtail="none"];
+"0" -> "5" [arrowhead="open", arrowtail="none"];
+"0" -> "6" [arrowhead="open", arrowtail="none"];
+"0" -> "7" [arrowhead="open", arrowtail="none"];
+"1" -> "3" [arrowhead="open", arrowtail="none"];
+"2" -> "3" [arrowhead="open", arrowtail="none"];
+"4" -> "3" [arrowhead="open", arrowtail="none"];
+"5" -> "3" [arrowhead="open", arrowtail="none"];
+"6" -> "3" [arrowhead="open", arrowtail="none"];
+"7" -> "3" [arrowhead="open", arrowtail="none"];
+}

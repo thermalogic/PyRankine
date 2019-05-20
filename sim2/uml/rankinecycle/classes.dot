@@ -1,0 +1,7 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{RankineCycle|Comps : dict\lDevNum : int\lHeatRate : float\lNodeNum\lNodehNum : int\lSteamRate\lWcycledot : NoneType\lefficiency : float\lmdot : NoneType\lname : NoneType\lnetpoweroutput : int\lnodes : list\ltotalQAdded : int\ltotalWExtracted : int\ltotalWRequired : int\ltotalheatAdded : int\ltotalworkExtracted : int\ltotalworkRequired : int\l|OutFiles()\lSpecifiedMassFlowSimulator()\lSpecifiedNetOutputPowerSimulator()\laddRankine()\lcomponentState()\lsimulator()\l}", shape="record"];
+"1" [label="{SimRankineCycle|cycle\ljsonfilename\lmodelDict : dict\lprefixResultFileName\l|CycleModelDict()\lCycleSimulator()\lOutToJSONFiles()\lSpecifiedMassFlowSimulatorAndOutput()\lSpecifiedNetOutputPowerSimulatorAndOutput()\l}", shape="record"];
+"0" -> "1" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="cycle", style="solid"];
+}

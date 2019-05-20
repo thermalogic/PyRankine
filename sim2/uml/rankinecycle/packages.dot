@@ -1,0 +1,10 @@
+digraph "packages" {
+charset="utf-8"
+rankdir=BT
+"0" [label="cycle", shape="box"];
+"1" [label="cycle.createcycle", shape="box"];
+"2" [label="cycle.objcycle", shape="box"];
+"3" [label="cycle.simcycle", shape="box"];
+"2" -> "1" [arrowhead="open", arrowtail="none"];
+"3" -> "2" [arrowhead="open", arrowtail="none"];
+}
