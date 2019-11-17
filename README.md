@@ -1,6 +1,6 @@
 # PyRankine
 
-The PyRankine is the general rankine cycle simulator provided with the two different types of data structures 
+The PyRankine is the general Rankine Cycle simulator provided in the different data structures 
  
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
  
@@ -8,7 +8,7 @@ We wish that PyRankine may be a helpful vehicle for you to understand **Computat
 
 ### [The Simulator 1](./sim1)
 
-* Using List,Dict and Function 
+* List,Dict and Function 
 
 * CSV Textual Model of the Rankine Cycle Flowsheet 
      
