@@ -33,26 +33,26 @@ class Node:
              ("NodeID", "Name", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)", "V(m^3/kg)", "X", "FDOT", "MDOT(kg/h)"))
 
     kwargs = {'name': None,
-                'id': None,
-                'p': None,
-                't': None,
-                'h': None,
-                's': None,
-                'v': None,
-                'x': None,
-                'fdot': None,
-                'mdot': None
-                }
+              'id': None,
+              'p': None,
+              't': None,
+              'h': None,
+              's': None,
+              'v': None,
+              'x': None,
+              'fdot': None,
+              'mdot': None
+              }
 
     def __init__(self, dictnode):
         """ create the node object"""
         self.kwargs = Node.kwargs.copy()
         self.kwargs.update(dictnode)
-        for key in ['p','t','h','s','v','x','fdot','mdot']:
+        for key in ['p', 't', 'h', 's', 'v', 'x', 'fdot', 'mdot']:
             if type(self.kwargs[key]) is int:
-               self.kwargs[key]=float(self.kwargs[key])
+                self.kwargs[key] = float(self.kwargs[key])
         self.__dict__.update(self.kwargs)
-       
+
         if self.p != None and self.t != None:
             self.pt()
         elif self.p != None and self.x != None:
@@ -110,15 +110,15 @@ class Node:
 
     def __iter__(self):
         objdict = {'name': self.name,
-                'id': self.id,
-                'p': self.p,
-                't': self.t,
-                'h': self.h,
-                's': self.s,
-                'v': self.v,
-                'x': self.x,
-                'fdot': self.fdot,
-                'mdot': self.mdot
-                }
+                   'id': self.id,
+                   'p': self.p,
+                   't': self.t,
+                   'h': self.h,
+                   's': self.s,
+                   'v': self.v,
+                   'x': self.x,
+                   'fdot': self.fdot,
+                   'mdot': self.mdot
+                   }
         for key, value in objdict.items():
             yield (key, value)
