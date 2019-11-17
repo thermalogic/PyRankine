@@ -1,9 +1,9 @@
 # PyRankine
 
-The two types of general rankine cycle simulator are provided in the PyRankine
+The PyRankine is the general rankine cycle simulator provided with the two different types of data structures 
  
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
-
+ 
 ## The Simulators
 
 ### [The Simulator 1](./sim1)
