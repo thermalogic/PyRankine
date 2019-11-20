@@ -1,7 +1,9 @@
 """
 General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
 
-Input and output of Rankine cycle simulator
+Input datefile to the objects
+
+output  objects to data file
   
 Last updated: 2018.05.10
 
