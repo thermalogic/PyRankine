@@ -44,7 +44,7 @@ def OutFiles(cycle, outfilename=None):
     print(Node.title)
     for node in cycle.nodes:
         print(node)
-    # 3output devices
+    # 3 output devices
     for key in cycle.comps:
         print(cycle.comps[key])
     

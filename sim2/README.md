@@ -228,35 +228,37 @@ class Boiler:
 
 ### 6 `object__iter_` and Iterator 
 
-**Objcycle.py**
+`boilee.py`
 
 ```python
 
-class RankineCycle:
-    
-    def __iter__(self):
-        perfornamcedict={'NetPower(MW)':self.Wcycledot,
-                   'MassFlow(kg/h)':self.mdot,
-                   'CycleEfficiency(%)':self.efficiency,
-                   'CycleHeatRate(kJ/kWh)':self.HeatRate,
-                   'SteamRate(kg/kWh)':self.SteamRate,
-                   'totalWExtracted(MW)':self.totalWExtracted,
-                   'totalWRequired(MW)':self.totalWRequired,
-                   'totalQAdded(MW)':self.totalQAdded}
+class Boiler:
 
-        cycledict={"name":self.name,"Performance":perfornamcedict}
-            
-        for key,value in cycledict.items():
-            yield (key, value) 
+    def __iter__(self):
+
+        dictobj = {'name': self.name,
+                   'inNode': dict(self.iNode),
+                   'outNode': dict(self.oNode),
+                   'heatAdded(kJ/kg)': self.heatAdded,
+                   'QAdded(MW)': self.QAdded
+                   }
+
+        for key, value in dictobj.items():
+            yield (key, value)
 ```
 
-**iocycle.py**
+`objcycle.py`
 
 ```python
-def CycleModelDict(cycle):
-    CycleDict =dict(cycle)
-    ...
+def CycleResultDict(self):
+    """ convert the objects to dict """ 
         
+    compobjs = []
+    for key in self.comps:
+      compobjs.append(dict(self.comps[key]))
+
+    self.odictcycle["comps"] = compobjs
+
 ```
 
 #### 6.1 object.`__iter__`(self)
