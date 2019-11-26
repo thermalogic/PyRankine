@@ -6,13 +6,9 @@ We wish that PyRankine may be a helpful vehicle for you to understand **Computat
 
 ### [The Simulator : List,Dict and Function](./sim-fun)
 
-* List, Dict and Function 
-
 * CSV Textual Model of the Rankine Cycle Flowsheet 
      
 ### [The Simulator : Object-oriented programming](./sim-oop)
-
-* Object-oriented programming
 
 * JSON Textual Model of Rankine Cycles Flowsheet 
      
