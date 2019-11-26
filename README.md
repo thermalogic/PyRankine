@@ -1,18 +1,18 @@
 # PyRankine
 
 The PyRankine is the general Rankine Cycle simulator provided in the different data structures 
- 
+
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
- 
+
 ## The Simulators
 
-### [The Simulator 1](./sim1)
+### [The Simulator : List,Dict and Function](./sim-fun)
 
-* List,Dict and Function 
+* List, Dict and Function 
 
 * CSV Textual Model of the Rankine Cycle Flowsheet 
      
-### [The Simulator 2](./sim2)
+### [The Simulator : Object-oriented programming](./sim-oop)
 
 * Object-oriented programming
 
@@ -20,7 +20,7 @@ We wish that PyRankine may be a helpful vehicle for you to understand **Computat
      
    **The UML Class Diagram: Association**
 
-   ![The UML Class Diagram: Association](./sim2/uml/packages.svg)  
+   ![The UML Class Diagram: Association](./sim-oop/uml/packages.svg)  
  
 ## Dependencies：SEUIF97
 

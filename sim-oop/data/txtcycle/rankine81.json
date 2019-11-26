@@ -1,0 +1,65 @@
+{
+    "name": "Rankine81",
+    "nodes": [
+        {
+            "name": "Main Steam",
+            "id": 0,
+            "p": 8.0,
+            "t": null,
+            "x": 1.0,
+            "fdot": 1.0
+        },
+        {
+            "name": "Outlet Steam of HP",
+            "id": 1,
+            "p": 0.008,
+            "t": null,
+            "x": null,
+            "fdot": null
+        },
+        {
+            "name": "Condenser Water",
+            "id": 2,
+            "p": 0.008,
+            "t": null,
+            "x": 0.0,
+            "fdot": null
+        },
+        {
+            "name": "Main FeedWater",
+            "id": 3,
+            "p": 8.0,
+            "t": null,
+            "x": null,
+            "fdot": null
+        }
+    ],
+    "comps": [
+        {
+            "name": "TurbineEx0",
+            "type": "TURBINE-EX0",
+            "ef": 1.0,
+            "inNode": 0,
+            "outNode": 1
+        },
+        {
+            "name": "Condenser",
+            "type": "CONDENSER",
+            "inNode": 1,
+            "outNode": 2
+        },
+        {
+            "name": "Feedwater Pump",
+            "type": "PUMP",
+            "ef": 1.0,
+            "inNode": 2,
+            "outNode": 3
+        },
+        {
+            "name": "Boiler",
+            "type": "BOILER",
+            "inNode": 3,
+            "outNode": 0
+        }
+    ]
+}
