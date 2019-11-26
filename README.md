@@ -4,8 +4,6 @@ The PyRankine is the general Rankine Cycle simulator provided in the different d
 
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
 
-## The Simulators
-
 ### [The Simulator : List,Dict and Function](./sim-fun)
 
 * List, Dict and Function 
