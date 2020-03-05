@@ -87,11 +87,11 @@ class RankineCycle:
                     pass
             
             i += 1
-            if (keys.count == 0):
+            if (len(keys) == 0):
                 deviceok = True
         
         # for debug: check the failed devices
-        if (keys.count >0): 
+        if (len(keys)>0): 
             print(keys)      
 
 
