@@ -202,5 +202,5 @@ def CalDevices(Devices, Nodes):
             except:
                 pass
         i += 1
-        if (i > devCounts+1 or keys.count == 0):
+        if (i > devCounts+1 or len(keys) == 0): 
             fdotok = True

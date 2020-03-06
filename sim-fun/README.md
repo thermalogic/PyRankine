@@ -86,39 +86,13 @@ In the example codes, we provide one simple general solution:
             except:
                 pass
         i += 1
-        if (i > devCounts+1 or keys.count == 0):
+        if (i > devCounts+1 or len(keys) == 0):
             fdotok = True
 ```
 
 ## Notes on Python
 
-### 1 Packages
-   
-   https://docs.python.org/3/tutorial/modules.html#packages
-
-   Packages are a way of structuring Python’s module namespace by using **“dotted module names”**.
-   The ` __init__.py  `files are required to make Python treat the **directories** as containing **packages**; 
-   this is done to **prevent directories with a common name**, such as string, from unintentionally hiding valid modules that occur later on the module search path. 
-   
-   In the simplest case, ` __init__.py ` can just be an **empty** file, but it can also execute initialization code for the package or set the ` __all__ ` variable
-
-```bash   
-   RankineCycle/                RankineCycle package
-      __init__.py               Initialize the  package
-      createitem.py
-      cycle.py
-     ...
-```
-
-Users of the package can import **individual modules** from the package, for example:
-
-```python
-from RankineCycle.createitems import CreateNodeFromCSV,CreateDeviceFromCSV
-from RankineCycle.cycle import  RankineCycle
-from RankineCycle.output import OutFiles
-```
-
-### 2 Redirect **stdout** to a file
+### 1 Redirect **stdout** to a file
 
 29.1. sys — System-specific parameters and functions
 
@@ -142,7 +116,7 @@ sys.stdout = open('Redirect2file.txt', 'w')
 print('Test: redirect sys.stdout to file')
 ```
 
-### 3 glob — Unix style pathname pattern expansion
+### 2 glob — Unix style pathname pattern expansion
 
 https://docs.python.org/3/library/glob.html
 
