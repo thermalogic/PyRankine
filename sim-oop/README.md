@@ -101,88 +101,16 @@ In the example codes, we provide one simple general solution:
                     pass
             
             i += 1
-            if (keys.count == 0):
+            if (len(keys) == 0):
                 deviceok = True
         
         # for debug: check the failed devices
-        if (keys.count >0): 
+        if (len(keys) >0): 
             print(keys)  
 ```
+## Notes of Python
 
-## Notes on Python
-
-### 1 Packages
-   
-   https://docs.python.org/3/tutorial/modules.html#packages
-
-   Packages are a way of structuring Python’s module namespace by using **“dotted module names”**.
-   The ` __init__.py  `files are required to make Python treat the **directories** as containing **packages**; 
-   this is done to **prevent directories with a common name**, such as string, from unintentionally hiding valid modules that occur later on the module search path. 
-   
-   In the simplest case, ` __init__.py ` can just be an **empty** file, but it can also execute initialization code for the package or set the ` __all__ ` variable
-
-```bash   
-   components/                  components package
-      __init__.py               Initialize the components package
-      boiler.py
-      condenser.py
-     ...
-```
-
-Users of the package can import **individual modules** from the package, for example:
-
-```python
-import components.node
-```
-An alternative way of importing the submodule is:
-
-```python
-from components import node
-```
-Yet another variation is to import **the desired function or variable** directly:
-
-```python
-from components.node import Node
-```
-
-### 2 Redirect **stdout** to a file
-
-29.1. sys — System-specific parameters and functions
-
-https://docs.python.org/3/library/sys.html
-
-This module provides access to some variables used or maintained by the **interpreter** and to functions that interact strongly with the interpreter. It is always available.
-
-File objects used by the interpreter for standard input, output and errors:
-
-* sys.stdin ： is used for all interactive input (including calls to input());
-
-* sys.stdout ：is used for the output of print() and expression statements and for the prompts of input();
-
-* sys.stderr：The interpreter’s own prompts and its error messages go to stderr.
-
-These streams are regular **text** files like those returned by the open() function. 
-
-```python
-import sys
-sys.stdout = open('Redirect2file.txt', 'w')
-print('Test: redirect sys.stdout to file')
-```
-
-### 3 glob — Unix style pathname pattern expansion
-
-https://docs.python.org/3/library/glob.html
-
-The `glob` module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde(~) expansion is done, but `*`, `?`, and character `ranges` expressed with `[]` will be correctly matched
-
-```python
-import glob
-
-json_filesname_str='./data/txtcycle/rankine8[0-9].json'
-json_filesname=glob.glob(json_filesname_str)
-```
-
-### 4 json — JSON encoder and decoder
+### 1 json — JSON encoder and decoder
 
 Python3: https://docs.python.org/3/library/json.html
 
@@ -201,7 +129,7 @@ def create_dictcycle_from_jsonfile(filename):
     return dictcycle
 ```
 
-### 5 object__dict__ & update([other])
+### 2 object__dict__ & update([other])
 
 **update([other])**
 
@@ -226,7 +154,7 @@ class Boiler:
         # self.outNode = dictDev['outNode']
 ```   
 
-### 6 `object__iter_` and Iterator 
+### 3 `object__iter_` and Iterator 
 
 `boilee.py`
 
@@ -261,7 +189,7 @@ def CycleResultDict(self):
 
 ```
 
-#### 6.1 object.`__iter__`(self)
+#### 3.1 object.`__iter__`(self)
 
 https://docs.python.org/3/reference/datamodel.html#object.__iter__
 
@@ -273,7 +201,7 @@ For **mappings**, it should iterate over the keys of the container.
 
 https://docs.python.org/3/library/stdtypes.html#typeiter
 
-#### 6.2 Iterator Types
+#### 3.2 Iterator Types
 
 https://docs.python.org/3/library/stdtypes.html#typeiter
 
