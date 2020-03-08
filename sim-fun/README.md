@@ -38,17 +38,19 @@ Chapter 8 : Vapour Power Systems
 
 [Modules in the package](./RankineCycle)
 
-* `__init__`
-
-* createitems
-
-* device
-
-* node
-
-* cycle
-
-* output
+```text
+ <RankineCycle>
+    │ 
+    |── __init__.py
+    |
+    |── createitems.py 
+    |
+    |── device.py 
+    │   
+    |── node.py
+    │ 
+    |── output.py
+```
 
 ## The Methods to check and analysis the mass flow rate
 
