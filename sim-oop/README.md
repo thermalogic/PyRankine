@@ -114,7 +114,7 @@ In the example codes, we provide one simple general solution:
 
 Python3: https://docs.python.org/3/library/json.html
 
-***json.loads**
+**json.loads**
 
 ```python
 json.loads(s, *, encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)
