@@ -25,7 +25,11 @@ Chapter 8 : Vapour Power Systems
 
 ### The Class Diagram : Composition
 
-![Class UML](./uml/classes.svg)
+All component classes have: 
+* class variables:  `energy`, `type`
+* methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`, `__iter__`
+
+  ![Class UML](./uml/classes.svg)
 
 ## The Projects 
 
@@ -49,8 +53,7 @@ The node  classes in the package
 
 * node
 
-All component classes in the package have these  methods:`__init__`,`state`,
-`balance`, `sm_energy`,`export`
+All component classes in the package: 
 
 * boiler
 
