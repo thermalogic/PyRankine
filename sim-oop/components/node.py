@@ -107,5 +107,3 @@ class Node:
             result = ('{} {}  {} {} {} {} {} {} {} {}'.format
                       (self.id, self.name, self.p, self.t, self.h, self.s, self.v, self.x, self.fdot, self.mdot))
         return result
-
-
