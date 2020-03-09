@@ -17,6 +17,41 @@ Chapter 8 : Vapour Power Systems
 * [EXAMPLE 8.2: Analyzing a Rankine Cycle with Irreversibilities, P444](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle81-82.ipynb)    
 * [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85.ipynb)
 
+## The Projects 
+
+```
+        <sim=oop>
+          │ 
+          |── rankine.py  #  main app
+          |
+          |── <components> components package
+          │    |
+          │    │ ── node.py
+          │    |
+          │    │ ── boiler.py
+          │         .... 
+          │
+          |── <rankinecycle> cycle package
+          │    |
+          │    │ ─  iocycle.py # read json to the object; output the class to json  
+          │    │     
+          │    │ ─  objcycle.py # the objects of rankine object
+          │    │
+          │    │ ─  simcycle.py  # ana;ysis the rankine cycle
+          │
+          |── <data> json files
+                 |
+                 │──<txtxyxle> The Textual Representation Files of Rankine Cycle
+                 │     │
+                 │     │ ──rankine??.json 
+                 │  
+                 │──<output> The Output Files of Rankine Cycle
+                       │
+                       │ ── rankine??-sm.txt # the Specified Mass Flow
+                       │
+                       │ ── rankine??-sp.txt`: the Specified Net Output Power
+```
+
 ## The UML Class diagram 
 
 ### The Class Diagram： Association
@@ -30,46 +65,6 @@ All component classes have:
 * methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`, `__iter__`
 
   ![Class UML](./uml/classes.svg)
-
-## The Projects 
-
-### Data Files in path `./data`
-
-[The Textual Representation Files of Rankine Cycle](./txtcycle)
-
-* `rankine??.json`
-
-[The Output Files of Rankine Cycle](./output) 
-
-* `rankine??-sm.txt`: the output of Specified Mass Flow
-
-* `rankine??-sp.txt`: the output of the Specified Net Output Power
-
-### Packages
-
-#### [The components Package](./components)
-
-The node  classes in the package
-
-* node
-
-All component classes in the package: 
-
-* boiler
-
-* conderser
-
-* ...
-
-#### [The rankincycle Package](./rankincycle)
-
-The cycle classes and functions in the package
-
-* iocycle 
-
-* objcycle
-
-* simcycle
 
 ## The Methods to check and analysis the mass flow rate
 
