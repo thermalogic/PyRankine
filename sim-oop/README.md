@@ -47,9 +47,9 @@ Chapter 8 : Vapour Power Systems
            │  
            │──<output> The Output Files of Rankine Cycle
                  │
-                 │ ── rankine??-sm.txt # the Specified Mass Flow
+                 │ ── rankine??-sm.txt/json # the Specified Mass Flow
                  │
-                 │ ── rankine??-sp.tx #  the Specified Net Output Power
+                 │ ── rankine??-sp.txt/json #  the Specified Net Output Power
 ```
 
 ## The UML Class diagram 
