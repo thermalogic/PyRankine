@@ -1,4 +1,4 @@
-# The Object-oriented programming and JSON Textual Representation of Rankine Cycle Flowsheet
+## The Object-oriented programming and JSON Textual Representation of Rankine Cycle Flowsheet
 
 **Run**
 
@@ -41,7 +41,7 @@ Chapter 8 : Vapour Power Systems
           │
           |── <data> json files
                  |
-                 │──<txtxyxle> The Textual Representation Files of Rankine Cycle
+                 │──<txtcyxle> The Textual Representation Files of Rankine Cycle
                  │     │
                  │     │ ──rankine??.json 
                  │  
