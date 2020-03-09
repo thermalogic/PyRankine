@@ -66,13 +66,3 @@ class Condenser:
             self.heatExtracted, self.QExtracted)
         return result
 
-    def __iter__(self):
-        dictobj = {'name': self.name,
-                   'inNode': dict(self.iNode),
-                   'outNode': dict(self.oNode),
-                   'heatExtracted(kJ/kg)': self.heatExtracted,
-                   'QExtracted(MW)': self.QExtracted
-                   }
-
-        for key, value in dictobj.items():
-            yield (key, value)

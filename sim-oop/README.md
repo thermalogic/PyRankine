@@ -47,9 +47,9 @@ Chapter 8 : Vapour Power Systems
            │  
            │──<output> The Output Files of Rankine Cycle
                  │
-                 │ ── rankine??-sm.txt/json # the Specified Mass Flow
+                 │ ── rankine??-sm.txt # the Specified Mass Flow
                  │
-                 │ ── rankine??-sp.txt/json #  the Specified Net Output Power
+                 │ ── rankine??-sp.txt #  the Specified Net Output Power
 ```
 
 ## The UML Class diagram 
@@ -62,7 +62,7 @@ Chapter 8 : Vapour Power Systems
 
 All component classes have: 
 * class variables:  `energy`, `type`
-* methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`, `__iter__`
+* methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`
 
   ![Class UML](./uml/classes.svg)
 

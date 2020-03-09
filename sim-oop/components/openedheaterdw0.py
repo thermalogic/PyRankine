@@ -86,14 +86,3 @@ class OpenedheaterDw0:
         result += '\nQExtracted(MW)  \t{:>.2f}'.format(self.QExtracted)
         return result
 
-    def __iter__(self):
-        dictobj = {'name': self.name,
-                   'inNode': dict(self.iNode),
-                   'inNode_fw': dict(self.iNode_fw),
-                   'heatAdded(kJ/kg)': (self.heatAdded),
-                   'QAdded(MW)': self.QAdded,
-                   'QExtracted(MW)': self.QExtracted
-                   }
-
-        for key, value in dictobj.items():
-            yield (key, value)

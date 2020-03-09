@@ -77,14 +77,3 @@ class Pump():
         result += '\nWRequired(MW): \t{:>.2f}'.format(self.WRequired)
         return result
 
-    def __iter__(self):
-        dictobj = {'name': self.name,
-                   'inNode': dict(self.iNode),
-                   'outNode': dict(self.oNode),
-                   'ef': self.ef,
-                   'workRequired(kJ/kg)': self.workRequired,
-                   'WRequired(MW)': self.WRequired
-                   }
-
-        for key, value in dictobj.items():
-            yield (key, value)

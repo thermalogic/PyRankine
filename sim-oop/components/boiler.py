@@ -73,15 +73,3 @@ class Boiler:
         result += '\nheatAdded(kJ/kg) \t{:>.2f} \nQAdded(MW) \t{:>.2f}'.format(
             self.heatAdded, self.QAdded)
         return result
-
-    def __iter__(self):
-
-        dictobj = {'name': self.name,
-                   'inNode': dict(self.iNode),
-                   'outNode': dict(self.oNode),
-                   'heatAdded(kJ/kg)': self.heatAdded,
-                   'QAdded(MW)': self.QAdded
-                   }
-
-        for key, value in dictobj.items():
-            yield (key, value)

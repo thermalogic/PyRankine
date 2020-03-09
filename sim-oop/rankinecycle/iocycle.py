@@ -54,6 +54,3 @@ def OutFiles(cycle, outfilename=None):
         sys.stdout = savedStdout
 
 
-def OutToJSONFiles(dictcycle, filename):
-    with open(filename, 'w', encoding='utf-8') as json_file:
-        json.dump(dictcycle, json_file)

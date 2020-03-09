@@ -141,39 +141,6 @@ class RankineCycle:
             elif self.comps[key].energy == "heatAdded":
                 self.totalQAdded += self.comps[key].QAdded
 
-    def CycleResultDict(self):
-        """ convert  the objects to dict """
-        self.perfornamcedict = {'NetPower(MW)': self.Wcycledot,
-                                'MassFlow(kg/h)': self.mdot,
-                                'CycleEfficiency(%)': self.efficiency*100.0,
-                                'CycleHeatRate(kJ/kWh)': self.HeatRate,
-                                'SteamRate(kg/kWh)': self.SteamRate,
-                                'totalWExtracted(MW)': self.totalWExtracted,
-                                'totalWRequired(MW)': self.totalWRequired,
-                                'totalQAdded(MW)': self.totalQAdded}
-
-        self.cycledict = {"name": self.name,
-                          "Performance": self.perfornamcedict}
-
-        self.odictcycle = copy.deepcopy(self.cycledict)
-        self.odictcycle["nodes"] = []
-        self.odictcycle["comps"] = []
-
-        nodesobjs = []
-        for node in self.nodes:
-            nodesobjs.append(dict(node))
-        self.odictcycle["nodes"] = nodesobjs
-
-        compobjs = []
-        for key in self.comps:
-            compobjs.append(dict(self.comps[key]))
-
-        self.odictcycle["comps"] = compobjs
-
-    def __iter__(self):
-        for key, value in self.odictcycle.items():
-            yield (key, value)
-
     def __setformatstr(self, formatstr, result):
         result += formatstr.format('Net Power(MW)', self.Wcycledot)
         result += formatstr.format('Mass Flow(kg/h)', self.mdot)

@@ -76,15 +76,4 @@ class TurbineEx0:
             self.workExtracted, self.WExtracted)
         return result
   
-    def __iter__(self):
-        dictobj = {'name': self.name,
-                   'inNode': dict(self.iNode),
-                   'outNode': dict(self.oNode),
-                   'ef':self.ef,
-                   'workExtracted(kJ/kg)': self.workExtracted,
-                   'Extracted(MW)': self.WExtracted
-                   }
-
-        for key, value in dictobj.items():
-            yield (key, value)
-  
+   

@@ -108,17 +108,4 @@ class Node:
                       (self.id, self.name, self.p, self.t, self.h, self.s, self.v, self.x, self.fdot, self.mdot))
         return result
 
-    def __iter__(self):
-        objdict = {'name': self.name,
-                   'id': self.id,
-                   'p': self.p,
-                   't': self.t,
-                   'h': self.h,
-                   's': self.s,
-                   'v': self.v,
-                   'x': self.x,
-                   'fdot': self.fdot,
-                   'mdot': self.mdot
-                   }
-        for key, value in objdict.items():
-            yield (key, value)
+

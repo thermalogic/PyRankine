@@ -16,7 +16,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 """
 
 from .objcycle import *
-from .iocycle import create_dictcycle_from_jsonfile,OutFiles,OutToJSONFiles
+from .iocycle import create_dictcycle_from_jsonfile,OutFiles
 
 class SimRankineCycle:
 
@@ -32,7 +32,6 @@ class SimRankineCycle:
     def CycleSpecifiedSimulator(self, SetPower=None,SetMass=None):
         # Specified Simulating
         self.cycle.SpecifiedSimulator(SetPower,SetMass)
-        self.cycle.CycleResultDict()
         
         # for output to files
         if SetPower!=None:
@@ -43,7 +42,4 @@ class SimRankineCycle:
         OutFiles(self.cycle)
         OutFiles(self.cycle,outprefix+ '.txt')
         
-        # output to json 
-        OutToJSONFiles(self.cycle.odictcycle,outprefix+ '.json')
-
-    
+          
