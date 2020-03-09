@@ -33,11 +33,11 @@ Chapter 8 : Vapour Power Systems
       │
       |── <rankinecycle> cycle package
       │    |
-      │    │ ─  iocycle.py # read json to the object; output the class to json  
+      │    │ ─  iocycle.py # read json to the object; output result to text files  
       │    │     
       │    │ ─  objcycle.py # the objects of rankine object
       │    │
-      │    │ ─  simcycle.py  # ana;ysis the rankine cycle
+      │    │ ─  simcycle.py  # analysis the rankine cycle
       │
       |── <data> json files
            |
