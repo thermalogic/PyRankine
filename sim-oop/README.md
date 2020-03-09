@@ -20,36 +20,36 @@ Chapter 8 : Vapour Power Systems
 ## The Projects 
 
 ```
-        <sim=oop>
-          │ 
-          |── rankine.py  #  main app
-          |
-          |── <components> components package
-          │    |
-          │    │ ── node.py
-          │    |
-          │    │ ── boiler.py
-          │         .... 
-          │
-          |── <rankinecycle> cycle package
-          │    |
-          │    │ ─  iocycle.py # read json to the object; output the class to json  
-          │    │     
-          │    │ ─  objcycle.py # the objects of rankine object
-          │    │
-          │    │ ─  simcycle.py  # ana;ysis the rankine cycle
-          │
-          |── <data> json files
-                 |
-                 │──<txtcyxle> The Textual Representation Files of Rankine Cycle
-                 │     │
-                 │     │ ──rankine??.json 
-                 │  
-                 │──<output> The Output Files of Rankine Cycle
-                       │
-                       │ ── rankine??-sm.txt # the Specified Mass Flow
-                       │
-                       │ ── rankine??-sp.txt`: the Specified Net Output Power
+   <sim=oop>
+      │ 
+      |── rankine.py  #  main app
+      |
+      |── <components> components package
+      │    |
+      │    │ ── node.py
+      │    |
+      │    │ ── boiler.py
+      │         .... 
+      │
+      |── <rankinecycle> cycle package
+      │    |
+      │    │ ─  iocycle.py # read json to the object; output the class to json  
+      │    │     
+      │    │ ─  objcycle.py # the objects of rankine object
+      │    │
+      │    │ ─  simcycle.py  # ana;ysis the rankine cycle
+      │
+      |── <data> json files
+           |
+           │──<txtcyxle> The json of Rankine Cycle
+           │     │
+           │     │ ── rankine??.json 
+           │  
+           │──<output> The Output Files of Rankine Cycle
+                 │
+                 │ ── rankine??-sm.txt # the Specified Mass Flow
+                 │
+                 │ ── rankine??-sp.tx #  the Specified Net Output Power
 ```
 
 ## The UML Class diagram 
