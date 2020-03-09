@@ -109,6 +109,7 @@ class Node:
         return result
 
     def __iter__(self):
+        """ the dict of the object """
         objdict = {'name': self.name,
                    'id': self.id,
                    'p': self.p,

@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine81, Time: 2019/04/30 12:19:03
+ Rankine Cycle: Rankine81, Time: 2020/03/10 00:14:50
        Net Power(MW) 100.00
      Mass Flow(kg/h) 376770.81
  Cycle Efficiency(%) 37.08

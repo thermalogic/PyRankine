@@ -87,6 +87,7 @@ class OpenedheaterDw0:
         return result
 
     def __iter__(self):
+        """ the dict of the object """
         dictobj = {'name': self.name,
                    'inNode': dict(self.iNode),
                    'inNode_fw': dict(self.iNode_fw),

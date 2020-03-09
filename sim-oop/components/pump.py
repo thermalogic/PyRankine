@@ -78,6 +78,7 @@ class Pump():
         return result
 
     def __iter__(self):
+        """ the dict of the object """
         dictobj = {'name': self.name,
                    'inNode': dict(self.iNode),
                    'outNode': dict(self.oNode),
