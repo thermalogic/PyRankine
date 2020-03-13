@@ -1,5 +1,7 @@
 # PyRankine
 
+[![DOI](https://zenodo.org/badge/85393590.svg)](https://zenodo.org/badge/latestdoi/85393590)
+
 The PyRankine is the general Rankine Cycle simulator provided in the different data structures 
 
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
@@ -56,6 +58,11 @@ Chapter 8 : Vapour Power Systems
 **Schematic of Example Rankine Cycles**
 
 ![rankines](./notebook/img/rankines.jpg)
+
+
+## Cite as
+
+Cheng Maohua. (2020, March 13). PySEE/PyRankine: First Release of PyRankine (Version V1.0.0). Zenodo. http://doi.org/10.5281/zenodo.3709393
 
 ## Reference
 
