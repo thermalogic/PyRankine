@@ -49,7 +49,7 @@ class Node:
         self.kwargs = Node.kwargs.copy()
         self.kwargs.update(dictnode)
         for key in ['p', 't', 'h', 's', 'v', 'x', 'fdot', 'mdot']:
-            if type(self.kwargs[key]) in [int,float]:
+            if type(self.kwargs[key]) is int:
                 self.kwargs[key] = float(self.kwargs[key])
         self.__dict__.update(self.kwargs)
 
