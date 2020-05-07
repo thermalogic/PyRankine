@@ -2,11 +2,13 @@
 
 [![DOI](https://zenodo.org/badge/85393590.svg)](https://zenodo.org/badge/latestdoi/85393590)
 
-The PyRankine is the general Rankine Cycle simulator. We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
+The PyRankine is the general Rankine Cycle simulator of Steady-State Mass and Energy Balance.
 
-### [The Simulator : Object-oriented programming](./sim-oop)
+We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
 
-  **The UML Class Diagram: Association**
+## [The Simulator : Object-oriented programming](./sim-oop)
+
+  **The UML Class Diagram**
 
    ![The UML Class Diagram: Association](./sim-oop/uml/packages.svg)  
  
@@ -81,10 +83,4 @@ Cheng Maohua. (2020, March 13). PySEE/PyRankine: First Release of PyRankine (Ver
     * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
     * ORC Modeling Kit: https://github.com/orcmkit/ORCmKit
-
-*  Electronic circuit simulator 
-
-  * ahkab：a SPICE-like electronic circuit simulator written in Python https://github.com/ahkab/ahkab
-
-  * 杨华中等. 电子电路的计算机辅助分析和设计方法（第二版），清华大学出版社，北京，2008.02
 
