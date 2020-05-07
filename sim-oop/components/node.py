@@ -32,26 +32,34 @@ class Node:
     title = ('{:^6} \t {:^30} \t {:<3}\t {:>10}\t {:>10}\t {:>10} \t {:>10}\t {:>5}\t {:>6}\t {:>15}'.format
              ("NodeID", "Name", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)", "V(m^3/kg)", "X", "FDOT", "MDOT(kg/h)"))
 
-    kwargs = {'name': None,
-              'id': None,
-              'p': None,
-              't': None,
-              'h': None,
-              's': None,
-              'v': None,
-              'x': None,
-              'fdot': None,
-              'mdot': None
-              }
-
     def __init__(self, dictnode):
         """ create the node object"""
-        self.kwargs = Node.kwargs.copy()
-        self.kwargs.update(dictnode)
-        for key in ['p', 't', 'h', 's', 'v', 'x', 'fdot', 'mdot']:
-            if type(self.kwargs[key]) is int:
-                self.kwargs[key] = float(self.kwargs[key])
-        self.__dict__.update(self.kwargs)
+        
+        self.name = dictnode['name']
+        self.id= dictnode['id']
+        
+        try: 
+           self.p =  float(dictnode['p'])
+        except:  
+           self.p=None  
+        try:   
+           self.t =  float(dictnode['t'])
+        except:  
+           self.t=None 
+        try: 
+           self.x = float(dictnode['x'])
+        except:  
+           self.x=None  
+
+        try:
+           self.fdot =  float(dictnode['fdot'])
+        except:
+           self.fdot = None
+
+        self.h = None
+        self.s = None
+        self.v = None
+        self.mdot = None
 
         if self.p != None and self.t != None:
             self.pt()
