@@ -3,13 +3,13 @@
 
   class Boiler
 
-                    ↑    outNode main steam
+                    ↑    oNode main steam
                 ┌───┼───┐  (No.i)
                 │   │   │   
                 │   │   │
                 │   │   │
                 └───┼───┘  
-                    ↑    inNode main feedwater
+                    ↑    iNode main feedwater
                             (No.j)  
 
  json object example:
@@ -17,8 +17,8 @@
         {    
             "name": "Boiler",  
             "type": "BOILER",
-            "inNode":i,
-            "outNode":j
+            "iNode":i,
+            "oNode":j
         }
 
  Last updated: 2018.05.10
@@ -42,10 +42,8 @@ class Boiler:
         # self.__dict__.update(dictDev)
 
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
-        self.iNode = nodes[self.inNode]
-        self.oNode = nodes[self.outNode]
+        self.iNode = nodes[dictDev['iNode']]
+        self.oNode = nodes[dictDev['oNode']]
 
     def state(self):
         pass

@@ -8,6 +8,43 @@ We wish that PyRankine may be a helpful vehicle for you to understand **Computat
 
 ## [The Simulator : Object-oriented programming](./sim-oop)
 
+```
+ ┌──────────────────────────────────────────────────┐   
+ │ Read JSON File of the Cycle Data(Devices,Nodes)  │
+ │     to the dict of cycle                         │
+ └─────────────────────┬────────────────────────────┘
+                       ↓
+      ┌────────────────┴────────────────┐ 
+      │  The Instance of Simulator      │
+      │    * the instance of nodes      │
+      │    * the instance of devices    │ 
+      └────────────────┬────────────────┘
+                       ↓  
+       ┌───────────────┴─────────────────┐ 
+       │ The state of node with device   │
+       └───────────────┬─────────────────┘
+                       ↓ 
+   ┌───────────────────┴────────────────────┐ 
+   │ The mass and energy balance of devices │ 
+   │           on the 1kg mass              │
+   └──────────────────┬─────────────────────┘
+                      ↓  
+        ┌─────────────┴─────────────┐ 
+        │ The performance of cycle  │ 
+        │        on the 1kg mass    │
+        └─────────────┬─────────────┘
+                      ↓  
+       ┌──────────────┴───────────────┐ 
+       │ The Specified Net Power      │
+       │ The Specified Mass Flow Rate │ 
+       └──────────────┬───────────────┘
+                      ↓  
+       ┌──────────────┴───────────────┐ 
+       │   Print results on Console   │ 
+       │   Save  results to text files│ 
+       └──────────────────────────────┘
+ ```
+
   **The UML Class Diagram**
 
    ![The UML Class Diagram: Association](./sim-oop/uml/packages.svg)  

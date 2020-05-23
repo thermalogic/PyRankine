@@ -39,27 +39,27 @@
             "name": "TurbineEx0",
             "type": "TURBINE-EX0",
             "ef": 1.0,
-            "inNode": 0,
-            "outNode": 1
+            "iNode": 0,
+            "oNode": 1
         },
         {
             "name": "Condenser",
             "type": "CONDENSER",
-            "inNode": 1,
-            "outNode": 2
+            "iNode": 1,
+            "oNode": 2
         },
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
             "ef": 1.0,
-            "inNode": 2,
-            "outNode": 3
+            "iNode": 2,
+            "oNode": 3
         },
         {
             "name": "Boiler",
             "type": "BOILER",
-            "inNode": 3,
-            "outNode": 0
+            "iNode": 3,
+            "oNode": 0
         }
     ]
 }

@@ -6,7 +6,7 @@
 
                    ┌───────┐
                    │       │
-    outNode      ← ┼───────┼← inNode
+    oNode        ← ┼───────┼← iNode
     (No.j)         │       │  (No.i)
                    └───────┘  
  
@@ -15,8 +15,8 @@
             "name": "Feedwater Pump1",
             "type": "PUMP",
             "ef": 1.00,
-            "inNode":i,
-            "outNode":j
+            "iNode":i,
+            "oNode":j
         }
 
   Last updated: 2018.05.08
@@ -32,20 +32,18 @@ class Pump():
     energy = "workRequired"
     type = "PUMP"
 
-    def __init__(self, dictDev,nodes):
+    def __init__(self, dictDev, nodes):
         """
         Initializes the pump with the conditions
         """
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
+        self.iNode = nodes[dictDev['iNode']]
+        self.oNode = nodes[dictDev['oNode']]
         self.ef = dictDev['ef']
-        self.iNode = nodes[self.inNode]
-        self.oNode = nodes[self.outNode]
 
     def state(self):
         """
-        calc outNode of the pump 
+        calc oNode of the pump 
         """
         sout_s = self.iNode.s
         hout_s = ps2h(self.oNode.p, sout_s)
@@ -76,4 +74,3 @@ class Pump():
         result += '\nworkRequired(kJ/kg): \t{:>.2f}'.format(self.workRequired)
         result += '\nWRequired(MW): \t{:>.2f}'.format(self.WRequired)
         return result
-

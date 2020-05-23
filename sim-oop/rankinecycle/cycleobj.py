@@ -3,28 +3,18 @@
 
 RankineCycle: the class of Rankine Cycle  Simulator
 
-Input and Output are dicts
-
-   - input: self.idictcycle 
-
-   - output: self.odictcycle
+dictcycle={"name":namestring,
+                     "nodes":[dict1,dict2,...],
+                     "comps":[dict1,dict2,...]
+                     }
   
-Last updated: 2018.05.10
-
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
-import copy
+
 import time
 
 from components.node import Node
-
-from components.boiler import Boiler
-from components.condenser import Condenser
-from components.openedheaterdw0 import OpenedheaterDw0
-from components.pump import Pump
-from components.turbineex0 import TurbineEx0
-from components.turbineex1 import TurbineEx1
 from components import compdict
 
 
@@ -32,7 +22,11 @@ class RankineCycle:
 
     def __init__(self, dictcycle):
         """
-        Create the node and comp objects from the dict of cycle
+          dictcycle={"name":namestring,
+                     "nodes":[dict1,dict2,...],
+                     "comps":[dict1,dict2,...]
+                     }
+          TO:           
              self.nodes : list of all node objects
              self.comps : dict of all component objects
         """
@@ -50,20 +44,21 @@ class RankineCycle:
         self.DevNum = len(dictcomps)
         self.comps = {}
         for curdev in dictcomps:
-            self.comps[curdev['name']] = compdict[curdev['type']](curdev, self.nodes )
+            self.comps[curdev['name']] = compdict[curdev['type']](
+                curdev, self.nodes)
 
         self.totalworkExtracted = 0
         self.totalworkRequired = 0
         self.totalheatAdded = 0
-       
+
         self.netpoweroutput = 0
         self.efficiency = 100.0
-        self.HeatRate=0.0
-        self.SteamRate =0.0
-  
+        self.HeatRate = 0.0
+        self.SteamRate = 0.0
+
         self.mdot = None
         self.Wcycledot = None
-     
+
         self.totalWExtracted = 0
         self.totalWRequired = 0
         self.totalQAdded = 0
@@ -75,30 +70,29 @@ class RankineCycle:
     def ComponentBalance(self):
         keys = list(self.comps.keys())
         deviceok = False
-        
+
         i = 0  # i: the count of deviceok to avoid endless loop
         while (deviceok == False and i <= self.DevNum):
-            
+
             for curdev in keys:
                 try:
                     self.comps[curdev].balance()
                     keys.remove(curdev)
                 except:
                     pass
-            
+
             i += 1
             if (len(keys) == 0):
                 deviceok = True
-        
-        # for debug: check the failed devices
-        if (len(keys)>0): 
-            print(keys)      
 
+        # for debug: check the failed devices
+        if (len(keys) > 0):
+            print(keys)
 
     def simulator(self):
         self.ComponentState()
         self.ComponentBalance()
-        
+
         self.totalworkExtracted = 0
         self.totalworkRequired = 0
         self.totalheatAdded = 0
@@ -115,7 +109,6 @@ class RankineCycle:
         self.efficiency = self.netpoweroutput / self.totalheatAdded
         self.HeatRate = 3600.0 / self.efficiency
         self.SteamRate = self.HeatRate / self.totalheatAdded
-        
 
     def SpecifiedSimulator(self, SetPower=None, SetMass=None):
         if SetPower != None:
@@ -125,7 +118,7 @@ class RankineCycle:
             self.mdot = SetMass
             self.Wcycledot = self.mdot * \
                 self.netpoweroutput / (1000.0 * 3600.0)
-        
+
         for i in range(self.NodeNum):
             self.nodes[i].calmdot(self.mdot)
 
@@ -151,10 +144,11 @@ class RankineCycle:
         result += formatstr.format('totalWExtracted(MW)', self.totalWExtracted)
         result += formatstr.format('totalWRequired(MW)', self.totalWRequired)
         result += formatstr.format('totalQAdded(MW)', self.totalQAdded)
-        return  result
+        return result
 
     def __str__(self):
-        str_curtime=time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
+        str_curtime = time.strftime(
+            "%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
         result = "\n Rankine Cycle: {}, Time: {}\n".format(
             self.name, str_curtime)
         try:

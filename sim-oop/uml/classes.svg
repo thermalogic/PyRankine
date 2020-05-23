@@ -21,7 +21,6 @@
 <text text-anchor="start" x="8" y="-218.8" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
 <text text-anchor="start" x="8" y="-203.8" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="8" y="-188.8" font-family="Times New Roman,serif" font-size="14.00">oNode</text>
-<text text-anchor="start" x="8" y="-173.8" font-family="Times New Roman,serif" font-size="14.00">outNode</text>
 <text text-anchor="start" x="8" y="-158.8" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <polyline fill="none" stroke="black" points="0,-151 86,-151 "/>
 <text text-anchor="start" x="8" y="-135.8" font-family="Times New Roman,serif" font-size="14.00">balance()</text>
@@ -37,10 +36,8 @@
 <text text-anchor="start" x="112" y="-263.8" font-family="Times New Roman,serif" font-size="14.00">energy : str</text>
 <text text-anchor="start" x="112" y="-248.8" font-family="Times New Roman,serif" font-size="14.00">heatExtracted</text>
 <text text-anchor="start" x="112" y="-233.8" font-family="Times New Roman,serif" font-size="14.00">iNode</text>
-<text text-anchor="start" x="112" y="-218.8" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
 <text text-anchor="start" x="112" y="-203.8" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="112" y="-188.8" font-family="Times New Roman,serif" font-size="14.00">oNode</text>
-<text text-anchor="start" x="112" y="-173.8" font-family="Times New Roman,serif" font-size="14.00">outNode</text>
 <text text-anchor="start" x="112" y="-158.8" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <polyline fill="none" stroke="black" points="104,-151 196,-151 "/>
 <text text-anchor="start" x="112" y="-135.8" font-family="Times New Roman,serif" font-size="14.00">balance()</text>
@@ -83,11 +80,8 @@
 <text text-anchor="start" x="328.5" y="-248.8" font-family="Times New Roman,serif" font-size="14.00">heatExtracted : int</text>
 <text text-anchor="start" x="328.5" y="-233.8" font-family="Times New Roman,serif" font-size="14.00">iNode</text>
 <text text-anchor="start" x="328.5" y="-218.8" font-family="Times New Roman,serif" font-size="14.00">iNode_fw</text>
-<text text-anchor="start" x="328.5" y="-203.8" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
-<text text-anchor="start" x="328.5" y="-188.8" font-family="Times New Roman,serif" font-size="14.00">inNode_fw</text>
 <text text-anchor="start" x="328.5" y="-173.8" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="328.5" y="-158.8" font-family="Times New Roman,serif" font-size="14.00">oNode_fw</text>
-<text text-anchor="start" x="328.5" y="-143.8" font-family="Times New Roman,serif" font-size="14.00">outNode_fw</text>
 <text text-anchor="start" x="328.5" y="-128.8" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <polyline fill="none" stroke="black" points="320.5,-121 457.5,-121 "/>
 <text text-anchor="start" x="328.5" y="-105.8" font-family="Times New Roman,serif" font-size="14.00">balance()</text>
@@ -103,10 +97,8 @@
 <text text-anchor="start" x="484" y="-271.3" font-family="Times New Roman,serif" font-size="14.00">ef</text>
 <text text-anchor="start" x="484" y="-256.3" font-family="Times New Roman,serif" font-size="14.00">energy : str</text>
 <text text-anchor="start" x="484" y="-241.3" font-family="Times New Roman,serif" font-size="14.00">iNode</text>
-<text text-anchor="start" x="484" y="-226.3" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
 <text text-anchor="start" x="484" y="-211.3" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="484" y="-196.3" font-family="Times New Roman,serif" font-size="14.00">oNode</text>
-<text text-anchor="start" x="484" y="-181.3" font-family="Times New Roman,serif" font-size="14.00">outNode</text>
 <text text-anchor="start" x="484" y="-166.3" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <text text-anchor="start" x="484" y="-151.3" font-family="Times New Roman,serif" font-size="14.00">workRequired</text>
 <polyline fill="none" stroke="black" points="476,-143.5 572,-143.5 "/>
@@ -173,10 +165,8 @@
 <text text-anchor="start" x="764" y="-271.3" font-family="Times New Roman,serif" font-size="14.00">ef</text>
 <text text-anchor="start" x="764" y="-256.3" font-family="Times New Roman,serif" font-size="14.00">energy : str</text>
 <text text-anchor="start" x="764" y="-241.3" font-family="Times New Roman,serif" font-size="14.00">iNode</text>
-<text text-anchor="start" x="764" y="-226.3" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
 <text text-anchor="start" x="764" y="-211.3" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="764" y="-196.3" font-family="Times New Roman,serif" font-size="14.00">oNode</text>
-<text text-anchor="start" x="764" y="-181.3" font-family="Times New Roman,serif" font-size="14.00">outNode</text>
 <text text-anchor="start" x="764" y="-166.3" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <text text-anchor="start" x="764" y="-151.3" font-family="Times New Roman,serif" font-size="14.00">workExtracted : int</text>
 <polyline fill="none" stroke="black" points="756,-143.5 896,-143.5 "/>
@@ -193,12 +183,9 @@
 <text text-anchor="start" x="922" y="-286.3" font-family="Times New Roman,serif" font-size="14.00">eNode</text>
 <text text-anchor="start" x="922" y="-271.3" font-family="Times New Roman,serif" font-size="14.00">ef</text>
 <text text-anchor="start" x="922" y="-256.3" font-family="Times New Roman,serif" font-size="14.00">energy : str</text>
-<text text-anchor="start" x="922" y="-241.3" font-family="Times New Roman,serif" font-size="14.00">extNode</text>
 <text text-anchor="start" x="922" y="-226.3" font-family="Times New Roman,serif" font-size="14.00">iNode</text>
-<text text-anchor="start" x="922" y="-211.3" font-family="Times New Roman,serif" font-size="14.00">inNode</text>
 <text text-anchor="start" x="922" y="-196.3" font-family="Times New Roman,serif" font-size="14.00">name</text>
 <text text-anchor="start" x="922" y="-181.3" font-family="Times New Roman,serif" font-size="14.00">oNode</text>
-<text text-anchor="start" x="922" y="-166.3" font-family="Times New Roman,serif" font-size="14.00">outNode</text>
 <text text-anchor="start" x="922" y="-151.3" font-family="Times New Roman,serif" font-size="14.00">type : str</text>
 <text text-anchor="start" x="922" y="-136.3" font-family="Times New Roman,serif" font-size="14.00">workExtracted</text>
 <polyline fill="none" stroke="black" points="914,-128.5 1012,-128.5 "/>

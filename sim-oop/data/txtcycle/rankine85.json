@@ -63,42 +63,42 @@
             "name": "Turbine Ex1",
             "type": "TURBINE-EX1",
             "ef": 0.85,
-            "inNode": 0,
-            "outNode": 2,
-            "extNode": 1
+            "iNode": 0,
+            "oNode": 2,
+            "eNode": 1
         },
         {
             "name": "Condenser",
             "type": "CONDENSER",
-            "inNode": 2,
-            "outNode": 3
+            "iNode": 2,
+            "oNode": 3
         },
         {
             "name": "Condensate Pump",
             "type": "PUMP",
             "ef": 1.00,
-            "inNode": 3,
-            "outNode": 4
+            "iNode": 3,
+            "oNode": 4
         },
         {
             "name": "Opened Feedwater Heater",
             "type": "FWH-OPEN-DW0",
-            "inNode": 1,
-            "inNode_fw": 4,
-            "outNode_fw": 5
+            "iNode": 1,
+            "iNode_fw": 4,
+            "oNode_fw": 5
         },
         {
             "name": "Feedwater Pump",
             "type": "PUMP",
             "ef": 1.00,
-            "inNode": 5,
-            "outNode": 6
+            "iNode": 5,
+            "oNode": 6
         },
         {
             "name": "Boiler",
             "type": "BOILER",
-            "inNode": 6,
-            "outNode": 0
+            "iNode": 6,
+            "oNode": 0
         }
     ]
 }

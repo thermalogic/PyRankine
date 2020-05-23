@@ -3,13 +3,13 @@
 
     TurbineEx1 class: 
        
-        inNode inlet steam   (No.i)
+        iNode inlet steam   (No.i)
                  ┌────────┐
               ↓ ╱         │ 
                ┤          │
                 ╲         │
                  └──┬─────┤
-          extNode   ↓     ↓  outNode exhausted steam  (No.i) 
+          eNode   ↓     ↓  oNode exhausted steam  (No.i) 
 extracted steam     1    
    (No.k)
 
@@ -19,9 +19,9 @@ json object example
             "name": "Turbine1",
             "type": "TURBINE-EX1",
             "ef": 0.85,
-            "inNode": i,
-            "outNode": j,
-            "extNode": k
+            "iNode": i,
+            "oNode": j,
+            "eNode": k
       } 
 
   Last updated: 2018.05.05
@@ -39,13 +39,11 @@ class TurbineEx1:
 
     def __init__(self, dictDev, nodes):
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
-        self.extNode = dictDev['extNode']
+        self.iNode = nodes[dictDev['iNode']]
+        self.oNode = nodes[dictDev['oNode']]
+        self.eNode = nodes[dictDev['eNode']]
+
         self.ef = dictDev['ef']
-        self.iNode = nodes[self.inNode]
-        self.oNode = nodes[self.outNode]
-        self.eNode = nodes[self.extNode]
 
     def state(self):
         if self.ef == 1.0:
@@ -85,4 +83,3 @@ class TurbineEx1:
         result += '\nworkExtracted(kJ/kg): \t{:>.2f} \nWExtracted(MW): \t{:>.2f}'.format(
             self.workExtracted, self.WExtracted)
         return result
-

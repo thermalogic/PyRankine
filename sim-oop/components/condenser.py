@@ -4,21 +4,21 @@
 
   class  Condenser
 
-                    ↓   inNode exhausted steam
+                    ↓   iNode exhausted steam
                 ┌───┴───┐   (No.i)
                 │       │
                 │       │
                 │       │
                 └───┬───┘
-                    ↓ outNode condensate water
+                    ↓ oNode condensate water
                             (No.j)
 json object example:
 
    {
             "name": "Condenser1",
             "type": "CONDENSER",
-            "inNode": i,
-            "outNode": j
+            "iNode": i,
+            "oNode": j
    },
 
    Last updated: 2018.05.10
@@ -36,10 +36,8 @@ class Condenser:
     def __init__(self, dictDev, nodes):
         """ Initializes the condenser """
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
-        self.iNode = nodes[self.inNode]
-        self.oNode = nodes[self.outNode]
+        self.iNode = nodes[dictDev['iNode']]
+        self.oNode = nodes[dictDev['oNode']]
 
     def state(self):
         pass

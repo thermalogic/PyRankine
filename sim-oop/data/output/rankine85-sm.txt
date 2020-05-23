@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine85, Time: 2020/05/07 09:48:03
+ Rankine Cycle: Rankine85, Time: 2020/05/22 01:03:37
        Net Power(MW) 146.42
      Mass Flow(kg/h) 540000.00
  Cycle Efficiency(%) 36.91
@@ -45,10 +45,10 @@ NodeID 	              Name              	 P(MPa)	      T(°C)	   H(kJ/kg)	 S(kJ/
   1    	 Extracted Steam To Opened FWH  	    0.7	     194.85	    2833.66	  6.86 	           0.296	   1.0	 0.1965	    106125.83
   4    	 CDW Pump to Opened FWH         	    0.7	      41.53	     174.55	  0.59 	           0.001	   0.0	 0.8035	    433874.17
   5    	 Opened FWH to FW Pump          	    0.7	     164.95	     697.14	  1.99 	           0.001	   0.0	 1.0000	    540000.00
-heatAdded(kJ/kg) 	522.59
-heatExtracted(kJ/kg) 	522.59
-QAdded(MW) 	78.39
-QExtracted(MW)  	78.39
+heatAdded(kJ/kg) 	419.89
+heatExtracted(kJ/kg) 	419.89
+QAdded(MW) 	62.98
+QExtracted(MW)  	62.98
 
 Feedwater Pump
 NodeID 	              Name              	 P(MPa)	      T(°C)	   H(kJ/kg)	 S(kJ/kg.K) 	  V(m^3/kg)	     X	   FDOT	      MDOT(kg/h)

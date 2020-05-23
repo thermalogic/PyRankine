@@ -1,6 +1,12 @@
 
 """
-General Object-oriented  Abstraction and JSON Textual Model of Rankine Cycle 
+General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
+
+- SimRankineCycle: The Simulator of Rankine Cycle 
+
+  * Input :json file  
+
+  * output: txt file
 
  Example Rankine Cycles:
     Michael J . Moran. Fundamentals of Engineering Thermodynamics(7th Edition). John Wiley & Sons, Inc. 2011
@@ -14,27 +20,59 @@ Run:
 
 python rankine.py
   
-Last updated: 2018.05.10
-
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
-import glob
-from rankinecycle.simcycle import SimRankineCycle
+import json
+from rankinecycle.cycleobj import RankineCycle
+from rankinecycle.cyclehelper import OutFiles
 
-json_filesname_str='./data/txtcycle/rankine8[0-9].json'
-#json_filesname_str='./data/txtcycle/rankine85.json'
-json_filesname=glob.glob(json_filesname_str)
+class SimRankineCycle:
 
-Wcycledot = 100 # MW
-mdot= 150*3600 # kg/h  
-for i in range(len(json_filesname)):
-   cycle=SimRankineCycle(json_filesname[i])
-   cycle.CycleSimulator()
+    def __init__(self, rankinefilename):
+        self.prefixResultFileName = (
+            rankinefilename[0:-5]).replace("txtcycle", "output")  # -5 remove .json
+       
+        with open(rankinefilename, 'r') as f:
+            self.idictcycle = json.loads(f.read())
+        self.cycle = RankineCycle(self.idictcycle)
+
+    def CycleSimulator(self):
+        self.cycle.simulator()
+  
+    def CycleSpecifiedSimulator(self, SetPower=None,SetMass=None):
+        # Specified Simulating： Power or Mass Flow
+        self.cycle.SpecifiedSimulator(SetPower,SetMass)
+        
+        # output to files
+        if SetPower!=None:
+           outprefix= self.prefixResultFileName + '-sp'
+        else:
+           outprefix= self.prefixResultFileName + '-sm'
+        # output to text
+        OutFiles(self.cycle)
+        OutFiles(self.cycle,outprefix+ '.txt')
+        
+          
+if __name__=="__main__":
+   from platform import *
+   import glob
+   curpath = os.path.abspath(os.path.dirname(__file__))
+   json_filesname_str=curpath+'\\'+'./data/txtcycle/rankine8[0-9].json'
+   #json_filesname_str=curpath+'\\'+'./data/txtcycle/rankine85.json'
+   json_filesname=glob.glob(json_filesname_str)
+
+   Wcycledot = 100 # MW
+   mdot= 150*3600 # kg/h  
+   for i in range(len(json_filesname)):
+      print(curpath)
+      cycle=SimRankineCycle(json_filesname[i])
+      # 1 1kg
+      cycle.CycleSimulator()
  
-   # Specified Net Output Power(MW)
-   cycle.CycleSpecifiedSimulator(SetPower=Wcycledot)      
+      # 2 Specified Net Output Power(MW)
+      cycle.CycleSpecifiedSimulator(SetPower=Wcycledot)      
  
-   # Specified Mass Flow(kg/h)
-   cycle.CycleSpecifiedSimulator(SetMass=mdot)   
+      # 3 Specified Mass Flow(kg/h)
+      cycle.CycleSpecifiedSimulator(SetMass=mdot)   
    
