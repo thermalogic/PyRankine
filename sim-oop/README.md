@@ -40,7 +40,7 @@ Chapter 8 : Vapour Power Systems
       │
       |── <data> json files
            |
-           │──<txtcyxle> The json of Rankine Cycle
+           │──<txtcycle> The json of Rankine Cycle
            │     │
            │     │ ── rankine??.json 
            │  
@@ -104,14 +104,13 @@ All component classes have:
 * class variables:  `energy`, `type`
 * methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`
 
-## The Methods to check and analysis the mass flow rate
+## The Method to analysis the mass flow rate
 
 There are dependencies in the mass float rate calculation.
 
 e.g: [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/S2021/notebook/RankineCycle85.ipynb)
 
-If the Open Feedwater Heater is not calculated, the fraction of extraction steam flow from turbine is not obtained, then the
-fraction of the total flow passing through the second-stage turbine is also no value, The turbine work calculation cannot be carried out.
+If the Open Feedwater Heater is not calculated, the fraction of extraction steam flow from one turbine is not obtained, then the fraction of the total flow passing through the second-stage turbine is also no value, The turbine work calculation cannot be carried out.
 
 That is to say that the Open Feedwater Heater must be calculated **before** the Turbine.
 

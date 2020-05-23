@@ -1,5 +1,5 @@
 """
- General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
+General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
 
     TurbineEx1 class: 
        
@@ -67,7 +67,7 @@ class TurbineEx1:
         self.workExtracted += self.oNode.fdot * (self.eNode.h - self.oNode.h)
 
     def sm_energy(self):
-        # mdot，get WExtracted
+        """ mdot，get WExtracted """
         self.WExtracted = self.iNode.mdot*(self.iNode.h - self.eNode.h)
 
         self.WExtracted += self.oNode.mdot * (self.eNode.h - self.oNode.h)
