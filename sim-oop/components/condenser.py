@@ -60,7 +60,7 @@ class Condenser:
         result += '\n' + Node.title
         result += '\n' + self.iNode.__str__()
         result += '\n' + self.oNode.__str__()
-        result += '\nheatExtracted(kJ/kg)  \t{:>.2f} \nQExtracted(MW): \t{:>.2f}'.format(
-            self.heatExtracted, self.QExtracted)
+        result += '\nheatExtracted(kJ/kg)  \t{:>.2f}'.format(self.heatExtracted)
+        result += '\nQExtracted(MW): \t{:>.2f}'.format(self.QExtracted)    
         return result
 

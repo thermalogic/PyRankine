@@ -1,5 +1,5 @@
 
- Rankine Cycle: Rankine85, Time: 2020/05/22 01:03:37
+ Rankine Cycle: Rankine85, Time: 2020/05/23 12:47:57
        Net Power(MW) 100.00
      Mass Flow(kg/h) 368813.09
  Cycle Efficiency(%) 36.91
@@ -23,14 +23,14 @@ NodeID 	              Name              	 P(MPa)	      T(°C)	   H(kJ/kg)	 S(kJ/
   0    	 Boiler to Turbine              	    8.0	     480.00	    3349.53	  6.66 	           0.040	   1.0	 1.0000	    368813.09
   2    	 Exhausted Steam to CD          	  0.008	      41.51	    2250.10	  7.19 	          15.642	 0.864	 0.8035	    296330.50
   1    	 Extracted Steam To Opened FWH  	    0.7	     194.85	    2833.66	  6.86 	           0.296	   1.0	 0.1965	     72482.58
-workExtracted(kJ/kg): 	984.74 
+workExtracted(kJ/kg): 	984.74
 WExtracted(MW): 	100.88
 
 Condenser
 NodeID 	              Name              	 P(MPa)	      T(°C)	   H(kJ/kg)	 S(kJ/kg.K) 	  V(m^3/kg)	     X	   FDOT	      MDOT(kg/h)
   2    	 Exhausted Steam to CD          	  0.008	      41.51	    2250.10	  7.19 	          15.642	 0.864	 0.8035	    296330.50
   3    	 Condensate Water to CDW Pump   	  0.008	      41.51	     173.85	  0.59 	           0.001	   0.0	 0.8035	    296330.50
-heatExtracted(kJ/kg)  	1668.21 
+heatExtracted(kJ/kg)  	1668.21
 QExtracted(MW): 	170.90
 
 Condensate Pump
@@ -61,5 +61,5 @@ Boiler
 NodeID 	              Name              	 P(MPa)	      T(°C)	   H(kJ/kg)	 S(kJ/kg.K) 	  V(m^3/kg)	     X	   FDOT	      MDOT(kg/h)
   6    	 FW Pump to Boiler              	    8.0	     165.85	     705.22	  1.99 	           0.001	   0.0	 1.0000	    368813.09
   0    	 Boiler to Turbine              	    8.0	     480.00	    3349.53	  6.66 	           0.040	   1.0	 1.0000	    368813.09
-heatAdded(kJ/kg) 	2644.31 
+heatAdded(kJ/kg) 	2644.31
 QAdded(MW) 	270.90

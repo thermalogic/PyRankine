@@ -68,6 +68,6 @@ class Boiler:
         result += '\n' + Node.title
         result += '\n' + self.iNode.__str__()
         result += '\n' + self.oNode.__str__()
-        result += '\nheatAdded(kJ/kg) \t{:>.2f} \nQAdded(MW) \t{:>.2f}'.format(
-            self.heatAdded, self.QAdded)
+        result += '\nheatAdded(kJ/kg) \t{:>.2f}'.format(self.heatAdded)
+        result += '\nQAdded(MW) \t{:>.2f}'.format(self.QAdded)
         return result

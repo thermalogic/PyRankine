@@ -39,7 +39,7 @@ class OpenedheaterDw0:
         self.name = dictDev['name']
         self.iNode = nodes[dictDev['iNode']]
         self.iNode_fw = nodes[dictDev['iNode_fw']]
-        self.oNode_fw = nodes[ dictDev['oNode_fw']]
+        self.oNode_fw = nodes[dictDev['oNode_fw']]
 
         self.heatAdded = 0
         self.heatExtracted = 0

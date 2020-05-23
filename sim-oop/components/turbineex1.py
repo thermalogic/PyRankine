@@ -63,14 +63,14 @@ class TurbineEx1:
         """ mass and energy balance of the TurbineEx1"""
         self.oNode.fdot = self.iNode.fdot - self.eNode.fdot
 
-        self.workExtracted = self.eNode.fdot * (self.iNode.h - self.eNode.h)
-        self.workExtracted += self.oNode.fdot * (self.iNode.h - self.oNode.h)
+        self.workExtracted = self.iNode.fdot * (self.iNode.h - self.eNode.h)
+        self.workExtracted += self.oNode.fdot * (self.eNode.h - self.oNode.h)
 
     def sm_energy(self):
         # mdot，get WExtracted
-        self.WExtracted = self.eNode.mdot*(self.iNode.h - self.eNode.h)
+        self.WExtracted = self.iNode.mdot*(self.iNode.h - self.eNode.h)
 
-        self.WExtracted += self.oNode.mdot * (self.iNode.h - self.oNode.h)
+        self.WExtracted += self.oNode.mdot * (self.eNode.h - self.oNode.h)
 
         self.WExtracted /= (3600.0 * 1000.0)
 
@@ -80,6 +80,6 @@ class TurbineEx1:
         result += '\n' + self.iNode.__str__()
         result += '\n' + self.oNode.__str__()
         result += '\n' + self.eNode.__str__()
-        result += '\nworkExtracted(kJ/kg): \t{:>.2f} \nWExtracted(MW): \t{:>.2f}'.format(
-            self.workExtracted, self.WExtracted)
+        result += '\nworkExtracted(kJ/kg): \t{:>.2f}'.format(self.workExtracted)
+        result += '\nWExtracted(MW): \t{:>.2f}'.format(self.WExtracted)     
         return result

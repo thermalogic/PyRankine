@@ -35,7 +35,7 @@ Chapter 8 : Vapour Power Systems
       │    |
       │    │ ─ cyclehelper.py # helper methods  
       │    │     
-      │    │ ─  cycleobj.py # the object of rankine object
+      │    │ ─ cycleobj.py # the object of rankine object
       │              
       │
       |── <data> json files
@@ -95,10 +95,10 @@ Chapter 8 : Vapour Power Systems
 ### The Node  Class
 
 The Node  Class has: 
-* class variables:  `title` 
+* class variable:  `title` 
 * methods:`__init__`,`calmdot`, `pt`, `ph`,`ps`,`hs`,`px`,`tx`,`__str__`
 
-### The  component classes
+### The Component Classes
 
 All component classes have: 
 * class variables:  `energy`, `type`

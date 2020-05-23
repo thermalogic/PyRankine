@@ -1,7 +1,7 @@
 """
  General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
 
-RankineCycle: the class of Rankine Cycle  Simulator
+RankineCycle: the Simulator class of Rankine Cycle  
 
 dictcycle={"name":namestring,
                      "nodes":[dict1,dict2,...],
