@@ -55,18 +55,19 @@ Chapter 8 : Vapour Power Systems
 
 ```
  ┌──────────────────────────────────────────────────┐   
- │ Read JSON File of the Cycle Data(Devices,Nodes)  │
- │     to the dict of cycle                         │
+ │    Convert the Cycle JSON Textual Model          │
+ │        to the dict of cycle                      │
  └─────────────────────┬────────────────────────────┘
                        ↓
-      ┌────────────────┴────────────────┐ 
-      │  The Instance of Simulator      │
-      │    * the instance of nodes      │
-      │    * the instance of devices    │ 
-      └────────────────┬────────────────┘
+   ┌───────────────────┴─────────────────┐ 
+   │ Instance of Simulator using the dict│    │
+   │    * the instance of nodes          │
+   │       │The node state with px,pt,tx │
+   │    * the instance of devices        │ 
+   └───────────────────┬─────────────────┘
                        ↓  
        ┌───────────────┴─────────────────┐ 
-       │ The state of node with device   │
+       │ The node state with device      │
        └───────────────┬─────────────────┘
                        ↓ 
    ┌───────────────────┴────────────────────┐ 
