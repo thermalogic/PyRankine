@@ -44,6 +44,8 @@ class TurbineEx1:
         self.eNode = nodes[dictDev['eNode']]
 
         self.ef = dictDev['ef']
+        self.workExtracted =0
+        self.WExtracted=0
 
     def state(self):
         if self.ef == 1.0:
@@ -60,18 +62,21 @@ class TurbineEx1:
             self.oNode.ph()
 
     def balance(self):
-        """ mass and energy balance of the TurbineEx1"""
+        """ mass and energy balance of the TurbineEx1
+            work=ienergy - oenergy
+        """
         self.oNode.fdot = self.iNode.fdot - self.eNode.fdot
 
-        self.workExtracted = self.iNode.fdot * (self.iNode.h - self.eNode.h)
-        self.workExtracted += self.oNode.fdot * (self.eNode.h - self.oNode.h)
-
+        ienergy=self.iNode.fdot * self.iNode.h
+        oenergy=self.eNode.fdot*self.eNode.h+self.oNode.fdot*self.oNode.h
+        self.workExtracted = ienergy - oenergy
+        
+        
     def sm_energy(self):
         """ mdot，get WExtracted """
-        self.WExtracted = self.iNode.mdot*(self.iNode.h - self.eNode.h)
-
-        self.WExtracted += self.oNode.mdot * (self.eNode.h - self.oNode.h)
-
+        ienergy=self.iNode.mdot * self.iNode.h
+        oenergy=self.eNode.mdot*self.eNode.h+self.oNode.mdot*self.oNode.h
+        self.WExtracted = ienergy - oenergy
         self.WExtracted /= (3600.0 * 1000.0)
 
     def __str__(self):
