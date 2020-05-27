@@ -60,7 +60,7 @@ Chapter 8 : Vapour Power Systems
  └─────────────────────┬────────────────────────────┘
                        ↓
    ┌───────────────────┴─────────────────┐ 
-   │ Instance of Simulator using the dict│    │
+   │ Instance of Simulator using the dict│   
    │    * the instance of nodes          │
    │        The node state with px,pt,tx │
    │    * the instance of devices        │ 
