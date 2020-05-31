@@ -1,5 +1,5 @@
 """
- General Object-oriented Abstraction and JSON Textual Representation of Rankine Cycle 
+ General Object-oriented Abstraction of Rankine Cycle 
     
     cycle Package 
 

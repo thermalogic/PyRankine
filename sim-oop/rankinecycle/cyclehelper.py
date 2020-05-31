@@ -1,5 +1,5 @@
 """
-General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
+General Object-oriented Abstraction of Rankine Cycle 
 
  - OutFiles(cycle, outfilename=None)
 
@@ -21,8 +21,8 @@ def OutFiles(cycle, outfilename=None):
    
     # 2 output nodes
     print(Node.title)
-    for node in cycle.nodes:
-        print(node)
+    for key in cycle.nodes:
+        print(cycle.nodes[key])
     # 3 output devices
     for key in cycle.comps:
         print(cycle.comps[key])

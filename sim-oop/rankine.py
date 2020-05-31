@@ -29,18 +29,19 @@ from rankinecycle.cyclehelper import OutFiles
 
 
 class SimRankineCycle:
+    """ Input :json file      """
 
     def __init__(self, rankinefilename):
-       # -5 remove .json
+        # -5 remove .json
         self.prefixResultFileName =rankinefilename[0:-5].replace("txtcycle", "output")
         with open(rankinefilename, 'r') as f:
             self.idictcycle = json.loads(f.read())
         self.cycle = RankineCycle(self.idictcycle)
 
-    def CycleSimulator(self):
+    def Simulator(self):
         self.cycle.simulator()
 
-    def CycleSpecifiedSimulator(self, SetPower=None, SetMass=None):
+    def SpecifiedSimulator(self, SetPower=None, SetMass=None):
         # Specified Simulating： Power or Mass Flow
         self.cycle.SpecifiedSimulator(SetPower, SetMass)
 
@@ -67,10 +68,10 @@ if __name__ == "__main__":
     for curfile in json_filesname:
         cycle = SimRankineCycle(curfile)
         # 1 1kg
-        cycle.CycleSimulator()
+        cycle.Simulator()
 
         # 2 Specified Net Output Power(MW)
-        cycle.CycleSpecifiedSimulator(SetPower=Wcycledot)
+        cycle.SpecifiedSimulator(SetPower=Wcycledot)
 
         # 3 Specified Mass Flow(kg/h)
-        cycle.CycleSpecifiedSimulator(SetMass=mdot)
+        cycle.SpecifiedSimulator(SetMass=mdot)

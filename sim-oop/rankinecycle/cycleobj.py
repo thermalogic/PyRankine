@@ -1,5 +1,5 @@
 """
- General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
+ General Object-oriented Abstraction of Rankine Cycle 
 
 RankineCycle: the Simulator class of Rankine Cycle  
 
@@ -27,7 +27,7 @@ class RankineCycle:
                      "comps":[dict1,dict2,...]
                      }
           TO:           
-             self.nodes : list of all node objects
+             self.nodes : dict of all node objects
              self.comps : dict of all component objects
         """
         self.name = dictcycle["name"]
@@ -36,9 +36,9 @@ class RankineCycle:
 
         # 1 convert dict to the object of nodes
         self.NodeNum = len(dictnodes)
-        self.nodes = [None for i in range(self.NodeNum)]
+        self.nodes = {}
         for curnode in dictnodes:
-            self.nodes[int(curnode['id'])] = Node(curnode)
+            self.nodes[curnode["id"]] = Node(curnode)
 
         # 2 convert dict to the object of Comps
         self.DevNum = len(dictcomps)
@@ -119,8 +119,8 @@ class RankineCycle:
             self.Wcycledot = self.mdot * \
                 self.netpoweroutput / (1000.0 * 3600.0)
 
-        for i in range(self.NodeNum):
-            self.nodes[i].calmdot(self.mdot)
+        for key in self.nodes:
+            self.nodes[key].calmdot(self.mdot)
 
         self.totalWExtracted = 0
         self.totalWRequired = 0
