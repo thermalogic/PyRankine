@@ -53,9 +53,9 @@ class Pump():
     def balance(self):
         """  mass and energy balance the pump    """
         # mass balance
-        if (self.iNode.fdot != None):
+        if self.iNode.fdot is not None:
             self.oNode.fdot = self.iNode.fdot
-        elif (self.oNode.fdot != None):
+        elif self.oNode.fdot is not None:
             self.iNode.fdot = self.oNode.fdot
 
         # energy

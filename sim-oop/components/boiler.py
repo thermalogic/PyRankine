@@ -51,9 +51,9 @@ class Boiler:
     def balance(self):
         """ mass and energy balance of the boiler """
         # mass blance equation
-        if (self.iNode.fdot != None):
+        if self.iNode.fdot is not None:
             self.oNode.fdot = self.iNode.fdot
-        elif (self.oNode.fdot != None):
+        elif self.oNode.fdot is not None:
             self.iNode.fdot = self.oNode.fdot
 
         self.heatAdded = self.iNode.fdot * (self.oNode.h - self.iNode.h)

@@ -4,8 +4,8 @@
 RankineCycle: the Simulator class of Rankine Cycle  
 
 dictcycle={"name":namestring,
-                     "nodes":[dict1,dict2,...],
-                     "comps":[dict1,dict2,...]
+                     "nodes":[{node1},{node2},...],
+                     "comps":[{dev1},{dev2},...]
                      }
   
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
@@ -23,8 +23,8 @@ class RankineCycle:
     def __init__(self, dictcycle):
         """
           dictcycle={"name":namestring,
-                     "nodes":[dict1,dict2,...],
-                     "comps":[dict1,dict2,...]
+                     "nodes":[{node1},{node2},...],
+                     "comps":[{node1},{node2},...]
                      }
           TO:           
              self.nodes : dict of all node objects

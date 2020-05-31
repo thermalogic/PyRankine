@@ -44,9 +44,9 @@ class Condenser:
 
     def balance(self):
         """ mass and energy balance of the condenser  """
-        if (self.iNode.fdot != None):
+        if self.iNode.fdot is not None:
             self.oNode.fdot = self.iNode.fdot
-        elif (self.oNode.fdot != None):
+        elif self.oNode.fdot is not None:
             self.iNode.fdot = self.oNode.fdot
 
         self.heatExtracted = self.iNode.fdot * (self.iNode.h - self.oNode.h)

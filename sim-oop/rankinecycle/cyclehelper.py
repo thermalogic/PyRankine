@@ -12,7 +12,7 @@ from components.node import Node
 def OutFiles(cycle, outfilename=None):
     savedStdout = sys.stdout
     # redirect to the outfilename
-    if (outfilename != None):
+    if outfilename is not None:
         datafile = open(outfilename, 'w', encoding='utf-8')
         sys.stdout = datafile
 

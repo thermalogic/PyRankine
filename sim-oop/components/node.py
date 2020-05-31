@@ -61,11 +61,11 @@ class Node:
         self.v = None
         self.mdot = None
 
-        if self.p != None and self.t != None:
+        if self.p is not None and self.t is not None:
             self.pt()
-        elif self.p != None and self.x != None:
+        elif self.p is not None and self.x is not None:
             self.px()
-        elif self.t != None and self.x != None:
+        elif self.t is not None and self.x is not None:
             self.tx()
 
     def calmdot(self, totalmass):
