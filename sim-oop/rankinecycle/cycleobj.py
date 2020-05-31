@@ -44,7 +44,7 @@ class RankineCycle:
         self.DevNum = len(dictcomps)
         self.comps = {}
         for curdev in dictcomps:
-            self.comps[curdev['name']] = compdict[curdev['type']](
+            self.comps[curdev['name']] = compdict[curdev['devtype']](
                 curdev, self.nodes)
 
         self.totalworkExtracted = 0

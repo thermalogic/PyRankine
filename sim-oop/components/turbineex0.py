@@ -33,7 +33,7 @@ from .node import *
 class TurbineEx0:
 
     energy = 'workExtracted'
-    type = 'TURBINE-EX0'
+    devtype = 'TURBINE-EX0'
 
     def __init__(self, dictDev, nodes):
         self.name = dictDev['name']

@@ -37,27 +37,27 @@
     "comps": [
         {
             "name": "TurbineEx0",
-            "type": "TURBINE-EX0",
+            "devtype": "TURBINE-EX0",
             "ef": 1.0,
             "iNode": 0,
             "oNode": 1
         },
         {
             "name": "Condenser",
-            "type": "CONDENSER",
+            "devtype": "CONDENSER",
             "iNode": 1,
             "oNode": 2
         },
         {
             "name": "Feedwater Pump",
-            "type": "PUMP",
+            "devtype": "PUMP",
             "ef": 1.0,
             "iNode": 2,
             "oNode": 3
         },
         {
             "name": "Boiler",
-            "type": "BOILER",
+            "devtype": "BOILER",
             "iNode": 3,
             "oNode": 0
         }

@@ -31,7 +31,7 @@ from .node import *
 class Condenser:
 
     energy = "heatExtracted"
-    type = "CONDENSER"
+    devtype = "CONDENSER"
 
     def __init__(self, dictDev, nodes):
         """ Initializes the condenser """

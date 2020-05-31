@@ -30,7 +30,7 @@ from .node import *
 class OpenedheaterDw0:
 
     energy = 'internel'
-    type = "FWH-OPEN-DW0"
+    devtype = "FWH-OPEN-DW0"
 
     def __init__(self, dictDev, nodes):
         """

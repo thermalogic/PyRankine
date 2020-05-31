@@ -33,7 +33,7 @@ from .node import *
 class Boiler:
 
     energy = "heatAdded"
-    type = "BOILER"
+    devtype = "BOILER"
 
     def __init__(self, dictDev, nodes):
         """

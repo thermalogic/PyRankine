@@ -30,7 +30,7 @@ from .node import *
 class Pump():
 
     energy = "workRequired"
-    type = "PUMP"
+    devtype = "PUMP"
 
     def __init__(self, dictDev, nodes):
         """
