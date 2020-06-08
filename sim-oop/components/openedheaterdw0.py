@@ -69,9 +69,11 @@ class OpenedheaterDw0:
         self.heatExtracted = self.heatAdded
 
     def sm_energy(self):
-        self.QExtracted = self.iNode.mdot * (self.iNode.h - self.iNode_fw.h)
-        self.QExtracted /= (3600.0 * 1000.0)
-        self.QAdded = self.QExtracted
+        ucovt = 3600.0 * 1000.0
+        self.QExtracted = self.iNode.mdot * \
+            (self.iNode.h - self.oNode_fw.h)/ucovt
+        self.QAdded = self.iNode_fw.mdot * \
+            (self.oNode_fw.h - self.iNode_fw.h)/ucovt
 
     def __str__(self):
         result = '\n' + self.name
