@@ -61,21 +61,17 @@ Cheng Maohua. (2020, March 13). PySEE/PyRankine: First Release of PyRankine (Ver
 
   * Jeannette M. Wing. [Computational Thinking Benefits Society]( http://socialissues.cs.toronto.edu/index.html%3Fp=279.html)
 
-* Modeling and Simulation of Engineering Systems
-
-  * R Sinha, Christiaan J. J. Paredis. etc. **Modeling and Simulation Methods for Design of Engineering Systems**. Transactions of the ASME[J]. 2001.03(1):84-91
-
-  * Modelica
-  
-    * Michael M.Tiller：[Introduction to Physical Modeling with Modelica](https://github.com/mtiller/FirstBookExamples)
-    
-      *  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
-
-    * Michael M.Tiller：[Learn Modelica by Example](http://book.xogeny.com/)
-      
 * ThermoCycle Simulator in Python
 
     * Maarten Winter: pyDNA https://github.com/mwoc/pydna
 
     * ORC Modeling Kit: https://github.com/orcmkit/ORCmKit
+
+* Modeling and Simulation of Engineering Systems
+
+  * R Sinha, Christiaan J. J. Paredis. etc. **Modeling and Simulation Methods for Design of Engineering Systems**. Transactions of the ASME[J]. 2001.03(1):84-91
+
+  * Michael M.Tiller：[Introduction to Physical Modeling with Modelica](https://github.com/mtiller/FirstBookExamples)
+    
+    *  刘俊堂等译. Modelica多领域物理系统建模入门与提高, 航空工业出版社(第1版),2017.05
 
