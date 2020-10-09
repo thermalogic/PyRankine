@@ -1,4 +1,4 @@
-## The Object-oriented programming of Rankine Cycle Flowsheet
+## The Object-oriented programming of Rankine Cycle 
 
 **Run**
 
@@ -38,7 +38,7 @@ Chapter 8 : Vapour Power Systems
       │    │ ─ cycleobj.py # the object of rankine object
       │              
       │
-      |── <cyclemodule> cycle dicts
+      |── <cyclemodule> the Rankine cycle dicts
       │     |
       │     │ ── rankine??.py # the Rankine cycle dict
       │           
@@ -46,7 +46,7 @@ Chapter 8 : Vapour Power Systems
             |
             │ ── Rankine??-sm.txt 
             │ ── Rankine??.sp.txt 
-          
+```         
  
 ## The Flowchart  
 
@@ -81,7 +81,7 @@ Chapter 8 : Vapour Power Systems
        │   Print results on Console   │ 
        │   Save  results to text files│ 
        └──────────────────────────────┘
- ```
+```
 
 ## The Node and Component Class
 
