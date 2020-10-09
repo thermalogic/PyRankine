@@ -1,9 +1,9 @@
-## The Object-oriented programming and JSON Textual Representation of Rankine Cycle Flowsheet
+## The Object-oriented programming of Rankine Cycle Flowsheet
 
 **Run**
 
 ```bash
->python rankine.py
+>python rankineapp.py
 ```
 
 ## Example Rankine Cycles
@@ -38,28 +38,20 @@ Chapter 8 : Vapour Power Systems
       │    │ ─ cycleobj.py # the object of rankine object
       │              
       │
-      |── <data> json files
-           |
-           │──<txtcycle> The json of Rankine Cycle
-           │     │
-           │     │ ── rankine??.json 
-           │  
-           │──<output> The Output Files of Rankine Cycle
-                 │
-                 │ ── rankine??-sm.txt # the Specified Mass Flow
-                 │
-                 │ ── rankine??-sp.txt #  the Specified Net Output Power
-```
+      |── <cyclemodule> cycle dicts
+      │     |
+      │     │ ── rankine??.py # the Rankine cycle dict
+      │           
+      |── <result>          
+            |
+            │ ── Rankine??-sm.txt 
+            │ ── Rankine??.sp.txt 
+          
  
 ## The Flowchart  
 
 ```
- ┌──────────────────────────────────────────────────┐   
- │    Convert the Cycle JSON Textual Model          │
- │        to the dict of cycle                      │
- └─────────────────────┬────────────────────────────┘
-                       ↓
-   ┌───────────────────┴─────────────────┐ 
+   ┌─────────────────────────────────────┐ 
    │ Instance of Simulator using the dict│   
    │    * the instance of nodes          │
    │        The node state with px,pt,tx │

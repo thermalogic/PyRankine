@@ -1,6 +1,6 @@
 
 """
-General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
+General Object-oriented Abstraction  of Rankine Cycle 
 
 - SimRankineCycle: The Simulator of Rankine Cycle 
 
