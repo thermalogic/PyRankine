@@ -3,13 +3,13 @@
 
   class Boiler
 
-                    ↑    outNode main steam
+                    ↑    oNode main steam
                 ┌───┼───┐  (No.i)
                 │   │   │   
                 │   │   │
                 │   │   │
                 └───┼───┘  
-                    ↑    inNode main feedwater
+                    ↑    iNode main feedwater
                             (No.j)  
 
  json object example:
@@ -17,8 +17,8 @@
         {    
             "name": "Boiler",  
             "type": "BOILER",
-            "inNode":i,
-            "outNode":j
+            "iNode":i,
+            "oNode":j
         }
 
  Last updated: 2018.05.10
@@ -33,7 +33,7 @@ from .node import *
 class Boiler:
 
     energy = "heatAdded"
-    type = "BOILER"
+    devtype = "BOILER"
 
     def __init__(self, dictDev, nodes):
         """
@@ -42,10 +42,8 @@ class Boiler:
         # self.__dict__.update(dictDev)
 
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
-        self.iNode = nodes[self.inNode]
-        self.oNode = nodes[self.outNode]
+        self.iNode = nodes[dictDev['iNode']]
+        self.oNode = nodes[dictDev['oNode']]
 
     def state(self):
         pass
@@ -53,9 +51,9 @@ class Boiler:
     def balance(self):
         """ mass and energy balance of the boiler """
         # mass blance equation
-        if (self.iNode.fdot != None):
+        if self.iNode.fdot is not None:
             self.oNode.fdot = self.iNode.fdot
-        elif (self.oNode.fdot != None):
+        elif self.oNode.fdot is not None:
             self.iNode.fdot = self.oNode.fdot
 
         self.heatAdded = self.iNode.fdot * (self.oNode.h - self.iNode.h)
@@ -70,6 +68,6 @@ class Boiler:
         result += '\n' + Node.title
         result += '\n' + self.iNode.__str__()
         result += '\n' + self.oNode.__str__()
-        result += '\nheatAdded(kJ/kg) \t{:>.2f} \nQAdded(MW) \t{:>.2f}'.format(
-            self.heatAdded, self.QAdded)
+        result += '\nheatAdded(kJ/kg) \t{:>.2f}'.format(self.heatAdded)
+        result += '\nQAdded(MW) \t{:>.2f}'.format(self.QAdded)
         return result

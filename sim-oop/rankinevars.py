@@ -4,7 +4,7 @@ General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle
 
 - SimRankineCycle: The Simulator of Rankine Cycle 
 
-  * Input :json file  
+  * Input :rankine cycle dict module  
 
   * output: txt file
 
@@ -23,20 +23,18 @@ python rankine.py
 Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
-import json
 from rankinecycle.cycleobj import RankineCycle
 from rankinecycle.cyclehelper import OutFiles
-
+from platform import *
 
 class SimRankineCycle:
-    """ Input :json file      """
+    """ Input :rankine dict"""
 
-    def __init__(self, rankinefilename):
-        # -5 remove .json
-        self.prefixResultFileName =rankinefilename[0:-5].replace("txtcycle", "output")
-        with open(rankinefilename, 'r') as f:
-            self.idictcycle = json.loads(f.read())
+    def __init__(self, rankinecycle):
+        self.idictcycle =rankinecycle
         self.cycle = RankineCycle(self.idictcycle)
+        curpath = os.path.abspath(os.path.dirname(__file__))
+        self.prefixResultFileName= curpath+'\\'+'./result/'+self.idictcycle['name']
 
     def Simulator(self):
         self.cycle.simulator()
@@ -56,22 +54,21 @@ class SimRankineCycle:
 
 
 if __name__ == "__main__":
-    from platform import *
-    import glob
-    curpath = os.path.abspath(os.path.dirname(__file__))
-    json_filesname_str = curpath+'\\'+'./data/txtcycle/rankine8[0-9].json'
-    # json_filesname_str=curpath+'\\'+'./data/txtcycle/rankine85.json'
-    json_filesname = glob.glob(json_filesname_str)
-
+    from cyclemodule import rankine81 as r81
+    #from cyclemodule import rankine82 as r82
+    #from cyclemodule import rankine85 as r85
     Wcycledot = 100  # MW
     mdot = 150*3600  # kg/h
-    for curfile in json_filesname:
-        cycle = SimRankineCycle(curfile)
-        # 1 1kg
-        cycle.Simulator()
 
-        # 2 Specified Net Output Power(MW)
-        cycle.SpecifiedSimulator(SetPower=Wcycledot)
+    #cycles=[r81,r82,r85]
+    cycles=[r81]
+    for curcycle in cycles:
+       cycle = SimRankineCycle(curcycle.cycle)
+       # 1 1kg
+       cycle.Simulator()
 
-        # 3 Specified Mass Flow(kg/h)
-        cycle.SpecifiedSimulator(SetMass=mdot)
+       # 2 Specified Net Output Power(MW)
+       cycle.SpecifiedSimulator(SetPower=Wcycledot)
+
+       # 3 Specified Mass Flow(kg/h)
+       cycle.SpecifiedSimulator(SetMass=mdot)

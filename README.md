@@ -6,12 +6,8 @@ The PyRankine is the general Rankine Cycle simulator of Steady-State Mass and En
 
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
 
-## [The Simulator : Object-oriented programming](./sim-oop)
+* [The Simulator: Object-oriented programming](./sim-oop)
 
-  **The UML Class Diagram**
-
-   ![The UML Class Diagram: Association](./sim-oop/uml/packages.svg)  
- 
 ## Dependencies：SEUIF97
 
 IAPWS-IF97 high-speed shared library
@@ -52,7 +48,6 @@ Chapter 8 : Vapour Power Systems
 **Schematic of Example Rankine Cycles**
 
 ![rankines](./notebook/img/rankines.jpg)
-
 
 ## Cite as
 

@@ -15,9 +15,9 @@ class Openedheaterdw0
      {
             "name": "Opened Feedwater Heater1",
             "type": "FWH-OPEN-DW0",
-            "inNode":i,
-            "inNode_fw":j,
-            "outNode_fw":k
+            "iNode":i,
+            "iNode_fw":j,
+            "oNode_fw":k
      }
 
   Last updated: 2018.05.08
@@ -30,43 +30,35 @@ from .node import *
 class OpenedheaterDw0:
 
     energy = 'internel'
-    type = "FWH-OPEN-DW0"
+    devtype = "FWH-OPEN-DW0"
 
     def __init__(self, dictDev, nodes):
         """
         Initializes the Opened feedwater with the conditions
         """
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.inNode_fw = dictDev['inNode_fw']
-        self.outNode_fw = dictDev['outNode_fw']
-
-        self.iNode = nodes[self.inNode]
-        self.iNode_fw = nodes[self.inNode_fw]
-        self.oNode_fw = nodes[self.outNode_fw]
+        self.iNode = nodes[dictDev['iNode']]
+        self.iNode_fw = nodes[dictDev['iNode_fw']]
+        self.oNode_fw = nodes[dictDev['oNode_fw']]
 
         self.heatAdded = 0
         self.heatExtracted = 0
         self.QExtracted = 0
 
     def state(self):
-        pass        
+        pass
 
     def balance(self):
         """ mass and energy balance of the opened feedwater heater """
         # energy balance equation
-        self.heatAdded = self.oNode_fw.fdot * \
-            (self.oNode_fw.h - self.iNode_fw.h)
-
-        self.heatExtracted = self.heatAdded
-
-        self.iNode.fdot = self.heatExtracted / (self.iNode.h - self.iNode_fw.h)
+        qes1 = self.iNode.h - self.oNode_fw.h
+        qfw1 = self.oNode_fw.h - self.iNode_fw.h
+        self.iNode.fdot = self.oNode_fw.fdot * qfw1/(qes1 + qfw1)
         # mass balance equation
         self.iNode_fw.fdot = self.oNode_fw.fdot - self.iNode.fdot
 
-        self.heatAdded = self.oNode_fw.fdot * \
-            (self.oNode_fw.h - self.iNode_fw.h)
-        self.heatExtracted = self.heatAdded
+        self.heatAdded = self.iNode_fw.fdot * qfw1
+        self.heatExtracted = self.iNode.fdot * qes1
 
     def sm_energy(self):
         ucovt = 3600.0 * 1000.0
@@ -87,4 +79,3 @@ class OpenedheaterDw0:
         result += '\nQAdded(MW) \t{:>.2f}'.format(self.QAdded)
         result += '\nQExtracted(MW)  \t{:>.2f}'.format(self.QExtracted)
         return result
-

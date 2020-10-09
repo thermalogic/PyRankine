@@ -3,13 +3,13 @@
 
     TurbineEx0 class: 
        
-        inNode inlet steam   (No.i)
+        iNode inlet steam   (No.i)
                  ┌────────┐
               ↓ ╱         │ 
                ┤          │
                 ╲         │
                  └────────┤
-                          ↓  outNode exhausted steam (No.j)  
+                          ↓  oNode exhausted steam (No.j)  
 extracted steam  0    
 
 json object example
@@ -18,8 +18,8 @@ json object example
             "name": "Turbine1",
             "type": "TURBINE-EX0",
             "ef": 1.00,
-            "inNode": i,
-            "outNode": j
+            "iNode": i,
+            "oNode": j
     },
 
   Last updated: 2017.05.05
@@ -33,17 +33,17 @@ from .node import *
 class TurbineEx0:
 
     energy = 'workExtracted'
-    type = 'TURBINE-EX0'
+    devtype = 'TURBINE-EX0'
 
     def __init__(self, dictDev, nodes):
         self.name = dictDev['name']
-        self.inNode = dictDev['inNode']
-        self.outNode = dictDev['outNode']
+        self.iNode=nodes[dictDev['iNode']]
+        self.oNode=nodes[dictDev['oNode']]
         self.ef = dictDev['ef']
-        self.iNode=nodes[self.inNode]
-        self.oNode=nodes[self.outNode]
-        self.WExtracted=0 
+       
         self.workExtracted=0
+        self.WExtracted=0 
+     
 
     def state(self):
         if self.ef == 1.0:
@@ -60,11 +60,11 @@ class TurbineEx0:
         # mass balance equation
         self.oNode.fdot = self.iNode.fdot
         # energy
-        self.workExtracted = self.oNode.fdot *(self.iNode.h - self.oNode.h)
+        self.workExtracted = self.iNode.fdot *(self.iNode.h - self.oNode.h)
 
     def sm_energy(self):
         # mdot，get WExtracted
-        self.WExtracted = self.oNode.mdot * (self.iNode.h - self.oNode.h)
+        self.WExtracted = self.iNode.mdot * (self.iNode.h - self.oNode.h)
         self.WExtracted /= (3600.0 * 1000.0)
 
     def __str__(self):
@@ -72,8 +72,8 @@ class TurbineEx0:
         result += '\n' + Node.title
         result += '\n' + self.iNode.__str__()
         result += '\n' + self.oNode.__str__()
-        result += '\nworkExtracted(kJ/kg): \t{:>.2f} \nWExtracted(MW): \t{:>.2f}'.format(
-            self.workExtracted, self.WExtracted)
+        result += '\nworkExtracted(kJ/kg): \t{:>.2f}'.format(self.workExtracted)
+        result += '\nWExtracted(MW): \t{:>.2f}'.format(self.WExtracted)    
         return result
   
    

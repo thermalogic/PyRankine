@@ -1,11 +1,11 @@
-{
-    "name": "Rankine82",
-    "nodes": [
+cycle={}
+cycle["name"]="Rankine82"
+cycle["nodes"] = [
         {
             "name": "Main Steam",
             "id": 0,
             "p": 8.0,
-            "t": null,
+            "t": None,
             "x": 1,
             "fdot": 1
         },
@@ -13,28 +13,29 @@
             "name": "Outlet Steam of HP",
             "id": 1,
             "p": 0.008,
-            "t": null,
-            "x": null,
-            "fdot": null
+            "t": None,
+            "x": None,
+            "fdot": None
         },
         {
             "name": "Condenser Water",
             "id": 2,
             "p": 0.008,
-            "t": null,
+            "t": None,
             "x": 0,
-            "fdot": null
+            "fdot": None
         },
         {
             "name": "Main FeedWater",
             "id": 3,
             "p": 8.0,
-            "t": null,
-            "x": null,
-            "fdot": null
+            "t": None,
+            "x": None,
+            "fdot": None
         }
-    ],
-    "comps": [
+    ]
+
+cycle["comps"] = [
         {
             "name": "Turbine Ex0",
             "devtype": "TURBINE-EX0",
@@ -62,4 +63,3 @@
             "oNode": 0
         }
     ]
-}

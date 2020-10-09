@@ -61,11 +61,11 @@ class Node:
         self.v = None
         self.mdot = None
 
-        if self.p != None and self.t != None:
+        if self.p is not None and self.t is not None:
             self.pt()
-        elif self.p != None and self.x != None:
+        elif self.p is not None and self.x is not None:
             self.px()
-        elif self.t != None and self.x != None:
+        elif self.t is not None and self.x is not None:
             self.tx()
 
     def calmdot(self, totalmass):
@@ -109,7 +109,7 @@ class Node:
 
     def __str__(self):
         try:
-            result = ('{:^6d} \t {:<30} \t {:>6.3}\t {:>10.2f}\t {:>10.2f}\t {:>5.2f} \t {:>15.3f}\t {:>5.3}\t {:>6.4f}\t {:>12.2f}'.format
+            result = ('{:^6} \t {:<30} \t {:>6.3}\t {:>10.2f}\t {:>10.2f}\t {:>5.2f} \t {:>15.3f}\t {:>5.3}\t {:>6.4f}\t {:>12.2f}'.format
                       (self.id, self.name, self.p, self.t, self.h, self.s, self.v, self.x, self.fdot, self.mdot))
         except:
             result = ('{} {}  {} {} {} {} {} {} {} {}'.format

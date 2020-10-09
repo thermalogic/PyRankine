@@ -20,7 +20,7 @@ Chapter 8 : Vapour Power Systems
 ## The Projects 
 
 ```
-   <sim=oop>
+   <sim-oop>
       │ 
       |── rankine.py  #  main app
       |
@@ -33,15 +33,14 @@ Chapter 8 : Vapour Power Systems
       │
       |── <rankinecycle> cycle package
       │    |
-      │    │ ─  iocycle.py # read json to the object; output result to text files  
+      │    │ ─ cyclehelper.py # helper methods  
       │    │     
-      │    │ ─  objcycle.py # the objects of rankine object
-      │    │
-      │    │ ─  simcycle.py  # analysis the rankine cycle
+      │    │ ─ cycleobj.py # the object of rankine object
+      │              
       │
       |── <data> json files
            |
-           │──<txtcyxle> The json of Rankine Cycle
+           │──<txtcycle> The json of Rankine Cycle
            │     │
            │     │ ── rankine??.json 
            │  
@@ -51,29 +50,68 @@ Chapter 8 : Vapour Power Systems
                  │
                  │ ── rankine??-sp.txt #  the Specified Net Output Power
 ```
+ 
+## The Flowchart  
 
-## The UML Class diagram 
+```
+ ┌──────────────────────────────────────────────────┐   
+ │    Convert the Cycle JSON Textual Model          │
+ │        to the dict of cycle                      │
+ └─────────────────────┬────────────────────────────┘
+                       ↓
+   ┌───────────────────┴─────────────────┐ 
+   │ Instance of Simulator using the dict│   
+   │    * the instance of nodes          │
+   │        The node state with px,pt,tx │
+   │    * the instance of devices        │ 
+   └───────────────────┬─────────────────┘
+                       ↓  
+       ┌───────────────┴─────────────────┐ 
+       │ The node state with device      │
+       └───────────────┬─────────────────┘
+                       ↓ 
+   ┌───────────────────┴────────────────────┐ 
+   │ The mass and energy balance of devices │ 
+   │           on the 1kg mass              │
+   └──────────────────┬─────────────────────┘
+                      ↓  
+        ┌─────────────┴─────────────┐ 
+        │ The performance of cycle  │ 
+        │        on the 1kg mass    │
+        └─────────────┬─────────────┘
+                      ↓  
+       ┌──────────────┴───────────────┐ 
+       │ The Specified Net Power      │
+       │ The Specified Mass Flow Rate │ 
+       └──────────────┬───────────────┘
+                      ↓  
+       ┌──────────────┴───────────────┐ 
+       │   Print results on Console   │ 
+       │   Save  results to text files│ 
+       └──────────────────────────────┘
+ ```
 
-### The Class Diagram： Association
+## The Node and Component Class
 
-![Package UML](./uml/packages.svg)
+### The Node  Class
 
-### The Class Diagram : Composition
+The Node  Class has: 
+* class variable:  `title` 
+* methods:`__init__`,`calmdot`, `pt`, `ph`,`ps`,`hs`,`px`,`tx`,`__str__`
+
+### The Component Classes
 
 All component classes have: 
 * class variables:  `energy`, `type`
 * methods:`__init__`,`state`, `balance`, `sm_energy`,`__str__`
 
-  ![Class UML](./uml/classes.svg)
-
-## The Methods to check and analysis the mass flow rate
+## The Method to analysis the mass flow rate
 
 There are dependencies in the mass float rate calculation.
 
-e.g: [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/master/notebook/RankineCycle85.ipynb)
+e.g: [EXAMPLE 8.5: The Regenerative Cycle with Open Feedwater Heater, P456](http://nbviewer.jupyter.org/github/PySEE/PyRankine/blob/S2021/notebook/RankineCycle85.ipynb)
 
-If the Open Feedwater Heater is not calculated, the fraction of extraction steam flow from turbine is not obtained, then the
-fraction of the total flow passing through the second-stage turbine is also no value, The turbine work calculation cannot be carried out.
+If the Open Feedwater Heater is not calculated, the fraction of extraction steam flow from one turbine is not obtained, then the fraction of the total flow passing through the second-stage turbine is also no value, The turbine work calculation cannot be carried out.
 
 That is to say that the Open Feedwater Heater must be calculated **before** the Turbine.
 
@@ -81,7 +119,7 @@ There is a problem of **equipment calculation order** in the mass float rate of 
 
 What is the solution? **Hard-coded** Calculation Order? No, It is not the general solution.
 
-In the example codes, we provide one simple general solution:
+In the example codes, we provide the simple general solution:
 
 ```python
   def ComponentBalance(self):
