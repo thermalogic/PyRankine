@@ -2,7 +2,7 @@
 """
 General Object-oriented Abstraction  of Rankine Cycle 
 
-- SimRankineCycle: The Simulator of Rankine Cycle 
+The Simulator of Rankine Cycle 
 
   * Input :rankine cycle dict module  
 
@@ -24,34 +24,8 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
 from rankinecycle.cycleobj import RankineCycle
-from rankinecycle.cyclehelper import OutFiles
+from rankinecycle.cyclehelper import SpecifiedSimulator
 from platform import *
-
-class SimRankineCycle:
-    """ Input :rankine dict"""
-
-    def __init__(self, rankinecycle):
-        self.idictcycle =rankinecycle
-        self.cycle = RankineCycle(self.idictcycle)
-        curpath = os.path.abspath(os.path.dirname(__file__))
-        self.prefixResultFileName= curpath+'\\'+'./result/'+self.idictcycle['name']
-
-    def Simulator(self):
-        self.cycle.simulator()
-
-    def SpecifiedSimulator(self, SetPower=None, SetMass=None):
-        # Specified Simulating： Power or Mass Flow
-        self.cycle.SpecifiedSimulator(SetPower, SetMass)
-
-        # output to files
-        if SetPower != None:
-            outprefix = self.prefixResultFileName + '-sp'
-        else:
-            outprefix = self.prefixResultFileName + '-sm'
-        # output to text
-        OutFiles(self.cycle)
-        OutFiles(self.cycle, outprefix + '.txt')
-
 
 if __name__ == "__main__":
     from cyclemodule import rankine81 as r81
@@ -60,15 +34,18 @@ if __name__ == "__main__":
     Wcycledot = 100  # MW
     mdot = 150*3600  # kg/h
 
-    #cycles=[r81,r82,r85]
     cycles=[r81]
+    #cycles=[r81,r82,r85]
     for curcycle in cycles:
-       cycle = SimRankineCycle(curcycle.cycle)
-       # 1 1kg
-       cycle.Simulator()
+        curpath = os.path.abspath(os.path.dirname(__file__))
+        prefixResultFileName= curpath+'\\'+'./result/'+curcycle.cycle['name']
 
-       # 2 Specified Net Output Power(MW)
-       cycle.SpecifiedSimulator(SetPower=Wcycledot)
+        cycle = RankineCycle(curcycle.cycle)
+        # 1 1kg
+        cycle.simulator()
 
-       # 3 Specified Mass Flow(kg/h)
-       cycle.SpecifiedSimulator(SetMass=mdot)
+        # 2 Specified Net Output Power(MW)
+        SpecifiedSimulator(cycle,prefixResultFileName, SetPower=Wcycledot)
+
+        # 3 Specified Mass Flow(kg/h)
+        SpecifiedSimulator(cycle,prefixResultFileName,SetMass=mdot)

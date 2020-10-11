@@ -13,7 +13,7 @@ General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle
 extracted steam     1    
    (No.k)
 
-json object example
+object example
 
      {
             "name": "Turbine1",

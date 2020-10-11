@@ -33,3 +33,15 @@ def OutFiles(cycle, outfilename=None):
         sys.stdout = savedStdout
 
 
+def SpecifiedSimulator(cycle, prefixResultFileName, SetPower=None, SetMass=None):
+    # Specified Simulating： Power or Mass Flow
+    cycle.SpecifiedSimulator(SetPower, SetMass)
+
+    # output to files
+    if SetPower != None:
+        outprefix = prefixResultFileName + '-sp'
+    else:
+        outprefix = prefixResultFileName + '-sm'
+    # output to text
+    OutFiles(cycle)
+    OutFiles(cycle, outprefix + '.txt')

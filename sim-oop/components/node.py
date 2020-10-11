@@ -9,15 +9,15 @@
                         │           │
                       ──┘           └──
 
-json object example:
+object example:
 
     {
             "name": "Extracted Steam To Opened FWH",
             "id": i,
             "p": 0.7,
-            "t": null,
-            "x": null,
-            "fdot":null
+            "t": None,
+            "x": None,
+            "fdot":None
     }
   
 Last updated: 2018.05.08

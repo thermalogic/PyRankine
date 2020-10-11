@@ -12,7 +12,7 @@
                 └───┬───┘
                     ↓ oNode condensate water
                             (No.j)
-json object example:
+object example:
 
    {
             "name": "Condenser1",

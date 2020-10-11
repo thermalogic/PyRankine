@@ -10,7 +10,7 @@
     (No.j)         │       │  (No.i)
                    └───────┘  
  
-  json object example:
+ object example:
      {
             "name": "Feedwater Pump1",
             "type": "PUMP",

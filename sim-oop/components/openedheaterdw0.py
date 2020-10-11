@@ -10,7 +10,7 @@ class Openedheaterdw0
      (No.k)       │       │
                   └───────┘
 
- json object example:
+ object example:
 
      {
             "name": "Opened Feedwater Heater1",

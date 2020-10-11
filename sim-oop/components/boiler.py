@@ -12,7 +12,7 @@
                     ↑    iNode main feedwater
                             (No.j)  
 
- json object example:
+ object example:
 
         {    
             "name": "Boiler",  

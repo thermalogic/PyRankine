@@ -12,7 +12,7 @@
                           ↓  oNode exhausted steam (No.j)  
 extracted steam  0    
 
-json object example
+object example
 
     {
             "name": "Turbine1",
