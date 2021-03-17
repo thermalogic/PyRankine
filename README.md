@@ -2,11 +2,17 @@
 
 [![DOI](https://zenodo.org/badge/85393590.svg)](https://zenodo.org/badge/latestdoi/85393590)
 
-The PyRankine is the general Rankine Cycle simulator of Steady-State Mass and Energy Balance.
+The PyRankine is the general Rankine Cycle simulator of Steady-State Mass and Energy Balance in Python.
 
 We wish that PyRankine may be a helpful vehicle for you to understand **Computational Thinking** and improve programming skills.
 
-* [The Simulator: Object-oriented programming](./sim-oop)
+* [The Simulator](./sim-oop)
+
+>---
+>  The another Rankine Cycle Simulator with the design scheme based on port and connector
+> 
+>  * [The Simulator in Python, C++ and Modelica](https://github.com/thermalogic/SimRankine)
+> ---
 
 ## Dependencies：SEUIF97
 
