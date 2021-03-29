@@ -4,7 +4,7 @@
 
 The PyRankine is the general Rankine Cycle simulator of Steady-State Mass and Energy Balance in Python.
 
-Two kinge of simulation approachs are provided in the the simulator 
+Two kind of simulation approachs are provided in the the simulator 
 
 * sequential-modular approach
 
