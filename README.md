@@ -29,7 +29,7 @@ The system has one sealing, four low pressure , one open feedwater heater/de-aer
 
 The Json file is used to representate the example system's flowsheet and data
 
-* [The Json File of the example system's flowsheet and data](./SimRankine/rankinejson/N600_1.json)
+* [The Json file of the example system's flowsheet and data](./SimRankine/rankinejson/N600_1.json)
 
 ## Run
 

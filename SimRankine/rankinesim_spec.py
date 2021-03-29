@@ -1,6 +1,6 @@
 
 """
-python rankinesim_n600_1.py
+python rankinesim_spec.py
 
 """
 from platform import os
