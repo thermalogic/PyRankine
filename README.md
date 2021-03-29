@@ -44,6 +44,5 @@ The Json file is used to representate the example system's flowsheet and data
 
 ## Cite as
 
-Cheng Maohua. (2020, March 13). PySEE/PyRankine: First Release of PyRankine (Version V1.0.0). Zenodo. http://doi.org/10.5281/zenodo.3709393
-
+Cheng Maohua. (2021, March 29). PySEE/PyRankine: The Open Source General Rankine Cycle Simulator of Steady-State Mass and Energy Balance in Python (Version 2.0). Zenodo. http://doi.org/10.5281/zenodo.4644278
 
