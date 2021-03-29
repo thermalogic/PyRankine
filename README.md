@@ -11,6 +11,7 @@ IAPWS-IF97 high-speed shared library
 * https://github.com/PySEE/SEUIF97
 
 Install with pip
+
 ```bash
 python -m pip install seuif97
 ```
@@ -33,11 +34,14 @@ The Json file is used to representate the example system's flowsheet and data
 
 ## Run
 
-* simulation based on  1kg mass:
+* simulation based on 1kg mass:
+ 
 ```bash
  python rankinesim.py
 ```
+
 * simulation on specified power/mass
+
 ```bash
  python rankinesim_spec.py
 ```
