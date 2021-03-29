@@ -15,22 +15,21 @@ Install with pip
 python -m pip install seuif97
 ```
 
-
 ## The Example Rankine Cycle
 
 The thermodynamic system of a supercritical pressure 600 MW generating unit.
 
 The system has one sealing, four low pressure , one open feedwater heater/de-aerator, and three high pressure closed feedwater heaters.
 
-### The Schematic of Example systems
+### The Schematic of Example System
 
 ![N600](.//img/N600.jpg)
 
-### The file of example system's flowsheet and data
+### The File of example system's Flowsheet and Data
 
 The Json file is used to representate the example system's flowsheet and data
 
-* [The JSON File of the example system's flowsheet and data](./SimRankine/rankinejson/N600_1.json)
+* [The Json File of the example system's flowsheet and data](./SimRankine/rankinejson/N600_1.json)
 
 ## Run
 
@@ -40,7 +39,7 @@ The Json file is used to representate the example system's flowsheet and data
 ```
 * simulation on specified power/mass
 ```bash
- python rankinesim.py
+ python rankinesim_spec.py
 ```
 
 ## Cite as
