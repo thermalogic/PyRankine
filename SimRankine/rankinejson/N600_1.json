@@ -1,0 +1,497 @@
+{
+    "name": "N600",
+    "etam": 0.99,
+    "etag": 0.988,
+    "components": [
+        {
+            "name": "CD",
+            "devtype": "CONDENSER",
+            "iPort": {},
+            "oPort": {
+                "p": 0.0054,
+                "x": 0.0
+            },
+            "iPort1": {
+                "fdot": 0.052
+            },
+            "oPort1": {
+                "p": 0.0054,
+                "x": 0.0
+            }
+        },
+        {
+            "name": "LP",
+            "devtype": "TURBINEEXS",
+            "iPort": {},
+            "oPort": {
+                "p": 0.0054,
+                "x": 0.917
+            },
+            "ePort0": {
+                "p": 0.0461,
+                "x": 0.98
+            },
+            "ePort1": {
+                "p": 0.0191,
+                "x": 0.953
+            }
+        },
+        {
+            "name": "SPIP",
+            "devtype": "SPLIT_ONE2TWO",
+            "iPort": {},
+            "oPort0": {},
+            "oPort1": {
+                "fdot": 0.052
+            }
+        },
+        {
+            "name": "IP",
+            "devtype": "TURBINEEXS",
+            "iPort": {},
+            "oPort": {
+                "p": 0.1033,
+                "t": 121.5
+            },
+            "ePort0": {
+                "p": 1.827,
+                "t": 456.2
+            },
+            "ePort1": {
+                "p": 0.941,
+                "t": 360.9
+            },
+            "ePort2": {
+                "p": 0.389,
+                "t": 253.9
+            },
+            "ePort3": {
+                "p": 0.1033,
+                "t": 121.5
+            }
+        },
+        {
+            "name": "RH",
+            "devtype": "REHEATER",
+            "iPort": {},
+            "oPort": {
+                "p": 3.648,
+                "t": 566.0
+            }
+        },
+        {
+            "name": "iRHPIPE",
+            "devtype": "PIPEPTLOSS",
+            "oPort": {},
+            "iPort": {},
+            "tdelta": 1.7,
+            "pdelta": 0.069
+        },
+        {
+            "name": "SPHP",
+            "devtype": "SPLIT_ONE2TWO",
+            "iPort": {},
+            "oPort0": {},
+            "oPort1": {}
+        },
+        {
+            "name": "HP",
+            "devtype": "TURBINEEXS",
+            "iPort": {},
+            "oPort": {
+                "p": 4.053,
+                "t": 303.5
+            },
+            "ePort0": {
+                "p": 6.003,
+                "t": 353.4
+            }
+        },
+        {
+            "name": "iHPPIPE",
+            "devtype": "PIPEMLOSS",
+            "oPort": {},
+            "iPort": {},
+            "lPort1": {
+                "h": 3323.8,
+                "fdot": 0.0029
+            },
+            "lPort2": {
+                "h": 3396.0,
+                "fdot": 0.0001
+            }
+        },
+        {
+            "name": "oBOPIPE",
+            "devtype": "PIPEPTLOSS",
+            "oPort": {},
+            "iPort": {},
+            "tdelta": 1.8,
+            "pdelta": 0.515
+        },
+        {
+            "name": "BO",
+            "devtype": "BOILER",
+            "iPort": {},
+            "oPort": {
+                "p": 24.2,
+                "t": 566.0,
+                "fdot": 1.0
+            }
+        },
+        {
+            "name": "H1",
+            "devtype": "FWH-CLOSE-DW0",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "oPort_dw": {},
+            "tdelta": -1.7,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES0",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.03
+        },
+        {
+            "name": "H2",
+            "devtype": "FWH-CLOSE-DW1",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "iPort_dw": {},
+            "oPort_dw": {},
+            "iPort_sg": {
+                "h": 3323.8,
+                "fdot": 0.0029
+            },
+            "tdelta": 0.0,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES1",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.03
+        },
+        {
+            "name": "H3",
+            "devtype": "FWH-CLOSE-DW1",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "iPort_dw": {},
+            "oPort_dw": {},
+            "tdelta": 0.0,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES2",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        },
+        {
+            "name": "FWP",
+            "devtype": "PUMP",
+            "iPort": {},
+            "oPort": {
+                "p": 30.38
+            },
+            "eta": 0.83
+        },
+        {
+            "name": "IFWPPIPE",
+            "devtype": "PIPEILEVEL",
+            "iPort": {},
+            "oPort": {},
+            "iLevel": 20.0
+        },
+        {
+            "name": "HD",
+            "devtype": "FWH-OPEN-DW1",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "iPort_dw": {},
+            "eta": 0.99
+        },
+        {
+            "name": "ES3",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        },
+        {
+            "name": "H5",
+            "devtype": "FWH-CLOSE-DW0",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "oPort_dw": {},
+            "tdelta": 2.8,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES4",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        },
+        {
+            "name": "H6",
+            "devtype": "FWH-CLOSE-DW1",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "iPort_dw": {},
+            "oPort_dw": {},
+            "tdelta": 2.8,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES5",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        },
+        {
+            "name": "H7",
+            "devtype": "FWH-CLOSE-DW1",
+            "iPort": {},
+            "iPort_fw": {},
+            "oPort_fw": {},
+            "iPort_dw": {},
+            "oPort_dw": {},
+            "tdelta": 2.8,
+            "tdeltadw": 5.6,
+            "eta": 0.99
+        },
+        {
+            "name": "ES6",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        },
+        {
+            "name": "CH",
+            "devtype": "FWH-CLOSE-DW1-SG-CWP-WELL",
+            "iPort": {},
+            "iPort_fw0": {},
+            "iPort_fw1": {},
+            "iPort_dw": {},
+            "iPort_sg1": {
+                "h": 3396.0,
+                "fdot": 0.0001
+            },
+            "iPort_sg2": {
+                "h": 2716.2,
+                "fdot": 0.0007
+            },
+            "oPort_fw": {
+                "p": 1.84
+            },
+            "tdelta": 2.8,
+            "eta": 0.99
+        },
+        {
+            "name": "ES7",
+            "devtype": "PIPEPLOSS",
+            "oPort": {},
+            "iPort": {},
+            "ploss": 0.05
+        }
+    ],
+    "connectors": [
+        {
+            "H2": "oPort_fw",
+            "H1": "iPort_fw"
+        },
+        {
+            "H1": "oPort_dw",
+            "H2": "iPort_dw"
+        },
+        {
+            "H1": "oPort_fw",
+            "BO": "iPort"
+        },
+        {
+            "BO": "oPort",
+            "oBOPIPE": "iPort"
+        },
+        {
+            "oBOPIPE": "oPort",
+            "iHPPIPE": "iPort"
+        },
+        {
+            "iHPPIPE": "oPort",
+            "HP": "iPort"
+        },
+        {
+            "HP": "ePort0",
+            "ES0": "iPort"
+        },
+        {
+            "ES0": "oPort",
+            "H1": "iPort"
+        },
+        {
+            "HP": "oPort",
+            "SPHP": "iPort"
+        },
+        {
+            "SPHP": "oPort0",
+            "ES1": "iPort"
+        },
+        {
+            "ES1": "oPort",
+            "H2": "iPort"
+        },
+        {
+            "SPHP": "oPort1",
+            "iRHPIPE": "iPort"
+        },
+        {
+            "iRHPIPE": "oPort",
+            "RH": "iPort"
+        },
+        {
+            "RH": "oPort",
+            "IP": "iPort"
+        },
+        {
+            "IP": "ePort0",
+            "ES2": "iPort"
+        },
+        {
+            "ES2": "oPort",
+            "H3": "iPort"
+        },
+        {
+            "H3": "oPort_fw",
+            "H2": "iPort_fw"
+        },
+        {
+            "H2": "oPort_dw",
+            "H3": "iPort_dw"
+        },
+        {
+            "IP": "ePort1",
+            "SPIP": "iPort"
+        },
+        {
+            "SPIP": "oPort0",
+            "ES3": "iPort"
+        },
+        {
+            "ES3": "oPort",
+            "HD": "iPort"
+        },
+        {
+            "FWP": "oPort",
+            "H3": "iPort_fw"
+        },
+        {
+            "IFWPPIPE": "oPort",
+            "FWP": "iPort"
+        },
+        {
+            "HD": "oPort_fw",
+            "IFWPPIPE": "iPort"
+        },
+        {
+            "H3": "oPort_dw",
+            "HD": "iPort_dw"
+        },
+        {
+            "H5": "oPort_fw",
+            "HD": "iPort_fw"
+        },
+        {
+            "IP": "ePort2",
+            "ES4": "iPort"
+        },
+        {
+            "ES4": "oPort",
+            "H5": "iPort"
+        },
+        {
+            "IP": "ePort3",
+            "ES5": "iPort"
+        },
+        {
+            "ES5": "oPort",
+            "H6": "iPort"
+        },
+        {
+            "H6": "oPort_fw",
+            "H5": "iPort_fw"
+        },
+        {
+            "H5": "oPort_dw",
+            "H6": "iPort_dw"
+        },
+        {
+            "IP": "oPort",
+            "LP": "iPort"
+        },
+        {
+            "LP": "ePort0",
+            "ES6": "iPort"
+        },
+        {
+            "ES6": "oPort",
+            "H7": "iPort"
+        },
+        {
+            "H7": "oPort_fw",
+            "H6": "iPort_fw"
+        },
+        {
+            "H6": "oPort_dw",
+            "H7": "iPort_dw"
+        },
+        {
+            "LP": "ePort1",
+            "ES7": "iPort"
+        },
+        {
+            "ES7": "oPort",
+            "CH": "iPort"
+        },
+        {
+            "CH": "oPort_fw",
+            "H7": "iPort_fw"
+        },
+        {
+            "H7": "oPort_dw",
+            "CH": "iPort_dw"
+        },
+        {
+            "LP": "oPort",
+            "CD": "iPort"
+        },
+        {
+            "CD": "oPort",
+            "CH": "iPort_fw0"
+        },
+        {
+            "CD": "oPort1",
+            "CH": "iPort_fw1"
+        }
+    ]
+}
