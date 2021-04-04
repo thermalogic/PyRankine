@@ -1,7 +1,5 @@
 """
-General Object-oriented Abstraction  of Rankine Cycle 
-
-sm and so
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
 
     TurbineExs class: 
        
@@ -27,7 +25,8 @@ json object example
             
       } 
 
-  mass balance row    
+row:
+  1. mass balance row    
 
  Author:Cheng Maohua  Email: cmh@seu.edu.cn
 

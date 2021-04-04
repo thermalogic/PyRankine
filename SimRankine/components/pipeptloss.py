@@ -1,5 +1,5 @@
 """
-sm and eo
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
 
   class PipePtloss
                     ↑ oPort
@@ -18,7 +18,8 @@ bopipe1={
 
 }
 
-mass balance row
+row:
+   1. mass balance row
 
  Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 

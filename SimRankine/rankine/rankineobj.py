@@ -1,5 +1,7 @@
 """
- General Object-oriented Abstraction of Rankine Cycle 
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
+
+Model: General Object-oriented Abstraction of Rankine Cycle 
 
 * Sequential-modular(SM)：
 
@@ -10,9 +12,12 @@
 * equation-oriented(EO)： 
 
     def simulator_eo(self):
-        self.component_state_eo()
-        self.cycle_equation_eo()
-        self.cycle_simulator_eo()
+        self.component_analysis_sm("STATE") 
+        self.equation_eo()
+        for key in self.comps:
+            self.comps[key].energy_fdot()
+            
+Author: Cheng Maohua, Email:cmh@seu.edu.cn
 """
 
 import time

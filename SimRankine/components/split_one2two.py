@@ -1,8 +1,10 @@
 """
+
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
+  
   class Split_One2Two
 
-  sm and so
-
+  
          ↓ iPort
     ┌────┴────┐                    
   oPort0      oPort1   
@@ -17,7 +19,8 @@
         "oPort1": {}
        }
 
- mass balance row
+row:
+   1.  mass balance row
 
  Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 

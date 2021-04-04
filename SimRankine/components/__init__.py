@@ -1,5 +1,9 @@
 """
-    Components Package  
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
+
+Package: components
+
+Author: Cheng Maohua, Email: cmh@seu.edu.cn
 """
 
 from .port import Port
@@ -13,7 +17,6 @@ from .turbineexs import TurbineExs
 from .condenser import Condenser
 #
 from .pump import Pump
-from .pump_pipe import Pump_Pipe
 #
 from .pipeptloss import PipePtloss
 from .pipeploss import PipePloss
@@ -44,7 +47,6 @@ compdict = {
     "CONDENSER": Condenser,
 
     "PUMP": Pump,
-    "PUMP-PIPE": Pump_Pipe,
 
     "FWH-OPEN-DW0": OpenedheaterDw0,
     "FWH-OPEN-DW1": OpenedheaterDw1,

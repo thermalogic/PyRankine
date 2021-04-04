@@ -1,6 +1,7 @@
 """
- sm and so 
-  class PipePloss
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
+
+class PipePloss
                     ↑ oPort
                     │      ploss
                     │ iPort  
@@ -16,7 +17,8 @@ es1={
         
 }
 
-mass balance row
+row:
+   mass balance row
 
 Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 

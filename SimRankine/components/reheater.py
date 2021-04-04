@@ -1,7 +1,5 @@
 """
- General Object-oriented Abstraction   
-
-sm and so
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
 
   class Reheater
 
@@ -21,8 +19,8 @@ sm and so
             "iPort":{},
             "oPort":{}
         }
-
-mass balance row
+row:
+  1. mass balance row
 
 Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 

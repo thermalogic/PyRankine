@@ -1,4 +1,5 @@
 """
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
 class combinedheater:  heater + SG + CDW + HeatWELL
 

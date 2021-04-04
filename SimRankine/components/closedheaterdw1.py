@@ -1,5 +1,5 @@
 """
-General Abstraction  Rankine Cycle 
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
 class Closedheater with drain water inlet  with/without sg inlet
 

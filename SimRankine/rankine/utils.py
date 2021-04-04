@@ -1,9 +1,11 @@
 """
-General Object-oriented Abstraction of rankine Cycle 
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
  - create_dictcycle_from_jsonfile(filename):
  - OutFiles(cycle, outfilename=None)
  - OutDevsFiles(cycle, outfilename=None)
+
+Author: Cheng Maohua, Email:cmh@seu.edu.cn
 
 """
 import sys

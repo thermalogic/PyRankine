@@ -1,7 +1,5 @@
 """
- General Object-oriented Abstraction and JSON Textual Model of Rankine Cycle 
-
-so and sm
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
 class Openedheaterdw0
 

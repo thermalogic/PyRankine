@@ -1,6 +1,12 @@
 
 """
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
+
+run:
+
 python rankinesim_spec.py
+
+Author: Cheng Maohua, Email:cmh@seu.edu.cn
 
 """
 from platform import os
@@ -8,7 +14,7 @@ from rankine.utils import OutFiles, create_dictcycle_from_jsonfile
 from rankine.simrankine import SimRankineCycle
 
 curpath = os.path.abspath(os.path.dirname(__file__))
-rankinefilename = curpath+'\\'+'./rankinejson/N600_1.json'
+rankinefilename = curpath+'\\'+'./jsonmodel/N600.json'
 dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 
 cycle600 = SimRankineCycle(dictcycle)

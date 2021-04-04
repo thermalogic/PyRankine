@@ -1,7 +1,7 @@
 """
- General Object-oriented Abstraction :sm and eo  
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
-  class Boiler
+ class Boiler
 
                     ↑    oPort[0] main steam
                 ┌───┼───┐ 
@@ -20,7 +20,10 @@
             "oPort": {"p": 8.0, "x": 1.0, "fdot": 1.0}
         }
 
- Author:Cheng Maohua  Email: cmh@seu.edu.cn 
+Rows:
+   1. mass balance row
+
+Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 
 """
 

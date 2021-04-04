@@ -1,8 +1,7 @@
 
 """
- General Object-oriented Abstraction of Rankine Cycle 
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
 
-    sm and so
     class Pump
 
                    ┌───────┐
@@ -21,7 +20,8 @@
         
         }
 
-  mass balance row      
+row:
+  1. mass balance row      
 
   Author:Cheng Maohua  Email: cmh@seu.edu.cn               
 

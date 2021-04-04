@@ -1,6 +1,5 @@
 """
-
-sm and eo
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
 class OpenedheaterDw1
 

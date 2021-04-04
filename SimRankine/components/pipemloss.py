@@ -1,6 +1,7 @@
 """
-sm and so
-  class Pipemleak
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
+
+class Pipemleak
                     ↑ oPort
                     │      pipemass leaks:lPort1,lPort2
                     │ iPort  
@@ -16,7 +17,8 @@ es1={
          "lPort2": {}
 }
 
-mass balance row
+row:
+  1. mass balance row
 
  Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 

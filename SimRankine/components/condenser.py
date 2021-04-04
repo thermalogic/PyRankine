@@ -1,6 +1,6 @@
 
 """
- General Object-oriented Abstraction of Rankine Cycle
+The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
   
   so and sm
 

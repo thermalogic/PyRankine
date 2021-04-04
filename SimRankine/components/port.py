@@ -1,5 +1,10 @@
 """
+The PyRankine: the hybrid steady-state simulator of Rankine Cycle
+
  The port of device
+
+Author:Cheng Maohua  Email: cmh@seu.edu.cn 
+
 """
 import seuif97 as if97
 

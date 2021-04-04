@@ -1,8 +1,11 @@
 
 """
+ 
+ The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
+
  inlet pipe
 
-    class PipeIlevel:
+ class PipeIlevel:
         
                                ↓   iPort 
                                │
@@ -21,7 +24,8 @@
             "iLevel":20.0
         }
 
-mass balance row
+Rows:
+   1. mass balance row
 
 Author:Cheng Maohua  Email: cmh@seu.edu.cn               
 
