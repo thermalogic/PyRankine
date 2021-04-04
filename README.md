@@ -38,7 +38,7 @@ The condensing steam cycle has
 
 The json file is used to representate the example cycle's flowsheet and data
 
-* [The Json file of the example cycle's flowsheet and data](./SimRankine/rankinejson/N600.json)
+* [The Json file of the example cycle's flowsheet and data](./SimRankine/jsonmodel/N600.json)
 
 ## Run
 
