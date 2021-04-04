@@ -56,5 +56,5 @@ python rankinesim_spec.py
 
 ## Cite as
 
-Cheng Maohua. (2021, March 29). PySEE/PyRankine: The Open Source Hybrid Steady-state Simulator of Rankine Cycle in Python (Version 2.0). Zenodo. http://doi.org/10.5281/zenodo.4644278
+Cheng Maohua. (2021, April 4). PyRankine: The Open Source Hybrid Steady-state Simulator of Rankine Cycle in Python (Version V2.0.0). Zenodo. http://doi.org/10.5281/zenodo.4661966
 
