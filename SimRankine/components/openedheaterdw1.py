@@ -96,11 +96,11 @@ class OpenedheaterDw1:
         """
         balance the opened feedwater heater  
         """
-        # 1 1kd 疏水放热
+        # 1 1kg dw 
         qdw1 = self.iPort_dw[0].h - self.oPort_fw[0].h
-        # 2 1kg 抽汽放热
+        # 2 1kg es
         qes1 = self.iPort[0].h - self.oPort_fw[0].h
-        # 1kg给水吸热
+        # 1kg fw
         qfw1 = self.oPort_fw[0].h - self.iPort_fw[0].h
 
         # eta
@@ -143,9 +143,9 @@ class OpenedheaterDw1:
         """
         # heat
         qdw1 = self.iPort_dw[0].h - self.oPort_fw[0].h
-        # 2 1kg 抽汽放热
+        # 2 1kg es
         qes1 = self.iPort[0].h - self.oPort_fw[0].h
-        # 1kg给水吸热
+        # 1kg fw
         qfw1 = self.oPort_fw[0].h - self.iPort_fw[0].h
         self.heatExtracted_dw = self.iPort_dw[0].fdot * qdw1
         self.heatExtracted_es = self.iPort[0].fdot * qes1

@@ -108,7 +108,7 @@ class ClosedHeaterDw1:
         self.oPort_fw[0].pt()
 
     def state_dw(self):
-        """ oDW 需要先计算加热器出口水温后计算"""
+        """ oDW """
         self.oPort_dw[0].p = self.p_sm_side
         self.oPort_dw[0].t = self.iPort_fw[0].t + self.tdeltadw
         self.oPort_dw[0].pt()

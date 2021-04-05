@@ -157,14 +157,14 @@ class RankineCycle:
             elif self.comps[key].energy == "heatAdded":
                 self.totalheatAdded += self.comps[key].heatAdded
         
-        # 1 循环 cycle efficiency
+        # 1 cycle efficiency
         self.efficiency_cycle = self.totalworkExtracted / self.totalheatAdded
-        # 2 发电  power generation 
+        # 2 power generation 
         self.poweroutput = self.totalworkExtracted*self.etam *self.etag
         self.efficiency_power_generation = self.efficiency_cycle*self.etam*self.etag
         self.HeatRate_power_generation = 3600.0 / self.efficiency_power_generation
         self.SteamRate_power_generation = self.HeatRate_power_generation / self.totalheatAdded
-        # 3 供电 Power supply 
+        # 3 Power supply 
         self.netpoweroutput = self.totalworkExtracted*self.etam * \
                self.etag - self.totalworkRequired
         self.efficiency_power_supply = self.netpoweroutput/self.totalheatAdded
@@ -181,11 +181,11 @@ class RankineCycle:
             self.SpecifiedStr = "\n--- Specified  Mass ---\n"
             self.mdot = set_mass
         
-        # mdot计算：两种情况
-        # 1 设备之间连接点端口mdot计算
+        # mdot
+        # 1 mdot of connected ports
         for item in self.curcon.nodes:
             item[0].calmdot(self.mdot)
-        # 2 非设备之间连接点端口mdot计算,这些端口fdot给定，如sg
+        # 2 the mdot from the knowned fdot,for example: sg
         for key in self.comps:
             self.comps[key].calmdot(self.mdot)
       

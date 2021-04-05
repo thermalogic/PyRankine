@@ -94,7 +94,7 @@ class ClosedHeaterDw0:
         self.oPort_fw[0].pt()
 
     def state_dw(self):
-        """ oDW self.iPort_fw[0].t 来自于连接的加热器出口水温 """
+        """ oDW self.iPort_fw[0].t """
         self.oPort_dw[0].p = self.p_sm_side
         self.oPort_dw[0].t = self.iPort_fw[0].t + self.tdeltadw
         self.oPort_dw[0].pt()

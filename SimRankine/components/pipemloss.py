@@ -69,11 +69,7 @@ class PipeMloss:
         # energy
         self.heatLossPipe = self.lPort1[0].fdot * \
             self.lPort1[0].h+self.lPort2[0].fdot*self.lPort2[0].h
-        # 严格的话应该计算self.oPort[0].h - 结果稍变大
-        #self.oPort[0].h = (self.iPort[0].fdot * self.iPort[0].h-self.heatLossPipe)/ self.oPort[0].fdot
-        # self.oPort[0].p=self.iPort[0].p
-        # self.oPort[0].ph()
-
+     
     #  equation-oriented approach
     def equation_rows(self):
         # mass balance row

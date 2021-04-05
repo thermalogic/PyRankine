@@ -57,9 +57,7 @@ class PipeIlevel:
     def state(self):
         """ state """
         self.oPort[0].p = self.level*0.0098+self.iPort[0].p
-        # self.oPort[0].t = self.iPort[0].t #这个处理有近似之处，和合并方案比效率稍低
-        # self.oPort[0].pt()
-        self.oPort[0].h = self.iPort[0].h  # 这个处理有近似之处 -和合并方案比效率稍低
+        self.oPort[0].h = self.iPort[0].h  
         self.oPort[0].ph()
 
     def balance(self):

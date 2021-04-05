@@ -71,7 +71,6 @@ class Condenser:
         if self.iPort1 is not None:
             self.oPort1[0].fdot = self.iPort1[0].fdot
         # energy balance
-        # 排汽热力参数未知时，可以不计算self.heatExtracted，不影响循环的计算
         if self.iPort[0].h is not None:
             self.heatExtracted = self.iPort[0].fdot * \
                 (self.iPort[0].h - self.oPort[0].h)
