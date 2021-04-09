@@ -14,7 +14,7 @@ In the hybrid simulator, two kind of simulation approachs are provided:
 
 IAPWS-IF97 high-speed shared library
 
-* https://github.com/PySEE/SEUIF97
+* https://github.com/thermalogic/SEUIF97
 
 Install
 
