@@ -63,7 +63,7 @@ class RankineCycle:
         self.curcon=Connector()
         # 2 use the dictconnectors to set the nodes value and alias between the item of nodes and the port of devices
         for tupconnector in listconnectors:
-            self.curcon.AddConnector(tupconnector, self.comps)
+            self.curcon.add_node(tupconnector, self.comps)
 
         self.totalworkExtracted = 0
         self.totalworkRequired = 0

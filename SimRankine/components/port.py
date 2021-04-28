@@ -14,46 +14,19 @@ class Port:
     title = ('{:^4} \t{:<3} \t{:>3} {:>10} {:>10} \t{:^6} \t{:^6} \t{:>10} \t\t{:^15} '.format
              ("ID", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)",  "X", "FDOT", "MDOT(kg/h)", "DESC"))
 
+    kwargs = {'p': None, 't': None, 'x': None,  'h': None, 'fdot': None}
+
     def __init__(self, dictport):
         """ create the port/node object"""
-        self.id = -10
-        self.desc = ""
-        self.p = None
-        self.t = None
-        self.x = None
-        self.h = None
-        self.fdot = None
+        kwargs = Port.kwargs.copy()
+        kwargs.update(dictport)
+        for key in Port.kwargs.keys():
+            if type(kwargs[key]) is int:
+                kwargs[key] = float(kwargs[key])
+        self.__dict__.update(kwargs)
 
-        if('p' in dictport):
-            try:
-                self.p = float(dictport['p'])
-            except:
-                pass
-
-        if ('t' in dictport):
-            try:
-                self.t = float(dictport['t'])
-            except:
-                pass
-
-        if ('x' in dictport):
-            try:
-                self.x = float(dictport['x'])
-            except:
-                pass
-
-        if ('h' in dictport):
-            try:
-                self.h = float(dictport['h'])
-            except:
-                pass
-
-        if ('fdot' in dictport):
-            try:
-                self.fdot = float(dictport['fdot'])
-            except:
-                pass
-
+        self.id=-10
+        self.desc=""
         self.s = None
         self.v = None
         self.mdot = None

@@ -14,7 +14,7 @@ from rankine.rankineobj import RankineCycle
 
 
 curpath = os.path.abspath(os.path.dirname(__file__))
-rankinefilename = curpath+'\\'+'./jsonmodels/N600.json'
+rankinefilename = curpath+'\\'+'./jsonmodel/N600.json'
 dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 
 # 1kg only
