@@ -121,7 +121,7 @@ class RankineCycle:
                 for col in row["a"]:
                      self.A[currow, col[0]] = col[1]
                 self.b[currow]=row["b"]
-                #print(key,self.A[currow],self.b[currow])
+                print(key,self.A[currow],self.b[currow])
                 currow += 1  
    
         fdot = np.linalg.solve(self.A, self.b)

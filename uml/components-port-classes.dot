@@ -1,0 +1,6 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"SimRankine.components.port.Port" [color="black", fontcolor="black", label="{Port|desc : str\lfdot\lh\lid : int\lkwargs : dict\lmdot : NoneType\lp\ls : NoneType\lt\ltitle : str\lv : NoneType\lx : int\l|calmdot(totalmass)\lhs()\lph()\lps()\lpt()\lpx()\ltx()\l}", shape="record", style="solid"];
+"SimRankine.components.connector.Connector" [color="black", fontcolor="black", label="{Connector|id : int\lnodes : list\l|add_node(tupConnector, comps)\lcombined_node_value(node, port)\l}", shape="record", style="solid"];
+}

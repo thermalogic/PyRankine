@@ -1,0 +1,10 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"rankine" [color="black", label="rankine", shape="box", style="solid"];
+"rankine.rankineobj" [color="black", label="rankine.rankineobj", shape="box", style="solid"];
+"rankine.simrankine" [color="black", label="rankine.simrankine", shape="box", style="solid"];
+"rankine.utils" [color="black", label="rankine.utils", shape="box", style="solid"];
+"rankine.simrankine" -> "rankine.rankineobj" [arrowhead="open", arrowtail="none"];
+"rankine.simrankine" -> "rankine.utils" [arrowhead="open", arrowtail="none"];
+}

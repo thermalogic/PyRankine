@@ -11,7 +11,7 @@ The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
                 │       │
                 │       │
                 │       │
-                └───┬───┘
+                └───┬───┘=
                    ↓ ↓ oPort/1 condensate water
                            
 json object example:
