@@ -1,0 +1,20 @@
+@startuml
+class Boiler{
+    + {static} devtype: string 
+    + {static} energy: string 
+    + name: string 
+    + iPort: Port[1]
+    + oPort: Port[1]
+    + portdict: dict 
+    + heatAdded: float 
+    + QAdded: float 
+    + {static}  Boiler(dictDev：dict)
+    + state() 
+    + balance() : sequential-modular approach
+    + equation_rows() : equation-oriented approach
+    + energy_fdot()   : equation-oriented approach
+    + calmdot(totalmass:float)
+    + sm_energy()
+    + toString()
+}
+@enduml
