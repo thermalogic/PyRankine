@@ -1,0 +1,31 @@
+@startuml
+class Port{
+    + {static} title : string 
+    + {static} kwargs : dict 
+    + id : int
+    + desc : str
+    + p : float  
+    + t : float 
+    + h : float 
+    + s : float 
+    + v : float 
+    + x : float 
+    + fdot : float 
+    + mdot : float 
+    + {static} __init__(dictport：dict)
+    + pt()
+    + ph()
+    + ps()
+    + px()
+    + tx()
+    + hs()
+    + calmdot(totalmass:float)
+    +__str__() : str
+}
+note right of Port::kwargs
+{'p':, 't': , 'x': , 'h': , 'fdot': }
+end note
+note right of Port::__init__(dictport：dict)
+{'p':, 't': , 'x':,'h': , 'fdot': }
+end note
+@enduml

@@ -14,7 +14,7 @@ class Port:
     title = ('{:^4} \t{:<3} \t{:>3} {:>10} {:>10} \t{:^6} \t{:^6} \t{:>10} \t\t{:^15} '.format
              ("ID", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)",  "X", "FDOT", "MDOT(kg/h)", "DESC"))
 
-    kwargs = {'p': None, 't': None, 'x': None,  'h': None, 'fdot': None}
+    kwargs = {'p': None, 't': None, 'x': None, 'h': None, 'fdot': None}
 
     def __init__(self, dictport):
         """ create the port/node object"""

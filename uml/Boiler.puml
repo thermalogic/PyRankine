@@ -26,4 +26,11 @@ end note
 note right of Boiler::energy_fdot
     equation-oriented 
 end note
+note left of Boiler::__init__(dictDev：dict)
+    {"name": "BO",
+     "devtype": "BOILER", 
+     "iPort": {},
+     "oPort": {}}
+end note
+
 @enduml
