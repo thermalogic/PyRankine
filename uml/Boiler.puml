@@ -17,16 +17,7 @@ class Boiler{
     + sm_energy()
     +__str__(): str
 }
-note right of Boiler::balance
-    sequential-modular
-end note
-note right of Boiler::equation_rows
-    equation-oriented 
-end note
-note right of Boiler::energy_fdot
-    equation-oriented 
-end note
-note left of Boiler::__init__(dictDev：dict)
+note right of Boiler::__init__
     {"name": "BO",
      "devtype": "BOILER", 
      "iPort": {},

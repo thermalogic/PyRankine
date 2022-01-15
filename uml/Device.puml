@@ -1,0 +1,43 @@
+@startuml
+class Device{
+    + {static} devtype: string 
+    + {static} energy: string
+    + name: string 
+    + iPort*: Port[1]
+    + oPort*: Port[1]
+    + portdict: dict
+    + value*: float  
+    + {static} __init__(dictDev：dict)
+    + state()
+    + balance()
+    + equation_rows()
+    + energy_fdot()
+    + calmdot(totalmass:float)
+    + sm_energy()
+    +__str__(): str
+}
+note left of Device::balance
+    sequential-modular
+end note
+note left of Device::equation_rows
+    equation-oriented 
+end note
+note left of Device::energy_fdot
+    equation-oriented 
+end note
+note right of Device::portdict
+map the port's name to the obj
+    self.portdict = {
+        "iPort": self.iPort,
+        "oPort": self.oPort
+    }
+end note
+note right of Device::__init__
+    {"name": "*",
+     "devtype": "*", 
+     "iPort*": {},
+     "oPort*": {},
+      "Value*": * }
+end note
+
+@enduml
