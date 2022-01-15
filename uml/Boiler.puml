@@ -26,8 +26,5 @@ end note
 note right of Boiler::energy_fdot
     equation-oriented 
 end note
-skinparam class{
-    BackgroundColor orange
-    BorderColor grey
 }
 @enduml
