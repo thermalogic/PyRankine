@@ -5,7 +5,7 @@
   - [The Class UML Diagrams](#the-class-uml-diagrams)
     - [Class Port](#class-port)
     - [Device Class](#device-class)
-      - [The common structurn of the Device Classes](#the-common-structurn-of-the-device-classes)
+      - [The common structure of the Device Classes](#the-common-structure-of-the-device-classes)
       - [Class Boiler](#class-boiler)
 
 <!-- /TOC -->
@@ -17,7 +17,7 @@
 
 ### Device Class
 
-#### The common structurn of the Device Classes
+#### The common structure of the Device Classes
 
 ![Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/Device.puml)
 
