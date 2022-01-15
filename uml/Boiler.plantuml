@@ -1,0 +1,33 @@
+@startuml
+class Boiler{
+    + {static} devtype: string 
+    + {static} energy: string
+    + name: string 
+    + iPort: Port[1]
+    + oPort: POrt[1]
+    + portdict: dict
+    + heatAdded: float  
+    + QAdded: float 
+    + {static} __init__()
+    + state()
+    + balance()
+    + equation_rows()
+    + energy_fdot()
+    + calmdot(totalmass:float)
+    + sm_energy()
+    +__str__(): str
+}
+note right of Boiler::balance
+    sequential-modular
+end note
+note right of Boiler::equation_rows
+    equation-oriented 
+end note
+note right of Boiler::energy_fdot
+    equation-oriented 
+end note
+skinparam class{
+    BackgroundColor orange
+    BorderColor grey
+}
+@enduml
