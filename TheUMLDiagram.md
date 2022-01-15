@@ -35,3 +35,5 @@
 ###  Class RankineCycle
 
 ![RankineCycle](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/RankineCycle.puml)
+
+![RankineCycle_Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/RankineCycle_Device.puml)
