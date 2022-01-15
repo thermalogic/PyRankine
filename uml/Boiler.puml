@@ -8,7 +8,7 @@ class Boiler{
     + portdict: dict
     + heatAdded: float  
     + QAdded: float 
-    + {static} __init__()
+    + {static} __init__(dictDev：dict)
     + state()
     + balance()
     + equation_rows()
