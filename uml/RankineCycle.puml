@@ -20,7 +20,7 @@ class RankineCycle{
     + totalWExtracted: float **mdot**
     + totalWRequired: float
     + netWExtracted: float
-    + Wcycledot: float
+    + Wcycledot: float **Net Output Power**
     + SteamRate_power_generation : float  
     + SteamRate_power_supply : float
     + HeatRate_power_generation : float  

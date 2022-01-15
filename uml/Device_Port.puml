@@ -1,0 +1,3 @@
+@startuml
+Device "2..*" *-- "2..*" Port : iPort*,oPort*
+@enduml
