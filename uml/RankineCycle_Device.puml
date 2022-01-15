@@ -1,6 +1,6 @@
 @startuml
 RankineCycle "1" *-- "1" Boiler: iPort,oPort
-RankineCycle "1..*" *-- "1..*" TurbineExs: iPort,oPort
+RankineCycle "1..*" *-- "1..*" TurbineExs: iPort,oPort,ePort[0..*]
 RankineCycle "1" *-- "1" Condenser: iPort,oPort
-RankineCycle "1..*" *-- "1..*" Pump: iPort,oPort，ePort[0..*]
+RankineCycle "1..*" *-- "1..*" Pump: iPort,oPort
 @enduml
