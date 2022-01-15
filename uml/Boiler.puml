@@ -26,5 +26,4 @@ end note
 note right of Boiler::energy_fdot
     equation-oriented 
 end note
-}
 @enduml
