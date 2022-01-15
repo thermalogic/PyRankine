@@ -65,11 +65,11 @@ class RankineCycle:
         for tupconnector in listconnectors:
             self.curcon.add_node(tupconnector, self.comps)
 
-        self.totalworkExtracted = 0
-        self.totalworkRequired = 0
-        self.totalheatAdded = 0
+        self.totalworkExtracted = 0.0
+        self.totalworkRequired = 0.0
+        self.totalheatAdded = 0.0
 
-        self.netpoweroutput = 0
+        self.netpoweroutput = 0.0
        
         # Specified 
         self.Specified = False
@@ -77,12 +77,12 @@ class RankineCycle:
         self.mdot = None
         self.Wcycledot = None
        
-        self.totalWExtracted = 0
-        self.totalWRequired = 0
-        self.totalQAdded = 0
+        self.totalWExtracted = 0.0
+        self.totalWRequired = 0.0
+        self.totalQAdded = 0.0
 
     # sequential-modular approach
-    def component_analysis_sm(self, funstr):
+    def __component_analysis_sm(self, funstr):
         keys = list(self.comps.keys())
         deviceok = False
 
@@ -109,7 +109,7 @@ class RankineCycle:
 
     
     #  equation-oriented approach
-    def equation_eo(self):
+    def __equation_eo(self):
         connum=len(self.curcon.nodes)
         self.A = np.zeros((connum, connum))
         self.b = np.zeros(connum)
@@ -134,13 +134,13 @@ class RankineCycle:
    
     # sequential-modular approach
     def simulator_sm(self):
-        self.component_analysis_sm("STATE")
-        self.component_analysis_sm("BALANCE")
+        self.__component_analysis_sm("STATE")
+        self.__component_analysis_sm("BALANCE")
 
     #  equation-oriented approach
     def simulator_eo(self):
-        self.component_analysis_sm("STATE") 
-        self.equation_eo()
+        self.__component_analysis_sm("STATE")
+        self.__equation_eo()
         for key in self.comps:
             self.comps[key].energy_fdot()
  

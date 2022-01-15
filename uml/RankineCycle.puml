@@ -1,0 +1,63 @@
+@startuml
+class RankineCycle{
+    + name : string 
+    + DevNum : int
+    + comps : dict
+    + etag : float
+    + etam : float
+    + mdot : float 
+    + Specified : bool
+    + SpicifiedStr : str
+    + curcon : int 
+    + A : [][] float 
+    + b : [] float
+    + totalheatAdded: float **1kg mass**
+    + totalworkExtracted: float
+    + totalworkRequired: float
+    + poweroutput: float
+    + netpoweroutput ：float
+    + totalQAdded: float
+    + totalWExtracted: float **mdot**
+    + totalWRequired: float
+    + netWExtracted: float
+    + Wcycledot: float
+    + SteamRate_power_generation : float  
+    + SteamRate_power_supply : float
+    + HeatRate_power_generation : float  
+    + HeatRate_power_supply : float
+    + SteamRate_power_generation : float  
+    + SteamRate_power_supply : float
+    + efficiency_cycle：float
+    + efficiency_power_generation：float
+    + efficiency_power_supply：float
+    + {static} RankineCycle(rankinecycle:dict)
+    - __component_analysis_sm(funstr：str)
+    + simulator_sm()
+    - __equation_eo()
+    + simulator_eo()
+    + simulator_performance()
+    + specified_simulator(set_power:float,set_mass：float)
+    - __set_formatstr(formatstr：str, result:str) : str
+    +__str__() : str
+}
+note left of RankineCycle::component_analysis_sm
+   funstr："STATE": device.state()
+          "BALANCE": device.balance()
+end note
+note left of RankineCycle::equation_eo
+   device.equation_rows() to **Ax=b** ,then get the solution
+end note
+note left of RankineCycle::simulator_sm
+   sequential-modular
+end note
+note left of RankineCycle::simulator_eo
+    equation-oriented 
+end note
+note right of RankineCycle::RankineCycle
+  { "name": "N600",
+    "etam": 0.99,
+    "etag": 0.988,
+    "components": [],
+    "connectors": [] } 
+end note
+@enduml
