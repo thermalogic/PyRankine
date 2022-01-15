@@ -4,7 +4,7 @@ class Boiler{
     + {static} energy: string
     + name: string 
     + iPort: Port[1]
-    + oPort: POrt[1]
+    + oPort: Port[1]
     + portdict: dict
     + heatAdded: float  
     + QAdded: float 
