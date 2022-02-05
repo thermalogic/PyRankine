@@ -6,9 +6,7 @@ Package: components
 Author: Cheng Maohua, Email: cmh@seu.edu.cn
 """
 
-from .port import Port
-from .connector import Connector
-#
+#--- device class
 from .boiler import Boiler
 from .reheater import Reheater
 #
@@ -33,9 +31,9 @@ from .combinedheater import CombinedHeater
 from .split_one2two import Split_One2Two
 
 # ------------------------------------------------------------------------------
-# compdict(jump table)
-#  1: key:value-> Type String: class  name
-#  2    add the new key:value to the dict after you add the new device class/type
+# compdict
+#  devtype: class  name
+#  2   add the new key:value to the dict after you add the new device class
 # --------------------------------------------------------------------------------
 
 compdict = {

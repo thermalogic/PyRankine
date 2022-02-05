@@ -16,14 +16,14 @@ class Port:
 
     def __init__(self, dictport):
         """ create the port/node object"""
-        self.p=None
+        self.p = None
         self.t = None
         self.x = None
         self.h = None
         self.fdot = None
-       
-        self.id=-10
-        self.desc=""
+
+        self.id = -10
+        self.desc = ""
         self.s = None
         self.v = None
         self.mdot = None
@@ -42,8 +42,6 @@ class Port:
         elif self.h is not None and self.x is not None:
             self.hx()
 
-        
-    
     def calmdot(self, totalmass):
         self.mdot = totalmass * self.fdot
 
@@ -94,7 +92,7 @@ class Port:
         self.p = if97.hx2p(self.h, self.x)
         self.v = if97.hx2v(self.h, self.x)
         self.s = if97.hx2s(self.h, self.x)
-       
+
     def __str__(self):
         if (self.id != -10):
             result = '{:^6}'.format(self.id)

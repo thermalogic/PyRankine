@@ -26,7 +26,7 @@ import getpass
 import numpy as np
 
 from components.port import Port
-from components.connector import Connector
+from .connector import Connector
 from components import compdict
 
 class RankineCycle:

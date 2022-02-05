@@ -7,8 +7,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 """
 
-from .port import *
-
+from components.port import Port
 
 class Connector:
 
