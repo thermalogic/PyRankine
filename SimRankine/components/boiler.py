@@ -3,13 +3,13 @@ The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
  class Boiler
 
-                    ↑    oPort[0] main steam
+                    ↑    oPort main steam
                 ┌───┼───┐ 
                 │   │   │   
                 │   │   │
                 │   │   │
                 └───┼───┘  
-                    ↑    iPort[0]  main feedwater
+                    ↑    iPort  main feedwater
                           
  json object example:
 
