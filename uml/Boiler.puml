@@ -3,9 +3,8 @@ class Boiler{
     + {static} devtype: string 
     + {static} energy: string
     + name: string 
-    + iPort: Port[1]
-    + oPort: Port[1]
-    + portdict: dict
+    + iPort: Port
+    + oPort: Port
     + heatAdded: float  
     + QAdded: float 
     + {static} __init__(dictDev：dict)

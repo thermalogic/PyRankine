@@ -44,37 +44,32 @@ class PipeIlevel:
         Initializes the pump with the conditions
         """
         self.name = dictDev['name']
-        self.iPort = [Port(dictDev['iPort'])]
-        self.oPort = [Port(dictDev['oPort'])]
+        self.iPort = Port(dictDev['iPort'])
+        self.oPort = Port(dictDev['oPort'])
 
-        # map the name of port to the port obj
-        self.portdict = {
-            "iPort": self.iPort,
-            "oPort": self.oPort
-        }
         self.level = dictDev['iLevel']
 
     def state(self):
         """ state """
-        self.oPort[0].p = self.level*0.0098+self.iPort[0].p
-        self.oPort[0].h = self.iPort[0].h  
-        self.oPort[0].ph()
+        self.oPort.p = self.level*0.0098+self.iPort.p
+        self.oPort.h = self.iPort.h  
+        self.oPort.ph()
 
     def balance(self):
         """ Simulates  """
         # mass balanceequation
-        if (self.iPort[0].fdot is not None):
-            self.oPort[0].fdot = self.iPort[0].fdot
-        elif (self.oPort[0].fdot is not None):
-            self.iPort[0].fdot = self.oPort[0].fdot
-        if (self.oPort[0].fdot is None or self.iPort[0].fdot is None):
+        if (self.iPort.fdot is not None):
+            self.oPort.fdot = self.iPort.fdot
+        elif (self.oPort.fdot is not None):
+            self.iPort.fdot = self.oPort.fdot
+        if (self.oPort.fdot is None or self.iPort.fdot is None):
             raise ValueError("fdot not none")
 
     #  equation-oriented approach
     def equation_rows(self):
         # 1 mass balance row
-        colid = [(self.iPort[0].id, 1),
-                 (self.oPort[0].id, -1)]
+        colid = [(self.iPort.id, 1),
+                 (self.oPort.id, -1)]
         self.rows = [{"a": colid, "b": 0}]
 
     #  equation-oriented approach
@@ -93,7 +88,7 @@ class PipeIlevel:
         """ string of feedwater pump """
         result = '\n' + self.name
         result += '\n' + " PORT " + Port.title
-        result += '\n' + " iPort "+self.iPort[0].__str__()
-        result += '\n' + " oPort "+self.oPort[0].__str__()
+        result += '\n' + " iPort "+self.iPort.__str__()
+        result += '\n' + " oPort "+self.oPort.__str__()
         result += '\nhlevel(m): \t{:>.2f}'.format(self.level)
         return result

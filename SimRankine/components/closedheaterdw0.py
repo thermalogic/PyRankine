@@ -50,18 +50,11 @@ class ClosedHeaterDw0:
         """
         self.name = dictDev['name']
 
-        self.iPort = [Port(dictDev['iPort'])]
-        self.iPort_fw = [Port(dictDev['iPort_fw'])]
-        self.oPort_fw = [Port(dictDev['oPort_fw'])]
-        self.oPort_dw = [Port(dictDev['oPort_dw'])]
+        self.iPort = Port(dictDev['iPort'])
+        self.iPort_fw = Port(dictDev['iPort_fw'])
+        self.oPort_fw = Port(dictDev['oPort_fw'])
+        self.oPort_dw = Port(dictDev['oPort_dw'])
 
-        # map the name of port to the port obj
-        self.portdict = {
-            "iPort": self.iPort,
-            "iPort_fw": self.iPort_fw,
-            "oPort_fw": self.oPort_fw,
-            "oPort_dw": self.oPort_dw
-        }
         if ("tdelta" in dictDev):
             self.tdelta = dictDev['tdelta']
         else:
@@ -82,22 +75,24 @@ class ClosedHeaterDw0:
 
     def state_fw(self):
         """ oFW """
-        if self.iPort_fw[0].p is not None:
-            self.oPort_fw[0].p = self.iPort_fw[0].p
-        elif self.oPort_fw[0].p is not None:
-            self.iPort_fw[0].p = self.oPort_fw[0].p
-
-        self.p_sm_side = self.iPort[0].p
+     
+        if self.iPort_fw.p is not None:
+            self.oPort_fw.p = self.iPort_fw.p
+        elif self.oPort_fw.p is not None:
+            self.iPort_fw.p = self.oPort_fw.p
+     
+        self.p_sm_side = self.iPort.p
         self.t_sat = px2t(self.p_sm_side, 0)
-
-        self.oPort_fw[0].t = self.t_sat - self.tdelta
-        self.oPort_fw[0].pt()
+     
+        self.oPort_fw.t = self.t_sat - self.tdelta
+        self.oPort_fw.pt()
+     
 
     def state_dw(self):
-        """ oDW self.iPort_fw[0].t """
-        self.oPort_dw[0].p = self.p_sm_side
-        self.oPort_dw[0].t = self.iPort_fw[0].t + self.tdeltadw
-        self.oPort_dw[0].pt()
+        """ oDW self.iPort_fw.t """
+        self.oPort_dw.p = self.p_sm_side
+        self.oPort_dw.t = self.iPort_fw.t + self.tdeltadw
+        self.oPort_dw.pt()
 
     def state(self):
         """ oFW,oDW """
@@ -105,42 +100,43 @@ class ClosedHeaterDw0:
             self.state_fw()
         if self.tdeltadw is not None:
             self.state_dw()
+         
 
     # sequential-modular approach
     def balance(self):
         """  balance the closed feed water heater  """
-        if (self.oPort_fw[0].fdot != None):
-            self.iPort_fw[0].fdot = self.oPort_fw[0].fdot
-        elif (self.iPort_fw[0].fdot != None):
-            self.oPort_fw[0].fdot = self.iPort_fw[0].fdot
+        if (self.oPort_fw.fdot != None):
+            self.iPort_fw.fdot = self.oPort_fw.fdot
+        elif (self.iPort_fw.fdot != None):
+            self.oPort_fw.fdot = self.iPort_fw.fdot
 
-        self.heatAdded = self.oPort_fw[0].fdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h)
+        self.heatAdded = self.oPort_fw.fdot * \
+            (self.oPort_fw.h - self.iPort_fw.h)
         # eta
         self.heatExtracted = self.heatAdded/self.eta
-        # self.iPort[0].fdot
-        self.iPort[0].fdot = self.heatExtracted / \
-            (self.iPort[0].h - self.oPort_dw[0].h)
-        self.oPort_dw[0].fdot = self.iPort[0].fdot
+        # self.iPort.fdot
+        self.iPort.fdot = self.heatExtracted / \
+            (self.iPort.h - self.oPort_dw.h)
+        self.oPort_dw.fdot = self.iPort.fdot
 
     #  equation-oriented approach
     def equation_rows(self):
         """ each row {"a":[(colid,val)] "b":val} """
         # 1 steam mass balance row:
-        colidms = [(self.iPort[0].id, 1),
-                   (self.oPort_dw[0].id, -1)]
+        colidms = [(self.iPort.id, 1),
+                   (self.oPort_dw.id, -1)]
         rowms = {"a": colidms, "b": 0}
 
         # 2 feedwater mass balance  row:
-        colidmw = [(self.iPort_fw[0].id, 1),
-                   (self.oPort_fw[0].id, -1)]
+        colidmw = [(self.iPort_fw.id, 1),
+                   (self.oPort_fw.id, -1)]
         rowmw = {"a": colidmw, "b": 0}
 
         # 3 energy balance row
-        colide = [(self.iPort[0].id, self.iPort[0].h),
-                  (self.iPort_fw[0].id, self.iPort_fw[0].h),
-                  (self.oPort_dw[0].id, -self.oPort_dw[0].h),
-                  (self.oPort_fw[0].id, -self.oPort_fw[0].h)]
+        colide = [(self.iPort.id, self.iPort.h),
+                  (self.iPort_fw.id, self.iPort_fw.h),
+                  (self.oPort_dw.id, -self.oPort_dw.h),
+                  (self.oPort_fw.id, -self.oPort_fw.h)]
         rowe = {"a": colide, "b": 0}
         self.rows = [rowms, rowmw, rowe]
 
@@ -148,11 +144,11 @@ class ClosedHeaterDw0:
 
     def energy_fdot(self):
         """  Simulates the closed feed water heater  """
-        self.heatAdded = self.oPort_fw[0].fdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h)
+        self.heatAdded = self.oPort_fw.fdot * \
+            (self.oPort_fw.h - self.iPort_fw.h)
         # eta
-        self.heatExtracted = self.iPort[0].fdot * \
-            (self.iPort[0].h - self.oPort_dw[0].h)
+        self.heatExtracted = self.iPort.fdot * \
+            (self.iPort.h - self.oPort_dw.h)
 
     def calmdot(self, totalmass):
         pass
@@ -160,18 +156,18 @@ class ClosedHeaterDw0:
     def sm_energy(self):
         """ mdot """
         ucovt = 3600.0*1000.0
-        self.QExtracted = self.iPort[0].mdot * \
-            (self.iPort[0].h - self.oPort_dw[0].h) / ucovt
-        self.QAdded = self.oPort_fw[0].mdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h) / ucovt
+        self.QExtracted = self.iPort.mdot * \
+            (self.iPort.h - self.oPort_dw.h) / ucovt
+        self.QAdded = self.oPort_fw.mdot * \
+            (self.oPort_fw.h - self.iPort_fw.h) / ucovt
 
     def __str__(self):
         result = '\n'+self.name
         result += '\n'+" PORT "+Port.title
-        result += '\n'+"iES"+self.iPort[0].__str__()
-        result += '\n'+"oDW"+self.oPort_dw[0].__str__()
-        result += '\n'+"iFW"+self.iPort_fw[0].__str__()
-        result += '\n'+"oFW"+self.oPort_fw[0].__str__()
+        result += '\n'+"iES"+self.iPort.__str__()
+        result += '\n'+"oDW"+self.oPort_dw.__str__()
+        result += '\n'+"iFW"+self.iPort_fw.__str__()
+        result += '\n'+"oFW"+self.oPort_fw.__str__()
         if self.tdelta is not None:
             result += '\ndelta(C) \t%.2f' % (self.tdelta)
         if self.tdeltadw is not None:

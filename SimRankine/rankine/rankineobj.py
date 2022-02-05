@@ -58,7 +58,6 @@ class RankineCycle:
         self.DevNum = len(dictcomps)
         self.comps = {}
         for curdev in dictcomps:
-            print(compdict[curdev['devtype']])
             self.comps[curdev['name']] = compdict[curdev['devtype']](curdev)
 
         self.curcon=Connector()
@@ -84,6 +83,7 @@ class RankineCycle:
 
     # sequential-modular approach
     def __component_analysis_sm(self, funstr):
+        
         keys = list(self.comps.keys())
         deviceok = False
 
@@ -131,7 +131,7 @@ class RankineCycle:
         #print(fdot)
         
         for i in range(len(self.curcon.nodes)):
-            self.curcon.nodes[i][0].fdot = fdot[i]
+            self.curcon.nodes[i].fdot = fdot[i]
    
     # sequential-modular approach
     def simulator_sm(self):

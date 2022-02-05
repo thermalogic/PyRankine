@@ -49,23 +49,14 @@ class OpenedheaterDw1:
         Initializes the Open feed water with the conditions
         """
         self.name = dictDev['name']
-        self.iPort = [Port(dictDev['iPort'])]
-        self.iPort_fw = [Port(dictDev['iPort_fw'])]
-        self.oPort_fw = [Port(dictDev['oPort_fw'])]
-        self.iPort_dw = [Port(dictDev['iPort_dw'])]
+        self.iPort = Port(dictDev['iPort'])
+        self.iPort_fw = Port(dictDev['iPort_fw'])
+        self.oPort_fw = Port(dictDev['oPort_fw'])
+        self.iPort_dw = Port(dictDev['iPort_dw'])
         if ("eta" in dictDev):
             self.eta = dictDev['eta']
         else:
             self.eta = 1.00
-
-        # map the name of port to the port obj
-        self.portdict = {
-            "iPort": self.iPort,
-            "iPort_fw": self.iPort_fw,
-            "oPort_fw": self.oPort_fw,
-            "iPort_dw": self.iPort_dw
-
-        }
 
         self.heatAdded = 0
         self.heatExtracted_s = None
@@ -76,12 +67,12 @@ class OpenedheaterDw1:
 
     def state_fw(self):
         """ oPort_fw """
-        self.p_sm_side = self.iPort[0].p
+        self.p_sm_side = self.iPort.p
         self.t_sat = px2t(self.p_sm_side, 0)
-        self.oPort_fw[0].p = self.p_sm_side
-        self.oPort_fw[0].t = self.t_sat
-        self.oPort_fw[0].x = 0
-        self.oPort_fw[0].px()
+        self.oPort_fw.p = self.p_sm_side
+        self.oPort_fw.t = self.t_sat
+        self.oPort_fw.x = 0
+        self.oPort_fw.px()
         self.tdelta = 0
 
     def state_dw(self):
@@ -97,42 +88,42 @@ class OpenedheaterDw1:
         balance the opened feedwater heater  
         """
         # 1 1kg dw 
-        qdw1 = self.iPort_dw[0].h - self.oPort_fw[0].h
+        qdw1 = self.iPort_dw.h - self.oPort_fw.h
         # 2 1kg es
-        qes1 = self.iPort[0].h - self.oPort_fw[0].h
+        qes1 = self.iPort.h - self.oPort_fw.h
         # 1kg fw
-        qfw1 = self.oPort_fw[0].h - self.iPort_fw[0].h
+        qfw1 = self.oPort_fw.h - self.iPort_fw.h
 
         # eta
-        a = self.oPort_fw[0].fdot*qfw1 - \
-            self.iPort_dw[0].fdot*(self.eta*qdw1+qfw1)
+        a = self.oPort_fw.fdot*qfw1 - \
+            self.iPort_dw.fdot*(self.eta*qdw1+qfw1)
         b = qes1*self.eta+qfw1
-        self.iPort[0].fdot = a/b
-        self.iPort_fw[0].fdot = self.oPort_fw[0].fdot - \
-            self.iPort[0].fdot-self.iPort_dw[0].fdot
+        self.iPort.fdot = a/b
+        self.iPort_fw.fdot = self.oPort_fw.fdot - \
+            self.iPort.fdot-self.iPort_dw.fdot
 
         # heat
-        self.heatExtracted_dw = self.iPort_dw[0].fdot * qdw1
-        self.heatExtracted_es = self.iPort[0].fdot * qes1
+        self.heatExtracted_dw = self.iPort_dw.fdot * qdw1
+        self.heatExtracted_es = self.iPort.fdot * qes1
         self.heatExtracted = self.heatExtracted_dw + self.heatExtracted_es
         # heatAddedto feedwater
-        self.heatAdded = self.iPort_fw[0].fdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h)
+        self.heatAdded = self.iPort_fw.fdot * \
+            (self.oPort_fw.h - self.iPort_fw.h)
 
     #  equation-oriented approach
     def equation_rows(self):
         """ masss ane erergy equations"""
         # 1 mass balance row
-        colidm = [(self.iPort[0].id, 1),
-                  (self.iPort_fw[0].id, 1),
-                  (self.iPort_dw[0].id, 1),
-                  (self.oPort_fw[0].id, -1)]
+        colidm = [(self.iPort.id, 1),
+                  (self.iPort_fw.id, 1),
+                  (self.iPort_dw.id, 1),
+                  (self.oPort_fw.id, -1)]
         rowm = {"a": colidm, "b": 0}
         # 2 energy balance row
-        colide = [(self.iPort[0].id, self.iPort[0].h),
-                  (self.iPort_fw[0].id, self.iPort_fw[0].h),
-                  (self.iPort_dw[0].id, self.iPort_dw[0].h),
-                  (self.oPort_fw[0].id, -self.oPort_fw[0].h)]
+        colide = [(self.iPort.id, self.iPort.h),
+                  (self.iPort_fw.id, self.iPort_fw.h),
+                  (self.iPort_dw.id, self.iPort_dw.h),
+                  (self.oPort_fw.id, -self.oPort_fw.h)]
         rowe = {"a": colide, "b": 0}
         self.rows = [rowm, rowe]
 
@@ -142,40 +133,40 @@ class OpenedheaterDw1:
         Simulates the opened feedwater heater  
         """
         # heat
-        qdw1 = self.iPort_dw[0].h - self.oPort_fw[0].h
+        qdw1 = self.iPort_dw.h - self.oPort_fw.h
         # 2 1kg es
-        qes1 = self.iPort[0].h - self.oPort_fw[0].h
+        qes1 = self.iPort.h - self.oPort_fw.h
         # 1kg fw
-        qfw1 = self.oPort_fw[0].h - self.iPort_fw[0].h
-        self.heatExtracted_dw = self.iPort_dw[0].fdot * qdw1
-        self.heatExtracted_es = self.iPort[0].fdot * qes1
+        qfw1 = self.oPort_fw.h - self.iPort_fw.h
+        self.heatExtracted_dw = self.iPort_dw.fdot * qdw1
+        self.heatExtracted_es = self.iPort.fdot * qes1
         self.heatExtracted = self.heatExtracted_dw + self.heatExtracted_es
         # heatAddedto feedwater
-        self.heatAdded = self.iPort_fw[0].fdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h)
+        self.heatAdded = self.iPort_fw.fdot * \
+            (self.oPort_fw.h - self.iPort_fw.h)
 
     def calmdot(self, totalmass):
         pass
 
     def sm_energy(self):
         ucovt = 3600.0*1000.0
-        self.QExtracted_es = self.iPort[0].mdot * \
-            (self.iPort[0].h - self.oPort_fw[0].h)/ucovt
+        self.QExtracted_es = self.iPort.mdot * \
+            (self.iPort.h - self.oPort_fw.h)/ucovt
         # drain water inlet
-        self.QExtracted_dw = self.iPort_dw[0].mdot * \
-            (self.iPort_dw[0].h - self.oPort_fw[0].h)/ucovt
+        self.QExtracted_dw = self.iPort_dw.mdot * \
+            (self.iPort_dw.h - self.oPort_fw.h)/ucovt
         self.QExtracted = self.QExtracted_es + self.QExtracted_dw
 
-        self.QAdded = self.iPort_fw[0].mdot * \
-            (self.oPort_fw[0].h - self.iPort_fw[0].h)/ucovt
+        self.QAdded = self.iPort_fw.mdot * \
+            (self.oPort_fw.h - self.iPort_fw.h)/ucovt
 
     def __str__(self):
         result = '\n' + self.name
         result += '\n'+" PORT " + Port.title
-        result += '\n'+"iES"+self.iPort[0].__str__()
-        result += '\n'+"iFW"+self.iPort_fw[0].__str__()
-        result += '\n'+"oFW"+self.oPort_fw[0].__str__()
-        result += '\n'+"iDW"+self.iPort_dw[0].__str__()
+        result += '\n'+"iES"+self.iPort.__str__()
+        result += '\n'+"iFW"+self.iPort_fw.__str__()
+        result += '\n'+"oFW"+self.oPort_fw.__str__()
+        result += '\n'+"iDW"+self.iPort_dw.__str__()
 
         result += '\neta(%%) \t%.2f' % (self.eta*100)
         result += '\nheatAdded(kJ) \t%.2f' % self.heatAdded

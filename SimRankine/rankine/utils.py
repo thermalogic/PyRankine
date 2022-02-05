@@ -44,7 +44,7 @@ def OutFiles(cycle, outfilename=None):
     print("\n--- CONNECTORS ---\n")
     print(Port.title)
     for item in cycle.curcon.nodes:
-        print(item[0])
+        print(item)
 
     # return to sys.stdout
     if (outfilename != None):

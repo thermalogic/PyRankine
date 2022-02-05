@@ -41,56 +41,50 @@ class Split_One2Two:
         """
         # self.__dict__.update(dictDev)
         self.name = dictDev['name']
-        self.iPort = [Port(dictDev['iPort'])]
-        self.oPort0 = [Port(dictDev['oPort0'])]
-        self.oPort1 = [Port(dictDev['oPort1'])]
+        self.iPort = Port(dictDev['iPort'])
+        self.oPort0 = Port(dictDev['oPort0'])
+        self.oPort1 = Port(dictDev['oPort1'])
 
-        # map the name of port to the port obj
-        self.portdict = {
-            "iPort": self.iPort,
-            "oPort0": self.oPort0,
-            "oPort1": self.oPort1
-        }
-
+    
     def state(self):
-        if self.iPort[0].p is not None and self.iPort[0].t is not None:
-            self.oPort0[0].p = self.iPort[0].p
-            self.oPort0[0].t = self.iPort[0].t
-            self.oPort0[0].pt()
+        if self.iPort.p is not None and self.iPort.t is not None:
+            self.oPort0.p = self.iPort.p
+            self.oPort0.t = self.iPort.t
+            self.oPort0.pt()
 
-            self.oPort1[0].p = self.iPort[0].p
-            self.oPort1[0].t = self.iPort[0].t
-            self.oPort1[0].pt()
+            self.oPort1.p = self.iPort.p
+            self.oPort1.t = self.iPort.t
+            self.oPort1.pt()
 
-        elif self.oPort0[0].p is not None and self.oPort0[0].t is not None:
-            self.iPort0[0].p = self.oPort0[0].p
-            self.iPort0[0].t = self.oPort[0].t
-            self.iPort0[0].pt()
+        elif self.oPort0.p is not None and self.oPort0.t is not None:
+            self.iPort0.p = self.oPort0.p
+            self.iPort0.t = self.oPort0.t
+            self.iPort0.pt()
 
-            self.oPort1[0].p = self.oPort0[0].p
-            self.oPort1[0].t = self.oPort0[0].t
-            self.oPort1[0].pt()
+            self.oPort1.p = self.oPort0.p
+            self.oPort1.t = self.oPort0.t
+            self.oPort1.pt()
 
-        elif self.oPort1[0].p is not None and self.oPort1[0].t is not None:
-            self.iPort0[0].p = self.oPort1[0].p
-            self.iPort0[0].t = self.oPort1[0].t
-            self.iPort0[0].pt()
+        elif self.oPort1.p is not None and self.oPort1.t is not None:
+            self.iPort0.p = self.oPort1.p
+            self.iPort0.t = self.oPort1.t
+            self.iPort0.pt()
 
-            self.oPort0[0].p = self.oPort1[0].p
-            self.oPort0[0].t = self.oPort1[0].t
-            self.oPort0[0].pt()
+            self.oPort0.p = self.oPort1.p
+            self.oPort0.t = self.oPort1.t
+            self.oPort0.pt()
 
     # sequential-modular approach
     def balance(self):
         """ 1kg mass balanceequation"""
-        if self.iPort[0].fdot is not None and self.oPort0[0].fdot is not None:
-            self.oPort1[0].fdot = self.iPort[0].fdot-self.oPort0[0].fdot
-        elif self.iPort[0].fdot is not None and self.oPort1[0].fdot is not None:
-            self.oPort0[0].fdot = self.iPort[0].fdot-self.oPort1[0].fdot
-        elif self.oPort0[0].fdot is not None and self.oPort1[0].fdot is not None:
-            self.iPort[0].fdot = self.oPort0[0].fdot+self.oPort1[0].fdot
+        if self.iPort.fdot is not None and self.oPort0.fdot is not None:
+            self.oPort1.fdot = self.iPort.fdot-self.oPort0.fdot
+        elif self.iPort.fdot is not None and self.oPort1.fdot is not None:
+            self.oPort0.fdot = self.iPort.fdot-self.oPort1.fdot
+        elif self.oPort0.fdot is not None and self.oPort1.fdot is not None:
+            self.iPort.fdot = self.oPort0.fdot+self.oPort1.fdot
         # the ifs maybe without any cal ,so use raise ValueError if fdot is None
-        if self.iPort[0].fdot is None or self.oPort0[0].fdot is None or self.oPort1[0].fdot is None:
+        if self.iPort.fdot is None or self.oPort0.fdot is None or self.oPort1.fdot is None:
             raise ValueError("fdot not none")
 
     #  equation-oriented approach
@@ -98,26 +92,26 @@ class Split_One2Two:
     def equation_rows(self):
         """ some ports may have values """
         # 1 mass balance  row
-        colid = [(self.iPort[0].id, 1),
-                 (self.oPort0[0].id, -1),
-                 (self.oPort1[0].id, -1),
+        colid = [(self.iPort.id, 1),
+                 (self.oPort0.id, -1),
+                 (self.oPort1.id, -1),
                  ]
         bv = 0
         # ports have values
-        if self.iPort[0].fdot is not None:
-            colid = [(self.oPort0[0].id, 1),
-                     (self.oPort1[0].id, 1)]
-            bv = self.iPort[0].fdot
+        if self.iPort.fdot is not None:
+            colid = [(self.oPort0.id, 1),
+                     (self.oPort1.id, 1)]
+            bv = self.iPort.fdot
 
-        if self.oPort0[0].fdot is not None:
-            colid = [(self.iPort[0].id, 1),
-                     (self.oPort1[0].id, -1)]
-            bv = self.oPort0[0].fdot
+        if self.oPort0.fdot is not None:
+            colid = [(self.iPort.id, 1),
+                     (self.oPort1.id, -1)]
+            bv = self.oPort0.fdot
 
-        if self.oPort1[0].fdot is not None:
-            colid = [(self.iPort[0].id, 1),
-                     (self.oPort0[0].id, -1)]
-            bv = self.oPort1[0].fdot
+        if self.oPort1.fdot is not None:
+            colid = [(self.iPort.id, 1),
+                     (self.oPort0.id, -1)]
+            bv = self.oPort1.fdot
 
         self.rows = [{"a": colid, "b": bv}]
 
@@ -135,7 +129,7 @@ class Split_One2Two:
     def __str__(self):
         result = '\n' + self.name
         result += '\n' + " PORT " + Port.title
-        result += '\n' + " iPort "+self.iPort[0].__str__()
-        result += '\n' + " oPort0 " + self.oPort0[0].__str__()
-        result += '\n' + " oPort1 " + self.oPort1[0].__str__()
+        result += '\n' + " iPort "+self.iPort.__str__()
+        result += '\n' + " oPort0 " + self.oPort0.__str__()
+        result += '\n' + " oPort1 " + self.oPort1.__str__()
         return result

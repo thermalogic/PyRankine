@@ -3,9 +3,8 @@ class Device{
     + {static} devtype: string 
     + {static} energy: string
     + name: string 
-    + iPort*: Port[1]
-    + oPort*: Port[1]
-    + portdict: dict
+    + iPort*: Port
+    + oPort*: Port
     + value*: float  
     + {static} __init__(dictDev：dict)
     + state()
@@ -24,13 +23,6 @@ note left of Device::equation_rows
 end note
 note left of Device::energy_fdot
     equation-oriented 
-end note
-note right of Device::portdict
-map the port's name to the obj
-    self.portdict = {
-        "iPort": self.iPort,
-        "oPort": self.oPort
-    }
 end note
 note right of Device::__init__
     {"name": "*",

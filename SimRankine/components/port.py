@@ -14,23 +14,21 @@ class Port:
     title = ('{:^4} \t{:<3} \t{:>3} {:>10} {:>10} \t{:^6} \t{:^6} \t{:>10} \t\t{:^15} '.format
              ("ID", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)",  "X", "FDOT", "MDOT(kg/h)", "DESC"))
 
-    kwargs = {'p': None, 't': None, 'x': None, 'h': None, 'fdot': None}
-
     def __init__(self, dictport):
         """ create the port/node object"""
-        kwargs = Port.kwargs.copy()
-        kwargs.update(dictport)
-        for key in Port.kwargs.keys():
-            if type(kwargs[key]) is int:
-                kwargs[key] = float(kwargs[key])
-        self.__dict__.update(kwargs)
-
+        self.p=None
+        self.t = None
+        self.x = None
+        self.h = None
+        self.fdot = None
+       
         self.id=-10
         self.desc=""
         self.s = None
         self.v = None
         self.mdot = None
 
+        self.__dict__.update(dictport)
         if self.p is not None and self.t is not None:
             self.pt()
         elif self.p is not None and self.x is not None:
@@ -44,6 +42,8 @@ class Port:
         elif self.h is not None and self.x is not None:
             self.hx()
 
+        
+    
     def calmdot(self, totalmass):
         self.mdot = totalmass * self.fdot
 
@@ -83,6 +83,18 @@ class Port:
         self.s = if97.tx2s(self.t, self.x)
         self.v = if97.tx2v(self.t, self.x)
 
+    def th(self):
+        self.p = if97.th2p(self.t, self.h)
+        self.x = if97.th2x(self.t, self.h)
+        self.s = if97.th2s(self.t, self.h)
+        self.v = if97.th2v(self.t, self.h)
+
+    def hx(self):
+        self.t = if97.hx2t(self.h, self.x)
+        self.p = if97.hx2p(self.h, self.x)
+        self.v = if97.hx2v(self.h, self.x)
+        self.s = if97.hx2s(self.h, self.x)
+       
     def __str__(self):
         if (self.id != -10):
             result = '{:^6}'.format(self.id)

@@ -42,31 +42,27 @@ class TurbineExs:
 
     def __init__(self, dictDev):
         self.name = dictDev['name']
-        self.iPort = [Port(dictDev['iPort'])]
-        self.oPort = [Port(dictDev['oPort'])]
+        self.iPort = Port(dictDev['iPort'])
+        self.oPort = Port(dictDev['oPort'])
         self.ePort = []
-        eportstrs = ['ePort0', 'ePort1', 'ePort2', 'ePort3']
-        for epstr in eportstrs:
-            if (epstr in dictDev):
-                self.ePort.append([Port(dictDev[epstr])])
-            else:
-                self.ePort.append(None)
-
+        self.ePort0, self.ePort1, self.ePort2, self.ePort3 = None, None, None, None
+        if ("ePort0" in dictDev):
+            self.ePort0 = Port(dictDev["ePort0"])
+            self.ePort.append(self.ePort0)
+        if ("ePort1" in dictDev):
+            self.ePort1 = Port(dictDev["ePort1"])
+            self.ePort.append(self.ePort1)
+        if ("ePort2" in dictDev):
+            self.ePort2 = Port(dictDev["ePort2"])
+            self.ePort.append(self.ePort2)
+        if ("ePort3" in dictDev):
+            self.ePort3 = Port(dictDev["ePort3"])
+            self.ePort.append(self.ePort3)
+        
         if ('eta' in dictDev):
             self.eta = dictDev['eta']
         else:
             self.eta = None
-
-        # map the name of port to the port obj
-        self.portdict = {
-            "iPort": self.iPort,
-            "oPort": self.oPort,
-            "ePort0": self.ePort[0],
-            "ePort1": self.ePort[1],
-            "ePort2": self.ePort[2],
-            "ePort3": self.ePort[3]
-
-        }
 
         self.workExtracted = 0
         self.WExtracted = 0
@@ -81,30 +77,28 @@ class TurbineExs:
             if self.eta == 1.0:
                 # ePort
                 for ep in self.ePort:
-                    if ep is not None:
-                        ep[0].s = self.iPort[0].s
-                        ep[0].ps()
+                    ep.s = self.iPort.s
+                    ep.ps()
                 # oPort
-                self.oPort[0].s = self.iPort[0].s
-                self.oPort[0].ps()
+                self.oPort.s = self.iPort.s
+                self.oPort.ps()
             else:
                 # ePort
                 for ep in self.ePort:
-                    if ep is not None:
-                        isosh = ps2h(ep[0].p, self.iPort[0].s)
-                        ep[0].h = self.iPort[0].h - \
-                            self.eta * (self.iPort[0].h - isosh)
-                        ep[0].ph()
+                    isosh = ps2h(ep.p, self.iPort.s)
+                    ep.h = self.iPort.h - \
+                        self.eta * (self.iPort.h - isosh)
+                    ep.ph()
                 # oPort
-                isoh = ps2h(self.oPort[0].p, self.iPort[0].s)
-                self.oPort[0].h = self.iPort[0].h - \
-                    self.eta * (self.iPort[0].h - isoh)
-                self.oPort[0].ph()
+                isoh = ps2h(self.oPort.p, self.iPort.s)
+                self.oPort.h = self.iPort.h - \
+                    self.eta * (self.iPort.h - isoh)
+                self.oPort.ph()
 
         else:
-            isosh = ps2h(self.oPort[0].p, self.iPort[0].s)
-            isohd = self.iPort[0].h - isosh
-            hd = self.iPort[0].h-self.oPort[0].h
+            isosh = ps2h(self.oPort.p, self.iPort.s)
+            isohd = self.iPort.h - isosh
+            hd = self.iPort.h-self.oPort.h
             self.eta = hd/isohd
 
     # sequential-modular approach
@@ -114,38 +108,34 @@ class TurbineExs:
         """
         totalesfdot = 0
         for ep in self.ePort:
-            if ep is not None:
-                if ep[0].fdot is None:  # 所有抽汽计算以后才可以计算排汽,所以，只要有抽汽未计算就抛出异常
-                    raise ValueError("es.fdot is none")
-                else:
-                    totalesfdot += ep[0].fdot
-        self.oPort[0].fdot = self.iPort[0].fdot-totalesfdot
+            if ep.fdot is None:  # 所有抽汽计算以后才可以计算排汽,所以，只要有抽汽未计算就抛出异常
+                raise ValueError("es.fdot is none")
+            else:
+               totalesfdot += ep.fdot
+        self.oPort.fdot = self.iPort.fdot-totalesfdot
 
-        ienergy = self.iPort[0].fdot * self.iPort[0].h
-        oenergy = self.oPort[0].fdot*self.oPort[0].h
+        ienergy = self.iPort.fdot * self.iPort.h
+        oenergy = self.oPort.fdot*self.oPort.h
         for ep in self.ePort:
-            if ep is not None:
-                oenergy += ep[0].fdot*ep[0].h
+            oenergy += ep.fdot*ep.h
         self.workExtracted = ienergy - oenergy
 
     #  equation-oriented approach
     def equation_rows(self):
         """ mass balance row """
         # 1 mass balance row
-        colid = [(self.iPort[0].id, 1),
-                 (self.oPort[0].id, -1)]
+        colid = [(self.iPort.id, 1),
+                 (self.oPort.id, -1)]
         for ep in self.ePort:
-            if ep is not None:
-                colid.append((ep[0].id, -1))
+            colid.append((ep.id, -1))
         self.rows = [{"a": colid, "b": 0}]
 
     #  equation-oriented approach
     def energy_fdot(self):
-        ienergy = self.iPort[0].fdot * self.iPort[0].h
-        oenergy = self.oPort[0].fdot*self.oPort[0].h
+        ienergy = self.iPort.fdot * self.iPort.h
+        oenergy = self.oPort.fdot*self.oPort.h
         for ep in self.ePort:
-            if ep is not None:
-                oenergy += ep[0].fdot*ep[0].h
+            oenergy += ep.fdot*ep.h
         self.workExtracted = ienergy - oenergy
 
     def calmdot(self, totalmass):
@@ -153,24 +143,22 @@ class TurbineExs:
 
     def sm_energy(self):
         """ mdot，get WExtracted """
-        ienergy = self.iPort[0].mdot * self.iPort[0].h
-        oenergy = self.oPort[0].mdot * self.oPort[0].h
+        ienergy = self.iPort.mdot * self.iPort.h
+        oenergy = self.oPort.mdot * self.oPort.h
         for ep in self.ePort:
-            if ep is not None:
-                oenergy += ep[0].mdot*ep[0].h
+            oenergy += ep.mdot*ep.h
         self.WExtracted = ienergy - oenergy
         self.WExtracted /= (3600.0 * 1000.0)
 
     def __str__(self):
         result = '\n' + self.name
         result += '\n' + " PORT " + Port.title
-        result += '\n' + " iPort " + self.iPort[0].__str__()
-        result += '\n' + " oPort " + self.oPort[0].__str__()
+        result += '\n' + " iPort " + self.iPort.__str__()
+        result += '\n' + " oPort " + self.oPort.__str__()
         i = 0
         for ep in self.ePort:
-            if ep is not None:
-                result += '\n' + " ePort" + str(i)+" "+ep[0].__str__()
-                i += 1
+            result += '\n' + " ePort" + str(i)+" "+ep.__str__()
+            i+=1
         result += '\neta(%): \t{:>.2f}'.format(self.eta*100.0)
         result += '\nworkExtracted(kJ): \t{:>.2f}'.format(
             self.workExtracted)

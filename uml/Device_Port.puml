@@ -1,7 +1,7 @@
 @startuml
 class Device{
-  iPort* : Port[1]
-  oPort* : Port[1]
+  iPort* : Port
+  oPort* : Port
 }
 Device "1" *-- "2..*" Port 
 @enduml
