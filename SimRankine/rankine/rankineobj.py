@@ -58,7 +58,6 @@ class RankineCycle:
         self.DevNum = len(dictcomps)
         self.comps = {}
         for curdev in dictcomps:
-            print(compdict[curdev['devtype']])
             self.comps[curdev['name']] = compdict[curdev['devtype']](curdev)
 
         self.curcon=Connector()
