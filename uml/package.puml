@@ -1,0 +1,15 @@
+@startuml
+package components {
+  Connector "1" *- "1..*" Port
+  Boiler "1" *- "2" Port
+  Condenser "1"*- "2" Port
+  Pump "1"*- "2" Port
+}
+
+package rankine {
+  SimRankineCycle "1" o- "1" RankineCycle   
+}
+rankine ..> components : <<import>>
+RankineCycle "1" *- "1" Connector
+RankineCycle "1" o- "1" Boiler
+@enduml

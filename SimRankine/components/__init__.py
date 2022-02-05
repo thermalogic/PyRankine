@@ -39,26 +39,26 @@ from .split_one2two import Split_One2Two
 # --------------------------------------------------------------------------------
 
 compdict = {
-    "BOILER": Boiler,
-    "REHEATER": Reheater,
+    Boiler.devtype: Boiler,
+    Reheater.devtype: Reheater,
 
-    "TURBINEEXS": TurbineExs,
+    TurbineExs.devtype: TurbineExs,
 
-    "CONDENSER": Condenser,
+    Condenser.devtype: Condenser,
 
-    "PUMP": Pump,
+    Pump.devtype: Pump,
 
-    "FWH-OPEN-DW0": OpenedheaterDw0,
-    "FWH-OPEN-DW1": OpenedheaterDw1,
-    "FWH-CLOSE-DW0": ClosedHeaterDw0,
-    "FWH-CLOSE-DW1": ClosedHeaterDw1,
-    "FWH-CLOSE-DW1-SG-CWP-WELL": CombinedHeater,
+    OpenedheaterDw0.devtype: OpenedheaterDw0,
+    OpenedheaterDw1.devtype: OpenedheaterDw1,
+    ClosedHeaterDw0.devtype: ClosedHeaterDw0,
+    ClosedHeaterDw1.devtype: ClosedHeaterDw1,
+    CombinedHeater.devtype: CombinedHeater,
  
-    "PIPEMLOSS": PipeMloss,
-    "PIPEPTLOSS": PipePtloss,
-    "PIPEPLOSS": PipePloss,
-    "PIPEILEVEL": PipeIlevel,
+    PipeMloss.devtype: PipeMloss,
+    PipePtloss.devtype: PipePtloss,
+    PipePloss.devtype: PipePloss,
+    PipeIlevel.devtype: PipeIlevel,
 
-    "SPLIT_ONE2TWO": Split_One2Two
+    Split_One2Two.devtype: Split_One2Two
     
 }

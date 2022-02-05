@@ -18,7 +18,8 @@ class Boiler{
     +__str__(): str
 }
 note right of Boiler::__init__
-    {"name": "BO",
+  dictDev： 
+     {"name": "BO",
      "devtype": "BOILER", 
      "iPort": {},
      "oPort": {}}

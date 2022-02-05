@@ -41,7 +41,7 @@ class OpenedheaterDw1:
       The Opened feedwater heater class with 1 drain water inlet
     """
     energy = "internel"
-    type = "FWH-OPEN-DW1"
+    devtype = "FWH-OPEN-DW1"
 
     # TDDO : modified to fit of inNode_dw=None
     def __init__(self, dictDev):

@@ -20,7 +20,7 @@ dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 # 1kg only
 curcycle = RankineCycle(dictcycle)
 
-# curcycle.simulator_sm() # use sequential-modular approach
+#curcycle.simulator_sm() # use sequential-modular approach
 curcycle.simulator_eo()   # use equation-oriented approach
 curcycle.simulator_performance()
 OutFiles(curcycle)

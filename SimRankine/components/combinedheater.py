@@ -53,7 +53,7 @@ class CombinedHeater:
     """
 
     energy = 'internel'
-    devtype = 'FWH-CLOSE-DW1-SG-CWP-WALL'
+    devtype = 'FWH-CLOSE-DW1-SG-CWP-WELL'
 
     def __init__(self, dictDev):
         """

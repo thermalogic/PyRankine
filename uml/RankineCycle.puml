@@ -54,7 +54,7 @@ note left of RankineCycle::simulator_eo
     equation-oriented 
 end note
 note right of RankineCycle::comps
-  { "name": "devicename":the device instance,...} 
+  { "devicename":the device instance,...} 
 end note
 note right of RankineCycle::RankineCycle
   { "name": "N600",
