@@ -15,25 +15,25 @@
 
 ### Class Port
 
-![Port](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/Port.puml)
+![Port](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Port.puml)
 
 ### Device Class
 
 ##### The common structure of the Device Classes
 
-![Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/Device.puml)
+![Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Device.puml)
 
 
-![Device-Port](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/Device_Port.puml)
+![Device-Port](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Device_Port.puml)
 
 #### Class Boiler
 
-![Boiler](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/Boiler.puml)
+![Boiler](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Boiler.puml)
 
 ## The Rankine Cycle Analysis  Classes
 
 ###  Class RankineCycle
 
-![RankineCycle](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/RankineCycle.puml)
+![RankineCycle](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/RankineCycle.puml)
 
-![RankineCycle_Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/release2.0/uml/RankineCycle_Device.puml)
+![RankineCycle_Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/RankineCycle_Device.puml)
