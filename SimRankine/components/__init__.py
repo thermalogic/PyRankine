@@ -6,7 +6,7 @@ Package: components
 Author: Cheng Maohua, Email: cmh@seu.edu.cn
 """
 
-#--- device class
+# --- device class
 from .boiler import Boiler
 from .reheater import Reheater
 #
@@ -33,7 +33,7 @@ from .split_one2two import Split_One2Two
 # ------------------------------------------------------------------------------
 # compdict
 #  devtype: class  name
-#  2   add the new key:value to the dict after you add the new device class
+#  add the new key:value to the dict after you add the new device class
 # --------------------------------------------------------------------------------
 
 compdict = {
@@ -51,12 +51,12 @@ compdict = {
     ClosedHeaterDw0.devtype: ClosedHeaterDw0,
     ClosedHeaterDw1.devtype: ClosedHeaterDw1,
     CombinedHeater.devtype: CombinedHeater,
- 
+
     PipeMloss.devtype: PipeMloss,
     PipePtloss.devtype: PipePtloss,
     PipePloss.devtype: PipePloss,
     PipeIlevel.devtype: PipeIlevel,
 
     Split_One2Two.devtype: Split_One2Two
-    
+
 }

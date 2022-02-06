@@ -31,5 +31,6 @@ note right of Device::__init__
      "oPort*": {},
       "Value*": * }
 end note
+Device "1" *-- "2..*" Port 
 
 @enduml

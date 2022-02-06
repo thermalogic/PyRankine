@@ -23,5 +23,6 @@ note right of Boiler::__init__
      "iPort": {},
      "oPort": {}}
 end note
+Boiler "1" *-- "2" Port 
 
 @enduml

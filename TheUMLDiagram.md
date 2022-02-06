@@ -23,9 +23,6 @@
 
 ![Device](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Device.puml)
 
-
-![Device-Port](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Device_Port.puml)
-
 #### Class Boiler
 
 ![Boiler](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/thermalogic/PyRankine/r2.1/uml/Boiler.puml)
