@@ -55,7 +55,6 @@ class RankineCycle:
         listconnectors = dictcycle["connectors"]
 
         # 1 convert dict to the dict of device objects: {device name:device obiect}
-        self.DevNum = len(dictcomps)
         self.comps = {}
         for curdev in dictcomps:
             self.comps[curdev['name']] = compdict[curdev['devtype']](curdev)
@@ -83,12 +82,13 @@ class RankineCycle:
 
     # sequential-modular approach
     def __component_analysis_sm(self, funstr):
-        
+        DevNum = len(self.comps)
+
         keys = list(self.comps.keys())
         deviceok = False
 
         i = 0  # i: the count of deviceok to avoid endless loop
-        while (deviceok == False and i <= self.DevNum):
+        while (deviceok == False and i <= DevNum):
 
             for curdev in keys:
                 try:
@@ -112,20 +112,20 @@ class RankineCycle:
     #  equation-oriented approach
     def __equation_eo(self):
         connum=len(self.curcon.nodes)
-        self.A = np.zeros((connum, connum))
-        self.b = np.zeros(connum)
+        A = np.zeros((connum, connum))
+        b = np.zeros(connum)
         
         currow=0
         for key in self.comps:
             self.comps[key].equation_rows()
             for row in self.comps[key].rows:
                 for col in row["a"]:
-                     self.A[currow, col[0]] = col[1]
-                self.b[currow]=row["b"]
-                print(key,self.A[currow],self.b[currow])
+                     A[currow, col[0]] = col[1]
+                b[currow]=row["b"]
+                print(key,A[currow],b[currow])
                 currow += 1  
    
-        fdot = np.linalg.solve(self.A, self.b)
+        fdot = np.linalg.solve(A, b)
 
         #print(" ---------  solution of fraction: fdot -----------")
         #print(fdot)
@@ -185,7 +185,7 @@ class RankineCycle:
         # mdot
         # 1 mdot of connected ports
         for item in self.curcon.nodes:
-            item[0].calmdot(self.mdot)
+            item.calmdot(self.mdot)
         # 2 the mdot from the knowned fdot,for example: sg
         for key in self.comps:
             self.comps[key].calmdot(self.mdot)

@@ -1,16 +1,13 @@
 @startuml
 class RankineCycle{
     + name : string 
-    + DevNum : int
-    + comps : dict
     + etag : float
     + etam : float
+    + comps : dict
+    + curcon : Connector 
     + mdot : float 
     + Specified : bool
     + SpicifiedStr : str
-    + curcon : int 
-    + A : [][] float 
-    + b : [] float
     + totalheatAdded: float **1kg mass**
     + totalworkExtracted: float
     + totalworkRequired: float
