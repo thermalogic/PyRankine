@@ -11,19 +11,20 @@ import seuif97 as if97
 
 class Port:
 
-    title = ('{:^4} \t{:<3} \t{:>3} {:>10} {:>10} \t{:^6} \t{:^6} \t{:>10} \t\t{:^15} '.format
+    title = ('{:^4} {:^10} {:^10} {:^10} {:^10} {:^10} {:^10} {:^10} {}'.format
              ("ID", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)",  "X", "FDOT", "MDOT(kg/h)", "DESC"))
 
     def __init__(self, dictport):
         """ create the port/node object"""
+        self.id = -10
+        self.desc = ""
+
         self.p = None
         self.t = None
         self.x = None
         self.h = None
         self.fdot = None
 
-        self.id = -10
-        self.desc = ""
         self.s = None
         self.v = None
         self.mdot = None
@@ -97,15 +98,15 @@ class Port:
         if (self.id != -10):
             result = '{:^6}'.format(self.id)
         else:
-            result = ' -- '
+            result = '--'
 
-        OutStrs = [{"fstr": '\t{:>7.4}', 'prop': self.p, "sstr": '\t{:>7}'},
-                   {"fstr": '\t{:>8.2f}', 'prop': self.t, "sstr": '\t{:>8}'},
-                   {"fstr": '{:>10.2f}', 'prop': self.h, "sstr": '\t{:>10}'},
-                   {"fstr": '\t{:>8.3f}',  'prop': self.s, "sstr": '\t{:>8}'},
-                   {"fstr": '\t{:>6.4f}', 'prop': self.x, "sstr": '\t{:>10}'},
-                   {"fstr": '\t\t{:>6.4f}',  'prop': self.fdot, "sstr": '\t{:>6}'},
-                   {"fstr": '\t{:>8.2f}',  'prop': self.mdot, "sstr": '\t{:>8}'}
+        OutStrs = [{"fstr": '{:^11.4f}', 'prop': self.p, "sstr": '\t{:>7}'},
+                   {"fstr": '{:^11.2f}', 'prop': self.t, "sstr": '\t{:>8}'},
+                   {"fstr": '{:^11.2f}', 'prop': self.h, "sstr": '\t{:>10}'},
+                   {"fstr": '{:^11.2f}',  'prop': self.s, "sstr": '\t{:>8}'},
+                   {"fstr": '{:^11.4f}', 'prop': self.x, "sstr": '\t{:>10}'},
+                   {"fstr": '{:^11.4f}',  'prop': self.fdot, "sstr": '\t{:>6}'},
+                   {"fstr": '{:^11.2f}',  'prop': self.mdot, "sstr": '\t{:>8}'}
                    ]
 
         for item in OutStrs:
@@ -114,5 +115,5 @@ class Port:
             except:
                 result += item["sstr"].format("")
 
-        result += '\t\t{:<30}'.format(self.desc)
+        result += '{}'.format(self.desc)
         return result

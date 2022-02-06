@@ -1,7 +1,6 @@
 @startuml
 class Port{
     + {static} title : string 
-    + {static} kwargs : dict 
     + id : int
     + desc : str
     + p : float  
@@ -22,9 +21,6 @@ class Port{
     + calmdot(totalmass:float)
     +__str__() : str
 }
-note right of Port::kwargs
-{'p':, 't': , 'x': , 'h': , 'fdot': }
-end note
 note right of Port::__init__(dictport：dict)
 {'p':, 't': , 'x':,'h': , 'fdot': }
 end note

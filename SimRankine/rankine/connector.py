@@ -31,8 +31,7 @@ class Connector:
 
         # 1 get the index of port in nodes
         comps[comp0].__dict__[port0].id = self.id
-        comps[comp0].__dict__[port0].desc = comp0 + \
-            "."+port0 + " = " + comp1+"."+port1
+        comps[comp0].__dict__[port0].desc = "("+comp0 +"."+port0 +"," + comp1+"."+port1+")"
         # 2 add port0 into nodes
         self.nodes.append(comps[comp0].__dict__[port0])
         # 3 merge port1 info into  nodes[self.id]
