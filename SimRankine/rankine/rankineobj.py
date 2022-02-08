@@ -51,19 +51,14 @@ class RankineCycle:
            self.etam=1.00
            self.etag = 1.00
 
-        dictcomps = dictcycle["components"]
-        listconnectors = dictcycle["connectors"]
-
         # 1 convert dict to the dict of device objects: {device name:device obiect}
         self.comps = {}
-        for curdev in dictcomps:
+        for curdev in dictcycle["components"]:
             self.comps[curdev['name']] = compdict[curdev['devtype']](curdev)
-
-        self.curcon=Connector()
+   
         # 2 use the dictconnectors to set the nodes value and alias between the item of nodes and the port of devices
-        for tupconnector in listconnectors:
-            self.curcon.add_node(tupconnector, self.comps)
-
+        self.curcon = Connector(dictcycle["connectors"],  self.comps)
+      
         self.totalworkExtracted = 0.0
         self.totalworkRequired = 0.0
         self.totalheatAdded = 0.0
@@ -120,9 +115,9 @@ class RankineCycle:
             self.comps[key].equation_rows()
             for row in self.comps[key].rows:
                 for col in row["a"]:
-                     A[currow, col[0]] = col[1]
+                    A[currow, col[0]] = col[1]
                 b[currow]=row["b"]
-                print(key,A[currow],b[currow])
+                # print(key,A[currow],b[currow])
                 currow += 1  
    
         fdot = np.linalg.solve(A, b)
