@@ -35,7 +35,7 @@ cycle600.specified_simulator(set_mass=mdot)
 # 4 Variable parameters: add the (p,t) of boiler output
 # 4.1 init
 curcycle = cycle600.cycle
-obPort = curcycle.comps["BO"].oPort[0]
+obPort = curcycle.comps["BO"].oPort
 bp = obPort.p
 bt = obPort.t
 beta = curcycle.efficiency_cycle

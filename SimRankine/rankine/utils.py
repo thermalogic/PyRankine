@@ -43,7 +43,7 @@ def OutFiles(cycle, outfilename=None):
     # 3 output connectors
     print("\n--- CONNECTORS ---\n")
     print(Port.title)
-    for item in cycle.curcon.nodes:
+    for item in cycle.nodes:
         print(item)
 
     # return to sys.stdout

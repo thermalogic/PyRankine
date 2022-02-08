@@ -4,7 +4,7 @@ class RankineCycle{
     + etag : float
     + etam : float
     + comps : dict
-    + curcon : Connector 
+    + nodes : Port[0..*] 
     + mdot : float 
     + Specified : bool
     + SpicifiedStr : str
@@ -28,6 +28,7 @@ class RankineCycle{
     + efficiency_power_generation：float
     + efficiency_power_supply：float
     + {static} RankineCycle(rankinecycle:dict)
+    - __add_node( i, tupConnector, comps)
     - __component_analysis_sm(funstr：str)
     + simulator_sm()
     - __equation_eo()

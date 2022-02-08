@@ -1,5 +1,4 @@
 @startuml
-RankineCycle "1" *-- "1" Connector
 RankineCycle "1" o-- "1" Boiler
 RankineCycle "1" o-- "1..*" TurbineExs
 RankineCycle "1" o-- "1" Condenser
