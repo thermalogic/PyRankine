@@ -12,10 +12,6 @@ In the hybrid simulator, two kind of simulation approachs are provided:
 
 ## Dependencies：SEUIF97
 
-IAPWS-IF97 high-speed shared library
-
-* https://github.com/thermalogic/SEUIF97
-
 Install
 
 ```bash
