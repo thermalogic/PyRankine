@@ -40,10 +40,10 @@ class OpenedheaterDw1:
     sm and eo
       The Opened feedwater heater class with 1 drain water inlet
     """
-    energy = "internel"
+    energy = "internal"
     devtype = "FWH-OPEN-DW1"
 
-    # TDDO : modified to fit of inNode_dw=None
+    # TODO : modified to fit of inNode_dw=None
     def __init__(self, dictDev):
         """
         Initializes the Open feed water with the conditions
@@ -112,7 +112,7 @@ class OpenedheaterDw1:
 
     #  equation-oriented approach
     def equation_rows(self):
-        """ masss ane erergy equations"""
+        """ mass and energy equations"""
         # 1 mass balance row
         colidm = [(self.iPort.id, 1),
                   (self.iPort_fw.id, 1),

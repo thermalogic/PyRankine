@@ -9,8 +9,8 @@ class combinedheater:  heater + SG + CDW + HeatWELL
                            │         ↓ (No. m)  ↓(No. n)
                     ┌──────┴─────────┴──────────┴──────────────┐
   feedwater outlet  │                                          │
-  oPort_fw        ← ┼──│ Heater │←──│ GS │←──│CWP│──│ WELL │───┼←  iPort_fw0 (No.j1 node)(unknow)
-      (No.k)        │                                          │←  iPort_fw1 (No.j2 node)(know！)
+  oPort_fw        ← ┼──│ Heater │←──│ GS │←──│CWP│──│ WELL │───┼←  iPort_fw0 (No.j1 node)(unknown)
+      (No.k)        │                                          │←  iPort_fw1 (No.j2 node)(known)
                     └──────┬───────────────────────────────────┘   feedwater inlet
     delta         iPort_dw ↑
                      (No. l)
@@ -52,7 +52,7 @@ class CombinedHeater:
         em and eo  
     """
 
-    energy = 'internel'
+    energy = 'internal'
     devtype = 'FWH-CLOSE-DW1-SG-CWP-WELL'
 
     def __init__(self, dictDev):
@@ -230,8 +230,8 @@ class CombinedHeater:
         # ------ SG stream inlet ------
         result += '\n\theatExtracted_sg(kJ) \t%.2f' % self.heatExtracted_sg
         try:
-            result += '\nQdded(MW) \t%.2f \nQExtracted(MW) \t%.2f ' % (
-                self.QExtracted, self.QAdded)
+            result += '\nQAdded(MW) \t%.2f \nQExtracted(MW) \t%.2f ' % (
+                self.QAdded, self.QExtracted)
         except:
             pass
         return result

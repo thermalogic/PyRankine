@@ -4,7 +4,7 @@
 
 The PyRankine is the hybrid steady-state simulator of Rankine Cycle in Python.
 
-In the hybrid simulator, two kind of simulation approachs are provided:
+In the hybrid simulator, two kinds of simulation approaches are provided:
 
 * sequential-modular
 
@@ -32,7 +32,7 @@ The condensing steam cycle has
 
 ### The Data File of the Example Cycle
 
-The json file is used to representate the example cycle's flowsheet and data
+The json file is used to represent the example cycle's flowsheet and data
 
 * [The Json file of the example cycle's flowsheet and data](./SimRankine/jsonmodel/N600.json)
 

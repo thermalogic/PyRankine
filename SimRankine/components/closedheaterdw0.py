@@ -41,7 +41,7 @@ from seuif97 import px2t
 class ClosedHeaterDw0:
     """ sm and eo """
 
-    energy = 'internel'
+    energy = 'internal'
     devtype = 'FWH-CLOSE-DW0'
 
     def __init__(self, dictDev):
@@ -178,8 +178,8 @@ class ClosedHeaterDw0:
         result += ('{} {:.2f}').format('\nheatExtracted(kJ):',
                                        self.heatExtracted)
         try:
-            result += ('{} {:.2f}').format('\n\nQdded(MW):', self.QAdded)
-            result += ('{} {:.2f}').format('\nQExtracted(MW)):',
+            result += ('{} {:.2f}').format('\n\nQAdded(MW):', self.QAdded)
+            result += ('{} {:.2f}').format('\nQExtracted(MW):',
                                            self.QExtracted)
         except:
             pass

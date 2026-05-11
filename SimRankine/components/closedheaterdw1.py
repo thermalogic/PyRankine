@@ -55,7 +55,7 @@ class ClosedHeaterDw1:
         em and eo
     """
 
-    energy = 'internel'
+    energy = 'internal'
     devtype = 'FWH-CLOSE-DW1'
 
     def __init__(self, dictDev):
@@ -234,8 +234,8 @@ class ClosedHeaterDw1:
         if self.iPort_sg is not None:
             result += '\n\theatExtracted_sg(kJ/kg) \t%.2f' % self.heatExtracted_sg
         try:
-            result += '\nQdded(MW) \t%.2f \nQExtracted(MW) \t%.2f ' % (
-                self.QExtracted, self.QAdded)
+            result += '\nQAdded(MW) \t%.2f \nQExtracted(MW) \t%.2f ' % (
+                self.QAdded, self.QExtracted)
         except:
             pass
         return result
