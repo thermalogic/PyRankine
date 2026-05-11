@@ -241,7 +241,7 @@ class RankineCycle:
                                    self.SteamRate_power_supply)
 
         result += "\n--- 1kg ---\n"
-        result += formatstr.format('totalheatAddedd(kJ/kg): ',
+        result += formatstr.format('totalheatAdded(kJ/kg): ',
                                    self.totalheatAdded)
         result += formatstr.format('totalworkExtracted(kJ/kg): ',
                                    self.totalworkExtracted)

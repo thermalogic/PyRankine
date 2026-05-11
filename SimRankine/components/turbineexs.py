@@ -20,8 +20,8 @@ json object example
             "ef": 0.85,
             "iPort":{},
             "oPort": {},
-            "ePort0": {}，
-            "ePort1":{}，
+            "ePort0": {},
+            "ePort1":{},
             
       } 
 

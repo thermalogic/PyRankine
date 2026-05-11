@@ -12,7 +12,7 @@ The PyRankine: the hybrid steady-state simulator of Rankine Cycle
  json object example:
 
         {    
-         "name": "inpur name",
+         "name": "input name",
         "devtype": "SPLIT_ONE2TWO",
         "iPort": {},
         "oPort0": {},
@@ -76,7 +76,7 @@ class Split_One2Two:
 
     # sequential-modular approach
     def balance(self):
-        """ 1kg mass balanceequation"""
+        """ 1kg mass balance equation"""
         if self.iPort.fdot is not None and self.oPort0.fdot is not None:
             self.oPort1.fdot = self.iPort.fdot-self.oPort0.fdot
         elif self.iPort.fdot is not None and self.oPort1.fdot is not None:

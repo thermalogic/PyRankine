@@ -52,7 +52,7 @@ class Reheater:
     # sequential-modular approach
     def balance(self):
         """ mass and energy balance of the boiler """
-        # mass balanceequation
+        # mass balance equation
         if self.iPort.fdot is not None:
             self.oPort.fdot = self.iPort.fdot
         elif self.oPort.fdot is not None:

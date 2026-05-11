@@ -55,7 +55,7 @@ class PipeMloss:
 
     def balance(self):
         """ 1kg """
-        # mass balanceequation
+        # mass balance equation
         self.oPort.fdot = self.iPort.fdot - \
             self.lPort1.fdot-self.lPort2.fdot
         # energy

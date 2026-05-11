@@ -56,7 +56,7 @@ class PipePtloss:
 
     def balance(self):
         """ 1kg """
-        # mass balanceequation
+        # mass balance equation
         if self.iPort.fdot is not None:
             self.oPort.fdot = self.iPort.fdot
         elif self.oPort.fdot is not None:

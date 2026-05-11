@@ -60,7 +60,7 @@ def OutDevsFiles(cycle, outfilename=None):
         sys.stdout = datafile
 
     # 1 output connectors
-    print("\n--- CONNTERORS ---")
+    print("\n--- CONNECTORS ---")
     print(Port.title)
     for item in cycle.curcon.nodes:
         print(item[0])
