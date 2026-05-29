@@ -46,8 +46,7 @@ def OutFiles(cycle, outfilename=None):
     for item in cycle.nodes:
         print(item)
 
-    # return to sys.stdout
-    if (outfilename != None):
+    if outfilename  is not None:
         datafile.close()
         sys.stdout = savedStdout
 
@@ -70,6 +69,6 @@ def OutDevsFiles(cycle, outfilename=None):
         print(cycle.comps[key])
     
     # return to sys.stdout
-    if (outfilename != None):
+    if outfilename is not None:
         datafile.close()
         sys.stdout = savedStdout

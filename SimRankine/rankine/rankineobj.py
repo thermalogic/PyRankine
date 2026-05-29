@@ -188,7 +188,7 @@ class RankineCycle:
         self.SteamRate_power_supply = self.HeatRate_power_supply / self.totalheatAdded
 
     def specified_simulator(self, set_power=None, set_mass=None):
-        if set_power != None:
+        if set_power is not None:
             self.SpecifiedStr = "\n--- Specified  Power Generation---\n"
             self.Wcycledot = set_power
             self.mdot = self.Wcycledot * self.SteamRate_power_generation * 1000.0

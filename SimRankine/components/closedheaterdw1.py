@@ -110,9 +110,9 @@ class ClosedHeaterDw1:
 
     def balance(self):
         """  balance the closed feed water heater  """
-        if (self.oPort_fw.fdot != None):
+        if self.oPort_fw.fdot is not None:
             self.iPort_fw.fdot = self.oPort_fw.fdot
-        elif (self.iPort_fw.fdot != None):
+        elif self.iPort_fw.fdot is not None:
             self.oPort_fw.fdot = self.iPort_fw.fdot
 
         self.heatAdded = self.oPort_fw.fdot * \

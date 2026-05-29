@@ -135,7 +135,7 @@ class CombinedHeater:
             (self.oPort_fw.h - self.iPort_fw0.h)
         self.heatAdded = self.heatAdded_iFW0+self.heatAdded_iFW1
 
-       #  equation-oriented approach
+    #  equation-oriented approach
     def equation_rows(self):
         """ each row {"a":[(colid,val)] "b":val} """
 

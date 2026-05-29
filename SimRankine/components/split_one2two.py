@@ -66,9 +66,9 @@ class Split_One2Two:
             self.oPort1.pt()
 
         elif self.oPort1.p is not None and self.oPort1.t is not None:
-            self.iPort0.p = self.oPort1.p
-            self.iPort0.t = self.oPort1.t
-            self.iPort0.pt()
+            self.iPort.p = self.oPort1.p
+            self.iPort.t = self.oPort1.t
+            self.iPort.pt()
 
             self.oPort0.p = self.oPort1.p
             self.oPort0.t = self.oPort1.t
