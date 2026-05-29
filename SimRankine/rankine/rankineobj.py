@@ -231,7 +231,7 @@ class RankineCycle:
         result += f"\t{'The Power Generation Steam Rate(kg/kWh): ':>20} {self.SteamRate_power_generation:>.2f}\n"
         result += f"\t{'The Power Supply Efficiency(%): ':>20} {self.efficiency_power_supply*100.0:>.2f}\n"
         result += f"\t{'The Power Supply Heat Rate(kJ/kWh): ':>20} {self.HeatRate_power_supply:>.2f}\n"
-        result += f"\t{'The Power Generation Steam Rate(kg/kWh): ':>20} {self.SteamRate_power_supply:>.2f}\n"
+        result += f"\t{'The Power Supply Steam Rate(kg/kWh): ':>20} {self.SteamRate_power_supply:>.2f}\n"
 
         result += "\n--- 1kg ---\n"
         result += f"\t{'totalheatAdded(kJ/kg): ':>20} {self.totalheatAdded:>.2f}\n"
