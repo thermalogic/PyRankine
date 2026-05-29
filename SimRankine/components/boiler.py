@@ -67,8 +67,7 @@ class Boiler:
         # mass balance row
         if self.iPort.fdot is not None:
             rowms ={"a":[(self.oPort.id, 1)],"b": self.iPort.fdot}
-
-        if self.oPort.fdot is not None:
+        elif self.oPort.fdot is not None:
             rowms ={"a":[(self.iPort.id, 1)],"b": self.oPort.fdot}
         self.rows = [rowms]
 
