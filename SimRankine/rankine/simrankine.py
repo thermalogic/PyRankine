@@ -25,7 +25,7 @@ class SimRankineCycle:
     def simulator_eo(self):
         self.cycle.simulator_eo()
 
-    def simulator_em(self):
+    def simulator_sm(self):
         self.cycle.simulator_sm()
 
     def simulator_performance(self):
