@@ -28,6 +28,7 @@ row:
 """
 from seuif97 import ps2h
 from .port import *
+from . import KJ_TO_MW
 
 
 class Pump():
@@ -84,7 +85,7 @@ class Pump():
 
     def sm_energy(self):
         self.WRequired = self.iPort.mdot * \
-            (self.oPort.h - self.iPort.h)/(3600.0 * 1000.0)
+            (self.oPort.h - self.iPort.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

@@ -26,6 +26,7 @@ row:
 """
 
 from .port import *
+from . import KJ_TO_MW
 
 
 class PipePtloss:
@@ -84,8 +85,7 @@ class PipePtloss:
     def sm_energy(self):
         """ mdot """
         self.QLossPipe = self.oPort.mdot * \
-            (self.iPort.h - self.oPort.h)
-        self.QLossPipe /= (3600.0 * 1000.0)
+            (self.iPort.h - self.oPort.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

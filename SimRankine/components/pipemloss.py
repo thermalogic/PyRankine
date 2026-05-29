@@ -25,6 +25,7 @@ row:
 """
 
 from .port import Port
+from . import KJ_TO_MW
 
 
 class PipeMloss:
@@ -85,7 +86,7 @@ class PipeMloss:
         """ mdot """
         self.QLossPipe = self.lPort1.mdot * \
             self.lPort1.h+self.lPort2.mdot*self.lPort2.h
-        self.QLossPipe /= (3600.0 * 1000.0)
+        self.QLossPipe /= KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

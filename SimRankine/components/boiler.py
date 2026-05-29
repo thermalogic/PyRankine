@@ -28,6 +28,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 """
 
 from .port import *
+from . import KJ_TO_MW
 
 
 class Boiler:
@@ -81,8 +82,7 @@ class Boiler:
 
     def sm_energy(self):
         self.QAdded = self.iPort.mdot * \
-            (self.oPort.h - self.iPort.h)
-        self.QAdded /= (3600.0 * 1000.0)
+            (self.oPort.h - self.iPort.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

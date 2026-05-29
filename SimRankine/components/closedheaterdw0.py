@@ -36,6 +36,7 @@ class ClosedheaterDw0
  Author:Cheng Maohua  Email: cmh@seu.edu.cn 
 """
 from .port import Port
+from . import KJ_TO_MW
 from seuif97 import px2t
 
 
@@ -155,12 +156,10 @@ class ClosedHeaterDw0:
         pass
 
     def sm_energy(self):
-        """ mdot """
-        ucovt = 3600.0*1000.0
         self.QExtracted = self.iPort.mdot * \
-            (self.iPort.h - self.oPort_dw.h) / ucovt
+            (self.iPort.h - self.oPort_dw.h) / KJ_TO_MW
         self.QAdded = self.oPort_fw.mdot * \
-            (self.oPort_fw.h - self.iPort_fw.h) / ucovt
+            (self.oPort_fw.h - self.iPort_fw.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n'+self.name

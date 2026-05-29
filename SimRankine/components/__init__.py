@@ -6,6 +6,8 @@ Package: components
 Author: Cheng Maohua, Email: cmh@seu.edu.cn
 """
 
+KJ_TO_MW = 3600.0 * 1000.0
+
 # --- device class
 from .boiler import Boiler
 from .reheater import Reheater

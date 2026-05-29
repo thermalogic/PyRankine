@@ -40,6 +40,7 @@ Author:Cheng Maohua  Email: cmh@seu.edu.cn
 
 from .port import *
 from seuif97 import px2t
+from . import KJ_TO_MW
 
 
 class CombinedHeater:
@@ -190,24 +191,20 @@ class CombinedHeater:
         self.iPort_sg2.mdot = self.iPort_sg2.fdot * totalmass
 
     def sm_energy(self):
-        """ mass """
-        ucovt = 3600.0*1000.0
         self.QExtracted_es = self.iPort.mdot * \
-            (self.iPort.h - self.oPort_fw.h) / ucovt
+            (self.iPort.h - self.oPort_fw.h) / KJ_TO_MW
         self.QExtracted_dw = self.iPort_dw.mdot * \
-            (self.iPort_dw.h - self.oPort_fw.h) / ucovt
-        #  ------ SG stream inlet ------
+            (self.iPort_dw.h - self.oPort_fw.h) / KJ_TO_MW
         self.QExtracted_sg1 = self.iPort_sg1.mdot * \
-            (self.iPort_sg1.h - self.oPort_fw.h) / ucovt
+            (self.iPort_sg1.h - self.oPort_fw.h) / KJ_TO_MW
         self.QExtracted_sg2 = self.iPort_sg2.mdot * \
-            (self.iPort_sg2.h - self.oPort_fw.h) / ucovt
+            (self.iPort_sg2.h - self.oPort_fw.h) / KJ_TO_MW
         self.QExtracted_sg = self.QExtracted_sg1+self.QExtracted_sg2
-        #  ------ SG stream inlet ------
         self.QExtracted = self.QExtracted_es + self.QExtracted_dw + self.QExtracted_sg
         self.QAdded = self.iPort_fw0.mdot * \
-            (self.oPort_fw.h - self.iPort_fw0.h) / ucovt
+            (self.oPort_fw.h - self.iPort_fw0.h) / KJ_TO_MW
         self.QAdded += self.iPort_fw1.mdot * \
-            (self.oPort_fw.h - self.iPort_fw1.h) / ucovt
+            (self.oPort_fw.h - self.iPort_fw1.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n'+self.name

@@ -44,6 +44,7 @@ class Closedheater with drain water inlet  with/without sg inlet
 """
 
 from .port import Port
+from . import KJ_TO_MW
 from seuif97 import px2t
 
 
@@ -196,20 +197,17 @@ class ClosedHeaterDw1:
             self.iPort_sg.mdot = self.iPort_sg.fdot*totalmass
 
     def sm_energy(self):
-        """ """
-        ucovt = 3600.0*1000.0
         self.QExtracted_es = self.iPort.mdot * \
-            (self.iPort.h - self.oPort_dw.h) / ucovt
+            (self.iPort.h - self.oPort_dw.h) / KJ_TO_MW
         self.QExtracted_dw = self.iPort_dw.mdot * \
-            (self.iPort_dw.h - self.oPort_dw.h) / ucovt
+            (self.iPort_dw.h - self.oPort_dw.h) / KJ_TO_MW
         self.QExtracted = self.QExtracted_es + self.QExtracted_dw
-        #  ------ SG stream inlet ------
         if self.iPort_sg is not None:
             self.QExtracted_sg = self.iPort_sg.mdot * \
-                (self.iPort_sg.h - self.oPort_dw.h) / ucovt
+                (self.iPort_sg.h - self.oPort_dw.h) / KJ_TO_MW
             self.QExtracted += self.QExtracted_sg
         self.QAdded = self.oPort_fw.mdot * \
-            (self.oPort_fw.h - self.iPort_fw.h) / ucovt
+            (self.oPort_fw.h - self.iPort_fw.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n'+self.name

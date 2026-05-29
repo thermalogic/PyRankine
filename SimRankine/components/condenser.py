@@ -31,6 +31,7 @@ mass balance row1/2
 """
 
 from .port import *
+from . import KJ_TO_MW
 
 
 class Condenser:
@@ -99,13 +100,12 @@ class Condenser:
             self.iPort1.mdot = self.iPort1.fdot * totalmass
 
     def sm_energy(self):
-        uc = 3600.0 * 1000.0
         if self.iPort.h is not None:
             self.QExtracted = self.iPort.mdot * \
-                (self.iPort.h - self.oPort.h)/uc
+                (self.iPort.h - self.oPort.h)/KJ_TO_MW
         if self.iPort1 is not None and self.iPort1.h is not None:
             self.QExtracted += self.iPort1.mdot * \
-                (self.iPort1.h - self.oPort.h)/uc
+                (self.iPort1.h - self.oPort.h)/KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

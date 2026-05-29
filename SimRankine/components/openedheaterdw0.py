@@ -28,6 +28,7 @@ class OpenedHeaterdw0
 
 """
 from .port import *
+from . import KJ_TO_MW
 
 
 class OpenedHeaterDw0:
@@ -95,11 +96,10 @@ class OpenedHeaterDw0:
         pass
 
     def sm_energy(self):
-        ucovt = 3600.0 * 1000.0
         self.QExtracted = self.iPort.mdot * \
-            (self.iPort.h - self.oPort_fw.h)/ucovt
+            (self.iPort.h - self.oPort_fw.h) / KJ_TO_MW
         self.QAdded = self.iPort_fw.mdot * \
-            (self.oPort_fw.h - self.iPort_fw.h)/ucovt
+            (self.oPort_fw.h - self.iPort_fw.h) / KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name

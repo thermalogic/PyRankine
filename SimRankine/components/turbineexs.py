@@ -33,6 +33,7 @@ row:
 """
 from seuif97 import *
 from .port import *
+from . import KJ_TO_MW
 
 
 class TurbineExs:
@@ -148,7 +149,7 @@ class TurbineExs:
         for ep in self.ePort:
             oenergy += ep.mdot*ep.h
         self.WExtracted = ienergy - oenergy
-        self.WExtracted /= (3600.0 * 1000.0)
+        self.WExtracted /= KJ_TO_MW
 
     def __str__(self):
         result = '\n' + self.name
