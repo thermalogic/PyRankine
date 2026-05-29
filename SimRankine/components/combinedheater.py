@@ -181,7 +181,7 @@ class CombinedHeater:
 
         self.heatAdded_iFW1 = self.iPort_fw1.fdot * \
             (self.oPort_fw.h - self.iPort_fw1.h)
-        self.heatAdded_iFW0 = self.iPort_fw1.fdot * \
+        self.heatAdded_iFW0 = self.iPort_fw0.fdot * \
             (self.oPort_fw.h - self.iPort_fw0.h)
         self.heatAdded = self.heatAdded_iFW0+self.heatAdded_iFW1
 

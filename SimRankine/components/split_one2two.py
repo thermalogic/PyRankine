@@ -32,7 +32,7 @@ from .port import *
 class Split_One2Two:
     """ sm and so """
 
-    energy = "none"
+    energy = "None"
     devtype = "SPLIT_ONE2TWO"
 
     def __init__(self, dictDev):

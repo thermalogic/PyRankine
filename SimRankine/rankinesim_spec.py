@@ -20,7 +20,7 @@ dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 cycle600 = SimRankineCycle(dictcycle)
 # 1 1kg
 # cycle600.simulator_sm()  # sequential-modular approach
-cycle600.simulator_eo() # use sequential-modular approach
+cycle600.simulator_eo() # use equation-oriented approach
 cycle600.simulator_performance()
 
 
