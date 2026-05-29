@@ -14,7 +14,7 @@ from rankine.rankineobj import RankineCycle
 
 
 curpath = os.path.abspath(os.path.dirname(__file__))
-rankinefilename = curpath+'\\'+'./jsonmodel/N600.json'
+rankinefilename = os.path.join(curpath, 'jsonmodel', 'N600.json')
 dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 
 # 1kg only
@@ -24,5 +24,5 @@ curcycle = RankineCycle(dictcycle)
 curcycle.simulator_eo()   # use equation-oriented approach
 curcycle.simulator_performance()
 OutFiles(curcycle)
-OutFiles(curcycle, curpath+'\\'+'./result/N600-1.txt')
+OutFiles(curcycle, os.path.join(curpath, 'result', 'N600-1.txt'))
 

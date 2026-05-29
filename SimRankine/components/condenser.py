@@ -115,9 +115,9 @@ class Condenser:
         if self.iPort1 is not None:
             result += '\n'+" iPort1 " + self.iPort1.__str__()
             result += '\n'+" oPort1 " + self.oPort1.__str__()
-        result += '\nheatExtracted(kJ)  \t{:>.2f}'.format(self.heatExtracted)
+        result += f'\nheatExtracted(kJ)  \t{self.heatExtracted:>.2f}'
         try:
-            result += '\nQExtracted(MW): \t{:>.2f}'.format(self.QExtracted)
+            result += f'\nQExtracted(MW): \t{self.QExtracted:>.2f}'
         except:
             pass
         return result

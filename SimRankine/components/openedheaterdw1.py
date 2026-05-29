@@ -1,7 +1,7 @@
 """
 The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
-class OpenedheaterDw1
+class OpenedHeaterDw1
 
                        ↓   iPort extracted steam (No. i)
                    ┌───┴───┐
@@ -35,7 +35,7 @@ from seuif97 import px2t
 from .port import *
 
 
-class OpenedheaterDw1:
+class OpenedHeaterDw1:
     """
     sm and eo
       The Opened feedwater heater class with 1 drain water inlet
@@ -168,16 +168,16 @@ class OpenedheaterDw1:
         result += '\n'+"oFW"+self.oPort_fw.__str__()
         result += '\n'+"iDW"+self.iPort_dw.__str__()
 
-        result += '\neta(%%) \t%.2f' % (self.eta*100)
-        result += '\nheatAdded(kJ) \t%.2f' % self.heatAdded
-        result += '\nheatExtracted(kJ) \t%.2f' % self.heatExtracted
-        result += '\n\theatExtracted_es(kJ) \t %.2f' % self.heatExtracted_es
-        result += '\n\theatExtracted_dw(kJ) \t%.2f' % self.heatExtracted_dw
+        result += f'\neta(%) \t{self.eta*100:.2f}'
+        result += f'\nheatAdded(kJ) \t{self.heatAdded:.2f}'
+        result += f'\nheatExtracted(kJ) \t{self.heatExtracted:.2f}'
+        result += f'\n\theatExtracted_es(kJ) \t {self.heatExtracted_es:.2f}'
+        result += f'\n\theatExtracted_dw(kJ) \t{self.heatExtracted_dw:.2f}'
         try:
-            result += '\nQAdded(MW) \t%.2f' % self.QAdded
-            result += '\nQExtracted(MW)  \t%.2f' % self.QExtracted
-            result += '\n\tQExtracted_es(MW) \t%.2f' % self.QExtracted_es
-            result += '\n\tQExtracted_dw(MW)\t%.2f' % self.QExtracted_dw
+            result += f'\nQAdded(MW) \t{self.QAdded:.2f}'
+            result += f'\nQExtracted(MW)  \t{self.QExtracted:.2f}'
+            result += f'\n\tQExtracted_es(MW) \t{self.QExtracted_es:.2f}'
+            result += f'\n\tQExtracted_dw(MW)\t{self.QExtracted_dw:.2f}'
         except:
             pass
         return result

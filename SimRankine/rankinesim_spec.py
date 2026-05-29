@@ -14,7 +14,7 @@ from rankine.utils import OutFiles, create_dictcycle_from_jsonfile
 from rankine.simrankine import SimRankineCycle
 
 curpath = os.path.abspath(os.path.dirname(__file__))
-rankinefilename = curpath+'\\'+'./jsonmodel/N600.json'
+rankinefilename = os.path.join(curpath, 'jsonmodel', 'N600.json')
 dictcycle = create_dictcycle_from_jsonfile(rankinefilename)
 
 cycle600 = SimRankineCycle(dictcycle)

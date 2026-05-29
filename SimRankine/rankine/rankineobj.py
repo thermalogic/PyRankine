@@ -3,13 +3,13 @@ The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
 Model: General Object-oriented Abstraction of Rankine Cycle 
 
-* Sequential-modular(SM)：
+* Sequential-modular(SM):
 
     def simulator_sm(self):
         self.component_analysis_sm("STATE")
         self.component_analysis_sm("BALANCE")
 
-* equation-oriented(EO)： 
+* equation-oriented(EO):
 
     def simulator_eo(self):
         self.component_analysis_sm("STATE") 
@@ -222,66 +222,48 @@ class RankineCycle:
 
         self.Specified = True
 
-    def __set_formatstr(self, formatstr, result):
-        result += formatstr.format('The Cycle Efficiency(%): ',
-                                   self.efficiency_cycle*100.0)
-        result += formatstr.format('etam(%): ', self.etam*100.0)
-        result += formatstr.format('etag(%): ', self.etag*100.0)
-        result += formatstr.format('The Power Generation Efficiency(%): ',
-                                   self.efficiency_power_generation*100.0)
-        result += formatstr.format('The Power Generation Heat Rate(kJ/kWh): ',
-                                   self.HeatRate_power_generation)
-        result += formatstr.format('The Power Generation Steam Rate(kg/kWh): ',
-                                   self.SteamRate_power_generation)
-        result += formatstr.format('The Power Supply Efficiency(%): ',
-                                   self.efficiency_power_supply*100.0)
-        result += formatstr.format('The Power Supply Heat Rate(kJ/kWh): ',
-                                   self.HeatRate_power_supply)
-        result += formatstr.format('The Power Generation Steam Rate(kg/kWh): ',
-                                   self.SteamRate_power_supply)
+    def __set_formatstr(self, result):
+        result += f"\t{'The Cycle Efficiency(%): ':>20} {self.efficiency_cycle*100.0:>.2f}\n"
+        result += f"\t{'etam(%): ':>20} {self.etam*100.0:>.2f}\n"
+        result += f"\t{'etag(%): ':>20} {self.etag*100.0:>.2f}\n"
+        result += f"\t{'The Power Generation Efficiency(%): ':>20} {self.efficiency_power_generation*100.0:>.2f}\n"
+        result += f"\t{'The Power Generation Heat Rate(kJ/kWh): ':>20} {self.HeatRate_power_generation:>.2f}\n"
+        result += f"\t{'The Power Generation Steam Rate(kg/kWh): ':>20} {self.SteamRate_power_generation:>.2f}\n"
+        result += f"\t{'The Power Supply Efficiency(%): ':>20} {self.efficiency_power_supply*100.0:>.2f}\n"
+        result += f"\t{'The Power Supply Heat Rate(kJ/kWh): ':>20} {self.HeatRate_power_supply:>.2f}\n"
+        result += f"\t{'The Power Generation Steam Rate(kg/kWh): ':>20} {self.SteamRate_power_supply:>.2f}\n"
 
         result += "\n--- 1kg ---\n"
-        result += formatstr.format('totalheatAdded(kJ/kg): ',
-                                   self.totalheatAdded)
-        result += formatstr.format('totalworkExtracted(kJ/kg): ',
-                                   self.totalworkExtracted)
-        result += formatstr.format('totalworkRequired(kJ/kg): ',
-                                   self.totalworkRequired)
-        result += formatstr.format('Power generation poweroutput(kJ/kg): ',
-                                   self.poweroutput)
-        result += formatstr.format('Power supply netpoweroutput(kJ/kg): ',
-                                   self.netpoweroutput)
+        result += f"\t{'totalheatAdded(kJ/kg): ':>20} {self.totalheatAdded:>.2f}\n"
+        result += f"\t{'totalworkExtracted(kJ/kg): ':>20} {self.totalworkExtracted:>.2f}\n"
+        result += f"\t{'totalworkRequired(kJ/kg): ':>20} {self.totalworkRequired:>.2f}\n"
+        result += f"\t{'Power generation poweroutput(kJ/kg): ':>20} {self.poweroutput:>.2f}\n"
+        result += f"\t{'Power supply netpoweroutput(kJ/kg): ':>20} {self.netpoweroutput:>.2f}\n"
         return result
 
-    def __set_specified_formatstr(self, formatstr, result):
+    def __set_specified_formatstr(self, result):
         result += self.SpecifiedStr
-        result += formatstr.format('Power(MW): ', self.Wcycledot)
-        result += formatstr.format('Mass Flow(kg/h): ', self.mdot)
-        result += formatstr.format('totalWExtracted(MW): ',
-                                   self.totalWExtracted)
-        result += formatstr.format('totalWRequired(MW): ', self.totalWRequired)
-        result += formatstr.format('totalQAdded(MW): ', self.totalQAdded)
-        result += formatstr.format('netWExtracted(MW): ', self.netWExtracted)
+        result += f"\t{'Power(MW): ':>20} {self.Wcycledot:>.2f}\n"
+        result += f"\t{'Mass Flow(kg/h): ':>20} {self.mdot:>.2f}\n"
+        result += f"\t{'totalWExtracted(MW): ':>20} {self.totalWExtracted:>.2f}\n"
+        result += f"\t{'totalWRequired(MW): ':>20} {self.totalWRequired:>.2f}\n"
+        result += f"\t{'totalQAdded(MW): ':>20} {self.totalQAdded:>.2f}\n"
+        result += f"\t{'netWExtracted(MW): ':>20} {self.netWExtracted:>.2f}\n"
         return result
 
     def __str__(self):
         str_curtime = time.strftime(
             "%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
-        result = "\n Rankine Cycle: {}, Time: {}\n".format(
-            self.name, str_curtime)
+        result = f"\n Rankine Cycle: {self.name}, Time: {str_curtime}\n"
         try:
-            formatstr = "\t{:>20} {:>.2f}\n"
-            result = self.__set_formatstr(formatstr, result)
+            result = self.__set_formatstr(result)
         except:
-            formatstr = "\t{} {}\n"
-            result = self.__set_formatstr(formatstr, result)
+            pass
 
         if self.Specified:
             try:
-                formatstr = "\t{:>20} {:>.2f}\n"
-                result = self.__set_specified_formatstr(formatstr, result)
+                result = self.__set_specified_formatstr(result)
             except:
-                formatstr = "\t{} {}\n"
-                result = self.__set_specified_formatstr(formatstr, result)
+                pass
 
         return result

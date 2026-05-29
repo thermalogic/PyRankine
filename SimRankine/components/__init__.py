@@ -22,9 +22,9 @@ from .pipemloss import PipeMloss
 from .pipeilevel import PipeIlevel
 
 #
-from .openedheaterdw0 import OpenedheaterDw0
+from .openedheaterdw0 import OpenedHeaterDw0
 from .closedheaterdw0 import ClosedHeaterDw0
-from .openedheaterdw1 import OpenedheaterDw1
+from .openedheaterdw1 import OpenedHeaterDw1
 from .closedheaterdw1 import ClosedHeaterDw1
 from .combinedheater import CombinedHeater
 #
@@ -46,8 +46,8 @@ compdict = {
 
     Pump.devtype: Pump,
 
-    OpenedheaterDw0.devtype: OpenedheaterDw0,
-    OpenedheaterDw1.devtype: OpenedheaterDw1,
+    OpenedHeaterDw0.devtype: OpenedHeaterDw0,
+    OpenedHeaterDw1.devtype: OpenedHeaterDw1,
     ClosedHeaterDw0.devtype: ClosedHeaterDw0,
     ClosedHeaterDw1.devtype: ClosedHeaterDw1,
     CombinedHeater.devtype: CombinedHeater,

@@ -1,7 +1,7 @@
 """
 The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
-class Openedheaterdw0
+class OpenedHeaterdw0
 
                       ↓   iPort extracted steam
                   ┌───┴───┐
@@ -30,7 +30,7 @@ class Openedheaterdw0
 from .port import *
 
 
-class OpenedheaterDw0:
+class OpenedHeaterDw0:
     """ so and sm """
 
     energy = 'internal'
@@ -108,11 +108,11 @@ class OpenedheaterDw0:
         result += '\n'+" iPort_fw " + self.iPort_fw.__str__()
         result += '\n' + " oPort_fw " + self.oPort_fw.__str__()
 
-        result += '\nheatAdded(kJ) \t{:>.2f}'.format(self.heatAdded)
-        result += '\nheatExtracted(kJ) \t{:>.2f}'.format(self.heatExtracted)
+        result += f'\nheatAdded(kJ) \t{self.heatAdded:>.2f}'
+        result += f'\nheatExtracted(kJ) \t{self.heatExtracted:>.2f}'
         try:
-            result += '\nQAdded(MW) \t{:>.2f}'.format(self.QAdded)
-            result += '\nQExtracted(MW)  \t{:>.2f}'.format(self.QExtracted)
+            result += f'\nQAdded(MW) \t{self.QAdded:>.2f}'
+            result += f'\nQExtracted(MW)  \t{self.QExtracted:>.2f}'
         except:
             pass
         return result

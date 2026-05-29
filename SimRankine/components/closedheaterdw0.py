@@ -170,18 +170,15 @@ class ClosedHeaterDw0:
         result += '\n'+"iFW"+self.iPort_fw.__str__()
         result += '\n'+"oFW"+self.oPort_fw.__str__()
         if self.tdelta is not None:
-            result += '\ndelta(C) \t%.2f' % (self.tdelta)
+            result += f'\ndelta(C) \t{self.tdelta:.2f}'
         if self.tdeltadw is not None:
-            result += '\ndeltadw(C) \t%.2f' % (self.tdeltadw)
-        result += '\neta(%%) \t%.2f' % (self.eta*100)
-        result += ('{} {:.2f}').format('\n\nheatAdded(kJ)):',
-                                       self.heatAdded)
-        result += ('{} {:.2f}').format('\nheatExtracted(kJ):',
-                                       self.heatExtracted)
+            result += f'\ndeltadw(C) \t{self.tdeltadw:.2f}'
+        result += f'\neta(%) \t{self.eta*100:.2f}'
+        result += f'\n\nheatAdded(kJ)): {self.heatAdded:.2f}'
+        result += f'\nheatExtracted(kJ): {self.heatExtracted:.2f}'
         try:
-            result += ('{} {:.2f}').format('\n\nQAdded(MW):', self.QAdded)
-            result += ('{} {:.2f}').format('\nQExtracted(MW):',
-                                           self.QExtracted)
+            result += f'\n\nQAdded(MW): {self.QAdded:.2f}'
+            result += f'\nQExtracted(MW): {self.QExtracted:.2f}'
         except:
             pass
         return result

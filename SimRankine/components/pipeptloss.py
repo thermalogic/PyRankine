@@ -92,9 +92,9 @@ class PipePtloss:
         result += '\n' + " PORT " + Port.title
         result += '\n' + " iPort " + self.iPort.__str__()
         result += '\n' + " oPort " + self.oPort.__str__()
-        result += '\nheatLossPipe(kJ) \t{:>.2f}'.format(self.heatLossPipe)
+        result += f'\nheatLossPipe(kJ) \t{self.heatLossPipe:>.2f}'
         try:
-            result += '\nQLossPipe(MW) \t{:>.4f}'.format(self.QLossPipe)
+            result += f'\nQLossPipe(MW) \t{self.QLossPipe:>.4f}'
         except:
             pass
         return result

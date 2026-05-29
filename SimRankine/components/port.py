@@ -11,8 +11,7 @@ import seuif97 as if97
 
 class Port:
 
-    title = ('{:^4} {:^10} {:^10} {:^10} {:^10} {:^10} {:^10} {:^10} {}'.format
-             ("ID", "P(MPa)", "T(°C)", "H(kJ/kg)", "S(kJ/kg.K)",  "X", "FDOT", "MDOT(kg/h)", "DESC"))
+    title = f'{"ID":^4} {"P(MPa)":^10} {"T(°C)":^10} {"H(kJ/kg)":^10} {"S(kJ/kg.K)":^10} {"X":^10} {"FDOT":^10} {"MDOT(kg/h)":^10} DESC'
 
     def __init__(self, dictport):
         """ create the port/node object"""
@@ -95,25 +94,25 @@ class Port:
         self.s = if97.hx2s(self.h, self.x)
 
     def __str__(self):
-        if (self.id != -10):
-            result = '{:^6}'.format(self.id)
+        if self.id != -10:
+            result = f'{self.id:^6}'
         else:
             result = '--'
 
-        OutStrs = [{"fstr": '{:^11.4f}', 'prop': self.p, "sstr": '\t{:>7}'},
-                   {"fstr": '{:^11.2f}', 'prop': self.t, "sstr": '\t{:>8}'},
-                   {"fstr": '{:^11.2f}', 'prop': self.h, "sstr": '\t{:>10}'},
-                   {"fstr": '{:^11.2f}',  'prop': self.s, "sstr": '\t{:>8}'},
-                   {"fstr": '{:^11.4f}', 'prop': self.x, "sstr": '\t{:>10}'},
-                   {"fstr": '{:^11.4f}',  'prop': self.fdot, "sstr": '\t{:>6}'},
-                   {"fstr": '{:^11.2f}',  'prop': self.mdot, "sstr": '\t{:>8}'}
+        OutStrs = [{"fspec": '^11.4f', 'prop': self.p, "sspec": '>7'},
+                   {"fspec": '^11.2f', 'prop': self.t, "sspec": '>8'},
+                   {"fspec": '^11.2f', 'prop': self.h, "sspec": '>10'},
+                   {"fspec": '^11.2f', 'prop': self.s, "sspec": '>8'},
+                   {"fspec": '^11.4f', 'prop': self.x, "sspec": '>10'},
+                   {"fspec": '^11.4f', 'prop': self.fdot, "sspec": '>6'},
+                   {"fspec": '^11.2f', 'prop': self.mdot, "sspec": '>8'}
                    ]
 
         for item in OutStrs:
             try:
-                result += item["fstr"].format(item["prop"])
+                result += f"{item['prop']:{item['fspec']}}"
             except:
-                result += item["sstr"].format("")
+                result += f"{'':{item['sspec']}}"
 
-        result += '{}'.format(self.desc)
+        result += f'{self.desc}'
         return result

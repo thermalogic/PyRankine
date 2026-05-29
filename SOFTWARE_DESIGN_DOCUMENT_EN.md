@@ -354,8 +354,8 @@ Field descriptions:
 | PUMP | Pump |
 | TURBINEEXS | TurbineExs |
 | CONDENSER | Condenser |
-| FWH-OPEN-DW0 | OpenedheaterDw0 |
-| FWH-OPEN-DW1 | OpenedheaterDw1 |
+| FWH-OPEN-DW0 | OpenedHeaterDw0 |
+| FWH-OPEN-DW1 | OpenedHeaterDw1 |
 | FWH-CLOSE-DW0 | ClosedHeaterDw0 |
 | FWH-CLOSE-DW1 | ClosedHeaterDw1 |
 | FWH-CLOSE-DW1-SG-CWP-WELL | CombinedHeater |

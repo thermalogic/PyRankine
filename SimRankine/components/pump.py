@@ -91,10 +91,10 @@ class Pump():
         result += '\n' + " PORT " + Port.title
         result += '\n'+" iPort " + self.iPort.__str__()
         result += '\n'+" oPort " + self.oPort.__str__()
-        result += '\neta(%): \t{:>.2f}'.format(self.eta*100.0)
-        result += '\nworkRequired(kJ): \t{:>.2f}'.format(self.workRequired)
+        result += f'\neta(%): \t{self.eta*100.0:>.2f}'
+        result += f'\nworkRequired(kJ): \t{self.workRequired:>.2f}'
         try:
-            result += '\nWRequired(MW): \t{:>.2f}'.format(self.WRequired)
+            result += f'\nWRequired(MW): \t{self.WRequired:>.2f}'
         except:
             pass
         return result

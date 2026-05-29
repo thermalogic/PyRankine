@@ -159,11 +159,10 @@ class TurbineExs:
         for ep in self.ePort:
             result += '\n' + " ePort" + str(i)+" "+ep.__str__()
             i+=1
-        result += '\neta(%): \t{:>.2f}'.format(self.eta*100.0)
-        result += '\nworkExtracted(kJ): \t{:>.2f}'.format(
-            self.workExtracted)
+        result += f'\neta(%): \t{self.eta*100.0:>.2f}'
+        result += f'\nworkExtracted(kJ): \t{self.workExtracted:>.2f}'
         try:
-            result += '\nWExtracted(MW): \t{:>.2f}'.format(self.WExtracted)
+            result += f'\nWExtracted(MW): \t{self.WExtracted:>.2f}'
         except:
             pass
         return result

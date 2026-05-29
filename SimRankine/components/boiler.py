@@ -90,9 +90,9 @@ class Boiler:
         result += '\n' + " PORT " + Port.title
         result += '\n' + " iPort " + self.iPort.__str__()
         result += '\n' + " oPort " + self.oPort.__str__()
-        result += '\nheatAdded(kJ) \t{:>.2f}'.format(self.heatAdded)
+        result += f'\nheatAdded(kJ) \t{self.heatAdded:>.2f}'
         try:
-            result += '\nQAdded(MW) \t{:>.2f}'.format(self.QAdded)
+            result += f'\nQAdded(MW) \t{self.QAdded:>.2f}'
         except:
             pass
         return result

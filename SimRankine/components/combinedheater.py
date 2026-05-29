@@ -221,17 +221,15 @@ class CombinedHeater:
         result += '\n'+" iSG1 "+self.iPort_sg1.__str__()
         result += '\n'+" iSG2 "+self.iPort_sg2.__str__()
 
-        result += '\ndelta(C) \t%.2f' % (self.tdelta)
-        result += '\neta(%%) \t%.2f' % (self.eta*100)
-        result += '\nheatAdded(kJ): \t%.2f' % (self.heatAdded)
-        result += '\nheatExtracted(kJ): \t%.2f' % (self.heatExtracted)
-        result += '\n\theatExtracted_es(kJ) \t %.2f' % self.heatExtracted_es
-        result += '\n\theatExtracted_dw(kJ) \t%.2f' % self.heatExtracted_dw
-        # ------ SG stream inlet ------
-        result += '\n\theatExtracted_sg(kJ) \t%.2f' % self.heatExtracted_sg
+        result += f'\ndelta(C) \t{self.tdelta:.2f}'
+        result += f'\neta(%) \t{self.eta*100:.2f}'
+        result += f'\nheatAdded(kJ): \t{self.heatAdded:.2f}'
+        result += f'\nheatExtracted(kJ): \t{self.heatExtracted:.2f}'
+        result += f'\n\theatExtracted_es(kJ) \t {self.heatExtracted_es:.2f}'
+        result += f'\n\theatExtracted_dw(kJ) \t{self.heatExtracted_dw:.2f}'
+        result += f'\n\theatExtracted_sg(kJ) \t{self.heatExtracted_sg:.2f}'
         try:
-            result += '\nQAdded(MW) \t%.2f \nQExtracted(MW) \t%.2f ' % (
-                self.QAdded, self.QExtracted)
+            result += f'\nQAdded(MW) \t{self.QAdded:.2f} \nQExtracted(MW) \t{self.QExtracted:.2f} '
         except:
             pass
         return result

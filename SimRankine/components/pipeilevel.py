@@ -90,5 +90,5 @@ class PipeIlevel:
         result += '\n' + " PORT " + Port.title
         result += '\n' + " iPort "+self.iPort.__str__()
         result += '\n' + " oPort "+self.oPort.__str__()
-        result += '\nhlevel(m): \t{:>.2f}'.format(self.level)
+        result += f'\nhlevel(m): \t{self.level:>.2f}'
         return result

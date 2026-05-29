@@ -2,9 +2,9 @@
 """
  The PyRankine: the  hybrid steady-state simulator of Rankine Cycle
 
-* Sequential-modular(SM)： Simulator_SM(self)
+* Sequential-modular(SM): Simulator_SM(self)
 
-* equation-oriented(EO)： Simulator_EO(self)
+* equation-oriented(EO): Simulator_EO(self)
 
 """
 from .rankineobj import RankineCycle
@@ -19,8 +19,8 @@ class SimRankineCycle:
         self.idictcycle = rankinecycle
         self.cycle = RankineCycle(self.idictcycle)
         curpath = os.path.abspath(os.path.dirname(__file__))
-        self.prefixResultFileName = curpath+'\\' + \
-            '../result/'+self.idictcycle['name']
+        self.prefixResultFileName = os.path.join(
+            curpath, '..', 'result', self.idictcycle['name'])
 
     def simulator_eo(self):
         self.cycle.simulator_eo()
