@@ -17,6 +17,7 @@ class ClosedheaterDw0
 
  json object example:
     {    
+        "name": "H1",
         "devtype": "FWH-CLOSE-DW0",
         "iPort": {},
         "iPort_fw": {"p":30.38,"t":249.33},
