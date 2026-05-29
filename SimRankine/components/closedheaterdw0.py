@@ -174,7 +174,7 @@ class ClosedHeaterDw0:
         if self.tdeltadw is not None:
             result += f'\ndeltadw(C) \t{self.tdeltadw:.2f}'
         result += f'\neta(%) \t{self.eta*100:.2f}'
-        result += f'\n\nheatAdded(kJ)): {self.heatAdded:.2f}'
+        result += f'\n\nheatAdded(kJ): {self.heatAdded:.2f}'
         result += f'\nheatExtracted(kJ): {self.heatExtracted:.2f}'
         try:
             result += f'\n\nQAdded(MW): {self.QAdded:.2f}'
