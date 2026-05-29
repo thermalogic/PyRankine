@@ -237,8 +237,8 @@ class RankineCycle:
         result += f"\t{'totalheatAdded(kJ/kg): ':>20} {self.totalheatAdded:>.2f}\n"
         result += f"\t{'totalworkExtracted(kJ/kg): ':>20} {self.totalworkExtracted:>.2f}\n"
         result += f"\t{'totalworkRequired(kJ/kg): ':>20} {self.totalworkRequired:>.2f}\n"
-        result += f"\t{'Power generation poweroutput(kJ/kg): ':>20} {self.poweroutput:>.2f}\n"
-        result += f"\t{'Power supply netpoweroutput(kJ/kg): ':>20} {self.netpoweroutput:>.2f}\n"
+        result += f"\t{'Power generation power output(kJ/kg): ':>20} {self.poweroutput:>.2f}\n"
+        result += f"\t{'Power supply netpower output(kJ/kg): ':>20} {self.netpoweroutput:>.2f}\n"
         return result
 
     def __set_specified_formatstr(self, result):
